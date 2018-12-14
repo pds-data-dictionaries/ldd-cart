@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!-- PDS4 XML/Schema for Name Space Id:sample  Version:1.0.0.0 - Tue Apr 24 09:25:02 PDT 2018 -->
+  <!-- Generated from the PDS4 Information Model Version 1.9.0.0 - System Build 8a -->
+  <!-- *** This PDS4 product schema is an operational deliverable. *** -->
+  <!--                                                                           -->
+  <!--               Dictionary Stack                                            -->
+  <!-- 1.9.0.0 - pds: - Common Dictionary - N/A                                  -->
+  <!-- 1.0.0.0 - sample: - SAMPLE - ldd-template.xml                             -->
+  <!--                                                                           -->
+  <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://pds.nasa.gov/pds4/sample/v1"
+    xmlns:sample="http://pds.nasa.gov/pds4/sample/v1"
+    xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+    version="1.0.0.0">
+ 
+    <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1900.xsd"/>
+ 
+  <xs:annotation>
+    <xs:documentation>
+The Sample dictionary contains classes that describe aspects of a fictious mission and related instruments.
+    </xs:documentation>
+  </xs:annotation>
+ 
+
+  <xs:complexType name="Inst">
+    <xs:annotation>
+      <xs:documentation>The MESSENGER MDIS class is the container for
+        MESSENGER MDIS specific metadata elements.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="brightness" type="sample:brightness" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="max_exposure" type="sample:max_exposure" minOccurs="0" maxOccurs="1"> </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SAMPLE">
+    <xs:annotation>
+      <xs:documentation>The SAMPLE class is the container for
+        mission-specific metadata elements.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="mission_phase_name" type="sample:mission_phase_name" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="spacecraft_clock_start_count" type="sample:spacecraft_clock_start_count" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="spacecraft_clock_stop_count" type="sample:spacecraft_clock_stop_count" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="standard_data_product_id" nillable="true" type="sample:standard_data_product_id" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Inst" type="sample:Inst" minOccurs="0" maxOccurs="1"> </xs:element>
+    </xs:sequence>
+    <!-- Begin assert statements for schematron - Enumerated Values -->
+    <!-- <xs:assert test="sample:mission_phase_name = ('Earth Cruise', 'Earth Flyby', 'Launch', 'Mercury Cruise', 'Mercury Encounter', 'Mercury Orbit', 'Venus Cruise', 'Venus Flyby')"/> -->
+    <!-- End assert statements for schematron - Enumerated Values -->
+  </xs:complexType>
+
+    <xs:annotation>
+      <xs:documentation>This section contains the simpleTypes that provide more constraints
+        than those at the base data type level. The simpleTypes defined here build on the base data
+        types. This is another component of the common dictionary and therefore falls within the
+        pds namespace.
+      </xs:documentation>
+    </xs:annotation>
+
+  <xs:simpleType name="brightness">
+    <xs:annotation>
+      <xs:documentation>The background brightness used for automatic
+        exposure time calculation. </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Integer">
+     <xs:minInclusive value="0"/>
+     <xs:maxInclusive value="4095"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="max_exposure">
+    <xs:annotation>
+      <xs:documentation>The maximum allowable exposure time from an
+        automatic exposure time calculation. </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Integer">
+     <xs:minInclusive value="0"/>
+     <xs:maxInclusive value="989"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="mission_phase_name">
+    <xs:annotation>
+      <xs:documentation>The mission_phase_name attribute provides the
+        mission-defined name of a mission phase.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="spacecraft_clock_start_count">
+    <xs:annotation>
+      <xs:documentation>The spacecraft_clock_start_count attribute
+        provides the value of the spacecraft clock at the beginning of a
+        time period of interest. </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+    	<xs:pattern value='[1-9]/[0-9]{9}(.[0-9]{3})?'/>
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="spacecraft_clock_stop_count">
+    <xs:annotation>
+      <xs:documentation>The spacecraft_clock_stop_count attribute
+        provides the value of the spacecraft clock at the beginning of a
+        time period of interest. </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+    	<xs:pattern value='[1-9]/[0-9]{9}(.[0-9]{3})?'/>
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="standard_data_product_id">
+    <xs:annotation>
+      <xs:documentation>The standard_data_product_id keyword is used to
+        identify data products of the same processing level that are not
+        otherwise indentified by being in different collections within
+        the bundle.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:schema>
