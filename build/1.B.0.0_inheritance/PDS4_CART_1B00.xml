@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML product label for PDS4 V1.11.0.0  Sat Feb 09 11:34:47 MST 2019 -->
+  <!-- PDS4 XML product label for PDS4 V1.11.0.0  Sat Feb 09 11:53:58 MST 2019 -->
   <!-- Generated from the PDS4 Information Model V1.11.0.0 - System Build 9a -->
   <!-- *** This PDS4 XML product label is an operational deliverable. *** -->
 <?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1B00.sch"
@@ -26,7 +26,7 @@
     <File_Area_XML_Schema>
         <File>
             <file_name>PDS4_CART_1B00_IngestLDD_CART_1930_inheritance_CART_1930.xsd</file_name>
-            <creation_date_time>2019-02-09T10:34:47</creation_date_time>
+            <creation_date_time>2019-02-09T10:53:58</creation_date_time>
             <file_size unit="byte">135905</file_size>
             <records>2702</records>
         </File>
@@ -40,7 +40,7 @@
     <File_Area_XML_Schema>
         <File>
             <file_name>PDS4_CART_1B00_IngestLDD_CART_1930_inheritance_CART_1930.sch</file_name>
-            <creation_date_time>2019-02-09T10:34:47</creation_date_time>
+            <creation_date_time>2019-02-09T10:53:58</creation_date_time>
             <file_size unit="byte">39377</file_size>
             <records>662</records>
         </File>

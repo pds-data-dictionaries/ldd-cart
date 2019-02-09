@@ -2563,6 +2563,7 @@
     </Terminological_Entry>
   </DD_Class>
 
+  <!-- 20190209: Per THare - changed 'cart.latitude_resolution' and 'cart:longitude_resolution' to be optional, no needed for vector GIS labels -->
   <DD_Class>
     <name>Geographic</name>
     <version_id>1.0</version_id>
@@ -2575,13 +2576,13 @@
     <DD_Association>
       <identifier_reference>latitude_resolution</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>longitude_resolution</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <Terminological_Entry>

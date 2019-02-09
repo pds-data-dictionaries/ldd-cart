@@ -2,7 +2,7 @@ PDS4 Local Data Dictionary Processing Report
 
 Configuration:
    LDDTool Version        0.2.1.5b
-   Time                   Sat Feb 09 11:34:47 MST 2019
+   Time                   Sat Feb 09 11:53:58 MST 2019
    Core Schemas           [PDS4_PDS_1B00.xsd]
    Core Schematrons       [PDS4_PDS_1B00.sch]
    Common Model Version   1.11.0.0
@@ -1014,12 +1014,12 @@ Parsed Input - Classes:
    Associations
 
       local identifier      latitude_resolution
-      minimum occurrences   1
+      minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
       local identifier      longitude_resolution
-      minimum occurrences   1
+      minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
