@@ -24,7 +24,7 @@
     xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1B00.xsd">
   
   <name>Cartography</name>
-  <ldd_version_id>1.9.2.0</ldd_version_id>
+  <ldd_version_id>1.9.3.0</ldd_version_id>
   <full_name>Trent Hare</full_name>
   <steward_id>img</steward_id>
   <namespace_id>cart</namespace_id>
@@ -72,7 +72,8 @@
     - Updated references that point at Vector_Cartesian_Position_Base to instead point at geom.Vector_Cartesian_Position_Base
 
     1.9.2.0
-	  - Added Oblique Cylindrical Map Projection (PGeissler and THare).
+	PGeissler and THare 20181221
+	- Added Oblique Cylindrical Map Projection 
     - Note: To support Cassini BIDR. This is a somewhat specialize map projection which requires several new projection parameters
             including: reference_latitude, reference_longitude, map_projection_rotation, oblique_proj_pole_latitude, 
 			oblique_proj_pole_longitude, oblique_proj_pole_rotation, oblique_proj_x_axis_vector, oblique_proj_y_axis_vector, and
@@ -81,6 +82,11 @@
 			remapped into meters using upperleft_corner_x and upperleft_corner_y. 
     - Added many definitions for map projections (cartographic and lander). 
     - Removed "General Vertical Near-sided Projection" since it has functionally been replaced by "Point Perspective".
+
+    1.9.3.0
+	THare 20190209
+	- To support map projection for vector files, make several settings optional including: pixel_resolution_x|y and pixel_scale_x|y
+	       under Coordinate_Representation
   </comment>
   
   <last_modification_date_time>2018-12-12T00:00:00Z</last_modification_date_time>
@@ -2820,7 +2826,7 @@
       column" methods.
     </definition>
 
-    <!-- 20151021: Per C.Isbell - removed 'cart.abscissa_resolution'  
+    <!-- 20151021: Per C.Isbell - removed 'cart.abscissa_resolution' , name changed to pixel_resolution_x 
     <DD_Association>
       <identifier_reference>cart.abscissa_resolution</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -2828,7 +2834,7 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     -->
-    <!-- 20151021: Per C.Isbell - removed 'cart.ordinate_resolution'
+    <!-- 20151021: Per C.Isbell - removed 'cart.ordinate_resolution', name changed to pixel_resolution_y
     <DD_Association>
       <identifier_reference>cart.ordinate_resolution</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -2839,10 +2845,11 @@
 
     <!-- 20151021: Per C.Isbell - added 'cart.pixel_resolution_x' -->  
     <!-- 20151022: Per C.Isbell - Both pixel_resolution_x|y and pixel_scale_x|y pairs must be present within a cartographic label -->  
+    <!-- 20190209: Per T.Hare - set to optional as not needed for vector (GIS) files) for both pixel_resolution_x|y and pixel_scale_x|y pairs, only images-->
     <DD_Association>
       <identifier_reference>pixel_resolution_x</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
 
@@ -2850,7 +2857,7 @@
     <DD_Association>
       <identifier_reference>pixel_resolution_y</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
 
@@ -2858,7 +2865,7 @@
     <DD_Association>
       <identifier_reference>pixel_scale_x</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
 
@@ -2866,7 +2873,7 @@
     <DD_Association>
       <identifier_reference>pixel_scale_y</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>    
   </DD_Class>
@@ -4147,7 +4154,7 @@
     <definition>The Vector_Surface_Normal class specifies a vector normal to the planar surface. This vector is measured in the 
       coordinates specified by the Coordinate_Space reference in the Surface_Model_Parameters class.</definition>
     <DD_Association>
-      <identifier_reference>geom.Vector_Cartesian_Unit</identifier_reference>
+      <identifier_reference>Vector_Cartesian_Unit_Base</identifier_reference>
       <reference_type>parent_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -4162,7 +4169,7 @@
     <definition>The Vector_Surface_Ground_Location class specifies any point on the surface. This point is measured in the 
       coordinates specified by the Coordinate_Space reference in the Surface_Model_Parameters class.</definition>
     <DD_Association>
-      <identifier_reference>geom.Vector_Cartesian_Position_Base</identifier_reference>
+      <identifier_reference>Vector_Cartesian_Position_Base</identifier_reference>
       <reference_type>parent_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -4177,7 +4184,7 @@
     <definition>The Vector_Sphere_Center class specifies the center of the sphere. This point is measured in the coordinates specified by 
       the Coordinate_Space reference in the Surface_Model_Parameters class.</definition>
     <DD_Association>
-      <identifier_reference>geom.Vector_Cartesian_Position_Base</identifier_reference>
+      <identifier_reference>Vector_Cartesian_Position_Base</identifier_reference>
       <reference_type>parent_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -4189,16 +4196,16 @@
     <version_id>1.0</version_id>
     <local_identifier>Vector_Projection_Origin</local_identifier>
     <submitter_name>Jordan Padams</submitter_name>
-    <definition>The Vector_Projection_Origin class specifies the location of the origin of the projection. For Polar and Cylindrical projections, 
-      this is the XYZ point from which all the azimuth/elevation rays emanate. For the Cylindrical-Perspective projection, 
-      this defines the center of the circle around which the synthetic camera orbits. For Orthographic, Orthorectified, and 
-      Vertical projections, this optional keyword specifies the point on the projection plane that serves as the origin of 
+    <definition>The Vector_Projection_Origin class specifies the location of the origin of the projection. For Polar and Cylindrical 
+      projections, this is the XYZ point from which all the azimuth/elevation rays emanate. For the Cylindrical-Perspective 
+      projection, this defines the center of the circle around which the synthetic camera orbits. For Orthographic, Orthorectified, 
+      and Vertical projections, this optional keyword specifies the point on the projection plane that serves as the origin of 
       the projection (i.e. all points on a line through this point in the direction of PROJECTION_Z_AXIS_VECTOR will be 
       ocated at X=Y=0 in the projection). If not present, (0,0,0) should be assumed. This translation is generally not necessary 
       and not often used; the (X|Y)_AXIS_MINIMUM and (X|Y)_AXIS_MAXIMUM fields allow the mosaic to be located arbitrarily 
       in the projection plane.</definition>
     <DD_Association>
-      <identifier_reference>geom.Vector_Cartesian_Position_Base</identifier_reference>
+      <identifier_reference>Vector_Cartesian_Position_Base</identifier_reference>
       <reference_type>parent_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -4210,11 +4217,11 @@
     <version_id>1.0</version_id>
     <local_identifier>Vector_Projection_X_Axis</local_identifier>
     <submitter_name>Jordan Padams</submitter_name>
-    <definition>The Vector_Projection_X_Axis class specifies a unit vector defining the X-axis for a given projection. For Orthographic, Orthorectified, and Vertical 
-      projections, this vector defines how the * axis in the mosaic is oriented in space. The X and Y axis vectors together define 
-      the rotation of the projection plane around the projection axis.</definition>
+    <definition>The Vector_Projection_X_Axis class specifies a unit vector defining the X-axis for a given projection. For Orthographic, 
+      Orthorectified, and Vertical projections, this vector defines how the * axis in the mosaic is oriented in space. The X and Y axis 
+      vectors together define the rotation of the projection plane around the projection axis.</definition>
     <DD_Association>
-      <identifier_reference>geom.Vector_Cartesian_Unit</identifier_reference>
+      <identifier_reference>Vector_Cartesian_Unit_Base</identifier_reference>
       <reference_type>parent_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -4230,7 +4237,7 @@
       projections, this vector defines how the * axis in the mosaic is oriented in space. The X and Y axis vectors together define 
       the rotation of the projection plane around the projection axis.</definition>
     <DD_Association>
-      <identifier_reference>geom.Vector_Cartesian_Unit</identifier_reference>
+      <identifier_reference>Vector_Cartesian_Unit_Base</identifier_reference>
       <reference_type>parent_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -4242,14 +4249,14 @@
     <version_id>1.0</version_id>
     <local_identifier>Vector_Projection_Z_Axis</local_identifier>
     <submitter_name>Jordan Padams</submitter_name>
-    <definition>The Vector_Projection_Z_Axis class specifies a unit vector defining the Z axis for a given projection. For Orthographic, Orthorectified, and Vertical 
-      projections, this vector defines the projection axis for the mosaic. All points along a line parallel to this axis are projected 
-      to the same spot in the projection plane. For the Cylindrical-Perspective projections, this defines the new axis of the circle 
-      around which the synthetic camera orbits (i.e. the normal to the circle), after the cameras have been rotated to correct for 
-      rover tilt. CAMERA_ROTATION_AXIS_VECTOR contains the axis before rotation; the difference in these two indicate the rotation 
-      amount.</definition>
+    <definition>The Vector_Projection_Z_Axis class specifies a unit vector defining the Z axis for a given projection. For Orthographic, 
+      Orthorectified, and Vertical projections, this vector defines the projection axis for the mosaic. All points along a line parallel 
+      to this axis are projected to the same spot in the projection plane. For the Cylindrical-Perspective projections, this defines the 
+      new axis of the circle around which the synthetic camera orbits (i.e. the normal to the circle), after the cameras have been rotated 
+      to correct for rover tilt. CAMERA_ROTATION_AXIS_VECTOR contains the axis before rotation; the difference in these two indicate the 
+      rotation amount.</definition>
     <DD_Association>
-      <identifier_reference>geom.Vector_Cartesian_Unit</identifier_reference>
+      <identifier_reference>Vector_Cartesian_Unit_Base</identifier_reference>
       <reference_type>parent_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -4280,6 +4287,101 @@
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>  
+  </DD_Class>
+  
+  <DD_Class>
+    <name>Vector_Cartesian_Unit_Base</name>
+    <version_id>1.0</version_id>
+    <local_identifier>Vector_Cartesian_Unit_Base</local_identifier>
+    <submitter_name>Elizabeth Rye</submitter_name>
+    <definition>This is a generic unit vector in Cartesian space.
+      The "x", "y", and "z" component have no units and are restricted to
+      values between -1.0 and 1.0 inclusive. Further the length of the 
+      vector square root of the (sum of the squares of the components) 
+      must be 1.0.
+    </definition>
+    <abstract_flag>false</abstract_flag>
+    <element_flag>false</element_flag>
+    <DD_Association>
+      <identifier_reference>x_unit</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>y_unit</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>z_unit</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+  
+  <DD_Class>
+    <name>Vector_Cartesian_Position_Base</name>
+    <version_id>1.0</version_id>
+    <local_identifier>Vector_Cartesian_Position_Base</local_identifier>
+    <submitter_name>Mitchell K. Gordon</submitter_name>
+    <definition>The Vector_Cartesian_Position_Base is a three dimensional,  
+      rectangular coordinates vector. Uses units of length. The   
+      included attributes are not sufficient to identify the  
+      endpoints of the vector.
+    </definition>
+    <abstract_flag>false</abstract_flag>
+    <element_flag>false</element_flag>
+    <DD_Association>
+      <identifier_reference>x_position</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>y_position</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>z_position</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+  
+  <DD_Class>
+    <name>Vector_Cartesian_No_Units</name>
+    <version_id>1.0</version_id>
+    <local_identifier>Vector_Cartesian_No_Units</local_identifier>
+    <submitter_name>Elizabeth Rye</submitter_name>
+    <definition>This is a generic vector in Cartesian space.
+      The "x", "y", and "z" component have no units.
+    </definition>
+    <abstract_flag>false</abstract_flag>
+    <element_flag>false</element_flag>
+    <DD_Association>
+      <identifier_reference>x</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>y</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>z</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
   </DD_Class>
   
   <DD_Class>

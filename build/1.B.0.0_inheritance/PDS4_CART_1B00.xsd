@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:cart  Version:1.11.0.0 - Fri Dec 28 14:51:43 MST 2018 -->
+  <!-- PDS4 XML/Schema for Name Space Id:cart  Version:1.9.3.0 - Sat Feb 09 11:34:47 MST 2019 -->
   <!-- Generated from the PDS4 Information Model Version 1.11.0.0 - System Build 9a -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
   <!--               Dictionary Stack                                            -->
   <!-- 1.11.0.0 - pds: - Common Dictionary - N/A                                 -->
-  <!-- 1.11.0.0 - cart: - Cartography - PDS4_CART_1B00_IngestLDD_CART_1920_inher -->
+  <!-- 1.9.3.0 - cart: - Cartography - PDS4_CART_1B00_IngestLDD_CART_1930_inheri -->
   <!--                                                                           -->
   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
     targetNamespace="http://pds.nasa.gov/pds4/cart/v1"
@@ -13,7 +13,7 @@
     xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
     elementFormDefault="qualified"
     attributeFormDefault="unqualified"
-    version="1.11.0.0">
+    version="1.9.3.0">
  
     <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1B00.xsd"/>
  
@@ -63,7 +63,8 @@
     - Updated references that point at Vector_Cartesian_Position_Base to instead point at geom.Vector_Cartesian_Position_Base
 
     1.9.2.0
-	  - Added Oblique Cylindrical Map Projection (PGeissler and THare).
+	PGeissler and THare 20181221
+	- Added Oblique Cylindrical Map Projection 
     - Note: To support Cassini BIDR. This is a somewhat specialize map projection which requires several new projection parameters
             including: reference_latitude, reference_longitude, map_projection_rotation, oblique_proj_pole_latitude, 
 			oblique_proj_pole_longitude, oblique_proj_pole_rotation, oblique_proj_x_axis_vector, oblique_proj_y_axis_vector, and
@@ -72,6 +73,11 @@
 			remapped into meters using upperleft_corner_x and upperleft_corner_y. 
     - Added many definitions for map projections (cartographic and lander). 
     - Removed "General Vertical Near-sided Projection" since it has functionally been replaced by "Point Perspective".
+	
+    1.9.3.0
+	THare 20190209
+	- To support map projection for vector files, make several settings optional including: pixel_resolution_x|y and pixel_scale_x|y
+	       under Coordinate_Representation
   
     </xs:documentation>
   </xs:annotation>
@@ -129,10 +135,10 @@
         pair" and "row and column" methods. </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="pixel_resolution_x" type="cart:pixel_resolution_x" minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="pixel_resolution_y" type="cart:pixel_resolution_y" minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="pixel_scale_x" type="cart:pixel_scale_x" minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="pixel_scale_y" type="cart:pixel_scale_y" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="pixel_resolution_x" type="cart:pixel_resolution_x" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="pixel_resolution_y" type="cart:pixel_resolution_y" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="pixel_scale_x" type="cart:pixel_scale_x" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="pixel_scale_y" type="cart:pixel_scale_y" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -2693,21 +2699,4 @@
      <xs:maxInclusive value="1.7976931348623157e308"/>
 	   </xs:restriction>
   </xs:simpleType>
- 
-  <xs:annotation>
-    <xs:documentation>
-[
-  {
-    "dataDictionary": {
-      "Title": "PDS4 Data Dictionary" ,
-      "Version": "1.11.0.0" ,
-      "Date": "Fri Dec 28 14:51:43 MST 2018" ,
-      "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
-      "PropertyMapDictionary": [
-      ]
-    }
-  }
-]
-    </xs:documentation>
-  </xs:annotation>
 </xs:schema>
