@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:cart  Version:1.9.3.0 - Sat Feb 09 11:53:58 MST 2019 -->
+  <!-- PDS4 XML/Schema for Name Space Id:cart  Version:1.9.3.0 - Fri Feb 22 15:50:38 MST 2019 -->
   <!-- Generated from the PDS4 Information Model Version 1.11.0.0 - System Build 9a -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -75,9 +75,9 @@
     - Removed "General Vertical Near-sided Projection" since it has functionally been replaced by "Point Perspective".
 	
     1.9.3.0
-	THare 20190209
-	- To support map projection for vector files, make several settings optional including: pixel_resolution_x|y and pixel_scale_x|y
-	       under Coordinate_Representation
+  THare 20190222
+  -  'Planar_Coordinate_Information' is no longer mandated to better support vector files. It should be added for images
+  -  'cart.latitude_resolution' and 'cart:longitude_resolution' to be optional, not needed for vector GIS labels
   
     </xs:documentation>
   </xs:annotation>
@@ -135,10 +135,10 @@
         pair" and "row and column" methods. </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="pixel_resolution_x" type="cart:pixel_resolution_x" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="pixel_resolution_y" type="cart:pixel_resolution_y" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="pixel_scale_x" type="cart:pixel_scale_x" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="pixel_scale_y" type="cart:pixel_scale_y" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="pixel_resolution_x" type="cart:pixel_resolution_x" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="pixel_resolution_y" type="cart:pixel_resolution_y" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="pixel_scale_x" type="cart:pixel_scale_x" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="pixel_scale_y" type="cart:pixel_scale_y" minOccurs="1" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -695,7 +695,7 @@
         <xs:element name="Local_Planar" type="cart:Local_Planar"> </xs:element>
         <xs:element name="Map_Projection" type="cart:Map_Projection"> </xs:element>
       </xs:choice>
-      <xs:element name="Planar_Coordinate_Information" type="cart:Planar_Coordinate_Information" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="Planar_Coordinate_Information" type="cart:Planar_Coordinate_Information" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="Geo_Transformation" type="cart:Geo_Transformation" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>

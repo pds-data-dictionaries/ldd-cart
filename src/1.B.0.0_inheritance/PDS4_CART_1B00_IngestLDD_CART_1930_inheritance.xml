@@ -84,9 +84,9 @@
     - Removed "General Vertical Near-sided Projection" since it has functionally been replaced by "Point Perspective".
 	
     1.9.3.0
-	THare 20190209
-	- To support map projection for vector files, make several settings optional including: pixel_resolution_x|y and pixel_scale_x|y
-	       under Coordinate_Representation
+  THare 20190222
+  -  'Planar_Coordinate_Information' is no longer mandated to better support vector files. It should be added for images
+  -  'cart.latitude_resolution' and 'cart:longitude_resolution' to be optional, not needed for vector GIS labels
   </comment>
   
   <last_modification_date_time>2018-12-12T00:00:00Z</last_modification_date_time>
@@ -2563,7 +2563,7 @@
     </Terminological_Entry>
   </DD_Class>
 
-  <!-- 20190209: Per THare - changed 'cart.latitude_resolution' and 'cart:longitude_resolution' to be optional, no needed for vector GIS labels -->
+  <!-- 20190222: Per THare - changed 'cart.latitude_resolution' and 'cart:longitude_resolution' to be optional, not needed for vector GIS labels -->
   <DD_Class>
     <name>Geographic</name>
     <version_id>1.0</version_id>
@@ -2613,10 +2613,11 @@
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
+    <!-- 20190209: Per T.Hare - Planar_Coordinate_Information is no longer mandated to support vector files. It should be there for images-->
     <DD_Association>
       <identifier_reference>Planar_Coordinate_Information</identifier_reference>
       <reference_type>component_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
@@ -2846,11 +2847,11 @@
 
     <!-- 20151021: Per C.Isbell - added 'cart.pixel_resolution_x' -->  
     <!-- 20151022: Per C.Isbell - Both pixel_resolution_x|y and pixel_scale_x|y pairs must be present within a cartographic label -->
-    <!-- 20190209: Per T.Hare - set to optional as not needed for vector (GIS) files) for both pixel_resolution_x|y and pixel_scale_x|y pairs, only images-->
+    <!-- 20190222: Per T.Hare - pixel_resolution_x|y and pixel_scale_x|y pairs are only madatory if Planar_Coordinate_Information is present-->
     <DD_Association>
       <identifier_reference>pixel_resolution_x</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
 
@@ -2858,7 +2859,7 @@
     <DD_Association>
       <identifier_reference>pixel_resolution_y</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
 
@@ -2866,7 +2867,7 @@
     <DD_Association>
       <identifier_reference>pixel_scale_x</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
 
@@ -2874,7 +2875,7 @@
     <DD_Association>
       <identifier_reference>pixel_scale_y</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>    
   </DD_Class>

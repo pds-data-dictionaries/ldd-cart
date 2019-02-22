@@ -2,7 +2,7 @@ PDS4 Local Data Dictionary Processing Report
 
 Configuration:
    LDDTool Version        0.2.1.5b
-   Time                   Sat Feb 09 11:53:58 MST 2019
+   Time                   Fri Feb 22 15:50:38 MST 2019
    Core Schemas           [PDS4_PDS_1B00.xsd]
    Core Schematrons       [PDS4_PDS_1B00.sch]
    Common Model Version   1.11.0.0
@@ -198,9 +198,9 @@ Parsed Input - Header:
     - Removed "General Vertical Near-sided Projection" since it has functionally been replaced by "Point Perspective".
 	
     1.9.3.0
-	THare 20190209
-	- To support map projection for vector files, make several settings optional including: pixel_resolution_x|y and pixel_scale_x|y
-	       under Coordinate_Representation
+  THare 20190222
+  -  'Planar_Coordinate_Information' is no longer mandated to better support vector files. It should be added for images
+  -  'cart.latitude_resolution' and 'cart:longitude_resolution' to be optional, not needed for vector GIS labels
   
    Last Modification Time 2018-12-12T00:00:00Z
    PDS4 Merge Flag        false
@@ -1052,7 +1052,7 @@ Parsed Input - Classes:
       reference type        component_of
 
       local identifier      Planar_Coordinate_Information
-      minimum occurrences   1
+      minimum occurrences   0
       maximum occurrences   1
       reference type        component_of
 
@@ -1259,22 +1259,22 @@ Parsed Input - Classes:
    Associations
 
       local identifier      pixel_resolution_x
-      minimum occurrences   0
+      minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
       local identifier      pixel_resolution_y
-      minimum occurrences   0
+      minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
       local identifier      pixel_scale_x
-      minimum occurrences   0
+      minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
       local identifier      pixel_scale_y
-      minimum occurrences   0
+      minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
