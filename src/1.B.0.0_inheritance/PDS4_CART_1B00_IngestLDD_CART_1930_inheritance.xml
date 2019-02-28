@@ -566,13 +566,13 @@
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
       <DD_Permissible_Value>
-        <value>planetographic</value>
+        <value>Planetographic</value>
         <value_meaning>The planetographic latitude is the angle between 
         the equatorial plane and a line that is normal to the body.
         </value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
-        <value>planetocentric</value>
+        <value>Planetocentric</value>
         <value_meaning>The planetocentric latitude is the angle between 
         the equatorial plane and a line from the center of the body.
         </value_meaning>

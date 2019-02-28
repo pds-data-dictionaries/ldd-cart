@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:cart  Version:1.9.3.0 - Fri Feb 22 15:50:38 MST 2019 -->
+  <!-- PDS4 Schematron for Name Space Id:cart  Version:1.9.3.0 - Thu Feb 28 15:29:32 MST 2019 -->
   <!-- Generated from the PDS4 Information Model Version 1.11.0.0 - System Build 9a -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -205,8 +205,8 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="cart:Geodetic_Model/cart:latitude_type">
-      <sch:assert test=". = ('planetocentric', 'planetographic')">
-        The attribute cart:latitude_type must be equal to one of the following values 'planetocentric', 'planetographic'.</sch:assert>
+      <sch:assert test=". = ('Planetocentric', 'Planetographic')">
+        The attribute cart:latitude_type must be equal to one of the following values 'Planetocentric', 'Planetographic'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

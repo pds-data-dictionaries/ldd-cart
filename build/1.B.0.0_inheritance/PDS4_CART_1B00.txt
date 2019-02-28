@@ -2,7 +2,7 @@ PDS4 Local Data Dictionary Processing Report
 
 Configuration:
    LDDTool Version        0.2.1.5b
-   Time                   Fri Feb 22 15:50:38 MST 2019
+   Time                   Thu Feb 28 15:29:32 MST 2019
    Core Schemas           [PDS4_PDS_1B00.xsd]
    Core Schematrons       [PDS4_PDS_1B00.sch]
    Common Model Version   1.11.0.0
@@ -303,8 +303,8 @@ Parsed Input - Attributes:
    value data type        ASCII_Short_String_Collapsed
    description            The latitude_type attribute defines the type of latitude (planetographic, planetocentric) used within a cartographic product and as reflected in attribute values within associated PDS labels. For planets and satellites, latitude is measured north and south of the equator; north latitudes are designated as positive. The planetocentric latitude is the angle between the equatorial plane and a line from the center of the body. The planetographic latitude is the angle between the equatorial plane and a line that is normal to the body. In summary, both latitudes are equivalent on a sphere (i.e., equatorial radius equal to polar radius); however, they differ on an ellipsoid (e.g., Mars, Earth). For more on latitude_type, please see the IAU publication available here: http://astrogeology.usgs.gov/groups/IAU-WGCCRE 
    permissible value - value meaning
-      planetographic - The planetographic latitude is the angle between the equatorial plane and a line that is normal to the body. 
-      planetocentric - The planetocentric latitude is the angle between the equatorial plane and a line from the center of the body. 
+      Planetographic - The planetographic latitude is the angle between the equatorial plane and a line that is normal to the body. 
+      Planetocentric - The planetocentric latitude is the angle between the equatorial plane and a line from the center of the body. 
 
    name                   latitude_resolution
    version                1.11
