@@ -84,9 +84,10 @@
     - Removed "General Vertical Near-sided Projection" since it has functionally been replaced by "Point Perspective".
 	
     1.9.3.0
-  THare 20190222
+  THare 20190307
   -  'Planar_Coordinate_Information' is no longer mandated to better support vector files. It should be added for images
   -  'cart.latitude_resolution' and 'cart:longitude_resolution' to be optional, not needed for vector GIS labels
+  -  changed DD_Association to DD_Association_External as a temporary fix to support geom.Coordinate_Space_Reference
   </comment>
   
   <last_modification_date_time>2018-12-12T00:00:00Z</last_modification_date_time>
@@ -3602,12 +3603,12 @@
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
-    <DD_Association>
+    <DD_Association_External>
       <identifier_reference>geom.Coordinate_Space_Reference</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
+    </DD_Association_External>
   </DD_Class>
   
   <DD_Class>

@@ -2,7 +2,7 @@ PDS4 Local Data Dictionary Processing Report
 
 Configuration:
    LDDTool Version        0.2.1.5b
-   Time                   Thu Feb 28 15:29:32 MST 2019
+   Time                   Thu Mar 07 23:32:22 MST 2019
    Core Schemas           [PDS4_PDS_1B00.xsd]
    Core Schematrons       [PDS4_PDS_1B00.sch]
    Common Model Version   1.11.0.0
@@ -24,14 +24,12 @@ Parameters:
 Summary:
    Classes                62
    Attributes             89
-   Associations           224
-   Error messages         18
+   Associations           223
+   Error messages         16
    Warning messages       10
    Information messages   77
 
 Detailed validation messages
-   ERROR    Class:0001_NASA_PDS_1.cart.Map_Projection_Lander  Association:geom.Coordinate_Space_Reference  Class:geom.Coordinate_Space_Reference - Missing Component Class
-   ERROR    Association: geom.Coordinate_Space_Reference - Missing Component - Reference Type: component_of
    ERROR    Class:0001_NASA_PDS_1.cart.Surface_Model_Parameters  Association:geom.Coordinate_Space_Reference  Class:geom.Coordinate_Space_Reference - Missing Component Class
    ERROR    Association: geom.Coordinate_Space_Reference - Missing Component - Reference Type: component_of
    ERROR    Class:0001_NASA_PDS_1.cart.Vector_Surface_Normal  Association:geom.Vector_Cartesian_Unit  Class:geom.Vector_Cartesian_Unit - Missing Parent Class
@@ -198,9 +196,10 @@ Parsed Input - Header:
     - Removed "General Vertical Near-sided Projection" since it has functionally been replaced by "Point Perspective".
 	
     1.9.3.0
-  THare 20190222
+  THare 20190307
   -  'Planar_Coordinate_Information' is no longer mandated to better support vector files. It should be added for images
   -  'cart.latitude_resolution' and 'cart:longitude_resolution' to be optional, not needed for vector GIS labels
+  -  changed DD_Association to DD_Association_External as a temporary fix to support geom.Coordinate_Space_Reference
   
    Last Modification Time 2018-12-12T00:00:00Z
    PDS4 Merge Flag        false
@@ -1787,11 +1786,6 @@ Parsed Input - Classes:
 
       local identifier      Orthorectified
       minimum occurrences   1
-      maximum occurrences   1
-      reference type        component_of
-
-      local identifier      geom.Coordinate_Space_Reference
-      minimum occurrences   0
       maximum occurrences   1
       reference type        component_of
 
