@@ -2,7 +2,7 @@ PDS4 Local Data Dictionary Processing Report
 
 Configuration:
    LDDTool Version        0.2.1.5b
-   Time                   Thu Mar 07 23:32:08 MST 2019
+   Time                   Wed Apr 17 18:44:53 MST 2019
    Core Schemas           [PDS4_PDS_1B00.xsd]
    Core Schematrons       [PDS4_PDS_1B00.sch]
    Common Model Version   1.11.0.0
@@ -22,15 +22,40 @@ Parameters:
    Merge with Master      false
 
 Summary:
-   Classes                65
+   Classes                63
    Attributes             89
-   Associations           231
-   Error messages         0
-   Warning messages       1
+   Associations           226
+   Error messages         16
+   Warning messages       10
    Information messages   77
 
 Detailed validation messages
+   ERROR    Association - Reference_Type: component_of - No identifiers were provided for this association.
+   ERROR    Association - Reference_Type: component_of - No identifiers were provided for this association.
+   ERROR    Class:0001_NASA_PDS_1.cart.Vector_Surface_Normal  Association:geom.Vector_Cartesian_Unit  Class:geom.Vector_Cartesian_Unit - Missing Parent Class
+   ERROR    Association: TBD_identifier - Missing Class: geom.Vector_Cartesian_Unit - Reference Type: parent_of
+   ERROR    Class:0001_NASA_PDS_1.cart.Vector_Surface_Ground_Location  Association:geom.Vector_Cartesian_Position_Base  Class:geom.Vector_Cartesian_Position_Base - Missing Parent Class
+   ERROR    Association: TBD_identifier - Missing Class: geom.Vector_Cartesian_Position_Base - Reference Type: parent_of
+   ERROR    Class:0001_NASA_PDS_1.cart.Vector_Sphere_Center  Association:geom.Vector_Cartesian_Position_Base  Class:geom.Vector_Cartesian_Position_Base - Missing Parent Class
+   ERROR    Association: TBD_identifier - Missing Class: geom.Vector_Cartesian_Position_Base - Reference Type: parent_of
+   ERROR    Class:0001_NASA_PDS_1.cart.Vector_Projection_Origin  Association:geom.Vector_Cartesian_Position_Base  Class:geom.Vector_Cartesian_Position_Base - Missing Parent Class
+   ERROR    Association: TBD_identifier - Missing Class: geom.Vector_Cartesian_Position_Base - Reference Type: parent_of
+   ERROR    Class:0001_NASA_PDS_1.cart.Vector_Projection_X_Axis  Association:geom.Vector_Cartesian_Unit  Class:geom.Vector_Cartesian_Unit - Missing Parent Class
+   ERROR    Association: TBD_identifier - Missing Class: geom.Vector_Cartesian_Unit - Reference Type: parent_of
+   ERROR    Class:0001_NASA_PDS_1.cart.Vector_Projection_Y_Axis  Association:geom.Vector_Cartesian_Unit  Class:geom.Vector_Cartesian_Unit - Missing Parent Class
+   ERROR    Association: TBD_identifier - Missing Class: geom.Vector_Cartesian_Unit - Reference Type: parent_of
+   ERROR    Class:0001_NASA_PDS_1.cart.Vector_Projection_Z_Axis  Association:geom.Vector_Cartesian_Unit  Class:geom.Vector_Cartesian_Unit - Missing Parent Class
+   ERROR    Association: TBD_identifier - Missing Class: geom.Vector_Cartesian_Unit - Reference Type: parent_of
    WARNING  Attribute: <pixel_resolution> - This local attribute was not used in an Association.
+   WARNING  Attribute: <x> - This local attribute was not used in an Association.
+   WARNING  Attribute: <x_position> - This local attribute was not used in an Association.
+   WARNING  Attribute: <x_unit> - This local attribute was not used in an Association.
+   WARNING  Attribute: <y> - This local attribute was not used in an Association.
+   WARNING  Attribute: <y_position> - This local attribute was not used in an Association.
+   WARNING  Attribute: <y_unit> - This local attribute was not used in an Association.
+   WARNING  Attribute: <z> - This local attribute was not used in an Association.
+   WARNING  Attribute: <z_position> - This local attribute was not used in an Association.
+   WARNING  Attribute: <z_unit> - This local attribute was not used in an Association.
    INFO     Attribute: <west_bounding_coordinate> - The default minimum value provided by the attribute's data type is being overridden with -180.0
    INFO     Attribute: <west_bounding_coordinate> - The default maximum value provided by the attribute's data type is being overridden with 360.0
    INFO     Attribute: <east_bounding_coordinate> - The default minimum value provided by the attribute's data type is being overridden with -180.0
@@ -40,8 +65,8 @@ Detailed validation messages
    INFO     Attribute: <south_bounding_coordinate> - The default minimum value provided by the attribute's data type is being overridden with -90.0
    INFO     Attribute: <south_bounding_coordinate> - The default maximum value provided by the attribute's data type is being overridden with 90.0
    INFO     Attribute: <semi_major_radius> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+   INFO     Attribute: <intermediate_radius> - The default minimum value provided by the attribute's data type is being overridden with 0.0
    INFO     Attribute: <semi_minor_radius> - The default minimum value provided by the attribute's data type is being overridden with 0.0
-   INFO     Attribute: <polar_radius> - The default minimum value provided by the attribute's data type is being overridden with 0.0
    INFO     Attribute: <longitude_direction> - The default minimum characters provided by the attribute's data type is being overridden with 13
    INFO     Attribute: <longitude_direction> - The default maximum characters provided by the attribute's data type is being overridden with 13
    INFO     Attribute: <latitude_resolution> - The default minimum value provided by the attribute's data type is being overridden with 0.0
@@ -169,13 +194,15 @@ Parsed Input - Header:
 			remapped into meters using upperleft_corner_x and upperleft_corner_y. 
     - Added many definitions for map projections (cartographic and lander). 
     - Removed "General Vertical Near-sided Projection" since it has functionally been replaced by "Point Perspective".
-
+	
     1.9.3.0
   THare and PGeissler 20190307
   -  'Planar_Coordinate_Information' is no longer mandated to better support vector files. It should be added for images
   -  'cart.latitude_resolution' and 'cart:longitude_resolution' to be optional, not needed for vector GIS labels
-  -  changed DD_Association to DD_Association_External as a temporary fix to support geom.Coordinate_Space_Reference
-          under Surface_Model_Parameters and Map_Projection_Lander
+  -  Added Secondary_Spatial_Domain as an optional or alternative method to list IAU recommended or historically used 
+     bounding coordinate section to support both positive East and positive West systems in the same label.
+  -  Fixed triaxial definition. renamed polar_radius to semi_minor_radius and semi_minor_radius to intermediate_radius. Removed
+     comments which stated these were odd and needed to be check. Indeed they were wrong. This is a fairly big update. 
   
    Last Modification Time 2018-12-12T00:00:00Z
    PDS4 Merge Flag        false
@@ -245,28 +272,28 @@ Parsed Input - Attributes:
    name                   semi_major_radius
    version                1.11
    value data type        ASCII_Real
-   description            The semi_major_axis attribute provides the radius of the equatorial axis of the ellipsoid.
+   description            The semi_major_axis attribute provides the radius of the equatorial axis of the ellipsoid. In PDS3 this was called A_AXIS_RADIUS.
+   minimum value          0.0
+   unit of measure type   Units_of_Length
+
+   name                   intermediate_radius
+   version                1.11
+   value data type        ASCII_Real
+   description            The intermediate_radius attribute provides the value of the intermediate axis of the ellipsoid that defines the approximate shape of a target body. The intermediate_radius axis is usually in the equatorial plane.
    minimum value          0.0
    unit of measure type   Units_of_Length
 
    name                   semi_minor_radius
    version                1.11
    value data type        ASCII_Real
-   description            The semi_minor_radius attribute provides the value of the intermediate axis of the ellipsoid that defines the approximate shape of a target body. The semi-minor axis is usually in the equatorial plane.
-   minimum value          0.0
-   unit of measure type   Units_of_Length
-
-   name                   polar_radius
-   version                1.11
-   value data type        ASCII_Real
-   description            The polar_radius attribute provides the value of the semiminor axis of the ellipsoid that defines the approximate shape of a target body. The polar radius is normal to the plane defined by the semi-major and semi-minor axes.
+   description            The semi_minor_radius attribute provides the value of the polar axis of the ellipsoid that defines the approximate shape of a target body. The semi_minor_radius is normal to the plane defined by the semi-major and intermediate axes.
    minimum value          0.0
    unit of measure type   Units_of_Length
 
    name                   longitude_direction
    version                1.11
    value data type        ASCII_Short_String_Collapsed
-   description            The longitude_direction attribute identifies the direction of longitude (e.g. POSITIVE_EAST or POSITIVE_WEST) for a planet. The IAU definition for direction of positive longitude should be adopted: http://astrogeology.usgs.gov/groups/IAU-WGCCRE. Typically, for planets with prograde (direct) rotations, positive longitude direction is to the west. For planets with retrograde rotations, positive longitude direction is to the east. Generally the Positive West longitude_direction is used for planetographc systems and Positive East is used for planetocentric systems.
+   description            The longitude_direction attribute identifies the direction of longitude (e.g. POSITIVE_EAST or POSITIVE_WEST) for a planet. The IAU definition for direction of positive longitude should be adopted: http://astrogeology.usgs.gov/groups/IAU-WGCCRE. Typically, for planets with prograde (direct) rotations, positive longitude direction is to the west. For planets with retrograde rotations, positive longitude direction is to the east. Generally the Positive West longitude_direction is used for planetographc systems and Positive East is used for planetocentric systems. If the data is defined with Spatial_Domain in a manner not recommended by the IAU, there is a optional Secondary_Spatial_Domain section to define a second set of bounding coordinates.
    minimum characters     13
    maximum characters     13
    permissible value - value meaning
@@ -564,17 +591,17 @@ Parsed Input - Attributes:
       Cylindrical_Perspective - This is an in-situ projection that is a hybrid. Each column is a vertical slice from a pinhole camera (Perspective projection), while the columns are spaced evenly in azimuth (Cylindrical projection). It is most useful for viewing panoramas in stereo.
 
    name                   x_unit
-   version                1.11
+   version                1.0
    value data type        ASCII_Real
    description            The x component of a unit vector.
 
    name                   y_unit
-   version                1.11
+   version                1.0
    value data type        ASCII_Real
    description            The y component of a unit vector.
 
    name                   z_unit
-   version                1.11
+   version                1.0
    value data type        ASCII_Real
    description            The z component of a unit vector.
 
@@ -597,35 +624,35 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Length
 
    name                   x_position
-   version                1.11
+   version                1.0
    value data type        ASCII_Real
    description            The x component of a Cartesian position vector.
    unit of measure type   Units_of_Length
 
    name                   y_position
-   version                1.11
+   version                1.0
    value data type        ASCII_Real
    description            The y component of a Cartesian position vector.
    unit of measure type   Units_of_Length
 
    name                   z_position
-   version                1.11
+   version                1.0
    value data type        ASCII_Real
    description            The z component of a Cartesian position vector.
    unit of measure type   Units_of_Length
 
    name                   x
-   version                1.11
+   version                1.0
    value data type        ASCII_Real
    description            The x component of a Cartesian vector which has no units.
 
    name                   y
-   version                1.11
+   version                1.0
    value data type        ASCII_Real
    description            The y component of a Cartesian vector which has no units.
 
    name                   z
-   version                1.11
+   version                1.0
    value data type        ASCII_Real
    description            The z component of a Cartesian vector which has no units.
 
@@ -842,6 +869,11 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        component_of
 
+      local identifier      Secondary_Spatial_Domain
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
       local identifier      Spatial_Reference_Information
       minimum occurrences   1
       maximum occurrences   1
@@ -859,6 +891,29 @@ Parsed Input - Classes:
       minimum occurrences   1
       maximum occurrences   1
       reference type        component_of
+
+   name                   Secondary_Spatial_Domain
+   description            The Secondary_Spatial_Domain class describes an alternative longitude and latitude bounds to better support IAU approved or historically used geographic areal coordinates. This is only needed if the Spatial_Domain does not meet IAU recommendations or historical uses for the body. 
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      Bounding_Coordinates
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        component_of
+
+      local identifier      longitude_direction
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      latitude_type
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
 
    name                   Spatial_Reference_Information
    description            The Spatial_Reference_Information class provides a description of the reference frame for, and the means to encode, coordinates in a data set. 
@@ -965,12 +1020,12 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      semi_minor_radius
+      local identifier      intermediate_radius
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      polar_radius
+      local identifier      semi_minor_radius
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
@@ -2230,11 +2285,11 @@ Parsed Input - Classes:
    description            The Vector_Surface_Normal class specifies a vector normal to the planar surface. This vector is measured in the coordinates specified by the Coordinate_Space reference in the Surface_Model_Parameters class.
    is abstract            false
    is choice              false
-   subclass of            Vector_Cartesian_Unit_Base
+   subclass of            USER
 
    Associations
 
-      local identifier      Vector_Cartesian_Unit_Base
+      local identifier      geom.Vector_Cartesian_Unit
       minimum occurrences   1
       maximum occurrences   1
       reference type        parent_of
@@ -2243,11 +2298,11 @@ Parsed Input - Classes:
    description            The Vector_Surface_Ground_Location class specifies any point on the surface. This point is measured in the coordinates specified by the Coordinate_Space reference in the Surface_Model_Parameters class.
    is abstract            false
    is choice              false
-   subclass of            Vector_Cartesian_Position_Base
+   subclass of            USER
 
    Associations
 
-      local identifier      Vector_Cartesian_Position_Base
+      local identifier      geom.Vector_Cartesian_Position_Base
       minimum occurrences   1
       maximum occurrences   1
       reference type        parent_of
@@ -2256,11 +2311,11 @@ Parsed Input - Classes:
    description            The Vector_Sphere_Center class specifies the center of the sphere. This point is measured in the coordinates specified by the Coordinate_Space reference in the Surface_Model_Parameters class.
    is abstract            false
    is choice              false
-   subclass of            Vector_Cartesian_Position_Base
+   subclass of            USER
 
    Associations
 
-      local identifier      Vector_Cartesian_Position_Base
+      local identifier      geom.Vector_Cartesian_Position_Base
       minimum occurrences   1
       maximum occurrences   1
       reference type        parent_of
@@ -2269,11 +2324,11 @@ Parsed Input - Classes:
    description            The Vector_Projection_Origin class specifies the location of the origin of the projection. For Polar and Cylindrical projections, this is the XYZ point from which all the azimuth/elevation rays emanate. For the Cylindrical-Perspective projection, this defines the center of the circle around which the synthetic camera orbits. For Orthographic, Orthorectified, and Vertical projections, this optional keyword specifies the point on the projection plane that serves as the origin of the projection (i.e. all points on a line through this point in the direction of PROJECTION_Z_AXIS_VECTOR will be ocated at X=Y=0 in the projection). If not present, (0,0,0) should be assumed. This translation is generally not necessary and not often used; the (X|Y)_AXIS_MINIMUM and (X|Y)_AXIS_MAXIMUM fields allow the mosaic to be located arbitrarily in the projection plane.
    is abstract            false
    is choice              false
-   subclass of            Vector_Cartesian_Position_Base
+   subclass of            USER
 
    Associations
 
-      local identifier      Vector_Cartesian_Position_Base
+      local identifier      geom.Vector_Cartesian_Position_Base
       minimum occurrences   1
       maximum occurrences   1
       reference type        parent_of
@@ -2282,11 +2337,11 @@ Parsed Input - Classes:
    description            The Vector_Projection_X_Axis class specifies a unit vector defining the X-axis for a given projection. For Orthographic, Orthorectified, and Vertical projections, this vector defines how the * axis in the mosaic is oriented in space. The X and Y axis vectors together define the rotation of the projection plane around the projection axis.
    is abstract            false
    is choice              false
-   subclass of            Vector_Cartesian_Unit_Base
+   subclass of            USER
 
    Associations
 
-      local identifier      Vector_Cartesian_Unit_Base
+      local identifier      geom.Vector_Cartesian_Unit
       minimum occurrences   1
       maximum occurrences   1
       reference type        parent_of
@@ -2295,11 +2350,11 @@ Parsed Input - Classes:
    description            The Vector_Projection_Y_Axis class specifies a unit vector defining the Y-axis for a given projection. For Orthographic, Orthorectified, and Vertical projections, this vector defines how the * axis in the mosaic is oriented in space. The X and Y axis vectors together define the rotation of the projection plane around the projection axis.
    is abstract            false
    is choice              false
-   subclass of            Vector_Cartesian_Unit_Base
+   subclass of            USER
 
    Associations
 
-      local identifier      Vector_Cartesian_Unit_Base
+      local identifier      geom.Vector_Cartesian_Unit
       minimum occurrences   1
       maximum occurrences   1
       reference type        parent_of
@@ -2308,11 +2363,11 @@ Parsed Input - Classes:
    description            The Vector_Projection_Z_Axis class specifies a unit vector defining the Z axis for a given projection. For Orthographic, Orthorectified, and Vertical projections, this vector defines the projection axis for the mosaic. All points along a line parallel to this axis are projected to the same spot in the projection plane. For the Cylindrical-Perspective projections, this defines the new axis of the circle around which the synthetic camera orbits (i.e. the normal to the circle), after the cameras have been rotated to correct for rover tilt. CAMERA_ROTATION_AXIS_VECTOR contains the axis before rotation; the difference in these two indicate the rotation amount.
    is abstract            false
    is choice              false
-   subclass of            Vector_Cartesian_Unit_Base
+   subclass of            USER
 
    Associations
 
-      local identifier      Vector_Cartesian_Unit_Base
+      local identifier      geom.Vector_Cartesian_Unit
       minimum occurrences   1
       maximum occurrences   1
       reference type        parent_of
@@ -2336,75 +2391,6 @@ Parsed Input - Classes:
       reference type        attribute_of
 
       local identifier      z_length
-      minimum occurrences   1
-      maximum occurrences   1
-      reference type        attribute_of
-
-   name                   Vector_Cartesian_Unit_Base
-   description            This is a generic unit vector in Cartesian space. The "x", "y", and "z" component have no units and are restricted to values between -1.0 and 1.0 inclusive. Further the length of the vector square root of the (sum of the squares of the components) must be 1.0. 
-   is abstract            false
-   is choice              false
-   subclass of            USER
-
-   Associations
-
-      local identifier      x_unit
-      minimum occurrences   1
-      maximum occurrences   1
-      reference type        attribute_of
-
-      local identifier      y_unit
-      minimum occurrences   1
-      maximum occurrences   1
-      reference type        attribute_of
-
-      local identifier      z_unit
-      minimum occurrences   1
-      maximum occurrences   1
-      reference type        attribute_of
-
-   name                   Vector_Cartesian_Position_Base
-   description            The Vector_Cartesian_Position_Base is a three dimensional, rectangular coordinates vector. Uses units of length. The included attributes are not sufficient to identify the endpoints of the vector. 
-   is abstract            false
-   is choice              false
-   subclass of            USER
-
-   Associations
-
-      local identifier      x_position
-      minimum occurrences   1
-      maximum occurrences   1
-      reference type        attribute_of
-
-      local identifier      y_position
-      minimum occurrences   1
-      maximum occurrences   1
-      reference type        attribute_of
-
-      local identifier      z_position
-      minimum occurrences   1
-      maximum occurrences   1
-      reference type        attribute_of
-
-   name                   Vector_Cartesian_No_Units
-   description            This is a generic vector in Cartesian space. The "x", "y", and "z" component have no units. 
-   is abstract            false
-   is choice              false
-   subclass of            USER
-
-   Associations
-
-      local identifier      x
-      minimum occurrences   1
-      maximum occurrences   1
-      reference type        attribute_of
-
-      local identifier      y
-      minimum occurrences   1
-      maximum occurrences   1
-      reference type        attribute_of
-
-      local identifier      z
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
