@@ -30,9 +30,9 @@
   <namespace_id>cart</namespace_id>
   <comment>
     Contains classes and attributes used to describe cartographic
-    products.  This information is largely adapted from the FGDC "Content
-    Standard for Digital Geospatial Metadata", with extensions (changes/
-    additions) to satisfy planetary requirements.
+    products.  This information is largely adapted from the Federal Geographic 
+	  Data Committee (FGDC) "Content Standard for Digital Geospatial Metadata", 
+	  with extensions (changes/additions) to satisfy planetary requirements.
     
     ## CHANGE LOG ##
     1.9.0.0
@@ -84,16 +84,30 @@
     - Removed "General Vertical Near-sided Projection" since it has functionally been replaced by "Point Perspective".
 	
     1.9.3.0
-  THare and PGeissler 20190307
+  THare and PGeissler 20190424
   -  'Planar_Coordinate_Information' is no longer mandated to better support vector files. It should be added for images
   -  'cart.latitude_resolution' and 'cart:longitude_resolution' to be optional, not needed for vector GIS labels
   -  Added Secondary_Spatial_Domain as an optional or alternative method to list IAU recommended or historically used 
      bounding coordinate section to support both positive East and positive West systems in the same label.
-  -  Fixed triaxial definition. renamed polar_radius to semi_minor_radius and semi_minor_radius to intermediate_radius. Removed
-     comments which stated these were odd and needed to be check. Indeed they were wrong. This is a fairly big update. 
+  -  Rename all three radius parameter names. These were renamed to clarify the parameter names since the name 
+     semi_major_radius is flawed and confusing as semi and radius both mean "half". This keyword should have
+     originally been named semi_major_axis (as used by the Federal Geospatial Data Consortium [FGDC]). To better
+     align with PDS version 3, we are moving these parameters names back to a_axis_radius, b_axis_radius, and 
+     c_axis_radius. Thus we are renaming: 
+   	 - semi_major_radius to a_axis_radius. 
+	   - semi_minor_radius to b_axis_radius
+	   - polar_radius to c_axis_radius
+	   To be clear, most mapping applications call a_axis_radius the semi_major_axis and c_axis_radius the semi_minor_radius.
+	   The b_axis_radius value is generally not seen in mapping applictions which typical do not support triaxial definitions
+	   for map projections. For most all cases, when a triaxial definition is defined, the IAU defines a best fit sphere. 
+	   see: https://astrogeology.usgs.gov/groups/IAU-WGCCRE.
+	   When a best-fit sphere or a body is already defined as a sphere, a single radius value will be listed across all three 
+	   parameters a_axis_radius, b_axis_radius, and c_axis_radius. For an ellipse, the a_axis_radius and b_axis_radius will be
+	   defined by a single radius value and a different (generally smaller) radius value for the c_axis_radius. Lastly, the
+     default units for the these parameters was set to meters "m".
   </comment>
   
-  <last_modification_date_time>2018-12-12T00:00:00Z</last_modification_date_time>
+  <last_modification_date_time>2019-04-24T00:00:00Z</last_modification_date_time>
   <DD_Attribute>
     <name>target_center_distance</name>
     <version_id>1.0</version_id>
@@ -452,58 +466,66 @@
   </DD_Attribute>
 
   <DD_Attribute>
-    <name>semi_major_radius</name>
+    <name>a_axis_radius</name>
     <version_id>1.0</version_id>
-    <local_identifier>semi_major_radius</local_identifier>
+    <local_identifier>a_axis_radius</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Elizabeth D. Rye</submitter_name>
-    <definition>The semi_major_axis attribute provides the radius of the
-      equatorial axis of the ellipsoid. In PDS3 this was called A_AXIS_RADIUS.</definition>
+    <submitter_name>Trent M. Hare</submitter_name>
+    <definition>The a_axis_radius attribute provides the radius of the equatorial
+      axis of the ellipsoid. The IAU calls this "Subplanetary equatorial radius" and
+	    mapping applications generally call this "semi_major_axis".
+    </definition>
+    <comment>In PDS3 this was named A_AXIS_RADIUS.</comment>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
       <minimum_value>0.0</minimum_value>
       <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+      <specified_unit_id>m</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
 
   <DD_Attribute>
-    <name>intermediate_radius</name>
+    <name>b_axis_radius</name>
     <version_id>1.0</version_id>
-    <local_identifier>intermediate_radius</local_identifier>
+    <local_identifier>b_axis_radius</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Elizabeth D. Rye</submitter_name>
-    <definition>The intermediate_radius attribute provides the value of the
+    <submitter_name>Trent M. Hare</submitter_name>
+    <definition>The b_axis_radius attribute provides the value of the
       intermediate axis of the ellipsoid that defines the approximate shape
-      of a target body.  The intermediate_radius axis is usually in the equatorial
-      plane.</definition>
-    <comment>In PDS3 this was called B_AXIS_RADIUS</comment>
+      of a target body. The b_axis_radius is usually in the equatorial
+      plane. The IAU calls this axis "along orbit equatorial radius". Mapping
+	    applications, which generally only define a sphere or an ellipse, do not
+	    support this radius parameter.</definition>
+    <comment>In PDS3 this was named B_AXIS_RADIUS.</comment>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
       <minimum_value>0.0</minimum_value>
       <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
-      <specified_unit_id>km</specified_unit_id>
+      <specified_unit_id>m</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
 
   <DD_Attribute>
-    <name>semi_minor_radius</name>
+    <name>c_axis_radius</name>
     <version_id>1.0</version_id>
-    <local_identifier>semi_minor_radius</local_identifier>
+    <local_identifier>c_axis_radius</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Elizabeth D. Rye</submitter_name>
-    <definition>The semi_minor_radius attribute provides the value of the
+    <submitter_name>Trent M. Hare</submitter_name>
+    <definition>The c_axis_radius attribute provides the value of the
       polar axis of the ellipsoid that defines the approximate shape of
-      a target body.  The semi_minor_radius is normal to the plane defined by
-      the semi-major and intermediate axes.</definition>
-    <comment>In PDS3 this was called C_AXIS_RADIUS</comment>
+      a target body.  The c_axis_radius is normal to the plane defined by
+      the a_axis_radius and b_axis_radius. The IAU calls this "polar radius".
+	  Mapping applications generally call this "semi_minor_axis"
+    </definition>
+    <comment>In PDS3 this was named C_AXIS_RADIUS.</comment>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
       <minimum_value>0.0</minimum_value>
       <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
-      <specified_unit_id>km</specified_unit_id>
+      <specified_unit_id>m</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
 
@@ -2434,11 +2456,11 @@
     <Terminological_Entry>
       <name>Secondary_Spatial_Domain</name>
       <definition>The Secondary_Spatial_Domain class optinally describes a second or alternative 
-      geographic areal domain of the data set which is recommended by the IAU or has historical use in previous
-      PDS archives. For example, if Spatial_Domain is defined using a POSITIVE_EAST longitude_direction, this
-      section can define to list the Bounding_Coordinates using POSITIVE_WEST coordinates and a different
-      latitude_type. This was implemented for the Europa Clipper mission to support both POSITIVE_EAST 
-      (within Spatial_Domain) and the historical use of POSITIVE_WEST for Europa (within Secondary_Spatial_Domain).
+        geographic areal domain of the data set which is recommended by the IAU or has historical use in previous
+        PDS archives. For example, if Spatial_Domain is defined using a POSITIVE_EAST longitude_direction, this
+        section can define to list the Bounding_Coordinates using POSITIVE_WEST coordinates and a different
+        latitude_type. This was implemented for the Europa Clipper mission to support both POSITIVE_EAST 
+        (within Spatial_Domain) and the historical use of POSITIVE_WEST for Europa (within Secondary_Spatial_Domain).
       </definition>
       <language>English</language>
       <preferred_flag>true</preferred_flag>
@@ -2585,19 +2607,19 @@
     -->
     
     <DD_Association>
-      <identifier_reference>semi_major_radius</identifier_reference>
+      <identifier_reference>semi_major_axis</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>intermediate_radius</identifier_reference>
+      <identifier_reference>semi_intermediate_axis</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>semi_minor_radius</identifier_reference>
+      <identifier_reference>semi_minor_axis</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
