@@ -3678,8 +3678,7 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <name>Coordinate_Space_Reference</name>
-      <namespace_id>geom.Coordinate_Space_Reference</namespace_id>
+      <identifier_reference>geom.Coordinate_Space_Reference</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -3707,8 +3706,7 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <name>Coordinate_Space_Reference</name>
-      <namespace_id>geom.Coordinate_Space_Reference</namespace_id>
+      <identifier_reference>geom.Coordinate_Space_Reference</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
