@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML product label for PDS4 V1.11.1.0  Fri May 03 16:24:33 PDT 2019 -->
-  <!-- Generated from the PDS4 Information Model V1.11.1.0 - System Build 9b -->
+  <!-- PDS4 XML product label for PDS4 V1.11.0.0  Wed May 22 19:27:11 MST 2019 -->
+  <!-- Generated from the PDS4 Information Model V1.11.1.0 - System Build 9a -->
   <!-- *** This PDS4 XML product label is an operational deliverable. *** -->
 <?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1B10.sch"
   schematypens="http://purl.oclc.org/dsdl/schematron"?>
@@ -17,7 +17,7 @@
         <product_class>Product_XML_Schema</product_class>
         <Modification_History>
             <Modification_Detail>
-                <modification_date>2019-05-03</modification_date>
+                <modification_date>2019-05-22</modification_date>
                 <version_id>1.0</version_id>
                 <description>This is the system generated PDS4 product label for PDS4 XML Schema and Schematron files.</description>
             </Modification_Detail>
@@ -26,9 +26,9 @@
     <File_Area_XML_Schema>
         <File>
             <file_name>PDS4_CART_1B10_1930.xsd</file_name>
-            <creation_date_time>2019-05-03T16:24:33</creation_date_time>
-            <file_size unit="byte">147506</file_size>
-            <records>2990</records>
+            <creation_date_time>2019-05-22T19:27:11</creation_date_time>
+            <file_size unit="byte">151932</file_size>
+            <records>3023</records>
         </File>
         <XML_Schema>
             <name>PDS4_CART_1B10_1930.xsd</name>
@@ -40,8 +40,8 @@
     <File_Area_XML_Schema>
         <File>
             <file_name>PDS4_CART_1B10_1930.sch</file_name>
-            <creation_date_time>2019-05-03T16:24:33</creation_date_time>
-            <file_size unit="byte">41098</file_size>
+            <creation_date_time>2019-05-22T19:27:11</creation_date_time>
+            <file_size unit="byte">41792</file_size>
             <records>693</records>
         </File>
         <XML_Schema>

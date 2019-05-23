@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:cart  Version:1.9.3.0 - Fri May 03 16:24:33 PDT 2019 -->
+  <!-- PDS4 XML/Schema for Name Space Id:cart  Version:1.9.3.0 - Wed May 22 19:27:11 MST 2019 -->
   <!-- Generated from the PDS4 Information Model Version 1.11.1.0 - System Build 9b -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
   <!--               Dictionary Stack                                            -->
   <!-- 1.11.1.0 - pds: - Common Dictionary - N/A                                 -->
-  <!-- 1.7.0.0 - geom: - Geometry Dictionary Full - /Users/decesare/Documents/De -->
-  <!-- 1.9.3.0 - cart: - Cartography - PDS4_CART_1B10_IngestLDD_CART_1930.xml    -->
+  <!-- 1.7.0.0 - geom: - Geometry Dictionary Full - ingest-PDS4_GEOM_1B10_1700. -->
+  <!-- 1.9.3.0 - cart: - Cartography - PDS4_CART_1B10_IngestLDD_CART_1930.xml   -->
   <!--                                                                           -->
   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
     targetNamespace="http://pds.nasa.gov/pds4/cart/v1"
@@ -78,32 +78,37 @@
     - Removed "General Vertical Near-sided Projection" since it has functionally been replaced by "Point Perspective".
 	
     1.9.3.0
-  THare and PGeissler 20190424
-  -  'Planar_Coordinate_Information' is no longer mandated to better support vector files. It should be added for images
-  -  'cart.latitude_resolution' and 'cart:longitude_resolution' to be optional, not needed for vector GIS labels
-  -  Added Secondary_Spatial_Domain as an optional or alternative method to list IAU recommended or historically used 
-     bounding coordinate section to support both positive East and positive West systems in the same label.
-  -  Rename all three radius parameter names. These were renamed to clarify the parameter names since the name 
-     semi_major_radius is flawed and confusing as semi and radius both mean "half". This keyword should have
-     originally been named semi_major_axis (as used by the Federal Geospatial Data Consortium [FGDC]). To better
-     align with PDS version 3, we are moving these parameters names back to a_axis_radius, b_axis_radius, and 
-     c_axis_radius. Thus we are renaming: 
-   	 - semi_major_radius to a_axis_radius. 
+    THare and PGeissler 20190424
+    -  'Planar_Coordinate_Information' is no longer mandated to better support vector files. It should be added for images
+    -  'cart.latitude_resolution' and 'cart:longitude_resolution' to be optional, not needed for vector GIS labels
+    -  Added Secondary_Spatial_Domain as an optional or alternative method to list IAU recommended or historically used 
+       bounding coordinate section to support both positive East and positive West systems in the same label.
+    -  Rename all three radius parameter names. These were renamed to clarify the parameter names since the name 
+       semi_major_radius is flawed and confusing as semi and radius both mean "half". This keyword should have
+       originally been named semi_major_axis (as used by the Federal Geospatial Data Consortium [FGDC]). To better
+       align with PDS version 3, we are moving these parameters names back to a_axis_radius, b_axis_radius, and 
+       c_axis_radius. Thus we are renaming: 
+   	   - semi_major_radius to a_axis_radius. 
 	   - semi_minor_radius to b_axis_radius
 	   - polar_radius to c_axis_radius
 	   To be clear, most mapping applications call a_axis_radius the semi_major_axis and c_axis_radius the semi_minor_radius.
-	   The b_axis_radius value is generally not seen in mapping applictions which typical do not support triaxial definitions
+	   The b_axis_radius value is generally not seen in mapping applications which typical do not support triaxial definitions
 	   for map projections. For most all cases, when a triaxial definition is defined, the IAU defines a best fit sphere. 
 	   see: https://astrogeology.usgs.gov/groups/IAU-WGCCRE.
 	   When a best-fit sphere or a body is already defined as a sphere, a single radius value will be listed across all three 
 	   parameters a_axis_radius, b_axis_radius, and c_axis_radius. For an ellipse, the a_axis_radius and b_axis_radius will be
 	   defined by a single radius value and a different (generally smaller) radius value for the c_axis_radius. Lastly, the
-     default units for the these parameters was set to meters "m".
+       default units for the these parameters was set to meters "m".
      
-     THare and CDeCesare 20190430
-     - Upgraded to v1B10 of IM.
-     - Undid changes from 1.9.1.1.
-     - Coordinate_Space_Reference is now re-used from the GEOM class as-is, so that CART doesn't need to re-implement it.
+    THare and CDeCesare 20190430
+    - Upgraded to v1B10 of IM.
+    - Undid changes from 1.9.1.1.
+    - Coordinate_Space_Reference is now re-used from the GEOM class as-is, so that CART doesn't need to re-implement it.
+
+    THare 20190520
+    - simple misspellings
+    - updated definitions for Surface_Model_Parameters and Surface_Model_Planar, surface_model_type, 
+	  Vector_Surface_Ground_Location, Vector_Surface_Normal
   
     </xs:documentation>
   </xs:annotation>
@@ -159,7 +164,7 @@
       <xs:documentation>The Coordinate_Representation class provides the
         method of encoding the position of a point by measuring its
         distance from perpendicular reference axes (the "coordinate
-        pair" and "row and column" methods. </xs:documentation>
+        pair" and "row and column" methods). </xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="pixel_resolution_x" type="cart:pixel_resolution_x" minOccurs="1" maxOccurs="1"> </xs:element>
@@ -235,7 +240,7 @@
   <xs:complexType name="Equirectangular">
     <xs:annotation>
       <xs:documentation>The Equirectangular class contains parameters
-        for the Equirectangular projection.</xs:documentation>
+        for the Equirectangular map projection. </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:restriction base="cart:Map_Projection_Base">
@@ -555,7 +560,7 @@
   <xs:complexType name="Oblique_Line_Azimuth">
     <xs:annotation>
       <xs:documentation>The Oblique_Line_Azimuth class defines the
-        method used to describe the line along which an oblique mercator
+        method used to describe the line along which an Oblique Mercator
         map projection is centered using the map projection origin and
         an azimuth.</xs:documentation>
     </xs:annotation>
@@ -568,7 +573,7 @@
   <xs:complexType name="Oblique_Line_Point">
     <xs:annotation>
       <xs:documentation>The Oblique_Line_Point class defines the method
-        used to describe the line along which an oblique mercator map
+        used to describe the line along which an Oblique Mercator map
         projection is centered using two points near the limits of the
         mapped region that define the center line. </xs:documentation>
     </xs:annotation>
@@ -749,7 +754,7 @@
   <xs:complexType name="Map_Projection_Base-Point_Perspective">
     <xs:annotation>
       <xs:documentation>The Point Perspective class contains parameters
-        for the Point Perpsective (fundemental definition)
+        for the Point Perspective (fundamental definition)
         projection.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -764,7 +769,7 @@
     <xs:complexType name="Point_Perspective">
       <xs:annotation>
         <xs:documentation>The Point Perspective class contains
-          parameters for the Point Perpsective (fundemental definition)
+          parameters for the Point Perspective (fundamental definition)
           projection.</xs:documentation>
       </xs:annotation>
       <xs:complexContent>
@@ -950,7 +955,12 @@
 
   <xs:complexType name="Surface_Model_Parameters">
     <xs:annotation>
-<xs:documentation>TBD</xs:documentation>
+      <xs:documentation>This class describes the surface model used by
+        the projection. For in-situ mosaics, the surface model describes
+        the surface upon which input images are projected in order to
+        create a unified point of view in a mosaic. To the extent the
+        surface model does not match the actual surface, parallax errors
+        typically occur at seams between images.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="surface_model_type" type="cart:surface_model_type" minOccurs="1" maxOccurs="1"> </xs:element>
@@ -964,7 +974,10 @@
 
   <xs:complexType name="Surface_Model_Planar">
     <xs:annotation>
-<xs:documentation>TBD</xs:documentation>
+      <xs:documentation>This is a specific type of surface model that
+        treats the surface as a flat plane, with a specified orientation
+        (Vector_Surface_Normal) and location
+        (Vector_Surface_Ground_Location). </xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="Vector_Surface_Normal" type="cart:Vector_Surface_Normal" minOccurs="1" maxOccurs="1"> </xs:element>
@@ -974,7 +987,9 @@
 
   <xs:complexType name="Surface_Model_Spherical">
     <xs:annotation>
-<xs:documentation>TBD</xs:documentation>
+      <xs:documentation>This is a specific type of surface model that
+        treats the surface as a sphere, with a specified center and
+        radius.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="sphere_radius" type="cart:sphere_radius" minOccurs="0" maxOccurs="1"> </xs:element>
@@ -1030,7 +1045,7 @@
   <xs:complexType name="Universal_Transverse_Mercator">
     <xs:annotation>
       <xs:documentation>The Universal_Transverse_Mercator class defines
-        a grid system based on the transverse mercator projection,
+        a grid system based on the Transverse Mercator projection,
         applied between latitudes 84 degrees north and 80 degrees south
         on the planet's surface.</xs:documentation>
     </xs:annotation>
@@ -1106,7 +1121,7 @@
         optional keyword specifies the point on the projection plane
         that serves as the origin of the projection (i.e. all points on
         a line through this point in the direction of
-        PROJECTION_Z_AXIS_VECTOR will be ocated at X=Y=0 in the
+        PROJECTION_Z_AXIS_VECTOR will be located at X=Y=0 in the
         projection). If not present, (0,0,0) should be assumed. This
         translation is generally not necessary and not often used; the
         (X|Y)_AXIS_MINIMUM and (X|Y)_AXIS_MAXIMUM fields allow the
@@ -1213,9 +1228,10 @@
   <xs:complexType name="Vector_Surface_Ground_Location">
     <xs:annotation>
       <xs:documentation>The Vector_Surface_Ground_Location class
-        specifies any point on the surface. This point is measured in
-        the coordinates specified by the Coordinate_Space reference in
-        the Surface_Model_Parameters class.</xs:documentation>
+        specifies any point on the surface model, in order to fix the
+        model in space. This point is measured in the coordinates
+        specified by the Coordinate_Space reference in the
+        Surface_Model_Parameters class.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:restriction base="cart:Vector_Cartesian_Position_Base">
@@ -1231,9 +1247,10 @@
   <xs:complexType name="Vector_Surface_Normal">
     <xs:annotation>
       <xs:documentation>The Vector_Surface_Normal class specifies a
-        vector normal to the planar surface. This vector is measured in
-        the coordinates specified by the Coordinate_Space reference in
-        the Surface_Model_Parameters class.</xs:documentation>
+        vector normal to the planar surface model. This vector is
+        measured in the coordinates specified by the Coordinate_Space
+        reference in the Surface_Model_Parameters
+        class.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:restriction base="cart:Vector_Cartesian_Unit_Base">
@@ -1620,7 +1637,7 @@
         planets with prograde (direct) rotations, positive longitude
         direction is to the west. For planets with retrograde rotations,
         positive longitude direction is to the east. Generally the
-        Positive West longitude_direction is used for planetographc
+        Positive West longitude_direction is used for planetographic
         systems and Positive East is used for planetocentric systems. If
         the data is defined with Spatial_Domain in a manner not
         recommended by the IAU, there is a optional
@@ -1677,7 +1694,7 @@
   <xs:simpleType name="look_direction">
     <xs:annotation>
       <xs:documentation>The value (RIGHT or LEFT) indicates the side of
-        the spacecraft groundtrack to which the antenna is pointed for
+        the spacecraft ground-track to which the antenna is pointed for
         data acquired within this file. The SAR images stored in theBIDR
         files are always acquired on only one side of the ground track
         for each Titan pass. This value also indicates from which side
@@ -2527,7 +2544,7 @@
 
   <xs:complexType name="stop_azimuth">
     <xs:annotation>
-      <xs:documentation>The stop_azimuth attribute pecifies the angular
+      <xs:documentation>The stop_azimuth attribute specifies the angular
         distance from a fixed reference position at which an image or
         observation stops. Azimuth is measured in a spherical coordinate
         system, in a plane normal to the principal axis. Azimuth values
@@ -2569,9 +2586,8 @@
     <xs:annotation>
       <xs:documentation>Specifies the type of surface used for the
         reprojection performed during the mosaicking process. Valid
-        values: Planar - refers to a flat planar model; Spherical refers
-        to a spherical model where the camera is at the center of the
-        sphere. </xs:documentation>
+        values: Planar - refers to a flat planar model; Spherical -
+        refers to a spherical model. </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
      <xs:minLength value="1"/>
@@ -2978,7 +2994,7 @@
     "dataDictionary": {
       "Title": "PDS4 Data Dictionary" ,
       "Version": "1.11.1.0" ,
-      "Date": "Fri May 03 16:24:33 PDT 2019" ,
+      "Date": "Wed May 22 19:27:11 MST 2019" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
       "PropertyMapDictionary": [
       ]
