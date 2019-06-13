@@ -3,7 +3,7 @@
     "dataDictionary": {
       "Title": "PDS4 Data Dictionary" ,
       "Version": "1.11.1.0" ,
-      "Date": "Wed May 22 19:27:11 MST 2019" ,
+      "Date": "Thu Jun 13 15:40:44 PDT 2019" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
       "classDictionary": [
         {
@@ -203,7 +203,7 @@
             "nameSpaceId": "cart" ,
             "steward": "img" ,
             "versionId": "1.0.0.0" ,
-            "description": "The Coordinate_Representation class provides the method of encoding the position of a point by measuring its distance from perpendicular reference axes (the \"coordinate pair\" and \"row and column\" methods. "
+            "description": "The Coordinate_Representation class provides the method of encoding the position of a point by measuring its distance from perpendicular reference axes (the \"coordinate pair\" and \"row and column\" methods). "
               , "associationList": [
              {"association": {
                 "identifier": "0001_NASA_PDS_1.cart.Coordinate_Representation.cart.pixel_resolution_x" ,
@@ -675,7 +675,7 @@
             "nameSpaceId": "cart" ,
             "steward": "img" ,
             "versionId": "1.0.0.0" ,
-            "description": "The Equirectangular class contains parameters for the Equirectangular projection."
+            "description": "The Equirectangular class contains parameters for the Equirectangular map projection. "
               , "associationList": [
              {"association": {
                 "identifier": "0001_NASA_PDS_1.cart.Map_Projection_Base.cart.straight_vertical_longitude_from_pole" ,
@@ -4260,7 +4260,7 @@
             "description": "The Vector_Projection_Origin class specifies the location of the origin of the projection. For Polar and Cylindrical projections, this is the XYZ point from which all the azimuth\/elevation rays emanate. For the Cylindrical-Perspective projection, this defines the center of the circle around which the synthetic camera orbits. For Orthographic, Orthorectified, and Vertical projections, this optional keyword specifies the point on the projection plane that serves as the origin of the projection (i.e. all points on a line through this point in the direction of PROJECTION_Z_AXIS_VECTOR will be located at X=Y=0 in the projection). If not present, (0,0,0) should be assumed. This translation is generally not necessary and not often used; the (X|Y)_AXIS_MINIMUM and (X|Y)_AXIS_MAXIMUM fields allow the mosaic to be located arbitrarily in the projection plane."
               , "associationList": [
              {"association": {
-                "identifier": "0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Base.geom.x_position" ,
+                "identifier": "0001_NASA_PDS_1.cart.Vector_Cartesian_Position_Base.cart.x_position" ,
                 "title": "null" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
@@ -4270,12 +4270,12 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1010" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Base.geom.x_position"
+                  "0001_NASA_PDS_1.cart.Vector_Cartesian_Position_Base.cart.x_position"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Base.geom.y_position" ,
+                "identifier": "0001_NASA_PDS_1.cart.Vector_Cartesian_Position_Base.cart.y_position" ,
                 "title": "null" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
@@ -4285,12 +4285,12 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1020" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Base.geom.y_position"
+                  "0001_NASA_PDS_1.cart.Vector_Cartesian_Position_Base.cart.y_position"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Base.geom.z_position" ,
+                "identifier": "0001_NASA_PDS_1.cart.Vector_Cartesian_Position_Base.cart.z_position" ,
                 "title": "null" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
@@ -4300,7 +4300,7 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1030" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Base.geom.z_position"
+                  "0001_NASA_PDS_1.cart.Vector_Cartesian_Position_Base.cart.z_position"
                  ]
               }
             }
@@ -4552,7 +4552,7 @@
             "description": "The Vector_Sphere_Center class specifies the center of the sphere. This point is measured in the coordinates specified by the Coordinate_Space reference in the Surface_Model_Parameters class."
               , "associationList": [
              {"association": {
-                "identifier": "0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Base.geom.x_position" ,
+                "identifier": "0001_NASA_PDS_1.cart.Vector_Cartesian_Position_Base.cart.x_position" ,
                 "title": "null" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
@@ -4562,12 +4562,12 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1010" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Base.geom.x_position"
+                  "0001_NASA_PDS_1.cart.Vector_Cartesian_Position_Base.cart.x_position"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Base.geom.y_position" ,
+                "identifier": "0001_NASA_PDS_1.cart.Vector_Cartesian_Position_Base.cart.y_position" ,
                 "title": "null" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
@@ -4577,12 +4577,12 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1020" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Base.geom.y_position"
+                  "0001_NASA_PDS_1.cart.Vector_Cartesian_Position_Base.cart.y_position"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Base.geom.z_position" ,
+                "identifier": "0001_NASA_PDS_1.cart.Vector_Cartesian_Position_Base.cart.z_position" ,
                 "title": "null" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
@@ -4592,7 +4592,7 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1030" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Base.geom.z_position"
+                  "0001_NASA_PDS_1.cart.Vector_Cartesian_Position_Base.cart.z_position"
                  ]
               }
             }
@@ -4625,7 +4625,7 @@
             "description": "The Vector_Surface_Ground_Location class specifies any point on the surface model, in order to fix the model in space. This point is measured in the coordinates specified by the Coordinate_Space reference in the Surface_Model_Parameters class."
               , "associationList": [
              {"association": {
-                "identifier": "0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Base.geom.x_position" ,
+                "identifier": "0001_NASA_PDS_1.cart.Vector_Cartesian_Position_Base.cart.x_position" ,
                 "title": "null" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
@@ -4635,12 +4635,12 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1010" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Base.geom.x_position"
+                  "0001_NASA_PDS_1.cart.Vector_Cartesian_Position_Base.cart.x_position"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Base.geom.y_position" ,
+                "identifier": "0001_NASA_PDS_1.cart.Vector_Cartesian_Position_Base.cart.y_position" ,
                 "title": "null" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
@@ -4650,12 +4650,12 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1020" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Base.geom.y_position"
+                  "0001_NASA_PDS_1.cart.Vector_Cartesian_Position_Base.cart.y_position"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Base.geom.z_position" ,
+                "identifier": "0001_NASA_PDS_1.cart.Vector_Cartesian_Position_Base.cart.z_position" ,
                 "title": "null" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
@@ -4665,7 +4665,7 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1030" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Base.geom.z_position"
+                  "0001_NASA_PDS_1.cart.Vector_Cartesian_Position_Base.cart.z_position"
                  ]
               }
             }
@@ -5094,7 +5094,7 @@
             "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Real" ,
             "minimumCharacters": "Unbounded" ,
             "maximumCharacters": "Unbounded" ,
-            "minimumValue": "1" ,
+            "minimumValue": "-1.7976931348623157e308" ,
             "maximumValue": "1.7976931348623157e308" ,
             "pattern": "null" ,
             "unitOfMeasure": "null" ,
@@ -5118,7 +5118,7 @@
             "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Real" ,
             "minimumCharacters": "Unbounded" ,
             "maximumCharacters": "Unbounded" ,
-            "minimumValue": "1" ,
+            "minimumValue": "-1.7976931348623157e308" ,
             "maximumValue": "1.7976931348623157e308" ,
             "pattern": "null" ,
             "unitOfMeasure": "null" ,
@@ -5351,7 +5351,7 @@
             "nameSpaceId": "cart" ,
             "steward": "img" ,
             "versionId": "1.11" ,
-            "description": "The stop_azimuth attribute pecifies the angular distance from a fixed reference position at which an image or observation stops. Azimuth is measured in a spherical coordinate system, in a plane normal to the principal axis. Azimuth values increase according to the right hand rule relative to the positive direction of the principal axis of the spherical coordinate system. For lander map projections, this attribute specifies the azimuth of the right edge of the output map. Applies to Cylindrical and Cylindrical-Perspective lander map projections only." ,
+            "description": "The stop_azimuth attribute specifies the angular distance from a fixed reference position at which an image or observation stops. Azimuth is measured in a spherical coordinate system, in a plane normal to the principal axis. Azimuth values increase according to the right hand rule relative to the positive direction of the principal axis of the spherical coordinate system. For lander map projections, this attribute specifies the azimuth of the right edge of the output map. Applies to Cylindrical and Cylindrical-Perspective lander map projections only." ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "dataType": "ASCII_Real" ,
@@ -5615,7 +5615,7 @@
             "nameSpaceId": "cart" ,
             "steward": "img" ,
             "versionId": "1.11" ,
-            "description": "The stop_azimuth attribute pecifies the angular distance from a fixed reference position at which an image or observation stops. Azimuth is measured in a spherical coordinate system, in a plane normal to the principal axis. Azimuth values increase according to the right hand rule relative to the positive direction of the principal axis of the spherical coordinate system. For lander map projections, this attribute specifies the azimuth of the right edge of the output map. Applies to Cylindrical and Cylindrical-Perspective lander map projections only." ,
+            "description": "The stop_azimuth attribute specifies the angular distance from a fixed reference position at which an image or observation stops. Azimuth is measured in a spherical coordinate system, in a plane normal to the principal axis. Azimuth values increase according to the right hand rule relative to the positive direction of the principal axis of the spherical coordinate system. For lander map projections, this attribute specifies the azimuth of the right edge of the output map. Applies to Cylindrical and Cylindrical-Perspective lander map projections only." ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "dataType": "ASCII_Real" ,
@@ -5954,7 +5954,7 @@
             "nameSpaceId": "cart" ,
             "steward": "img" ,
             "versionId": "1.11" ,
-            "description": "The longitude_direction attribute identifies the direction of longitude (e.g. POSITIVE_EAST or POSITIVE_WEST) for a planet. The IAU definition for direction of positive longitude should be adopted: http:\/\/astrogeology.usgs.gov\/groups\/IAU-WGCCRE. Typically, for planets with prograde (direct) rotations, positive longitude direction is to the west. For planets with retrograde rotations, positive longitude direction is to the east. Generally the Positive West longitude_direction is used for planetographc systems and Positive East is used for planetocentric systems. If the data is defined with Spatial_Domain in a manner not recommended by the IAU, there is a optional Secondary_Spatial_Domain section to define a second set of bounding coordinates." ,
+            "description": "The longitude_direction attribute identifies the direction of longitude (e.g. POSITIVE_EAST or POSITIVE_WEST) for a planet. The IAU definition for direction of positive longitude should be adopted: http:\/\/astrogeology.usgs.gov\/groups\/IAU-WGCCRE. Typically, for planets with prograde (direct) rotations, positive longitude direction is to the west. For planets with retrograde rotations, positive longitude direction is to the east. Generally the Positive West longitude_direction is used for planetographic systems and Positive East is used for planetocentric systems. If the data is defined with Spatial_Domain in a manner not recommended by the IAU, there is a optional Secondary_Spatial_Domain section to define a second set of bounding coordinates." ,
             "isNillable": "false" ,
             "isEnumerated": "true" ,
             "dataType": "ASCII_Short_String_Collapsed" ,
@@ -6289,7 +6289,7 @@
              }
             , {"PermissibleValue": {
                   "value": "Equidistant Conic" ,
-                  "valueMeaning": "Projection is mathematically based on a cone that is tangent at one parallel or conceptually secant at two paralle ls. North or South Pole is represented by an arc. "
+                  "valueMeaning": "Projection is mathematically based on a cone that is tangent at one parallel or conceptually secant at two parallels. North or South Pole is represented by an arc. "
                 }
              }
             , {"PermissibleValue": {
@@ -6324,7 +6324,7 @@
              }
             , {"PermissibleValue": {
                   "value": "Oblique Cylindrical" ,
-                  "valueMeaning": "This projection works by moving the north pole of the simple cylindrical projection. The pole latitude and longitude are the location of the new north pole, and the rotation is the equivalent to the center longitude in simple cylindrical. Because of the supported rotation parameter, this projection is pretty uniquely used in the planetary community and it is impleneted in USGS's Integrated Software for Imagers and Spectrometers v2\/3 (ISIS3) suite."
+                  "valueMeaning": "This projection works by moving the north pole of the simple cylindrical projection. The pole latitude and longitude are the location of the new north pole, and the rotation is the equivalent to the center longitude in simple cylindrical. Because of the supported rotation parameter, this projection is pretty uniquely used in the planetary community and it is implemented in USGS's Integrated Software for Imagers and Spectrometers v2\/3 (ISIS3) suite."
                 }
              }
             , {"PermissibleValue": {
@@ -6364,7 +6364,7 @@
              }
             , {"PermissibleValue": {
                   "value": "Space Oblique Mercator" ,
-                  "valueMeaning": "The Space Oblique Mercator (SOM) projection visually differs from the Oblique Mercator projection in that the central line (the groundtrack of the orbiting satellite) is slightly curved, rather than straight."
+                  "valueMeaning": "The Space Oblique Mercator (SOM) projection visually differs from the Oblique Mercator projection in that the central line (the ground-track of the orbiting satellite) is slightly curved, rather than straight."
                 }
              }
             , {"PermissibleValue": {
@@ -6374,7 +6374,7 @@
              }
             , {"PermissibleValue": {
                   "value": "Transverse Mercator" ,
-                  "valueMeaning": "Projection is mathematically based on a cylinder tangent to a meridian. Shape is true only within any small area. Areal enlargment increases away from the tangent meridian. Reasonably accurate projection within a 15 degree band along the line of tangency. Cannot be edge-joined in an east-west direction if each map has its own central meridian."
+                  "valueMeaning": "Projection is mathematically based on a cylinder tangent to a meridian. Shape is true only within any small area. Areal enlargement increases away from the tangent meridian. Reasonably accurate projection within a 15 degree band along the line of tangency. Cannot be edge-joined in an east-west direction if each map has its own central meridian."
                 }
              }
             , {"PermissibleValue": {
@@ -6694,7 +6694,7 @@
             "nameSpaceId": "cart" ,
             "steward": "img" ,
             "versionId": "1.11" ,
-            "description": "The value (RIGHT or LEFT) indicates the side of the spacecraft groundtrack to which the antenna is pointed for data acquired within this file. The SAR images stored in theBIDR files are always acquired on only one side of the ground track for each Titan pass. This value also indicates from which side the SAR image is illuminated. If the spacecraft images to the left of its ground track (LOOK_DIRECTION=LEFT), the image will be illuminated from the (viewer's) left side, and, conversely, if the spacecraft looks to the right, the illumination will come from the right in the image file. The direction of illumination is critical to interpretation of features in the image. " ,
+            "description": "The value (RIGHT or LEFT) indicates the side of the spacecraft ground-track to which the antenna is pointed for data acquired within this file. The SAR images stored in theBIDR files are always acquired on only one side of the ground track for each Titan pass. This value also indicates from which side the SAR image is illuminated. If the spacecraft images to the left of its ground track (LOOK_DIRECTION=LEFT), the image will be illuminated from the (viewer's) left side, and, conversely, if the spacecraft looks to the right, the illumination will come from the right in the image file. The direction of illumination is critical to interpretation of features in the image. " ,
             "isNillable": "false" ,
             "isEnumerated": "true" ,
             "dataType": "ASCII_Short_String_Collapsed" ,
@@ -6711,7 +6711,7 @@
           , "PermissibleValueList": [
               {"PermissibleValue": {
                   "value": "LEFT" ,
-                  "valueMeaning": "Antenna pointed left of spacecraft groundtrack"
+                  "valueMeaning": "Antenna pointed left of spacecraft ground-track"
                 }
              }
             , {"PermissibleValue": {
@@ -7498,7 +7498,7 @@
             "nameSpaceId": "cart" ,
             "steward": "img" ,
             "versionId": "1.11" ,
-            "description": "The stop_azimuth attribute pecifies the angular distance from a fixed reference position at which an image or observation stops. Azimuth is measured in a spherical coordinate system, in a plane normal to the principal axis. Azimuth values increase according to the right hand rule relative to the positive direction of the principal axis of the spherical coordinate system. For lander map projections, this attribute specifies the azimuth of the right edge of the output map. Applies to Cylindrical and Cylindrical-Perspective lander map projections only." ,
+            "description": "The stop_azimuth attribute specifies the angular distance from a fixed reference position at which an image or observation stops. Azimuth is measured in a spherical coordinate system, in a plane normal to the principal axis. Azimuth values increase according to the right hand rule relative to the positive direction of the principal axis of the spherical coordinate system. For lander map projections, this attribute specifies the azimuth of the right edge of the output map. Applies to Cylindrical and Cylindrical-Perspective lander map projections only." ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "dataType": "ASCII_Real" ,
@@ -7529,7 +7529,7 @@
             "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Real" ,
             "minimumCharacters": "Unbounded" ,
             "maximumCharacters": "Unbounded" ,
-            "minimumValue": "1" ,
+            "minimumValue": "-1.7976931348623157e308" ,
             "maximumValue": "1.7976931348623157e308" ,
             "pattern": "null" ,
             "unitOfMeasure": "null" ,
@@ -7553,7 +7553,7 @@
             "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Real" ,
             "minimumCharacters": "Unbounded" ,
             "maximumCharacters": "Unbounded" ,
-            "minimumValue": "1" ,
+            "minimumValue": "-1.7976931348623157e308" ,
             "maximumValue": "1.7976931348623157e308" ,
             "pattern": "null" ,
             "unitOfMeasure": "null" ,
@@ -7577,7 +7577,7 @@
             "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Real" ,
             "minimumCharacters": "Unbounded" ,
             "maximumCharacters": "Unbounded" ,
-            "minimumValue": "1" ,
+            "minimumValue": "-1.7976931348623157e308" ,
             "maximumValue": "1.7976931348623157e308" ,
             "pattern": "null" ,
             "unitOfMeasure": "null" ,
@@ -7601,7 +7601,7 @@
             "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Real" ,
             "minimumCharacters": "Unbounded" ,
             "maximumCharacters": "Unbounded" ,
-            "minimumValue": "1" ,
+            "minimumValue": "-1.7976931348623157e308" ,
             "maximumValue": "1.7976931348623157e308" ,
             "pattern": "null" ,
             "unitOfMeasure": "null" ,
@@ -7635,7 +7635,7 @@
           , "PermissibleValueList": [
               {"PermissibleValue": {
                   "value": "Coordinate Pair" ,
-                  "valueMeaning": "A method of encoding the position of a point by measuring its distance from perpendicular reference axes (Casrtesian plane). The coordinate pair (x,y), generally in meters, is defined such that x is determined by its horizontal distance from the origin and y is determined by its vertical distance from the origin. "
+                  "valueMeaning": "A method of encoding the position of a point by measuring its distance from perpendicular reference axes (Cartesian plane). The coordinate pair (x,y), generally in meters, is defined such that x is determined by its horizontal distance from the origin and y is determined by its vertical distance from the origin. "
                 }
              }
             , {"PermissibleValue": {
@@ -7645,7 +7645,7 @@
              }
             , {"PermissibleValue": {
                   "value": "Row and Column" ,
-                  "valueMeaning": "A method of encoding the position of a point by measuring its distance from perpendicular reference axes (Casrtesian plane). The coordinate pair (row,column), generally in pixels, is defined such that the row is determined by its horizontal distance from the origin and column is determined by its vertical distance from the origin."
+                  "valueMeaning": "A method of encoding the position of a point by measuring its distance from perpendicular reference axes (Cartesian plane). The coordinate pair (row,column), generally in pixels, is defined such that the row is determined by its horizontal distance from the origin and column is determined by its vertical distance from the origin."
                 }
              }
            ]
@@ -7911,7 +7911,7 @@
             "nameSpaceId": "cart" ,
             "steward": "img" ,
             "versionId": "1.11" ,
-            "description": "The longitude_direction attribute identifies the direction of longitude (e.g. POSITIVE_EAST or POSITIVE_WEST) for a planet. The IAU definition for direction of positive longitude should be adopted: http:\/\/astrogeology.usgs.gov\/groups\/IAU-WGCCRE. Typically, for planets with prograde (direct) rotations, positive longitude direction is to the west. For planets with retrograde rotations, positive longitude direction is to the east. Generally the Positive West longitude_direction is used for planetographc systems and Positive East is used for planetocentric systems. If the data is defined with Spatial_Domain in a manner not recommended by the IAU, there is a optional Secondary_Spatial_Domain section to define a second set of bounding coordinates." ,
+            "description": "The longitude_direction attribute identifies the direction of longitude (e.g. POSITIVE_EAST or POSITIVE_WEST) for a planet. The IAU definition for direction of positive longitude should be adopted: http:\/\/astrogeology.usgs.gov\/groups\/IAU-WGCCRE. Typically, for planets with prograde (direct) rotations, positive longitude direction is to the west. For planets with retrograde rotations, positive longitude direction is to the east. Generally the Positive West longitude_direction is used for planetographic systems and Positive East is used for planetocentric systems. If the data is defined with Spatial_Domain in a manner not recommended by the IAU, there is a optional Secondary_Spatial_Domain section to define a second set of bounding coordinates." ,
             "isNillable": "false" ,
             "isEnumerated": "true" ,
             "dataType": "ASCII_Short_String_Collapsed" ,
@@ -7995,7 +7995,7 @@
             "nameSpaceId": "cart" ,
             "steward": "img" ,
             "versionId": "1.11" ,
-            "description": "Specifies the type of surface used for the reprojection performed during the mosaicking process. Valid values: Planar - refers to a flat planar model; Spherical refers to a spherical model where the camera is at the center of the sphere. " ,
+            "description": "Specifies the type of surface used for the reprojection performed during the mosaicking process. Valid values: Planar - refers to a flat planar model; Spherical - refers to a spherical model. " ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "dataType": "ASCII_Short_String_Collapsed" ,
@@ -8012,7 +8012,7 @@
           , "PermissibleValueList": [
               {"PermissibleValue": {
                   "value": "Spherical" ,
-                  "valueMeaning": "spherical surface model where the camera is at the center of the sphere"
+                  "valueMeaning": "spherical surface model"
                 }
              }
             , {"PermissibleValue": {

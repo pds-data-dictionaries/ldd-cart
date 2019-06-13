@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:cart  Version:1.9.3.0 - Wed May 22 19:27:11 MST 2019 -->
+  <!-- PDS4 XML/Schema for Name Space Id:cart  Version:1.9.3.1 - Thu Jun 13 15:40:44 PDT 2019 -->
   <!-- Generated from the PDS4 Information Model Version 1.11.1.0 - System Build 9b -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
   <!--               Dictionary Stack                                            -->
   <!-- 1.11.1.0 - pds: - Common Dictionary - N/A                                 -->
-  <!-- 1.7.0.0 - geom: - Geometry Dictionary Full - ingest-PDS4_GEOM_1B10_1700. -->
-  <!-- 1.9.3.0 - cart: - Cartography - PDS4_CART_1B10_IngestLDD_CART_1930.xml   -->
+  <!-- 1.7.0.0 - geom: - Geometry Dictionary Full - /Users/decesare/Documents/De -->
+  <!-- 1.9.3.1 - cart: - Cartography - PDS4_CART_1B10_IngestLDD_CART_1931.xml    -->
   <!--                                                                           -->
   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
     targetNamespace="http://pds.nasa.gov/pds4/cart/v1"
@@ -15,7 +15,7 @@
     xmlns:geom="http://pds.nasa.gov/pds4/geom/v1"
     elementFormDefault="qualified"
     attributeFormDefault="unqualified"
-    version="1.9.3.0">
+    version="1.9.3.1">
  
     <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1B10.xsd"/>
     <xs:import namespace="http://pds.nasa.gov/pds4/geom/v1" schemaLocation="https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1B10_1700.xsd"/>
@@ -58,7 +58,7 @@
             requirements of target_center_distance and nadir point (longitude_of_central_meridian, latitude_of_projection_origin) 
             will define the basic PP projection. Additional parameters for a more 'complex' PP (line/sample sub-spacecraft offsets,
             optical offsets, focal parameters, image array segment definitions, etc, will need to be added as needed.
- 
+
     1.9.1.1
     - CDeCesare 20181116
     - Removed definitions of classes which are already defined by GEOM dictionary: Vector_Cartesian_Unit_Base, Vector_Cartesian_Position_Base, Vector_Cartesian_No_Units
@@ -109,6 +109,10 @@
     - simple misspellings
     - updated definitions for Surface_Model_Parameters and Surface_Model_Planar, surface_model_type, 
 	  Vector_Surface_Ground_Location, Vector_Surface_Normal
+
+    THare and CDeCesare 20190613
+    - updated line and sample attributes to allow for non-negate values under Camera_Model_Offset, 
+      Pixel_Position_Nadir_Polar, Pixel_Position_Origin  
   
     </xs:documentation>
   </xs:annotation>
@@ -1576,7 +1580,7 @@
         the image.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Real">
-     <xs:minInclusive value="1"/>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
      <xs:maxInclusive value="1.7976931348623157e308"/>
 	   </xs:restriction>
   </xs:simpleType>
@@ -2336,7 +2340,7 @@
         number.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Real">
-     <xs:minInclusive value="1"/>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
      <xs:maxInclusive value="1.7976931348623157e308"/>
 	   </xs:restriction>
   </xs:simpleType>
@@ -2994,7 +2998,7 @@
     "dataDictionary": {
       "Title": "PDS4 Data Dictionary" ,
       "Version": "1.11.1.0" ,
-      "Date": "Wed May 22 19:27:11 MST 2019" ,
+      "Date": "Thu Jun 13 15:40:44 PDT 2019" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
       "PropertyMapDictionary": [
       ]

@@ -2,12 +2,12 @@ PDS4 Local Data Dictionary Processing Report
 
 Configuration:
    LDDTool Version        0.2.2.5
-   LDD Version Id:        1.9.3.0
+   LDD Version Id:        1.9.3.1
    LDD Label Version Id:  1.0
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Wed May 22 19:27:11 MST 2019
+   Time                   Thu Jun 13 15:40:44 PDT 2019
    Common Schema          [PDS4_PDS_1B10.xsd]
    Common Schematron      [PDS4_PDS_1B10.sch]
    IM Version Id:         1.11.1.0
@@ -20,7 +20,7 @@ Configuration:
    IM Document Spec       [DMDocument.pins]
 
 Parameters:
-   Input File             [PDS4_CART_1B10_IngestLDD_CART_1930.xml]
+   Input File             [PDS4_CART_1B10_IngestLDD_CART_1931.xml]
    PDS Processing         true
    LDD Processing         true
    Discipline LDD         true
@@ -34,7 +34,7 @@ Summary:
    Associations           237
    Error messages         0
    Warning messages       2
-   Information messages   77
+   Information messages   75
 
 Detailed validation messages
    WARNING  Attribute: <pixel_resolution> - This local attribute was not used in an Association.
@@ -101,8 +101,6 @@ Detailed validation messages
    INFO     Attribute: <sphere_intersection_count> - The default minimum value provided by the attribute's data type is being overridden with 1
    INFO     Attribute: <projection_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 1
    INFO     Attribute: <projection_elevation_line> - The default minimum value provided by the attribute's data type is being overridden with 1
-   INFO     Attribute: <line> - The default minimum value provided by the attribute's data type is being overridden with 1
-   INFO     Attribute: <sample> - The default minimum value provided by the attribute's data type is being overridden with 1
    INFO     Attribute: <projection_axis_offset> - The default minimum value provided by the attribute's data type is being overridden with 1
    INFO     Attribute: <reference_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90.0
    INFO     Attribute: <reference_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90.0
@@ -119,7 +117,7 @@ Detailed validation messages
 
 Parsed Input - Header:
    LDD Name               Cartography
-   LDD Version            1.9.3.0
+   LDD Version            1.9.3.1
    Full Name              Trent Hare
    Steward                img
    Namespace Id           cart
@@ -159,7 +157,7 @@ Parsed Input - Header:
             requirements of target_center_distance and nadir point (longitude_of_central_meridian, latitude_of_projection_origin) 
             will define the basic PP projection. Additional parameters for a more 'complex' PP (line/sample sub-spacecraft offsets,
             optical offsets, focal parameters, image array segment definitions, etc, will need to be added as needed.
- 
+
     1.9.1.1
     - CDeCesare 20181116
     - Removed definitions of classes which are already defined by GEOM dictionary: Vector_Cartesian_Unit_Base, Vector_Cartesian_Position_Base, Vector_Cartesian_No_Units
@@ -210,6 +208,10 @@ Parsed Input - Header:
     - simple misspellings
     - updated definitions for Surface_Model_Parameters and Surface_Model_Planar, surface_model_type, 
 	  Vector_Surface_Ground_Location, Vector_Surface_Normal
+
+    THare and CDeCesare 20190613
+    - updated line and sample attributes to allow for non-negate values under Camera_Model_Offset, 
+      Pixel_Position_Nadir_Polar, Pixel_Position_Origin  
   
    Last Modification Time 2019-05-20T00:00:00Z
    PDS4 Merge Flag        false
@@ -770,13 +772,11 @@ Parsed Input - Attributes:
    version                1.11
    value data type        ASCII_Real
    description            The line attribute specifies the line number in the image.
-   minimum value          1
 
    name                   sample
    version                1.11
    value data type        ASCII_Real
    description            The sample attribute specifies the sample number.
-   minimum value          1
 
    name                   projection_axis_offset
    version                1.11
