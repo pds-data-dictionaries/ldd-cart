@@ -64,7 +64,7 @@
             requirements of target_center_distance and nadir point (longitude_of_central_meridian, latitude_of_projection_origin) 
             will define the basic PP projection. Additional parameters for a more 'complex' PP (line/sample sub-spacecraft offsets,
             optical offsets, focal parameters, image array segment definitions, etc, will need to be added as needed.
- 
+
     1.9.1.1
     - CDeCesare 20181116
     - Removed definitions of classes which are already defined by GEOM dictionary: Vector_Cartesian_Unit_Base, Vector_Cartesian_Position_Base, Vector_Cartesian_No_Units
@@ -115,6 +115,10 @@
     - simple misspellings
     - updated definitions for Surface_Model_Parameters and Surface_Model_Planar, surface_model_type, 
 	  Vector_Surface_Ground_Location, Vector_Surface_Normal
+
+    THare nd CDeCesare 20190613
+    - updated <name>line</name> and <name>sample</name> to allow for non-negate values under Camera_Model_Offset, 
+      Pixel_Position_Nadir_Polar, Pixel_Position_Origin  
   </comment>
   
   <last_modification_date_time>2019-05-20T00:00:00Z</last_modification_date_time>
@@ -147,7 +151,7 @@
       The upperleft_corner_x and upperleft_corner_y attributes provide the projection x and y values, 
       in meters, relative to the map projection origin, at sample 0.5 and line 0.5 (upper left corner 
       of pixel 1,1 within image array).
-                 
+
       (0.5,0.5) - upper left corner (edge) of pixel 1,1
       /
       #---+---+-> I    where # is X,Y location in meters,
@@ -2119,7 +2123,6 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
-      <minimum_value>1</minimum_value>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -2133,7 +2136,6 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
-      <minimum_value>1</minimum_value>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
