@@ -35,6 +35,8 @@ The files here can be used as a starting point for creating a new local data dic
 ## Versions (Source)
 
 - [1.B.0.0](src/1.B.0.0)
+- [1.B.1.0](src/1.B.1.0)
+- [1.C.0.0](src/1.C.0.0)
 
 ## Builds
 
@@ -44,7 +46,6 @@ The build process insures compatiblity of the LDD with the core information mode
 This LDD has been built for the following versions of the PDS4 information model.
 
 - [1.B.0.0](build/1.B.0.0)
-
 	
 ## Notes
 

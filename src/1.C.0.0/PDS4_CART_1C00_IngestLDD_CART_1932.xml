@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://pds.jpl.nasa.gov/pds4/pds/v1/PDS4_PDS_1B10.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1B10.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.jpl.nasa.gov/pds4/pds/v1/PDS4_PDS_1C00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1B10_1700.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
 <!-- PDS4 Local Data Dictionary Ingest File -->
 <!-- Generated 2014-02-13T18:31:07Z by eduxbury using mk_img_ldd.pl 
@@ -22,9 +22,9 @@
     xmlns:cart="http://pds.nasa.gov/pds4/cart/v1"
     xmlns:geom="http://pds.nasa.gov/pds4/geom/v1"
     xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"    
-    xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1B10.xsd    http://pds.nasa.gov/pds4/geom/v1 https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1B10_1700.xsd">
+    xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1C00.xsd    http://pds.nasa.gov/pds4/geom/v1 https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1B10_1700.xsd">
   <name>Cartography</name>
-  <ldd_version_id>1.9.3.1</ldd_version_id>
+  <ldd_version_id>1.9.3.2</ldd_version_id>
   <full_name>Trent Hare</full_name>
   <steward_id>img</steward_id>
   <namespace_id>cart</namespace_id>
@@ -120,6 +120,13 @@
     THare and CDeCesare 20190613
     - updated line and sample attributes to allow for non-negate values under Camera_Model_Offset, 
       Pixel_Position_Nadir_Polar, Pixel_Position_Origin  
+
+   1.9.3.2
+   THare 20190909
+   - add Ring section, Map_Projection_Rings, for ring map projections to meet conversion of Cassini PDS3 data to PDS4.
+   - Rings intially falls under Horizontal_Coordinate_System_Definition using Local (not tied to a surface) and
+     enforces the need for a defined Geodetic_Model (body name, radius values, latitude type, and longitude direction).
+   - Updated spatial_domain_or_lander_check to spatial_domain_or_lander_or_rings_check rule.
   </comment>
   
   <last_modification_date_time>2019-05-20T00:00:00Z</last_modification_date_time>
@@ -1694,7 +1701,40 @@
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
-  
+
+  <!-- Map_Projection_Rings attributes START -->
+  <DD_Attribute>
+    <name>rings_map_projection_name</name>
+    <version_id>1.0</version_id>
+    <local_identifier>rings_map_projection_name</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Trent Hare</submitter_name>
+    <definition>The rings_map_projection_name attribute provides the name of the
+      map projection used for rings data.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+      <DD_Permissible_Value>
+        <value>Ring_Polar</value>
+        <value_meaning>The representation of ring data requires a unique projection. The rings are
+          modeled by a thin disk centered on the body and in its equatorial plane. For Saturn,
+          the thin disk is centered on Saturn and in its equatorial plane, with an outer
+          radius of 500,000km. If the field of view falls partially or completely beyond this
+          limit or if it intersects the primary body before intersecting the rings, the data
+          will not be included.
+          
+          Plotted coordinates are derived as follows. If A is the location of the intersection of
+          the CIRS field of view with the body's equatorial plane, the X coordinate is the distance
+          of A from the center of the body (e.g. Saturn), and the Y coordinate is the local time on
+          on the body at the intersection with the body's surface of the line between A and the body's
+          center. Local time is expressed in fractional hours, from 0.0 (at midnight) to 12.0 
+          (at noon), to 24.0 (at midnight).
+        </value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
   <!-- Base Vector attributes -->
   <DD_Attribute>
     <name>x_unit</name>
@@ -2377,7 +2417,183 @@
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>  
- 
+
+  <!-- Map_Projection_Lander attributes START, THare Sep. 2019 -->
+  <!-- definitions (not many) from Cassini Composite Infrared Spectrometer (CIRS) SIS,
+        Version 1.1, Relevant to PDS v3.2, December 22, 2015. filename CUBESIS.PDF -->
+  <DD_Attribute>
+    <name>data_count</name>
+    <version_id>1.0</version_id>
+    <local_identifier>data_count</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Trent Hare</submitter_name>
+    <definition>Number of measurements combined to create the cube.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_NonNegative_Integer</value_data_type>
+      <minimum_value>1</minimum_value>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>radial_scale</name>
+    <version_id>1.0</version_id>
+    <local_identifier>radial_scale</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Trent Hare</submitter_name>
+    <definition>Grid spacing. Unit is km/pixel.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+      <specified_unit_id>km</specified_unit_id>
+    </DD_Value_Domain>
+  </DD_Attribute>  
+  <DD_Attribute>
+    <name>local_time_scale</name>
+    <version_id>1.0</version_id>
+    <local_identifier>local_time_scale</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Trent Hare</submitter_name>
+    <definition>undefined. Unit is hours/pixel.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>  
+  <DD_Attribute>
+    <name>sample_name</name>
+    <version_id>1.0</version_id>
+    <local_identifier>sample_name</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Trent Hare</submitter_name>
+    <definition>defines the name of the axis for the sample direction</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Text_Preserved</value_data_type>
+      <!-- string in the form of  "RADIUS <KM>" -->
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>line_name</name>
+    <version_id>1.0</version_id>
+    <local_identifier>line_name</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Trent Hare</submitter_name>
+    <definition>defines the name of the axis for the line direction</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Text_Preserved</value_data_type>
+      <!-- string in the form of  "LOCAL TIME <HOURS>" -->
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>first_sample_center</name>
+    <version_id>1.0</version_id>
+    <local_identifier>first_sample_center</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Trent Hare</submitter_name>
+    <definition>undefined</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Pixels</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>first_line_center</name>
+    <version_id>1.0</version_id>
+    <local_identifier>first_line_center</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Trent Hare</submitter_name>
+    <definition>undefined</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Pixels</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>last_sample_center</name>
+    <version_id>1.0</version_id>
+    <local_identifier>last_sample_center</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Trent Hare</submitter_name>
+    <definition>undefined</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Pixels</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>last_line_center</name>
+    <version_id>1.0</version_id>
+    <local_identifier>last_line_center</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Trent Hare</submitter_name>
+    <definition>undefined</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Pixels</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>min_footprint_sample</name>
+    <version_id>1.0</version_id>
+    <local_identifier>min_footprint_sample</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Trent Hare</submitter_name>
+    <definition>undefined</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Pixels</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>min_footprint_line</name>
+    <version_id>1.0</version_id>
+    <local_identifier>min_footprint_line</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Trent Hare</submitter_name>
+    <definition>undefined</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Pixels</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>max_footprint_sample</name>
+    <version_id>1.0</version_id>
+    <local_identifier>max_footprint_sample</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Trent Hare</submitter_name>
+    <definition>undefined</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Pixels</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>max_footprint_line</name>
+    <version_id>1.0</version_id>
+    <local_identifier>max_footprint_line</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Trent Hare</submitter_name>
+    <definition>undefined</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Pixels</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <!-- Map_Projection_Lander attributes END -->
+
   <DD_Class>
     <name>Cartography</name>
     <version_id>1.0</version_id>
@@ -2718,7 +2934,7 @@
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>    
+    </DD_Association>
     <Terminological_Entry>
       <name>Planar</name>
       <definition>The Planar class provides the quantities of distances, or distances and angles, which define 
@@ -2751,6 +2967,12 @@
     </DD_Association>
     <DD_Association>
       <identifier_reference>Map_Projection_Lander</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>Map_Projection_Rings</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -4800,7 +5022,7 @@
     </DD_Association>
   </DD_Class>
 -->
-  
+
   <DD_Class>
     <name>Oblique_Line_Point_Group</name>
     <version_id>1.0</version_id>
@@ -4830,6 +5052,128 @@
       <preferred_flag>true</preferred_flag>
     </Terminological_Entry>
   </DD_Class>
+
+  <!-- added: 20190909 (THare) -->  
+  <DD_Class>
+    <name>Map_Projection_Rings</name>
+    <version_id>1.0</version_id>
+    <local_identifier>Map_Projection_Rings</local_identifier>
+    <submitter_name>Trent Hare</submitter_name>
+    <definition>The Map_Projection_Rings class provides the systematic representation 
+      of all or part of the rings of a planet on a plane.</definition>
+    <DD_Association>
+      <identifier_reference>rings_map_projection_name</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>XSChoice#</identifier_reference>
+      <identifier_reference>Ring_Polar</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+
+  <DD_Class>
+    <name>Ring_Polar</name>
+    <version_id>1.0</version_id>
+    <local_identifier>Ring_Polar</local_identifier>
+    <submitter_name>Trent Hare</submitter_name>
+    <definition>The representation of ring data requires a unique projection. The rings are
+          modeled by a thin disk centered on the body and in its equatorial plane. For Saturn,
+          the thin disk is centered on Saturn and in its equatorial plane, with an outer
+          radius of 500,000km. If the field of view falls partially or completely beyond this
+          limit or if it intersects the primary body before intersecting the rings, the data
+          will not be included.
+          
+          Plotted coordinates are derived as follows. If A is the location of the intersection of
+          the CIRS field of view with the body's equatorial plane, the X coordinate is the distance
+          of A from the center of the body (e.g. Saturn), and the Y coordinate is the local time on
+          on the body at the intersection with the body's surface of the line between A and the body's
+          center. Local time is expressed in fractional hours, from 0.0 (at midnight) to 12.0 
+          (at noon), to 24.0 (at midnight).
+    </definition>
+    <DD_Association>
+      <identifier_reference>data_count</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>  
+    <DD_Association>
+      <identifier_reference>radial_scale</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>local_time_scale</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>sample_name</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>line_name</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>first_sample_center</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>first_line_center</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>last_sample_center</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>last_line_center</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>min_footprint_sample</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>min_footprint_line</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>max_footprint_sample</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+  <DD_Association>
+      <identifier_reference>max_footprint_line</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+  </DD_Association>
 
   <!-- added/enabled: 20150331 (rj) -->  
   <DD_Class>
@@ -4893,18 +5237,20 @@
     <rule_context>//cart:Horizontal_Coordinate_System_Definition/cart:Local</rule_context>
     <DD_Rule_Statement>
       <rule_type>Assert</rule_type>
-      <rule_test>exists(cart:local_georeference_information) or exists(cart:Map_Projection_Lander)</rule_test>
-      <rule_message>In cart:Local, cart:local_georeference_information or cart:Map_Projection_Lander must be specified</rule_message>
+      <rule_test>exists(cart:local_georeference_information) or exists(cart:Map_Projection_Lander) or exists(cart:Map_Projection_Rings)</rule_test>
+      <rule_message>In cart:Local, cart:local_georeference_information or cart:Map_Projection_Lander or cart:Map_Projection_Rings must be specified</rule_message>
     </DD_Rule_Statement>
   </DD_Rule>
   
   <DD_Rule>
-    <local_identifier>spatial_domain_or_lander_check</local_identifier>
+    <local_identifier>spatial_domain_or_lander_or_rings_check</local_identifier>
     <rule_context>//cart:Cartography</rule_context>
     <DD_Rule_Statement>
       <rule_type>Assert</rule_type>
-      <rule_test>exists(cart:Spatial_Domain) or exists(cart:Spatial_Reference_Information/cart:Horizontal_Coordinate_System_Definition/cart:Local/cart:Map_Projection_Lander)</rule_test>
-      <rule_message>cart:Spatial_Domain or cart:Map_Projection_Lander must be specified</rule_message>
+      <rule_test>exists(cart:Spatial_Domain) or 
+                 exists(cart:Spatial_Reference_Information/cart:Horizontal_Coordinate_System_Definition/cart:Local/cart:Map_Projection_Lander) or
+                 exists(cart:Spatial_Reference_Information/cart:Horizontal_Coordinate_System_Definition/cart:Map_Projection_Rings)</rule_test>
+      <rule_message>cart:Spatial_Domain or cart:Map_Projection_Lander or cart:Map_Projection_Rings must be specified</rule_message>
     </DD_Rule_Statement>
   </DD_Rule>
   
