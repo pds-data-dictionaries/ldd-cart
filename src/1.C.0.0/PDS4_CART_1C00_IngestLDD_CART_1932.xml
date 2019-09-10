@@ -148,7 +148,7 @@
     </DD_Value_Domain>
   </DD_Attribute>
 
-  <!-- added/enabled: 20150331 (rj) -->   
+  <!-- added/enabled: 20150331 (rj) -->
   <DD_Attribute>
     <name>upperleft_corner_x</name>
     <version_id>1.0</version_id>
@@ -2247,7 +2247,7 @@
       <unit_of_measure_type>Units_of_Angle</unit_of_measure_type>
       <specified_unit_id>deg</specified_unit_id>
     </DD_Value_Domain>
-  </DD_Attribute>  
+  </DD_Attribute>
   
   <DD_Attribute>
     <name>map_projection_rotation</name>
@@ -2264,7 +2264,7 @@
       <unit_of_measure_type>Units_of_Angle</unit_of_measure_type>
       <specified_unit_id>deg</specified_unit_id>
     </DD_Value_Domain>
-  </DD_Attribute>  
+  </DD_Attribute>
   <!-- SAMPLE/LINE_PROJECTION_OFFSET maps to upperleft_corner_x/y in meters -->
   
   <DD_Attribute>
@@ -2366,7 +2366,7 @@
       <value_data_type>ASCII_Text_Preserved</value_data_type>
       <!-- string of form "(-0.40371897,0.91470143,0.01822869)", three real numbers in range of -1.0 to +1.0 -->
     </DD_Value_Domain>
-  </DD_Attribute>  
+  </DD_Attribute>
   
   <DD_Attribute>
     <name>oblique_proj_z_axis_vector</name>
@@ -2387,7 +2387,7 @@
       <value_data_type>ASCII_Text_Preserved</value_data_type>
       <!-- string of form "(-0.40371897,0.91470143,0.01822869)", three real numbers in range of -1.0 to +1.0 -->
     </DD_Value_Domain>
-  </DD_Attribute>  
+  </DD_Attribute>
   
   <DD_Attribute>
     <name>look_direction</name>
@@ -2415,7 +2415,7 @@
         <value_meaning>Antenna pointed right of spacecraft groundtrack</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
-  </DD_Attribute>  
+  </DD_Attribute>
 
   <!-- Map_Projection_Rings attributes START, THare Sep. 2019 -->
   <!-- definitions (not many) from Cassini Composite Infrared Spectrometer (CIRS) SIS,
@@ -2431,7 +2431,7 @@
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_NonNegative_Integer</value_data_type>
       <minimum_value>1</minimum_value>
-      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+      <unit_of_measure_type>Units_​of_​None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -2440,11 +2440,12 @@
     <local_identifier>angular_scale</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
-    <definition>Grid spacing. Unit is milliradians/pixel.</definition>
+    <definition>Grid spacing. Unit is radians/pixel.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
-      <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+      <unit_of_measure_type>Units_​of_​Pixel_​Resolution_​Angular</unit_of_measure_type>
+      <specified_unit_id>radian/pixel</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -2457,7 +2458,8 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
-      <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+      <unit_of_measure_type>Units_​of_​Pixel_​Resolution_​Linear</unit_of_measure_type>
+      <specified_unit_id>km/pixel</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -2470,7 +2472,7 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
-      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+      <unit_of_measure_type>Units_​of_​None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -2509,7 +2511,7 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
-      <unit_of_measure_type>Units_of_Pixels</unit_of_measure_type>
+      <unit_of_measure_type>Units_​of_​None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -2522,7 +2524,7 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
-      <unit_of_measure_type>Units_of_Pixels</unit_of_measure_type>
+      <unit_of_measure_type>Units_​of_​None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -2535,7 +2537,7 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
-      <unit_of_measure_type>Units_of_Pixels</unit_of_measure_type>
+      <unit_of_measure_type>Units_​of_​None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -2548,7 +2550,7 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
-      <unit_of_measure_type>Units_of_Pixels</unit_of_measure_type>
+      <unit_of_measure_type>Units_​of_​None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -2561,7 +2563,7 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
-      <unit_of_measure_type>Units_of_Pixels</unit_of_measure_type>
+      <unit_of_measure_type>Units_​of_​None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -2574,7 +2576,7 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
-      <unit_of_measure_type>Units_of_Pixels</unit_of_measure_type>
+      <unit_of_measure_type>Units_​of_​None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -2587,7 +2589,7 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
-      <unit_of_measure_type>Units_of_Pixels</unit_of_measure_type>
+      <unit_of_measure_type>Units_​of_​None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -2600,7 +2602,7 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
-      <unit_of_measure_type>Units_of_Pixels</unit_of_measure_type>
+      <unit_of_measure_type>Units_​of_​None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
   <!-- Map_Projection_Rings attributes END -->
@@ -3171,7 +3173,7 @@
     </DD_Association>
     -->
 
-    <!-- 20151021: Per C.Isbell - added 'cart.pixel_resolution_x' -->  
+    <!-- 20151021: Per C.Isbell - added 'cart.pixel_resolution_x' -->
     <!-- 20151022: Per C.Isbell - Both pixel_resolution_x|y and pixel_scale_x|y pairs must be present within a cartographic label -->
     <!-- 20190222: Per T.Hare - pixel_resolution_x|y and pixel_scale_x|y pairs are only madatory if Planar_Coordinate_Information is present-->
     <DD_Association>
@@ -3181,7 +3183,7 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
 
-    <!-- 20151021: Per C.Isbell - added 'cart.pixel_resolution_y' -->  
+    <!-- 20151021: Per C.Isbell - added 'cart.pixel_resolution_y' -->
     <DD_Association>
       <identifier_reference>pixel_resolution_y</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -3189,20 +3191,20 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
 
-    <!-- 20151021: Per C.Isbell - added 'cart.pixel_scale_x' -->  
+    <!-- 20151021: Per C.Isbell - added 'cart.pixel_scale_x' -->
     <DD_Association>
       <identifier_reference>pixel_scale_x</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
-    <!-- 20151021: Per C.Isbell - added 'cart.pixel_scale_y' -->  
+    <!-- 20151021: Per C.Isbell - added 'cart.pixel_scale_y' -->
     <DD_Association>
       <identifier_reference>pixel_scale_y</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>    
+    </DD_Association>
   </DD_Class>
   
   <DD_Class>
@@ -3894,7 +3896,7 @@
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>  
+    </DD_Association>
     <DD_Association>
       <identifier_reference>pixel_scale_y</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -3951,7 +3953,7 @@
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>  
+    </DD_Association>
     <DD_Association>
       <identifier_reference>pixel_scale_y</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -4017,7 +4019,7 @@
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>  
+    </DD_Association>
     <DD_Association>
       <identifier_reference>pixel_scale_y</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -4143,7 +4145,7 @@
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>  
+    </DD_Association>
     <DD_Association>
       <identifier_reference>pixel_resolution_y</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -4202,7 +4204,7 @@
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>  
+    </DD_Association>
     <DD_Association>
       <identifier_reference>pixel_resolution_y</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -4280,7 +4282,7 @@
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>  
+    </DD_Association>
     <DD_Association>
       <identifier_reference>pixel_resolution_y</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -4408,7 +4410,7 @@
       <reference_type>parent_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>  
+    </DD_Association>
   </DD_Class>
   
   <DD_Class>
@@ -4424,7 +4426,7 @@
       <reference_type>parent_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>  
+    </DD_Association>
   </DD_Class>
   
   <DD_Class>
@@ -4440,7 +4442,7 @@
       <reference_type>parent_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>  
+    </DD_Association>
   </DD_Class>
   
   <DD_Class>
@@ -4459,7 +4461,7 @@
       <reference_type>parent_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>  
+    </DD_Association>
   </DD_Class>
   
   <DD_Class>
@@ -4473,19 +4475,19 @@
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>  
+    </DD_Association>
     <DD_Association>
       <identifier_reference>y_length</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>  
+    </DD_Association>
     <DD_Association>
       <identifier_reference>z_length</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>  
+    </DD_Association>
   </DD_Class>
   
   <DD_Class>
@@ -4680,7 +4682,7 @@
     </Terminological_Entry>
   </DD_Class>
 
-  <!-- Rings projected added: 20190909 (THare) -->  
+  <!-- Rings projected added: 20190909 (THare) -->
   <DD_Class>
     <name>Map_Projection_Rings</name>
     <version_id>1.0</version_id>
@@ -4727,7 +4729,7 @@
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>  
+    </DD_Association>
     <DD_Association>
       <identifier_reference>radial_scale</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -4808,7 +4810,7 @@
       <maximum_occurrences>1</maximum_occurrences>
   </DD_Association>
 
-  <!-- added/enabled: 20150331 (rj) -->  
+  <!-- added/enabled: 20150331 (rj) -->
   <DD_Class>
     <name>Geo_Transformation</name>
     <version_id>1.0</version_id>
@@ -4848,15 +4850,15 @@
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>    
-  </DD_Class> 
+    </DD_Association>
+  </DD_Class>
   <!-- end -->
 
   <!--                         -->
   <!--  Start Schematron Rules -->
-  <!--                         -->  
+  <!--                         -->
   
-  <!-- 20151021: Per C.Isbell - added rule to ensure: -->  
+  <!-- 20151021: Per C.Isbell - added rule to ensure: -->
   <!--   either pixel_resolution_x|y pair or pixel_scale_x|y pair must be present -->
   <!--   within a cartographic label. And, both can be present -->
 
