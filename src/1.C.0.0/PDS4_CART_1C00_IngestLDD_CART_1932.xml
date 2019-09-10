@@ -2440,7 +2440,7 @@
     <local_identifier>angular_scale</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
-    <definition>Grid spacing. Unit is radians/pixel.</definition>
+    <definition>Grid spacing. Unit is radian/pixel.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
