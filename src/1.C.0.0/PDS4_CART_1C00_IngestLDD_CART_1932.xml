@@ -591,6 +591,59 @@
     </DD_Value_Domain>
   </DD_Attribute>
 
+  <DD_Attribute>
+    <name>coordinate_system_type</name>
+    <version_id>1.0</version_id>
+    <local_identifier>coordinate_system_type</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Trent Hare</submitter_name>
+    <definition>There are three basic types of coordinate systems: body-fixed rotating,
+      body-fixed non-rotating, and inertial. A body-fixed coordinate system is one associated
+      with the body (e.g., a planet or satellite). The body-fixed system is centered on the
+      body and rotates with the body (unless it is a non-rotating type), whereas an inertial
+      coordinate system is fixed at some point in space.
+
+      Currently, the PDS has specifically defined two types of body-fixed rotating
+      coordinate systems: planetocentric and planetographic. However, the set of related data 
+      elements are modeled such that definitions for other body-fixed rotating coordinate systems,
+      body-fixed non-rotating and inertial coordinate systems can be added as the need arises.
+      Contact a PDS data engineer for assistance in defining a specific coordinate system.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <minimum_characters>8</minimum_characters>
+      <maximum_characters>25</maximum_characters>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+      <DD_Permissible_Value>
+        <value>Body-fixed Rotating</value>
+        <value_meaning>The PDS has specifically defined two types of body-fixed rotating
+          coordinate systems: planetocentric and planetographic.</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Body-fixed Non-rotating</value>
+        <value_meaning>The body-fixed system is centered on the body and it is non-rotating</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Inertial</value>
+        <value_meaning>an inertial coordinate system is fixed at some point in space.</value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>coordinate_system_name</name>
+    <version_id>1.0</version_id>
+    <local_identifier>coordinate_system_name</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Trent Hare</submitter_name>
+    <definition>The given name of the used coordinate system. e.g. "MEAN EARTH/POLAR AXIS OF DE421"</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Text_Preserved</value_data_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
   <!-- 20151021: Per C.Isbell - added 'cart.latitude_type' -->
   <DD_Attribute>
     <name>latitude_type</name>
@@ -2481,11 +2534,10 @@
     <local_identifier>sample_name</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
-    <definition>Coordinate name for the sample axis.</definition>
+    <definition>Coordinate name for the sample axis. e.g. "RADIUS <KM>"</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Text_Preserved</value_data_type>
-      <!-- string in the form of  "RADIUS <KM>" -->
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -2494,11 +2546,10 @@
     <local_identifier>line_name</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
-    <definition>Coordinate name for the line axis.</definition>
+    <definition>Coordinate name for the line axis. e.g. "LOCAL TIME <HOURS>"</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Text_Preserved</value_data_type>
-      <!-- string in the form of  "LOCAL TIME <HOURS>" -->
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -2820,7 +2871,6 @@
     <local_identifier>Geodetic_Model</local_identifier>
     <submitter_name>Elizabeth D. Rye</submitter_name>
     <definition>The Geodetic_Model class provides parameters describing the shape of the planet.</definition>
-   
     <!-- 20151021: Per C.Isbell - added 'cart.latitude_type' -->
     <DD_Association>
       <identifier_reference>latitude_type</identifier_reference>
@@ -2828,7 +2878,6 @@
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
-    
     <!-- 20151021: Per C.Isbell - removed 'cart.horizontal_datum_name'
     <DD_Association>
       <identifier_reference>cart.horizontal_datum_name</identifier_reference>
@@ -2852,7 +2901,6 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     -->
-    
     <DD_Association>
       <identifier_reference>a_axis_radius</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -2875,6 +2923,18 @@
       <identifier_reference>longitude_direction</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>coordinate_system_type</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>coordinate_system_name</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <Terminological_Entry>
