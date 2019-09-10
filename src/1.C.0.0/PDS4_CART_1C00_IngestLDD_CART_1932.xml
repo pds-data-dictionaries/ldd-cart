@@ -1643,7 +1643,7 @@
     <local_identifier>lander_map_projection_name</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Jordan Padams</submitter_name>
-    <definition>The map_projection_name attribute provides the name of the
+    <definition>The lander_map_projection_name attribute provides the name of the
       map projection.</definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
@@ -1701,8 +1701,8 @@
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
-
-  <!-- Map_Projection_Rings attributes START -->
+  
+  <!-- Map_Projection_Rings, added THare 20190909 -->
   <DD_Attribute>
     <name>rings_map_projection_name</name>
     <version_id>1.0</version_id>
@@ -1734,7 +1734,7 @@
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
-
+  
   <!-- Base Vector attributes -->
   <DD_Attribute>
     <name>x_unit</name>
@@ -2224,7 +2224,7 @@
       <specified_unit_id>deg</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
-
+  
   <DD_Attribute>
     <name>reference_longitude</name>
     <version_id>1.0</version_id>
@@ -2248,7 +2248,7 @@
       <specified_unit_id>deg</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>  
-
+  
   <DD_Attribute>
     <name>map_projection_rotation</name>
     <version_id>1.0</version_id>
@@ -2265,7 +2265,6 @@
       <specified_unit_id>deg</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>  
-
   <!-- SAMPLE/LINE_PROJECTION_OFFSET maps to upperleft_corner_x/y in meters -->
   
   <DD_Attribute>
@@ -2418,7 +2417,7 @@
     </DD_Value_Domain>
   </DD_Attribute>  
 
-  <!-- Map_Projection_Lander attributes START, THare Sep. 2019 -->
+  <!-- Map_Projection_Rings attributes START, THare Sep. 2019 -->
   <!-- definitions (not many) from Cassini Composite Infrared Spectrometer (CIRS) SIS,
         Version 1.1, Relevant to PDS v3.2, December 22, 2015. filename CUBESIS.PDF -->
   <DD_Attribute>
@@ -2436,6 +2435,19 @@
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
+    <name>angular_scale</name>
+    <version_id>1.0</version_id>
+    <local_identifier>angular_scale</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Trent Hare</submitter_name>
+    <definition>Grid spacing. Unit is milliradians/pixel.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
     <name>radial_scale</name>
     <version_id>1.0</version_id>
     <local_identifier>radial_scale</local_identifier>
@@ -2446,29 +2458,28 @@
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
       <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
-      <specified_unit_id>km</specified_unit_id>
     </DD_Value_Domain>
-  </DD_Attribute>  
+  </DD_Attribute>
   <DD_Attribute>
     <name>local_time_scale</name>
     <version_id>1.0</version_id>
     <local_identifier>local_time_scale</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
-    <definition>undefined. Unit is hours/pixel.</definition>
+    <definition>Grid spacing. Unit is local hours/pixel.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
-  </DD_Attribute>  
+  </DD_Attribute>
   <DD_Attribute>
     <name>sample_name</name>
     <version_id>1.0</version_id>
     <local_identifier>sample_name</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
-    <definition>defines the name of the axis for the sample direction</definition>
+    <definition>Coordinate name for the sample axis.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Text_Preserved</value_data_type>
@@ -2481,7 +2492,7 @@
     <local_identifier>line_name</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
-    <definition>defines the name of the axis for the line direction</definition>
+    <definition>Coordinate name for the line axis.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Text_Preserved</value_data_type>
@@ -2494,7 +2505,7 @@
     <local_identifier>first_sample_center</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
-    <definition>undefined</definition>
+    <definition>Sample coordinate at the center of the first sample element.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -2507,7 +2518,7 @@
     <local_identifier>first_line_center</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
-    <definition>undefined</definition>
+    <definition>Line coordinate at the center of the first line element.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -2520,7 +2531,7 @@
     <local_identifier>last_sample_center</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
-    <definition>undefined</definition>
+    <definition>Sample coordinate at the center of the last sample element.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -2533,7 +2544,7 @@
     <local_identifier>last_line_center</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
-    <definition>undefined</definition>
+    <definition>Line coordinate at the center of the last line element.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -2546,7 +2557,7 @@
     <local_identifier>min_footprint_sample</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
-    <definition>undefined</definition>
+    <definition>Minimum size of footprints along the sample axis.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -2559,7 +2570,7 @@
     <local_identifier>min_footprint_line</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
-    <definition>undefined</definition>
+    <definition>Minimum size of footprints along the line axis.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -2572,7 +2583,7 @@
     <local_identifier>max_footprint_sample</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
-    <definition>undefined</definition>
+    <definition>Maximum size of footprints along the sample axis.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -2585,15 +2596,15 @@
     <local_identifier>max_footprint_line</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
-    <definition>undefined</definition>
+    <definition>Maximum size of footprints along the line axis.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
       <unit_of_measure_type>Units_of_Pixels</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
-  <!-- Map_Projection_Lander attributes END -->
-
+  <!-- Map_Projection_Rings attributes END -->
+  
   <DD_Class>
     <name>Cartography</name>
     <version_id>1.0</version_id>
@@ -2636,7 +2647,7 @@
       <preferred_flag>true</preferred_flag>
     </Terminological_Entry>
   </DD_Class>
-
+  
   <DD_Class>
     <name>Spatial_Domain</name>
     <version_id>1.0</version_id>
@@ -2659,7 +2670,7 @@
       <preferred_flag>true</preferred_flag>
     </Terminological_Entry>
   </DD_Class>
-
+  
   <DD_Class>
     <name>Secondary_Spatial_Domain</name>
     <version_id>1.0</version_id>
@@ -2700,7 +2711,7 @@
       <preferred_flag>true</preferred_flag>
     </Terminological_Entry>
   </DD_Class>
-
+  
   <DD_Class>
     <name>Spatial_Reference_Information</name>
     <version_id>1.0</version_id>
@@ -2718,20 +2729,20 @@
     </DD_Association>
     <Terminological_Entry>
       <name>Spatial_Reference_Information</name>
-      <definition>The Spatial_Reference_Information class provides a description of the reference frame for, and the means 
+      <definition>The Spatial_Reference_Information class provides a description of the reference frame for, and the means
         to encode, coordinates in a data set.
       </definition>
       <language>English</language>
       <preferred_flag>true</preferred_flag>
     </Terminological_Entry>
   </DD_Class>
-
+  
   <DD_Class>
     <name>Bounding_Coordinates</name>
     <version_id>1.0</version_id>
     <local_identifier>Bounding_Coordinates</local_identifier>
     <submitter_name>Elizabeth D. Rye</submitter_name>
-    <definition>The Bounding_Coordinates class defines the limits of coverage of a set of data expressed by latitude 
+    <definition>The Bounding_Coordinates class defines the limits of coverage of a set of data expressed by latitude
       and longitude values in the order western-most, eastern-most, northern-most, and southern-most.
     </definition>
     <DD_Association>
@@ -2773,8 +2784,8 @@
     <version_id>1.0</version_id>
     <local_identifier>Horizontal_Coordinate_System_Definition</local_identifier>
     <submitter_name>Elizabeth D. Rye</submitter_name>
-    <definition>The Horizontal_Coordinate_System_Definition class provides the reference frame or system from which 
-      linear or angular quantities are measured and assigned to the position that a point occupies.
+    <definition>The Horizontal_Coordinate_System_Definition class provides the reference frame or system from
+      which linear or angular quantities are measured and assigned to the position that a point occupies.
     </definition>
     <DD_Association>
       <identifier_reference>XSChoice#</identifier_reference>
@@ -2800,14 +2811,14 @@
       <preferred_flag>true</preferred_flag>
     </Terminological_Entry>
   </DD_Class>
-
+  
   <DD_Class>
     <name>Geodetic_Model</name>
     <version_id>1.0</version_id>
     <local_identifier>Geodetic_Model</local_identifier>
     <submitter_name>Elizabeth D. Rye</submitter_name>
     <definition>The Geodetic_Model class provides parameters describing the shape of the planet.</definition>
-
+   
     <!-- 20151021: Per C.Isbell - added 'cart.latitude_type' -->
     <DD_Association>
       <identifier_reference>latitude_type</identifier_reference>
@@ -2871,7 +2882,7 @@
       <preferred_flag>true</preferred_flag>
     </Terminological_Entry>
   </DD_Class>
-
+  
   <!-- 20190222: Per THare - changed 'cart.latitude_resolution' and 'cart:longitude_resolution' to be optional, not needed for vector GIS labels -->
   <DD_Class>
     <name>Geographic</name>
@@ -2903,7 +2914,7 @@
       <preferred_flag>true</preferred_flag>
     </Terminological_Entry>
   </DD_Class>
-
+  
   <DD_Class>
     <name>Planar</name>
     <version_id>1.0</version_id>
@@ -2944,7 +2955,7 @@
       <preferred_flag>true</preferred_flag>
     </Terminological_Entry>
   </DD_Class>
-
+  
   <DD_Class>
     <name>Local</name>
     <version_id>1.0</version_id>
@@ -2991,7 +3002,7 @@
       <preferred_flag>true</preferred_flag>
     </Terminological_Entry>
   </DD_Class>
-
+  
   <DD_Class>
     <name>Planar_Coordinate_Information</name>
     <version_id>1.0</version_id>
@@ -3015,7 +3026,7 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
-
+  
   <DD_Class>
     <name>Map_Projection</name>
     <version_id>1.0</version_id>
@@ -3054,7 +3065,7 @@
       <preferred_flag>true</preferred_flag>
     </Terminological_Entry>
   </DD_Class>
-
+  
   <DD_Class>
     <name>Grid_Coordinate_System</name>
     <version_id>1.0</version_id>
@@ -3099,7 +3110,7 @@
       <preferred_flag>true</preferred_flag>
     </Terminological_Entry>
   </DD_Class>
-
+  
   <DD_Class>
     <name>Local_Planar</name>
     <version_id>1.0</version_id>
@@ -3131,7 +3142,7 @@
       <preferred_flag>true</preferred_flag>
     </Terminological_Entry>
   </DD_Class>
-
+  
   <DD_Class>
     <name>Coordinate_Representation</name>
     <version_id>1.0</version_id>
@@ -3185,7 +3196,6 @@
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
-
     <!-- 20151021: Per C.Isbell - added 'cart.pixel_scale_y' -->  
     <DD_Association>
       <identifier_reference>pixel_scale_y</identifier_reference>
@@ -3194,7 +3204,7 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>    
   </DD_Class>
-
+  
   <DD_Class>
     <name>Distance_and_Bearing_Representation</name>
     <version_id>1.0</version_id>
@@ -3228,7 +3238,7 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
-
+  
   <DD_Class>
     <name>Equirectangular</name>
     <version_id>1.0</version_id>
@@ -3242,14 +3252,6 @@
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
-    <!-- 20150427: deleted - standard_parallel is Choice in Map_Projection_Base    
-    <DD_Association>
-      <identifier_reference>cart.standard_parallel</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    -->    
     <DD_Association>
       <identifier_reference>longitude_of_central_meridian</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -3263,7 +3265,7 @@
       <preferred_flag>true</preferred_flag>
     </Terminological_Entry>
   </DD_Class>
-
+  
   <DD_Class>
     <name>Lambert_Conformal_Conic</name>
     <version_id>1.0</version_id>
@@ -3277,14 +3279,6 @@
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
-    <!-- 20150427: deleted - standard_parallel is Choice in Map_Projection_Base    
-    <DD_Association>
-      <identifier_reference>cart.standard_parallel</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>2</maximum_occurrences>
-    </DD_Association>
-    -->
     <DD_Association>
       <identifier_reference>longitude_of_central_meridian</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -3304,7 +3298,7 @@
       <preferred_flag>true</preferred_flag>
     </Terminological_Entry>
   </DD_Class>
-
+  
   <DD_Class>
     <name>Oblique_Mercator</name>
     <version_id>1.0</version_id>
@@ -3325,7 +3319,7 @@
       <preferred_flag>true</preferred_flag>
     </Terminological_Entry>
   </DD_Class>
-
+  
   <DD_Class>
     <name>Point_Perspective</name>
     <version_id>1.0</version_id>
@@ -3366,7 +3360,7 @@
       <preferred_flag>true</preferred_flag>
     </Terminological_Entry>
   </DD_Class>
-
+  
   <DD_Class>
     <name>Polar_Stereographic</name>
     <version_id>1.0</version_id>
@@ -3386,18 +3380,8 @@
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
-    <!-- 20150427: deleted - standard_parallel is Choice in Map_Projection_Base    
-    <DD_Association>
-      <identifier_reference>XSChoice#</identifier_reference>
-      <identifier_reference>cart.standard_parallel</identifier_reference>
-      <identifier_reference>cart.scale_factor_at_projection_origin</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    -->
   </DD_Class>
-
+  
   <DD_Class>
     <name>Polyconic</name>
     <version_id>1.0</version_id>
@@ -3424,7 +3408,7 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
-
+  
   <DD_Class>
     <name>Sinusoidal</name>
     <version_id>1.0</version_id>
@@ -3445,7 +3429,7 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
-
+  
   <DD_Class>
     <name>Transverse_Mercator</name>
     <version_id>1.0</version_id>
@@ -3478,7 +3462,7 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
-
+  
   <DD_Class>
     <name>Universal_Transverse_Mercator</name>
     <version_id>1.0</version_id>
@@ -3510,7 +3494,7 @@
       <preferred_flag>true</preferred_flag>
     </Terminological_Entry>
   </DD_Class>
-
+  
   <DD_Class>
     <name>Universal_Polar_Stereographic</name>
     <version_id>1.0</version_id>
@@ -3539,6 +3523,7 @@
       <preferred_flag>true</preferred_flag>
     </Terminological_Entry>
   </DD_Class>
+  
   <DD_Class>
     <name>Oblique_Cylindrical</name>
     <version_id>1.0</version_id>
@@ -3661,118 +3646,6 @@
     </Terminological_Entry>
   </DD_Class>
 
-<!--
-  <DD_Class>
-    <name>Map_Projection_Base</name>
-    <version_id>1.0</version_id>
-    <local_identifier>cart.Map_Projection_Base</local_identifier>
-    <submitter_name>Elizabeth D. Rye</submitter_name>
-    <definition>An abstract class that serves as the parent class to all
-      the map projections.</definition>
-    <DD_Association>
-      <identifier_reference>cart.straight_vertical_longitude_from_pole</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>XSChoice#</identifier_reference>
-      <identifier_reference>cart.standard_parallel</identifier_reference>
-      <identifier_reference>cart.scale_factor_at_projection_origin</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>2</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>cart.scale_factor_at_center_line</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>cart.scale_factor_at_central_meridian</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>cart.longitude_of_central_meridian</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>XSChoice#</identifier_reference>
-      <identifier_reference>cart.Oblique_Line_Azimuth</identifier_reference>
-      <identifier_reference>cart.Oblique_Line_Point</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>cart.latitude_of_projection_origin</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-  </DD_Class>
--->
-<!--
-  <DD_Class>
-    <name>Map_Projection_Base</name>
-    <version_id>1.0</version_id>
-    <local_identifier>cart.Map_Projection_Base</local_identifier>
-    <submitter_name>Elizabeth D. Rye</submitter_name>
-    <definition>An abstract class that serves as the parent class to all
-      the map projections.</definition>
-    <DD_Association>
-      <identifier_reference>cart.straight_vertical_longitude_from_pole</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>XSChoice#</identifier_reference>
-      <identifier_reference>cart.standard_parallel</identifier_reference>
-      <identifier_reference>cart.scale_factor_at_projection_origin</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>2</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>cart.scale_factor_at_center_line</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>cart.scale_factor_at_central_meridian</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>cart.longitude_of_central_meridian</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>XSChoice#</identifier_reference>
-      <identifier_reference>cart.Oblique_Line_Azimuth</identifier_reference>
-      <identifier_reference>cart.Oblique_Line_Point</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>cart.latitude_of_projection_origin</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-  </DD_Class>
--->
   <DD_Class>
     <name>Oblique_Line_Azimuth</name>
     <version_id>1.0</version_id>
@@ -4485,7 +4358,7 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
-    
+  
   <DD_Class>
     <name>Vector_Surface_Ground_Location</name>
     <version_id>1.0</version_id>
@@ -4776,252 +4649,6 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
-  
-  <!--<DD_Attribute>
-    <name>lander_map_projection_name</name>
-    <version_id>1.0</version_id>
-    <local_identifier>lander_map_projection_name</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Elizabeth D. Rye</submitter_name>
-    <definition>The lander_map_projection_name attribute provides the name of the
-      map projection.</definition>
-    <DD_Value_Domain>
-      <enumeration_flag>true</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
-      <DD_Permissible_Value>
-        <value>Albers Conical Equal Area</value>
-        <value_meaning>TBD</value_meaning>
-      </DD_Permissible_Value>
-    </DD_Value_Domain>
-  </DD_Attribute>-->
-  
-  <!-- jpadams END -->
-
-<!--
-  <DD_Class>
-    <name>Map_Projection_Base</name>
-    <version_id>1.0</version_id>
-    <local_identifier>cart.Map_Projection_Base</local_identifier>
-    <submitter_name>Elizabeth D. Rye</submitter_name>
-    <definition>An abstract class that serves as the parent class to all
-      the map projections.</definition>
-    <DD_Association>
-      <identifier_reference>cart.straight_vertical_longitude_from_pole</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>XSChoice#</identifier_reference>
-      <identifier_reference>cart.standard_parallel</identifier_reference>
-      <identifier_reference>cart.scale_factor_at_projection_origin</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>2</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>cart.scale_factor_at_center_line</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>cart.scale_factor_at_central_meridian</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>cart.longitude_of_central_meridian</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>XSChoice#</identifier_reference>
-      <identifier_reference>cart.Oblique_Line_Azimuth</identifier_reference>
-      <identifier_reference>cart.Oblique_Line_Point</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>cart.latitude_of_projection_origin</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-  </DD_Class>
--->
-<!--
-  <DD_Class>
-    <name>Map_Projection_Base</name>
-    <version_id>1.0</version_id>
-    <local_identifier>cart.Map_Projection_Base</local_identifier>
-    <submitter_name>Elizabeth D. Rye</submitter_name>
-    <definition>An abstract class that serves as the parent class to all
-      the map projections.</definition>
-    <DD_Association>
-      <identifier_reference>cart.straight_vertical_longitude_from_pole</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>XSChoice#</identifier_reference>
-      <identifier_reference>cart.standard_parallel</identifier_reference>
-      <identifier_reference>cart.scale_factor_at_projection_origin</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>2</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>cart.scale_factor_at_center_line</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>cart.scale_factor_at_central_meridian</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>cart.longitude_of_central_meridian</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>XSChoice#</identifier_reference>
-      <identifier_reference>cart.Oblique_Line_Azimuth</identifier_reference>
-      <identifier_reference>cart.Oblique_Line_Point</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>cart.latitude_of_projection_origin</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-  </DD_Class>
--->
-<!--
-  <DD_Class>
-    <name>Map_Projection_Base</name>
-    <version_id>1.0</version_id>
-    <local_identifier>cart.Map_Projection_Base</local_identifier>
-    <submitter_name>Elizabeth D. Rye</submitter_name>
-    <definition>An abstract class that serves as the parent class to all
-      the map projections.</definition>
-    <DD_Association>
-      <identifier_reference>cart.straight_vertical_longitude_from_pole</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>XSChoice#</identifier_reference>
-      <identifier_reference>cart.standard_parallel</identifier_reference>
-      <identifier_reference>cart.scale_factor_at_projection_origin</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>2</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>cart.scale_factor_at_center_line</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>cart.scale_factor_at_central_meridian</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>cart.longitude_of_central_meridian</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>XSChoice#</identifier_reference>
-      <identifier_reference>cart.Oblique_Line_Azimuth</identifier_reference>
-      <identifier_reference>cart.Oblique_Line_Point</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>cart.latitude_of_projection_origin</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-  </DD_Class>
--->
-<!--
-  <DD_Class>
-    <name>Map_Projection_Base</name>
-    <version_id>1.0</version_id>
-    <local_identifier>cart.Map_Projection_Base</local_identifier>
-    <submitter_name>Elizabeth D. Rye</submitter_name>
-    <definition>An abstract class that serves as the parent class to all
-      the map projections.</definition>
-    <DD_Association>
-      <identifier_reference>cart.straight_vertical_longitude_from_pole</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>XSChoice#</identifier_reference>
-      <identifier_reference>cart.standard_parallel</identifier_reference>
-      <identifier_reference>cart.scale_factor_at_projection_origin</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>2</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>cart.scale_factor_at_center_line</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>cart.scale_factor_at_central_meridian</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>cart.longitude_of_central_meridian</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>XSChoice#</identifier_reference>
-      <identifier_reference>cart.Oblique_Line_Azimuth</identifier_reference>
-      <identifier_reference>cart.Oblique_Line_Point</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>cart.latitude_of_projection_origin</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-  </DD_Class>
--->
 
   <DD_Class>
     <name>Oblique_Line_Point_Group</name>
@@ -5053,7 +4680,7 @@
     </Terminological_Entry>
   </DD_Class>
 
-  <!-- added: 20190909 (THare) -->  
+  <!-- Rings projected added: 20190909 (THare) -->  
   <DD_Class>
     <name>Map_Projection_Rings</name>
     <version_id>1.0</version_id>
@@ -5103,6 +4730,12 @@
     </DD_Association>  
     <DD_Association>
       <identifier_reference>radial_scale</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>angular_scale</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -5249,7 +4882,7 @@
       <rule_type>Assert</rule_type>
       <rule_test>exists(cart:Spatial_Domain) or 
                  exists(cart:Spatial_Reference_Information/cart:Horizontal_Coordinate_System_Definition/cart:Local/cart:Map_Projection_Lander) or
-                 exists(cart:Spatial_Reference_Information/cart:Horizontal_Coordinate_System_Definition/cart:Map_Projection_Rings)</rule_test>
+                 exists(cart:Spatial_Reference_Information/cart:Horizontal_Coordinate_System_Definition/cart:Local/cart:Map_Projection_Rings)</rule_test>
       <rule_message>cart:Spatial_Domain or cart:Map_Projection_Lander or cart:Map_Projection_Rings must be specified</rule_message>
     </DD_Rule_Statement>
   </DD_Rule>
