@@ -129,7 +129,7 @@
    - Updated spatial_domain_or_lander_check to spatial_domain_or_lander_or_rings_check rule.
   </comment>
   
-  <last_modification_date_time>2019-05-20T00:00:00Z</last_modification_date_time>
+  <last_modification_date_time>2019-09-09T00:00:00Z</last_modification_date_time>
   <DD_Attribute>
     <name>target_center_distance</name>
     <version_id>1.0</version_id>
