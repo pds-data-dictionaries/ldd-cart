@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:cart  Version:1.9.3.0 - Thu Mar 07 23:32:22 MST 2019 -->
-  <!-- Generated from the PDS4 Information Model Version 1.11.0.0 - System Build 9a -->
+  <!-- PDS4 Schematron for Name Space Id:cart  Version:1.9.3.1 - Thu Jun 13 15:40:44 PDT 2019 -->
+  <!-- Generated from the PDS4 Information Model Version 1.11.1.0 - System Build 9b -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
 
@@ -8,6 +8,7 @@
 
   <sch:ns uri="http://pds.nasa.gov/pds4/pds/v1" prefix="pds"/>
   <sch:ns uri="http://pds.nasa.gov/pds4/cart/v1" prefix="cart"/>
+  <sch:ns uri="http://pds.nasa.gov/pds4/geom/v1" prefix="geom"/>
 
 		   <!-- ================================================ -->
 		   <!-- NOTE:  There are two types of schematron rules.  -->
@@ -49,26 +50,26 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="cart:Coordinate_Representation/cart:pixel_resolution_x">
-      <sch:assert test="@unit = ('deg/pixel', 'km/pixel', 'm/pixel', 'mm/pixel')">
-        The attribute @unit must be equal to one of the following values 'deg/pixel', 'km/pixel', 'm/pixel', 'mm/pixel'.</sch:assert>
+      <sch:assert test="@unit = ('km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg')">
+        The attribute @unit must be equal to one of the following values 'km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="cart:Coordinate_Representation/cart:pixel_resolution_y">
-      <sch:assert test="@unit = ('deg/pixel', 'km/pixel', 'm/pixel', 'mm/pixel')">
-        The attribute @unit must be equal to one of the following values 'deg/pixel', 'km/pixel', 'm/pixel', 'mm/pixel'.</sch:assert>
+      <sch:assert test="@unit = ('km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg')">
+        The attribute @unit must be equal to one of the following values 'km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="cart:Coordinate_Representation/cart:pixel_scale_x">
-      <sch:assert test="@unit = ('pixel/deg')">
-        The attribute @unit must be equal to one of the following values 'pixel/deg'.</sch:assert>
+      <sch:assert test="@unit = ('km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg')">
+        The attribute @unit must be equal to one of the following values 'km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="cart:Coordinate_Representation/cart:pixel_scale_y">
-      <sch:assert test="@unit = ('pixel/deg')">
-        The attribute @unit must be equal to one of the following values 'pixel/deg'.</sch:assert>
+      <sch:assert test="@unit = ('km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg')">
+        The attribute @unit must be equal to one of the following values 'km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -85,14 +86,14 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="cart:Cylindrical/cart:pixel_scale_x">
-      <sch:assert test="@unit = ('pixel/deg')">
-        The attribute @unit must be equal to one of the following values 'pixel/deg'.</sch:assert>
+      <sch:assert test="@unit = ('km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg')">
+        The attribute @unit must be equal to one of the following values 'km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="cart:Cylindrical/cart:pixel_scale_y">
-      <sch:assert test="@unit = ('pixel/deg')">
-        The attribute @unit must be equal to one of the following values 'pixel/deg'.</sch:assert>
+      <sch:assert test="@unit = ('km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg')">
+        The attribute @unit must be equal to one of the following values 'km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -121,14 +122,14 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="cart:Cylindrical_Perspective/cart:pixel_scale_x">
-      <sch:assert test="@unit = ('pixel/deg')">
-        The attribute @unit must be equal to one of the following values 'pixel/deg'.</sch:assert>
+      <sch:assert test="@unit = ('km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg')">
+        The attribute @unit must be equal to one of the following values 'km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="cart:Cylindrical_Perspective/cart:pixel_scale_y">
-      <sch:assert test="@unit = ('pixel/deg')">
-        The attribute @unit must be equal to one of the following values 'pixel/deg'.</sch:assert>
+      <sch:assert test="@unit = ('km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg')">
+        The attribute @unit must be equal to one of the following values 'km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -204,6 +205,24 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+    <sch:rule context="cart:Geodetic_Model/cart:a_axis_radius">
+      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
+        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="cart:Geodetic_Model/cart:b_axis_radius">
+      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
+        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="cart:Geodetic_Model/cart:c_axis_radius">
+      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
+        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:rule context="cart:Geodetic_Model/cart:latitude_type">
       <sch:assert test=". = ('Planetocentric', 'Planetographic')">
         The attribute cart:latitude_type must be equal to one of the following values 'Planetocentric', 'Planetographic'.</sch:assert>
@@ -213,24 +232,6 @@
     <sch:rule context="cart:Geodetic_Model/cart:longitude_direction">
       <sch:assert test=". = ('Positive East', 'Positive West')">
         The attribute cart:longitude_direction must be equal to one of the following values 'Positive East', 'Positive West'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="cart:Geodetic_Model/cart:polar_radius">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="cart:Geodetic_Model/cart:semi_major_radius">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="cart:Geodetic_Model/cart:semi_minor_radius">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -385,14 +386,14 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="cart:Orthographic_Lander/cart:pixel_resolution_x">
-      <sch:assert test="@unit = ('deg/pixel', 'km/pixel', 'm/pixel', 'mm/pixel')">
-        The attribute @unit must be equal to one of the following values 'deg/pixel', 'km/pixel', 'm/pixel', 'mm/pixel'.</sch:assert>
+      <sch:assert test="@unit = ('km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg')">
+        The attribute @unit must be equal to one of the following values 'km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="cart:Orthographic_Lander/cart:pixel_resolution_y">
-      <sch:assert test="@unit = ('deg/pixel', 'km/pixel', 'm/pixel', 'mm/pixel')">
-        The attribute @unit must be equal to one of the following values 'deg/pixel', 'km/pixel', 'm/pixel', 'mm/pixel'.</sch:assert>
+      <sch:assert test="@unit = ('km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg')">
+        The attribute @unit must be equal to one of the following values 'km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -421,14 +422,14 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="cart:Orthorectified/cart:pixel_resolution_x">
-      <sch:assert test="@unit = ('deg/pixel', 'km/pixel', 'm/pixel', 'mm/pixel')">
-        The attribute @unit must be equal to one of the following values 'deg/pixel', 'km/pixel', 'm/pixel', 'mm/pixel'.</sch:assert>
+      <sch:assert test="@unit = ('km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg')">
+        The attribute @unit must be equal to one of the following values 'km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="cart:Orthorectified/cart:pixel_resolution_y">
-      <sch:assert test="@unit = ('deg/pixel', 'km/pixel', 'm/pixel', 'mm/pixel')">
-        The attribute @unit must be equal to one of the following values 'deg/pixel', 'km/pixel', 'm/pixel', 'mm/pixel'.</sch:assert>
+      <sch:assert test="@unit = ('km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg')">
+        The attribute @unit must be equal to one of the following values 'km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -469,14 +470,14 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="cart:Perspective/cart:pixel_scale_x">
-      <sch:assert test="@unit = ('pixel/deg')">
-        The attribute @unit must be equal to one of the following values 'pixel/deg'.</sch:assert>
+      <sch:assert test="@unit = ('km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg')">
+        The attribute @unit must be equal to one of the following values 'km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="cart:Perspective/cart:pixel_scale_y">
-      <sch:assert test="@unit = ('pixel/deg')">
-        The attribute @unit must be equal to one of the following values 'pixel/deg'.</sch:assert>
+      <sch:assert test="@unit = ('km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg')">
+        The attribute @unit must be equal to one of the following values 'km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -564,6 +565,18 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+    <sch:rule context="cart:Secondary_Spatial_Domain/cart:latitude_type">
+      <sch:assert test=". = ('Planetocentric', 'Planetographic')">
+        The attribute cart:latitude_type must be equal to one of the following values 'Planetocentric', 'Planetographic'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="cart:Secondary_Spatial_Domain/cart:longitude_direction">
+      <sch:assert test=". = ('Positive East', 'Positive West')">
+        The attribute cart:longitude_direction must be equal to one of the following values 'Positive East', 'Positive West'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:rule context="cart:Sinusoidal/cart:longitude_of_central_meridian">
       <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
         The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
@@ -594,6 +607,24 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+    <sch:rule context="cart:Vector_Cartesian_Position_Base/cart:x_position">
+      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
+        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="cart:Vector_Cartesian_Position_Base/cart:y_position">
+      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
+        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="cart:Vector_Cartesian_Position_Base/cart:z_position">
+      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
+        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:rule context="cart:Vector_Length_Base/cart:x_length">
       <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
         The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
@@ -613,14 +644,14 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="cart:Vertical/cart:pixel_resolution_x">
-      <sch:assert test="@unit = ('deg/pixel', 'km/pixel', 'm/pixel', 'mm/pixel')">
-        The attribute @unit must be equal to one of the following values 'deg/pixel', 'km/pixel', 'm/pixel', 'mm/pixel'.</sch:assert>
+      <sch:assert test="@unit = ('km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg')">
+        The attribute @unit must be equal to one of the following values 'km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="cart:Vertical/cart:pixel_resolution_y">
-      <sch:assert test="@unit = ('deg/pixel', 'km/pixel', 'm/pixel', 'mm/pixel')">
-        The attribute @unit must be equal to one of the following values 'deg/pixel', 'km/pixel', 'm/pixel', 'mm/pixel'.</sch:assert>
+      <sch:assert test="@unit = ('km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg')">
+        The attribute @unit must be equal to one of the following values 'km/pixel', 'm/pixel', 'mm/pixel', 'pixel/deg'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

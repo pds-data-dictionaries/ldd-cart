@@ -34,29 +34,26 @@ The files here can be used as a starting point for creating a new local data dic
 
 ## Versions (Source)
 
-- [1.B.0.0](src/1.B.0.0)
-- [1.B.0.0_inheritance](src/1.B.0.0_inheritance)
-   This is a temporary version which is attempting to share attributes across geometry. I believe, support under the LDD tool needs to be enable to support this.
+- [1.C.0.0](src/1.C.0.0)
 
 ## Builds
 
 A Local Data Dictionary (LDD) is built for each version of the [PDS4 Information Model](https://pds.nasa.gov/pds4/doc/im/).
-The build process insures compatiblity of the LDD with the core information model.
+The build process insures compatibility of the LDD with the core information model.
 
 This LDD has been built for the following versions of the PDS4 information model.
 
-- [1.B.0.0](build/1.B.0.0)
+- [1.C.0.0](build/1.C.0.0)
 
 	
 ## Notes
 
-Each build is generating using the [lddtool](https://pds.nasa.gov/pds4/software/ldd/) specific to a version of the [PDS4 Information Model](https://pds.nasa.gov/pds4/doc/im/). The build command used is:
+Each build is generating using the [lddtool](https://pds.nasa.gov/pds4/software/ldd/) specific to a version of the [PDS4 Information Model](https://pds.nasa.gov/pds4/doc/im/). Because this relies on GEOM, we will need to download the GEOM ingest for lddtool. Thus the specific build command used was (version will change):
 
 ```
-lddtool -lp ldd-file.xml
+lddtool.bat -lpsnJ ingest-PDS4_GEOM_1B10_1700.xml PDS4_CART_1C00_IngestLDD_CART_1932.xml
 ```
 
 Documentation included in the source (src) directory is generated using the "pds-ldd-doc" tool in the [pds4-tools](https://github.com/nasa-pds/pds4-tools) package.
 
 After a build the README.md files are updated (manually) to reflect the content of repository.
-

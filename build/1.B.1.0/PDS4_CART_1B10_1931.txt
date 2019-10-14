@@ -1,19 +1,26 @@
 PDS4 Local Data Dictionary Processing Report
 
 Configuration:
-   LDDTool Version        0.2.1.5b
-   Time                   Thu Mar 07 23:32:22 MST 2019
-   Core Schemas           [PDS4_PDS_1B00.xsd]
-   Core Schematrons       [PDS4_PDS_1B00.sch]
-   Common Model Version   1.11.0.0
-   Object Model           [UpperModel.pont]
-   Data Dictionary        [dd11179.pins]
-   Configuration File     [MDPTNConfigClassDisp.xml]
-   Glossary               [Glossary.pins]
-   Document Spec          [DMDocument.pins]
+   LDDTool Version        0.2.2.5
+   LDD Version Id:        1.9.3.1
+   LDD Label Version Id:  1.0
+   LDD Discipline (T/F):  true
+   LDD Namespace URL:     http://pds.nasa.gov/pds4/
+   LDD URN Prefix:        urn:nasa:pds:
+   Time                   Thu Jun 13 15:40:44 PDT 2019
+   Common Schema          [PDS4_PDS_1B10.xsd]
+   Common Schematron      [PDS4_PDS_1B10.sch]
+   IM Version Id:         1.11.1.0
+   IM Namespace Id:       pds
+   IM Label Version Id:   1.17
+   IM Object Model        [UpperModel.pont]
+   IM Data Dictionary     [dd11179.pins]
+   IM Configuration File  [MDPTNConfigClassDisp.xml]
+   IM Glossary            [Glossary.pins]
+   IM Document Spec       [DMDocument.pins]
 
 Parameters:
-   Input File             [PDS4_CART_1B00_IngestLDD_CART_1930_inheritance.xml]
+   Input File             [PDS4_CART_1B10_IngestLDD_CART_1931.xml]
    PDS Processing         true
    LDD Processing         true
    Discipline LDD         true
@@ -22,40 +29,16 @@ Parameters:
    Merge with Master      false
 
 Summary:
-   Classes                62
+   Classes                66
    Attributes             89
-   Associations           223
-   Error messages         16
-   Warning messages       10
-   Information messages   77
+   Associations           237
+   Error messages         0
+   Warning messages       2
+   Information messages   75
 
 Detailed validation messages
-   ERROR    Class:0001_NASA_PDS_1.cart.Surface_Model_Parameters  Association:geom.Coordinate_Space_Reference  Class:geom.Coordinate_Space_Reference - Missing Component Class
-   ERROR    Association: geom.Coordinate_Space_Reference - Missing Component - Reference Type: component_of
-   ERROR    Class:0001_NASA_PDS_1.cart.Vector_Surface_Normal  Association:geom.Vector_Cartesian_Unit  Class:geom.Vector_Cartesian_Unit - Missing Parent Class
-   ERROR    Association: TBD_identifier - Missing Class: geom.Vector_Cartesian_Unit - Reference Type: parent_of
-   ERROR    Class:0001_NASA_PDS_1.cart.Vector_Surface_Ground_Location  Association:geom.Vector_Cartesian_Position_Base  Class:geom.Vector_Cartesian_Position_Base - Missing Parent Class
-   ERROR    Association: TBD_identifier - Missing Class: geom.Vector_Cartesian_Position_Base - Reference Type: parent_of
-   ERROR    Class:0001_NASA_PDS_1.cart.Vector_Sphere_Center  Association:geom.Vector_Cartesian_Position_Base  Class:geom.Vector_Cartesian_Position_Base - Missing Parent Class
-   ERROR    Association: TBD_identifier - Missing Class: geom.Vector_Cartesian_Position_Base - Reference Type: parent_of
-   ERROR    Class:0001_NASA_PDS_1.cart.Vector_Projection_Origin  Association:geom.Vector_Cartesian_Position_Base  Class:geom.Vector_Cartesian_Position_Base - Missing Parent Class
-   ERROR    Association: TBD_identifier - Missing Class: geom.Vector_Cartesian_Position_Base - Reference Type: parent_of
-   ERROR    Class:0001_NASA_PDS_1.cart.Vector_Projection_X_Axis  Association:geom.Vector_Cartesian_Unit  Class:geom.Vector_Cartesian_Unit - Missing Parent Class
-   ERROR    Association: TBD_identifier - Missing Class: geom.Vector_Cartesian_Unit - Reference Type: parent_of
-   ERROR    Class:0001_NASA_PDS_1.cart.Vector_Projection_Y_Axis  Association:geom.Vector_Cartesian_Unit  Class:geom.Vector_Cartesian_Unit - Missing Parent Class
-   ERROR    Association: TBD_identifier - Missing Class: geom.Vector_Cartesian_Unit - Reference Type: parent_of
-   ERROR    Class:0001_NASA_PDS_1.cart.Vector_Projection_Z_Axis  Association:geom.Vector_Cartesian_Unit  Class:geom.Vector_Cartesian_Unit - Missing Parent Class
-   ERROR    Association: TBD_identifier - Missing Class: geom.Vector_Cartesian_Unit - Reference Type: parent_of
    WARNING  Attribute: <pixel_resolution> - This local attribute was not used in an Association.
-   WARNING  Attribute: <x> - This local attribute was not used in an Association.
-   WARNING  Attribute: <x_position> - This local attribute was not used in an Association.
-   WARNING  Attribute: <x_unit> - This local attribute was not used in an Association.
-   WARNING  Attribute: <y> - This local attribute was not used in an Association.
-   WARNING  Attribute: <y_position> - This local attribute was not used in an Association.
-   WARNING  Attribute: <y_unit> - This local attribute was not used in an Association.
-   WARNING  Attribute: <z> - This local attribute was not used in an Association.
-   WARNING  Attribute: <z_position> - This local attribute was not used in an Association.
-   WARNING  Attribute: <z_unit> - This local attribute was not used in an Association.
+   WARNING  Header:  - New namespace id has been specified:cart
    INFO     Attribute: <west_bounding_coordinate> - The default minimum value provided by the attribute's data type is being overridden with -180.0
    INFO     Attribute: <west_bounding_coordinate> - The default maximum value provided by the attribute's data type is being overridden with 360.0
    INFO     Attribute: <east_bounding_coordinate> - The default minimum value provided by the attribute's data type is being overridden with -180.0
@@ -64,9 +47,9 @@ Detailed validation messages
    INFO     Attribute: <north_bounding_coordinate> - The default maximum value provided by the attribute's data type is being overridden with 90.0
    INFO     Attribute: <south_bounding_coordinate> - The default minimum value provided by the attribute's data type is being overridden with -90.0
    INFO     Attribute: <south_bounding_coordinate> - The default maximum value provided by the attribute's data type is being overridden with 90.0
-   INFO     Attribute: <semi_major_radius> - The default minimum value provided by the attribute's data type is being overridden with 0.0
-   INFO     Attribute: <semi_minor_radius> - The default minimum value provided by the attribute's data type is being overridden with 0.0
-   INFO     Attribute: <polar_radius> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+   INFO     Attribute: <a_axis_radius> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+   INFO     Attribute: <b_axis_radius> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+   INFO     Attribute: <c_axis_radius> - The default minimum value provided by the attribute's data type is being overridden with 0.0
    INFO     Attribute: <longitude_direction> - The default minimum characters provided by the attribute's data type is being overridden with 13
    INFO     Attribute: <longitude_direction> - The default maximum characters provided by the attribute's data type is being overridden with 13
    INFO     Attribute: <latitude_resolution> - The default minimum value provided by the attribute's data type is being overridden with 0.0
@@ -118,8 +101,6 @@ Detailed validation messages
    INFO     Attribute: <sphere_intersection_count> - The default minimum value provided by the attribute's data type is being overridden with 1
    INFO     Attribute: <projection_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 1
    INFO     Attribute: <projection_elevation_line> - The default minimum value provided by the attribute's data type is being overridden with 1
-   INFO     Attribute: <line> - The default minimum value provided by the attribute's data type is being overridden with 1
-   INFO     Attribute: <sample> - The default minimum value provided by the attribute's data type is being overridden with 1
    INFO     Attribute: <projection_axis_offset> - The default minimum value provided by the attribute's data type is being overridden with 1
    INFO     Attribute: <reference_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90.0
    INFO     Attribute: <reference_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90.0
@@ -136,15 +117,15 @@ Detailed validation messages
 
 Parsed Input - Header:
    LDD Name               Cartography
-   LDD Version            1.9.3.0
+   LDD Version            1.9.3.1
    Full Name              Trent Hare
    Steward                img
    Namespace Id           cart
    Comment                
     Contains classes and attributes used to describe cartographic
-    products.  This information is largely adapted from the FGDC "Content
-    Standard for Digital Geospatial Metadata", with extensions (changes/
-    additions) to satisfy planetary requirements.
+    products.  This information is largely adapted from the Federal Geographic 
+	  Data Committee (FGDC) "Content Standard for Digital Geospatial Metadata", 
+	  with extensions (changes/additions) to satisfy planetary requirements.
     
     ## CHANGE LOG ##
     1.9.0.0
@@ -176,7 +157,7 @@ Parsed Input - Header:
             requirements of target_center_distance and nadir point (longitude_of_central_meridian, latitude_of_projection_origin) 
             will define the basic PP projection. Additional parameters for a more 'complex' PP (line/sample sub-spacecraft offsets,
             optical offsets, focal parameters, image array segment definitions, etc, will need to be added as needed.
- 
+
     1.9.1.1
     - CDeCesare 20181116
     - Removed definitions of classes which are already defined by GEOM dictionary: Vector_Cartesian_Unit_Base, Vector_Cartesian_Position_Base, Vector_Cartesian_No_Units
@@ -196,12 +177,43 @@ Parsed Input - Header:
     - Removed "General Vertical Near-sided Projection" since it has functionally been replaced by "Point Perspective".
 	
     1.9.3.0
-  THare 20190307
-  -  'Planar_Coordinate_Information' is no longer mandated to better support vector files. It should be added for images
-  -  'cart.latitude_resolution' and 'cart:longitude_resolution' to be optional, not needed for vector GIS labels
-  -  changed DD_Association to DD_Association_External as a temporary fix to support geom.Coordinate_Space_Reference
+    THare and PGeissler 20190424
+    -  'Planar_Coordinate_Information' is no longer mandated to better support vector files. It should be added for images
+    -  'cart.latitude_resolution' and 'cart:longitude_resolution' to be optional, not needed for vector GIS labels
+    -  Added Secondary_Spatial_Domain as an optional or alternative method to list IAU recommended or historically used 
+       bounding coordinate section to support both positive East and positive West systems in the same label.
+    -  Rename all three radius parameter names. These were renamed to clarify the parameter names since the name 
+       semi_major_radius is flawed and confusing as semi and radius both mean "half". This keyword should have
+       originally been named semi_major_axis (as used by the Federal Geospatial Data Consortium [FGDC]). To better
+       align with PDS version 3, we are moving these parameters names back to a_axis_radius, b_axis_radius, and 
+       c_axis_radius. Thus we are renaming: 
+   	   - semi_major_radius to a_axis_radius. 
+	   - semi_minor_radius to b_axis_radius
+	   - polar_radius to c_axis_radius
+	   To be clear, most mapping applications call a_axis_radius the semi_major_axis and c_axis_radius the semi_minor_radius.
+	   The b_axis_radius value is generally not seen in mapping applications which typical do not support triaxial definitions
+	   for map projections. For most all cases, when a triaxial definition is defined, the IAU defines a best fit sphere. 
+	   see: https://astrogeology.usgs.gov/groups/IAU-WGCCRE.
+	   When a best-fit sphere or a body is already defined as a sphere, a single radius value will be listed across all three 
+	   parameters a_axis_radius, b_axis_radius, and c_axis_radius. For an ellipse, the a_axis_radius and b_axis_radius will be
+	   defined by a single radius value and a different (generally smaller) radius value for the c_axis_radius. Lastly, the
+       default units for the these parameters was set to meters "m".
+     
+    THare and CDeCesare 20190430
+    - Upgraded to v1B10 of IM.
+    - Undid changes from 1.9.1.1.
+    - Coordinate_Space_Reference is now re-used from the GEOM class as-is, so that CART doesn't need to re-implement it.
+
+    THare 20190520
+    - simple misspellings
+    - updated definitions for Surface_Model_Parameters and Surface_Model_Planar, surface_model_type, 
+	  Vector_Surface_Ground_Location, Vector_Surface_Normal
+
+    THare and CDeCesare 20190613
+    - updated line and sample attributes to allow for non-negate values under Camera_Model_Offset, 
+      Pixel_Position_Nadir_Polar, Pixel_Position_Origin  
   
-   Last Modification Time 2018-12-12T00:00:00Z
+   Last Modification Time 2019-05-20T00:00:00Z
    PDS4 Merge Flag        false
 
 Parsed Input - Attributes:
@@ -266,31 +278,31 @@ Parsed Input - Attributes:
    value data type        ASCII_Short_String_Collapsed
    description            The spheroid_name attribute provides the identification given to established representations of a planet's shape. 
 
-   name                   semi_major_radius
+   name                   a_axis_radius
    version                1.11
    value data type        ASCII_Real
-   description            The semi_major_axis attribute provides the radius of the equatorial axis of the ellipsoid.
+   description            The a_axis_radius attribute provides the radius of the equatorial axis of the ellipsoid. The IAU calls this "Subplanetary equatorial radius" and mapping applications generally call this "semi_major_axis". 
    minimum value          0.0
    unit of measure type   Units_of_Length
 
-   name                   semi_minor_radius
+   name                   b_axis_radius
    version                1.11
    value data type        ASCII_Real
-   description            The semi_minor_radius attribute provides the value of the intermediate axis of the ellipsoid that defines the approximate shape of a target body. The semi-minor axis is usually in the equatorial plane.
+   description            The b_axis_radius attribute provides the value of the intermediate axis of the ellipsoid that defines the approximate shape of a target body. The b_axis_radius is usually in the equatorial plane. The IAU calls this axis "along orbit equatorial radius". Mapping applications, which generally only define a sphere or an ellipse, do not support this radius parameter.
    minimum value          0.0
    unit of measure type   Units_of_Length
 
-   name                   polar_radius
+   name                   c_axis_radius
    version                1.11
    value data type        ASCII_Real
-   description            The polar_radius attribute provides the value of the semiminor axis of the ellipsoid that defines the approximate shape of a target body. The polar radius is normal to the plane defined by the semi-major and semi-minor axes.
+   description            The c_axis_radius attribute provides the value of the polar axis of the ellipsoid that defines the approximate shape of a target body. The c_axis_radius is normal to the plane defined by the a_axis_radius and b_axis_radius. The IAU calls this "polar radius". Mapping applications generally call this "semi_minor_axis" 
    minimum value          0.0
    unit of measure type   Units_of_Length
 
    name                   longitude_direction
    version                1.11
    value data type        ASCII_Short_String_Collapsed
-   description            The longitude_direction attribute identifies the direction of longitude (e.g. POSITIVE_EAST or POSITIVE_WEST) for a planet. The IAU definition for direction of positive longitude should be adopted: http://astrogeology.usgs.gov/groups/IAU-WGCCRE. Typically, for planets with prograde (direct) rotations, positive longitude direction is to the west. For planets with retrograde rotations, positive longitude direction is to the east. Generally the Positive West longitude_direction is used for planetographc systems and Positive East is used for planetocentric systems.
+   description            The longitude_direction attribute identifies the direction of longitude (e.g. POSITIVE_EAST or POSITIVE_WEST) for a planet. The IAU definition for direction of positive longitude should be adopted: http://astrogeology.usgs.gov/groups/IAU-WGCCRE. Typically, for planets with prograde (direct) rotations, positive longitude direction is to the west. For planets with retrograde rotations, positive longitude direction is to the east. Generally the Positive West longitude_direction is used for planetographic systems and Positive East is used for planetocentric systems. If the data is defined with Spatial_Domain in a manner not recommended by the IAU, there is a optional Secondary_Spatial_Domain section to define a second set of bounding coordinates.
    minimum characters     13
    maximum characters     13
    permissible value - value meaning
@@ -334,9 +346,9 @@ Parsed Input - Attributes:
    value data type        ASCII_Short_String_Collapsed
    description            The planar_coordinate_encoding_method attribute indicates the means used to represent horizontal positions.
    permissible value - value meaning
-      Coordinate Pair - A method of encoding the position of a point by measuring its distance from perpendicular reference axes (Casrtesian plane). The coordinate pair (x,y), generally in meters, is defined such that x is determined by its horizontal distance from the origin and y is determined by its vertical distance from the origin. 
+      Coordinate Pair - A method of encoding the position of a point by measuring its distance from perpendicular reference axes (Cartesian plane). The coordinate pair (x,y), generally in meters, is defined such that x is determined by its horizontal distance from the origin and y is determined by its vertical distance from the origin. 
       Distance and Bearing - A method of encoding the position of a point by measuring its distance and direction (azimuth angle) from another point.
-      Row and Column - A method of encoding the position of a point by measuring its distance from perpendicular reference axes (Casrtesian plane). The coordinate pair (row,column), generally in pixels, is defined such that the row is determined by its horizontal distance from the origin and column is determined by its vertical distance from the origin.
+      Row and Column - A method of encoding the position of a point by measuring its distance from perpendicular reference axes (Cartesian plane). The coordinate pair (row,column), generally in pixels, is defined such that the row is determined by its horizontal distance from the origin and column is determined by its vertical distance from the origin.
 
    name                   map_projection_name
    version                1.11
@@ -345,14 +357,14 @@ Parsed Input - Attributes:
    permissible value - value meaning
       Albers Conical Equal Area - Projection is mathematically based on a cone that is conceptually secant on two parallels. No areal deformation. North or South Pole is represented by an arc. Retains its properties at various scales; individual maps can be joined along their edges. 
       Azimuthal Equidistant - Projection is mathematically based on a plane tangent to the body. The entire body can be represented. Generally the Azimuthal Equidistant map projection portrays less than one hemisphere, though the other hemisphere can be portrayed but is much distorted. Has true direction and true distance scaling from the point of tangency. 
-      Equidistant Conic - Projection is mathematically based on a cone that is tangent at one parallel or conceptually secant at two paralle ls. North or South Pole is represented by an arc. 
+      Equidistant Conic - Projection is mathematically based on a cone that is tangent at one parallel or conceptually secant at two parallels. North or South Pole is represented by an arc. 
       Equirectangular - Also called Equidistant Cylindrical, this projection is neither equal-area or conformal and is known for its very simple construction. Equations only allow spherical body definitions. The meridians and parallels are all equidistant straight parallel lines, intersecting at right angles. If the Equator is made the standard parallel, true to scale and free of distortion, the meridians are spaced at the same distances as the parallels, and the graticule appears square. This form is often called the Plate Carree or the Simple Cylindrical projection.
       Gnomonic - This projection is geometrically projected onto a plane, and the point of projection is at the center of the body. It is impossible to show a full hemisphere with one Gnomonic map. It is the only projection in which any straight line is a great circle, and it is the only projection that shows the shortest distance between any two points as a straight line. 
       Lambert Azimuthal Equal Area - The Lambert Azimuthal Equal-Area projection is mathematically based on a plane tangent to the body. It is the only projection that can accurately represent both areas and true direction from the center of the projection. This projection generally represents only one hemisphere.
       Lambert Conformal Conic - Projection is mathematically based on a cone that is tangent at one parallel or (more often) that is conceptually secant on two parallels. Areal distortion is minimal but increases away from the standard parallels. North or South Pole is represented by a point; the other pole cannot be shown. Great circle lines are approximately straight. It retains its properties at various scale and maps can be joined along their edges.
       Mercator - Projection can be thought of as being mathematically based on a cylinder tangent at the equator. Any straight line is a constant-azimuth (rhumb) line. Areal enlargement is extreme away from the equator; poles cannot be represented. Shape is true only within any small area. Reasonably accurate projection within a 15 degree band along the line of tangency. 
       Miller Cylindrical - Similar to Mercator, this projection is neither equal-area or conformal. Equations only allow spherical body definitions. The meridians and parallels are straight lines, intersecting at right angles. Meridians are equidistant and parallels are spaced farther apart away from Equator. Generally used for global maps.
-      Oblique Cylindrical - This projection works by moving the north pole of the simple cylindrical projection. The pole latitude and longitude are the location of the new north pole, and the rotation is the equivalent to the center longitude in simple cylindrical. Because of the supported rotation parameter, this projection is pretty uniquely used in the planetary community and it is impleneted in USGS's Integrated Software for Imagers and Spectrometers v2/3 (ISIS3) suite.
+      Oblique Cylindrical - This projection works by moving the north pole of the simple cylindrical projection. The pole latitude and longitude are the location of the new north pole, and the rotation is the equivalent to the center longitude in simple cylindrical. Because of the supported rotation parameter, this projection is pretty uniquely used in the planetary community and it is implemented in USGS's Integrated Software for Imagers and Spectrometers v2/3 (ISIS3) suite.
       Oblique Mercator - The projection is mathematically based on a cylinder tangent along any great circle other than the equator or a meridian. Shape is true only within any small area. Areal enlargement increases away from the line of tangency. Reasonably accurate projection within a 15 degree band along the line of tangency.
       Orthographic - The Orthographic projection is geometrically based on a plane tangent to the earth, and the point of projection is at infinity. The body appears as it would from outer space. This projection is a truly graphic representation of the body and is a projection in which distortion becomes a visual aid. It is the most familiar of the azimuthal map projections. Directions from the center of the Orthographic map projection are true.
       Point Perspective - Simimlar to Orthographic, this projection is often used to show the body as seen from space. This appears to be the same as the the Vertical Perspective projection as define in Synder, J.P., 1987, Map Projections: A Working Manual. Vertical Perspective projections are azimuthal. Central meridian and a particular parallel (if shown) are straight lines. Other meridians and parallels are usually arcs of circles or ellipses, but some may be parabolas or hyperbolas. This is neither conformal or equal-area.
@@ -360,9 +372,9 @@ Parsed Input - Attributes:
       Polyconic - Projection is mathematically based on an infinite number of cones tangent to an infinite number of parallels. Distortion increases away from the central meridian. Has both areal and angular deformation.
       Robinson - Also called orthophanic, Robinson is a compromise projection used for global maps. Meridians are equally spaced and resemble elliptical arcs, concave toward the central meridian. The poles are 0.53 times the length of the equator.
       Sinusoidal - Projection is mathematically based on a cylinder tangent on the equator. Meridian spacing is equal and decreases toward the poles. Parallel spacing is equal. There is no angular deformation along the central meridian and the equator. Cannot be edge-joined in an east-west direction if each map has its own central meridian.
-      Space Oblique Mercator - The Space Oblique Mercator (SOM) projection visually differs from the Oblique Mercator projection in that the central line (the groundtrack of the orbiting satellite) is slightly curved, rather than straight.
+      Space Oblique Mercator - The Space Oblique Mercator (SOM) projection visually differs from the Oblique Mercator projection in that the central line (the ground-track of the orbiting satellite) is slightly curved, rather than straight.
       Stereographic - The Stereographic projection is geometrically projected onto a plane, and the point of the projection is on the surface of the sphere opposite the point of tangency. Circles on the body appear as straight lines, parts of circles, or circles on the projection. Directions from the center of the stereographic map projection are true. Generally only one hemisphere is portrayed.
-      Transverse Mercator - Projection is mathematically based on a cylinder tangent to a meridian. Shape is true only within any small area. Areal enlargment increases away from the tangent meridian. Reasonably accurate projection within a 15 degree band along the line of tangency. Cannot be edge-joined in an east-west direction if each map has its own central meridian.
+      Transverse Mercator - Projection is mathematically based on a cylinder tangent to a meridian. Shape is true only within any small area. Areal enlargement increases away from the tangent meridian. Reasonably accurate projection within a 15 degree band along the line of tangency. Cannot be edge-joined in an east-west direction if each map has its own central meridian.
       van der Grinten - The projection has both areal and angular deformation. It was conceived as a compromise between the Mercator and the Mollweide projection, which shows the world in an ellipse. The Vander Grinten shows the world in a circle.
 
    name                   grid_coordinate_system_name
@@ -392,28 +404,28 @@ Parsed Input - Attributes:
    value data type        ASCII_Real
    description             The pixel_resolution_x and pixel_resolution_y attributes indicate the image array pixel resolution (distance/pixel or degree/pixel) relative to the Cartesian (x,y) coordinate system as defined by the map projection. Due to varying properties across different map projections, actual surface distances for an individual pixel may be accurate only at specific location(s) within the image array (e.g. reference latitude or longitude, standard parallels, etc). For most PDS products, x and y resolution values are equal ('square' pixels). The inclusion of both x and y attributes allows for anticipated products where resolution may differ for each axis ('rectangular' pixels). NOTE: Definition of this PDS4 attribute differs from how 'resolution' was defined within PDS3. 
    minimum value          0.0
-   unit of measure type   Units_of_Pixel_Resolution_Map
+   unit of measure type   Units_of_Map_Scale
 
    name                   pixel_resolution_y
    version                1.11
    value data type        ASCII_Real
    description             The pixel_resolution_x and pixel_resolution_y attributes indicate the image array pixel resolution (distance/pixel or degree/pixel) relative to the Cartesian (x,y) coordinate system as defined by the map projection. Due to varying properties across different map projections, actual surface distances for an individual pixel may be accurate only at specific location(s) within the image array (e.g. reference latitude or longitude, standard parallels, etc). For most PDS products, x and y resolution values are equal ('square' pixels). The inclusion of both x and y attributes allows for anticipated products where resolution may differ for each axis ('rectangular' pixels). NOTE: Definition of this PDS4 attribute differs from how 'resolution' was defined within PDS3. 
    minimum value          0.0
-   unit of measure type   Units_of_Pixel_Resolution_Map
+   unit of measure type   Units_of_Map_Scale
 
    name                   pixel_scale_x
    version                1.11
    value data type        ASCII_Real
    description             The pixel_scale_x and pixel_scale_y attributes indicate the image array pixel scale (pixel/degree or pixel/distance) relative to the Cartesian (x,y) coordinate system as defined by the map projection. Due to varying properties across different map projections, actual surface distances for an individual pixel may be accurate only at specific location(s) within the image array (e.g. reference latitude or longitude, standard parallels, etc). For most PDS products, x and y scale values are equal ('square' pixels). The inclusion of both x and y attributes allows for anticipated products where scale may differ for each axis ('rectangular' pixels). NOTE1: For presentation of hard-copy maps, a map scale is traditionally expressed as a 'representative fraction' (the ratio of a hard-copy map to the actual subject surface (e.g. 1:250,000, where one unit of measure on the map equals 250,000 of the same unit on the body surface)). This usage is relevant when map/data are presented on hard-copy media (paper, computer screen,etc). When defining pixel scale within a stored image/array context here, we are expressing a ratio between the image array and the actual surface (thus, pixel/degree or pixel/distance units). NOTE2: Definition of this PDS4 attribute differs from how 'scale' was defined within PDS3 
    minimum value          0.0
-   unit of measure type   Units_of_Pixel_Scale_Map
+   unit of measure type   Units_of_Map_Scale
 
    name                   pixel_scale_y
    version                1.11
    value data type        ASCII_Real
    description             The pixel_scale_x and pixel_scale_y attributes indicate the image array pixel scale (pixel/degree or pixel/distance) relative to the Cartesian (x,y) coordinate system as defined by the map projection. Due to varying properties across different map projections, actual surface distances for an individual pixel may be accurate only at specific location(s) within the image array (e.g. reference latitude or longitude, standard parallels, etc). For most PDS products, x and y scale values are equal ('square' pixels). The inclusion of both x and y attributes allows for anticipated products where scale may differ for each axis ('rectangular' pixels). NOTE1: For presentation of hard-copy maps, a map scale is traditionally expressed as a 'representative fraction' (the ratio of a hard-copy map to the actual subject surface (e.g. 1:250,000, where one unit of measure on the map equals 250,000 of the same unit on the body surface)). This usage is relevant when map/data are presented on hard-copy media (paper, computer screen,etc). When defining pixel scale within a stored image/array context here, we are expressing a ratio between the image array and the actual surface (thus, pixel/degree or pixel/distance units). NOTE2: Definition of this PDS4 attribute differs from how 'scale' was defined within PDS3 
    minimum value          0.0
-   unit of measure type   Units_of_Pixel_Scale_Map
+   unit of measure type   Units_of_Map_Scale
 
    name                   pixel_resolution
    version                1.0
@@ -588,17 +600,17 @@ Parsed Input - Attributes:
       Cylindrical_Perspective - This is an in-situ projection that is a hybrid. Each column is a vertical slice from a pinhole camera (Perspective projection), while the columns are spaced evenly in azimuth (Cylindrical projection). It is most useful for viewing panoramas in stereo.
 
    name                   x_unit
-   version                1.0
+   version                1.11
    value data type        ASCII_Real
    description            The x component of a unit vector.
 
    name                   y_unit
-   version                1.0
+   version                1.11
    value data type        ASCII_Real
    description            The y component of a unit vector.
 
    name                   z_unit
-   version                1.0
+   version                1.11
    value data type        ASCII_Real
    description            The z component of a unit vector.
 
@@ -621,35 +633,35 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Length
 
    name                   x_position
-   version                1.0
+   version                1.11
    value data type        ASCII_Real
    description            The x component of a Cartesian position vector.
    unit of measure type   Units_of_Length
 
    name                   y_position
-   version                1.0
+   version                1.11
    value data type        ASCII_Real
    description            The y component of a Cartesian position vector.
    unit of measure type   Units_of_Length
 
    name                   z_position
-   version                1.0
+   version                1.11
    value data type        ASCII_Real
    description            The z component of a Cartesian position vector.
    unit of measure type   Units_of_Length
 
    name                   x
-   version                1.0
+   version                1.11
    value data type        ASCII_Real
    description            The x component of a Cartesian vector which has no units.
 
    name                   y
-   version                1.0
+   version                1.11
    value data type        ASCII_Real
    description            The y component of a Cartesian vector which has no units.
 
    name                   z
-   version                1.0
+   version                1.11
    value data type        ASCII_Real
    description            The z component of a Cartesian vector which has no units.
 
@@ -688,7 +700,7 @@ Parsed Input - Attributes:
    name                   stop_azimuth
    version                1.11
    value data type        ASCII_Real
-   description            The stop_azimuth attribute pecifies the angular distance from a fixed reference position at which an image or observation stops. Azimuth is measured in a spherical coordinate system, in a plane normal to the principal axis. Azimuth values increase according to the right hand rule relative to the positive direction of the principal axis of the spherical coordinate system. For lander map projections, this attribute specifies the azimuth of the right edge of the output map. Applies to Cylindrical and Cylindrical-Perspective lander map projections only.
+   description            The stop_azimuth attribute specifies the angular distance from a fixed reference position at which an image or observation stops. Azimuth is measured in a spherical coordinate system, in a plane normal to the principal axis. Azimuth values increase according to the right hand rule relative to the positive direction of the principal axis of the spherical coordinate system. For lander map projections, this attribute specifies the azimuth of the right edge of the output map. Applies to Cylindrical and Cylindrical-Perspective lander map projections only.
    minimum value          0
    maximum value          360
    unit of measure type   Units_of_Angle
@@ -708,9 +720,9 @@ Parsed Input - Attributes:
    name                   surface_model_type
    version                1.11
    value data type        ASCII_Short_String_Collapsed
-   description            Specifies the type of surface used for the reprojection performed during the mosaicking process. Valid values: Planar - refers to a flat planar model; Spherical refers to a spherical model where the camera is at the center of the sphere. 
+   description            Specifies the type of surface used for the reprojection performed during the mosaicking process. Valid values: Planar - refers to a flat planar model; Spherical - refers to a spherical model. 
    permissible value - value meaning
-      Spherical - spherical surface model where the camera is at the center of the sphere
+      Spherical - spherical surface model
       Planar - flat planar surface model
 
    name                   sphere_radius
@@ -760,13 +772,11 @@ Parsed Input - Attributes:
    version                1.11
    value data type        ASCII_Real
    description            The line attribute specifies the line number in the image.
-   minimum value          1
 
    name                   sample
    version                1.11
    value data type        ASCII_Real
    description            The sample attribute specifies the sample number.
-   minimum value          1
 
    name                   projection_axis_offset
    version                1.11
@@ -841,9 +851,9 @@ Parsed Input - Attributes:
    name                   look_direction
    version                1.11
    value data type        ASCII_Short_String_Collapsed
-   description            The value (RIGHT or LEFT) indicates the side of the spacecraft groundtrack to which the antenna is pointed for data acquired within this file. The SAR images stored in theBIDR files are always acquired on only one side of the ground track for each Titan pass. This value also indicates from which side the SAR image is illuminated. If the spacecraft images to the left of its ground track (LOOK_DIRECTION=LEFT), the image will be illuminated from the (viewer's) left side, and, conversely, if the spacecraft looks to the right, the illumination will come from the right in the image file. The direction of illumination is critical to interpretation of features in the image. 
+   description            The value (RIGHT or LEFT) indicates the side of the spacecraft ground-track to which the antenna is pointed for data acquired within this file. The SAR images stored in theBIDR files are always acquired on only one side of the ground track for each Titan pass. This value also indicates from which side the SAR image is illuminated. If the spacecraft images to the left of its ground track (LOOK_DIRECTION=LEFT), the image will be illuminated from the (viewer's) left side, and, conversely, if the spacecraft looks to the right, the illumination will come from the right in the image file. The direction of illumination is critical to interpretation of features in the image. 
    permissible value - value meaning
-      LEFT - Antenna pointed left of spacecraft groundtrack
+      LEFT - Antenna pointed left of spacecraft ground-track
       RIGHT - Antenna pointed right of spacecraft groundtrack
 
 Parsed Input - Classes:
@@ -866,6 +876,11 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        component_of
 
+      local identifier      Secondary_Spatial_Domain
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
       local identifier      Spatial_Reference_Information
       minimum occurrences   1
       maximum occurrences   1
@@ -883,6 +898,29 @@ Parsed Input - Classes:
       minimum occurrences   1
       maximum occurrences   1
       reference type        component_of
+
+   name                   Secondary_Spatial_Domain
+   description            The Secondary_Spatial_Domain class describes an alternative longitude and latitude bounds to better support IAU approved or historically used geographic areal coordinates. This is only needed if the Spatial_Domain does not meet IAU recommendations or historical uses for the body. 
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      Bounding_Coordinates
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        component_of
+
+      local identifier      longitude_direction
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      latitude_type
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
 
    name                   Spatial_Reference_Information
    description            The Spatial_Reference_Information class provides a description of the reference frame for, and the means to encode, coordinates in a data set. 
@@ -933,7 +971,7 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      XSChoice#11
+      local identifier      XSChoice#28
       minimum occurrences   1
       maximum occurrences   1
       reference type        component_of
@@ -958,7 +996,7 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        component_of
 
-   name                   XSChoice#11
+   name                   XSChoice#28
    description            TBD_description
    is abstract            true
    is choice              true
@@ -984,17 +1022,17 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      semi_major_radius
+      local identifier      a_axis_radius
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      semi_minor_radius
+      local identifier      b_axis_radius
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      polar_radius
+      local identifier      c_axis_radius
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
@@ -1030,7 +1068,7 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      XSChoice#12
+      local identifier      XSChoice#29
       minimum occurrences   1
       maximum occurrences   1
       reference type        component_of
@@ -1060,7 +1098,7 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        component_of
 
-   name                   XSChoice#12
+   name                   XSChoice#29
    description            TBD_description
    is abstract            true
    is choice              true
@@ -1109,7 +1147,7 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      XSChoice#13
+      local identifier      XSChoice#30
       minimum occurrences   1
       maximum occurrences   1
       reference type        component_of
@@ -1124,7 +1162,7 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        component_of
 
-   name                   XSChoice#13
+   name                   XSChoice#30
    description            TBD_description
    is abstract            true
    is choice              true
@@ -1145,7 +1183,7 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      XSChoice#14
+      local identifier      XSChoice#31
       minimum occurrences   1
       maximum occurrences   1
       reference type        component_of
@@ -1195,7 +1233,7 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        component_of
 
-   name                   XSChoice#14
+   name                   XSChoice#31
    description            TBD_description
    is abstract            true
    is choice              true
@@ -1250,7 +1288,7 @@ Parsed Input - Classes:
       reference type        attribute_of
 
    name                   Coordinate_Representation
-   description            The Coordinate_Representation class provides the method of encoding the position of a point by measuring its distance from perpendicular reference axes (the "coordinate pair" and "row and column" methods. 
+   description            The Coordinate_Representation class provides the method of encoding the position of a point by measuring its distance from perpendicular reference axes (the "coordinate pair" and "row and column" methods). 
    is abstract            false
    is choice              false
    subclass of            USER
@@ -1306,7 +1344,7 @@ Parsed Input - Classes:
       reference type        attribute_of
 
    name                   Equirectangular
-   description            The Equirectangular class contains parameters for the Equirectangular projection.
+   description            The Equirectangular class contains parameters for the Equirectangular map projection. 
    is abstract            false
    is choice              false
    subclass of            Map_Projection_Base
@@ -1360,7 +1398,7 @@ Parsed Input - Classes:
       reference type        parent_of
 
    name                   Point_Perspective
-   description            The Point Perspective class contains parameters for the Point Perpsective (fundemental definition) projection.
+   description            The Point Perspective class contains parameters for the Point Perspective (fundamental definition) projection.
    is abstract            false
    is choice              false
    subclass of            Map_Projection_Base
@@ -1475,7 +1513,7 @@ Parsed Input - Classes:
       reference type        attribute_of
 
    name                   Universal_Transverse_Mercator
-   description            The Universal_Transverse_Mercator class defines a grid system based on the transverse mercator projection, applied between latitudes 84 degrees north and 80 degrees south on the planet's surface.
+   description            The Universal_Transverse_Mercator class defines a grid system based on the Transverse Mercator projection, applied between latitudes 84 degrees north and 80 degrees south on the planet's surface.
    is abstract            false
    is choice              false
    subclass of            USER
@@ -1596,7 +1634,7 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      XSChoice#15
+      local identifier      XSChoice#32
       minimum occurrences   1
       maximum occurrences   1
       reference type        component_of
@@ -1621,7 +1659,7 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        component_of
 
-   name                   XSChoice#15
+   name                   XSChoice#32
    description            TBD_description
    is abstract            true
    is choice              true
@@ -1630,7 +1668,7 @@ Parsed Input - Classes:
    Associations
 
    name                   Oblique_Line_Azimuth
-   description            The Oblique_Line_Azimuth class defines the method used to describe the line along which an oblique mercator map projection is centered using the map projection origin and an azimuth.
+   description            The Oblique_Line_Azimuth class defines the method used to describe the line along which an Oblique Mercator map projection is centered using the map projection origin and an azimuth.
    is abstract            false
    is choice              false
    subclass of            USER
@@ -1648,7 +1686,7 @@ Parsed Input - Classes:
       reference type        attribute_of
 
    name                   Oblique_Line_Point
-   description            The Oblique_Line_Point class defines the method used to describe the line along which an oblique mercator map projection is centered using two points near the limits of the mapped region that define the center line. 
+   description            The Oblique_Line_Point class defines the method used to describe the line along which an Oblique Mercator map projection is centered using two points near the limits of the mapped region that define the center line. 
    is abstract            false
    is choice              false
    subclass of            USER
@@ -1708,7 +1746,7 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      XSChoice#17
+      local identifier      XSChoice#34
       minimum occurrences   0
       maximum occurrences   1
       reference type        component_of
@@ -1728,7 +1766,7 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
-   name                   XSChoice#17
+   name                   XSChoice#34
    description            TBD_description
    is abstract            true
    is choice              true
@@ -1739,7 +1777,7 @@ Parsed Input - Classes:
    name                   Map_Projection_Lander
    description            The Map_Projection class provides the systematic representation of all or part of the surface of a planet on a plane or developable surface from the perspective of an in-situ spacecraft.
    is abstract            false
-   is choice              true
+   is choice              false
    subclass of            USER
 
    Associations
@@ -1749,7 +1787,7 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      XSChoice#18
+      local identifier      XSChoice#35
       minimum occurrences   1
       maximum occurrences   1
       reference type        component_of
@@ -1789,7 +1827,12 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        component_of
 
-   name                   XSChoice#18
+      local identifier      geom.Coordinate_Space_Reference
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
+   name                   XSChoice#35
    description            TBD_description
    is abstract            true
    is choice              true
@@ -1798,9 +1841,9 @@ Parsed Input - Classes:
    Associations
 
    name                   Surface_Model_Parameters
-   description            TBD
+   description            This class describes the surface model used by the projection. For in-situ mosaics, the surface model describes the surface upon which input images are projected in order to create a unified point of view in a mosaic. To the extent the surface model does not match the actual surface, parallax errors typically occur at seams between images.
    is abstract            false
-   is choice              true
+   is choice              false
    subclass of            USER
 
    Associations
@@ -1810,7 +1853,7 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      XSChoice#19
+      local identifier      XSChoice#36
       minimum occurrences   1
       maximum occurrences   1
       reference type        component_of
@@ -1830,7 +1873,7 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        component_of
 
-   name                   XSChoice#19
+   name                   XSChoice#36
    description            TBD_description
    is abstract            true
    is choice              true
@@ -1839,7 +1882,7 @@ Parsed Input - Classes:
    Associations
 
    name                   Surface_Model_Planar
-   description            TBD
+   description            This is a specific type of surface model that treats the surface as a flat plane, with a specified orientation (Vector_Surface_Normal) and location (Vector_Surface_Ground_Location). 
    is abstract            false
    is choice              false
    subclass of            USER
@@ -1857,7 +1900,7 @@ Parsed Input - Classes:
       reference type        component_of
 
    name                   Surface_Model_Spherical
-   description            TBD
+   description            This is a specific type of surface model that treats the surface as a sphere, with a specified center and radius.
    is abstract            false
    is choice              false
    subclass of            USER
@@ -2256,27 +2299,27 @@ Parsed Input - Classes:
       reference type        component_of
 
    name                   Vector_Surface_Normal
-   description            The Vector_Surface_Normal class specifies a vector normal to the planar surface. This vector is measured in the coordinates specified by the Coordinate_Space reference in the Surface_Model_Parameters class.
+   description            The Vector_Surface_Normal class specifies a vector normal to the planar surface model. This vector is measured in the coordinates specified by the Coordinate_Space reference in the Surface_Model_Parameters class.
    is abstract            false
    is choice              false
-   subclass of            USER
+   subclass of            Vector_Cartesian_Unit_Base
 
    Associations
 
-      local identifier      geom.Vector_Cartesian_Unit
+      local identifier      Vector_Cartesian_Unit_Base
       minimum occurrences   1
       maximum occurrences   1
       reference type        parent_of
 
    name                   Vector_Surface_Ground_Location
-   description            The Vector_Surface_Ground_Location class specifies any point on the surface. This point is measured in the coordinates specified by the Coordinate_Space reference in the Surface_Model_Parameters class.
+   description            The Vector_Surface_Ground_Location class specifies any point on the surface model, in order to fix the model in space. This point is measured in the coordinates specified by the Coordinate_Space reference in the Surface_Model_Parameters class.
    is abstract            false
    is choice              false
-   subclass of            USER
+   subclass of            Vector_Cartesian_Position_Base
 
    Associations
 
-      local identifier      geom.Vector_Cartesian_Position_Base
+      local identifier      Vector_Cartesian_Position_Base
       minimum occurrences   1
       maximum occurrences   1
       reference type        parent_of
@@ -2285,24 +2328,24 @@ Parsed Input - Classes:
    description            The Vector_Sphere_Center class specifies the center of the sphere. This point is measured in the coordinates specified by the Coordinate_Space reference in the Surface_Model_Parameters class.
    is abstract            false
    is choice              false
-   subclass of            USER
+   subclass of            Vector_Cartesian_Position_Base
 
    Associations
 
-      local identifier      geom.Vector_Cartesian_Position_Base
+      local identifier      Vector_Cartesian_Position_Base
       minimum occurrences   1
       maximum occurrences   1
       reference type        parent_of
 
    name                   Vector_Projection_Origin
-   description            The Vector_Projection_Origin class specifies the location of the origin of the projection. For Polar and Cylindrical projections, this is the XYZ point from which all the azimuth/elevation rays emanate. For the Cylindrical-Perspective projection, this defines the center of the circle around which the synthetic camera orbits. For Orthographic, Orthorectified, and Vertical projections, this optional keyword specifies the point on the projection plane that serves as the origin of the projection (i.e. all points on a line through this point in the direction of PROJECTION_Z_AXIS_VECTOR will be ocated at X=Y=0 in the projection). If not present, (0,0,0) should be assumed. This translation is generally not necessary and not often used; the (X|Y)_AXIS_MINIMUM and (X|Y)_AXIS_MAXIMUM fields allow the mosaic to be located arbitrarily in the projection plane.
+   description            The Vector_Projection_Origin class specifies the location of the origin of the projection. For Polar and Cylindrical projections, this is the XYZ point from which all the azimuth/elevation rays emanate. For the Cylindrical-Perspective projection, this defines the center of the circle around which the synthetic camera orbits. For Orthographic, Orthorectified, and Vertical projections, this optional keyword specifies the point on the projection plane that serves as the origin of the projection (i.e. all points on a line through this point in the direction of PROJECTION_Z_AXIS_VECTOR will be located at X=Y=0 in the projection). If not present, (0,0,0) should be assumed. This translation is generally not necessary and not often used; the (X|Y)_AXIS_MINIMUM and (X|Y)_AXIS_MAXIMUM fields allow the mosaic to be located arbitrarily in the projection plane.
    is abstract            false
    is choice              false
-   subclass of            USER
+   subclass of            Vector_Cartesian_Position_Base
 
    Associations
 
-      local identifier      geom.Vector_Cartesian_Position_Base
+      local identifier      Vector_Cartesian_Position_Base
       minimum occurrences   1
       maximum occurrences   1
       reference type        parent_of
@@ -2311,11 +2354,11 @@ Parsed Input - Classes:
    description            The Vector_Projection_X_Axis class specifies a unit vector defining the X-axis for a given projection. For Orthographic, Orthorectified, and Vertical projections, this vector defines how the * axis in the mosaic is oriented in space. The X and Y axis vectors together define the rotation of the projection plane around the projection axis.
    is abstract            false
    is choice              false
-   subclass of            USER
+   subclass of            Vector_Cartesian_Unit_Base
 
    Associations
 
-      local identifier      geom.Vector_Cartesian_Unit
+      local identifier      Vector_Cartesian_Unit_Base
       minimum occurrences   1
       maximum occurrences   1
       reference type        parent_of
@@ -2324,11 +2367,11 @@ Parsed Input - Classes:
    description            The Vector_Projection_Y_Axis class specifies a unit vector defining the Y-axis for a given projection. For Orthographic, Orthorectified, and Vertical projections, this vector defines how the * axis in the mosaic is oriented in space. The X and Y axis vectors together define the rotation of the projection plane around the projection axis.
    is abstract            false
    is choice              false
-   subclass of            USER
+   subclass of            Vector_Cartesian_Unit_Base
 
    Associations
 
-      local identifier      geom.Vector_Cartesian_Unit
+      local identifier      Vector_Cartesian_Unit_Base
       minimum occurrences   1
       maximum occurrences   1
       reference type        parent_of
@@ -2337,11 +2380,11 @@ Parsed Input - Classes:
    description            The Vector_Projection_Z_Axis class specifies a unit vector defining the Z axis for a given projection. For Orthographic, Orthorectified, and Vertical projections, this vector defines the projection axis for the mosaic. All points along a line parallel to this axis are projected to the same spot in the projection plane. For the Cylindrical-Perspective projections, this defines the new axis of the circle around which the synthetic camera orbits (i.e. the normal to the circle), after the cameras have been rotated to correct for rover tilt. CAMERA_ROTATION_AXIS_VECTOR contains the axis before rotation; the difference in these two indicate the rotation amount.
    is abstract            false
    is choice              false
-   subclass of            USER
+   subclass of            Vector_Cartesian_Unit_Base
 
    Associations
 
-      local identifier      geom.Vector_Cartesian_Unit
+      local identifier      Vector_Cartesian_Unit_Base
       minimum occurrences   1
       maximum occurrences   1
       reference type        parent_of
@@ -2365,6 +2408,75 @@ Parsed Input - Classes:
       reference type        attribute_of
 
       local identifier      z_length
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   Vector_Cartesian_Unit_Base
+   description            This is a generic unit vector in Cartesian space. The "x", "y", and "z" component have no units and are restricted to values between -1.0 and 1.0 inclusive. Further the length of the vector square root of the (sum of the squares of the components) must be 1.0. 
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      x_unit
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      y_unit
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      z_unit
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   Vector_Cartesian_Position_Base
+   description            The Vector_Cartesian_Position_Base is a three dimensional, rectangular coordinates vector. Uses units of length. The included attributes are not sufficient to identify the endpoints of the vector. 
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      x_position
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      y_position
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      z_position
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   Vector_Cartesian_No_Units
+   description            This is a generic vector in Cartesian space. The "x", "y", and "z" component have no units. 
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      x
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      y
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      z
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
