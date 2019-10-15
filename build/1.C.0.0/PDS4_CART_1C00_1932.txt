@@ -1,13 +1,13 @@
 PDS4 Local Data Dictionary Processing Report
 
 Configuration:
-   LDDTool Version        0.2.2.6
+   LDDTool Version        0.2.2.8
    LDD Version Id:        1.9.3.2
    LDD Label Version Id:  1.0
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Fri Oct 11 15:33:22 MST 2019
+   Time                   Tue Oct 15 16:06:22 MST 2019
    Common Schema          [PDS4_PDS_1C00.xsd]
    Common Schematron      [PDS4_PDS_1C00.sch]
    IM Version Id:         1.12.0.0
@@ -1580,37 +1580,37 @@ Parsed Input - Classes:
       reference type        attribute_of
 
       local identifier      oblique_proj_pole_latitude
-      minimum occurrences   1
+      minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
       local identifier      oblique_proj_pole_longitude
-      minimum occurrences   1
+      minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
       local identifier      oblique_proj_pole_rotation
-      minimum occurrences   1
+      minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
       local identifier      oblique_proj_x_axis_vector
-      minimum occurrences   1
+      minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
       local identifier      oblique_proj_y_axis_vector
-      minimum occurrences   1
+      minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
       local identifier      oblique_proj_z_axis_vector
-      minimum occurrences   1
+      minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
       local identifier      look_direction
-      minimum occurrences   1
+      minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
