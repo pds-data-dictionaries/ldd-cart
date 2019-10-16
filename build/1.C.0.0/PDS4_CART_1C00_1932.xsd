@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:cart  Version:1.9.3.2 - Fri Oct 11 15:33:22 MST 2019 -->
+  <!-- PDS4 XML/Schema for Name Space Id:cart  Version:1.9.3.2 - Tue Oct 15 16:06:22 MST 2019 -->
   <!-- Generated from the PDS4 Information Model Version 1.12.0.0 - System Build 10a -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -18,7 +18,7 @@
     version="1.9.3.2">
  
     <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1C00.xsd"/>
-    <xs:import namespace="http://pds.nasa.gov/pds4/geom/v1" schemaLocation="https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_null_1700.xsd"/>
+    <xs:import namespace="http://pds.nasa.gov/pds4/geom/v1" schemaLocation="https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1B10_1700.xsd"/>
  
   <xs:annotation>
     <xs:documentation>
@@ -532,37 +532,23 @@
         projection.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base="cart:Map_Projection_Base">
+      <xs:extension base="cart:Map_Projection_Base">
         <xs:sequence>
-          <xs:element name="straight_vertical_longitude_from_pole" type="cart:straight_vertical_longitude_from_pole" minOccurs="0" maxOccurs="1"> </xs:element>
-          <xs:choice minOccurs="0" maxOccurs="3">
-            <xs:element name="standard_parallel_1" type="cart:standard_parallel_1"> </xs:element>
-            <xs:element name="standard_parallel_2" type="cart:standard_parallel_2"> </xs:element>
-            <xs:element name="scale_factor_at_projection_origin" type="cart:scale_factor_at_projection_origin"> </xs:element>
-          </xs:choice>
-          <xs:element name="scale_factor_at_center_line" type="cart:scale_factor_at_center_line" minOccurs="0" maxOccurs="1"> </xs:element>
-          <xs:element name="scale_factor_at_central_meridian" type="cart:scale_factor_at_central_meridian" minOccurs="0" maxOccurs="1"> </xs:element>
-          <xs:element name="longitude_of_central_meridian" type="cart:longitude_of_central_meridian" minOccurs="1" maxOccurs="1"> </xs:element>
-          <xs:choice minOccurs="0" maxOccurs="1">
-            <xs:element name="Oblique_Line_Azimuth" type="cart:Oblique_Line_Azimuth"> </xs:element>
-            <xs:element name="Oblique_Line_Point" type="cart:Oblique_Line_Point"> </xs:element>
-          </xs:choice>
-          <xs:element name="latitude_of_projection_origin" type="cart:latitude_of_projection_origin" minOccurs="1" maxOccurs="1"> </xs:element>
           <xs:element name="reference_latitude" type="cart:reference_latitude" minOccurs="1" maxOccurs="1"> </xs:element>
           <xs:element name="reference_longitude" type="cart:reference_longitude" minOccurs="1" maxOccurs="1"> </xs:element>
           <xs:element name="map_projection_rotation" type="cart:map_projection_rotation" minOccurs="1" maxOccurs="1"> </xs:element>
-          <xs:element name="oblique_proj_pole_latitude" type="cart:oblique_proj_pole_latitude" minOccurs="1" maxOccurs="1"> </xs:element>
-          <xs:element name="oblique_proj_pole_longitude" type="cart:oblique_proj_pole_longitude" minOccurs="1" maxOccurs="1"> </xs:element>
-          <xs:element name="oblique_proj_pole_rotation" type="cart:oblique_proj_pole_rotation" minOccurs="1" maxOccurs="1"> </xs:element>
-          <xs:element name="oblique_proj_x_axis_vector" type="cart:oblique_proj_x_axis_vector" minOccurs="1" maxOccurs="1"> </xs:element>
-          <xs:element name="oblique_proj_y_axis_vector" type="cart:oblique_proj_y_axis_vector" minOccurs="1" maxOccurs="1"> </xs:element>
-          <xs:element name="oblique_proj_z_axis_vector" type="cart:oblique_proj_z_axis_vector" minOccurs="1" maxOccurs="1"> </xs:element>
-          <xs:element name="look_direction" type="cart:look_direction" minOccurs="1" maxOccurs="1"> </xs:element>
+          <xs:element name="oblique_proj_pole_latitude" type="cart:oblique_proj_pole_latitude" minOccurs="0" maxOccurs="1"> </xs:element>
+          <xs:element name="oblique_proj_pole_longitude" type="cart:oblique_proj_pole_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
+          <xs:element name="oblique_proj_pole_rotation" type="cart:oblique_proj_pole_rotation" minOccurs="0" maxOccurs="1"> </xs:element>
+          <xs:element name="oblique_proj_x_axis_vector" type="cart:oblique_proj_x_axis_vector" minOccurs="0" maxOccurs="1"> </xs:element>
+          <xs:element name="oblique_proj_y_axis_vector" type="cart:oblique_proj_y_axis_vector" minOccurs="0" maxOccurs="1"> </xs:element>
+          <xs:element name="oblique_proj_z_axis_vector" type="cart:oblique_proj_z_axis_vector" minOccurs="0" maxOccurs="1"> </xs:element>
+          <xs:element name="look_direction" type="cart:look_direction" minOccurs="0" maxOccurs="1"> </xs:element>
         </xs:sequence>
         <!-- Begin assert statements for schematron - Enumerated Values -->
         <!-- <xs:assert test="cart:look_direction = ('LEFT', 'RIGHT')"/> -->
         <!-- End assert statements for schematron - Enumerated Values -->
-      </xs:restriction>
+      </xs:extension>
     </xs:complexContent>
   </xs:complexType>
 
@@ -767,25 +753,11 @@
         projection.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base="cart:Map_Projection_Base">
+      <xs:extension base="cart:Map_Projection_Base">
         <xs:sequence>
-          <xs:element name="straight_vertical_longitude_from_pole" type="cart:straight_vertical_longitude_from_pole" minOccurs="0" maxOccurs="1"> </xs:element>
-          <xs:choice minOccurs="0" maxOccurs="3">
-            <xs:element name="standard_parallel_1" type="cart:standard_parallel_1"> </xs:element>
-            <xs:element name="standard_parallel_2" type="cart:standard_parallel_2"> </xs:element>
-            <xs:element name="scale_factor_at_projection_origin" type="cart:scale_factor_at_projection_origin"> </xs:element>
-          </xs:choice>
-          <xs:element name="scale_factor_at_center_line" type="cart:scale_factor_at_center_line" minOccurs="0" maxOccurs="1"> </xs:element>
-          <xs:element name="scale_factor_at_central_meridian" type="cart:scale_factor_at_central_meridian" minOccurs="0" maxOccurs="1"> </xs:element>
-          <xs:element name="longitude_of_central_meridian" type="cart:longitude_of_central_meridian" minOccurs="1" maxOccurs="1"> </xs:element>
-          <xs:choice minOccurs="0" maxOccurs="1">
-            <xs:element name="Oblique_Line_Azimuth" type="cart:Oblique_Line_Azimuth"> </xs:element>
-            <xs:element name="Oblique_Line_Point" type="cart:Oblique_Line_Point"> </xs:element>
-          </xs:choice>
-          <xs:element name="latitude_of_projection_origin" type="cart:latitude_of_projection_origin" minOccurs="1" maxOccurs="1"> </xs:element>
           <xs:element name="target_center_distance" type="cart:target_center_distance" minOccurs="1" maxOccurs="1"> </xs:element>
         </xs:sequence>
-      </xs:restriction>
+      </xs:extension>
     </xs:complexContent>
   </xs:complexType>
 
@@ -3247,7 +3219,7 @@
     "dataDictionary": {
       "Title": "PDS4 Data Dictionary" ,
       "Version": "1.12.0.0" ,
-      "Date": "Fri Oct 11 15:33:22 MST 2019" ,
+      "Date": "Tue Oct 15 16:06:22 MST 2019" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
       "PropertyMapDictionary": [
       ]
