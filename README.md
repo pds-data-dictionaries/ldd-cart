@@ -54,6 +54,8 @@ Each build is generating using the [lddtool](https://pds.nasa.gov/pds4/software/
 lddtool.bat -lpsnJ ingest-PDS4_GEOM_1B10_1700.xml PDS4_CART_1C00_IngestLDD_CART_1932.xml
 ```
 
+Once built, double check paths to PDS and GEOM schemas.
+
 Documentation included in the source (src) directory is generated using the "pds-ldd-doc" tool in the [pds4-tools](https://github.com/nasa-pds/pds4-tools) package.
 
 After a build the README.md files are updated (manually) to reflect the content of repository.
