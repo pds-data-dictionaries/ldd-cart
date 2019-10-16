@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:cart  Version:1.9.3.0 - Wed Apr 17 18:44:53 MST 2019 -->
+  <!-- PDS4 XML/Schema for Name Space Id:cart  Version:1.9.3.0 - Thu Mar 07 23:32:08 MST 2019 -->
   <!-- Generated from the PDS4 Information Model Version 1.11.0.0 - System Build 9a -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -73,15 +73,13 @@
 			remapped into meters using upperleft_corner_x and upperleft_corner_y. 
     - Added many definitions for map projections (cartographic and lander). 
     - Removed "General Vertical Near-sided Projection" since it has functionally been replaced by "Point Perspective".
-	
+
     1.9.3.0
   THare and PGeissler 20190307
   -  'Planar_Coordinate_Information' is no longer mandated to better support vector files. It should be added for images
   -  'cart.latitude_resolution' and 'cart:longitude_resolution' to be optional, not needed for vector GIS labels
-  -  Added Secondary_Spatial_Domain as an optional or alternative method to list IAU recommended or historically used 
-     bounding coordinate section to support both positive East and positive West systems in the same label.
-  -  Fixed triaxial definition. renamed polar_radius to semi_minor_radius and semi_minor_radius to intermediate_radius. Removed
-     comments which stated these were odd and needed to be check. Indeed they were wrong. This is a fairly big update. 
+  -  changed DD_Association to DD_Association_External as a temporary fix to support geom.Coordinate_Space_Reference
+          under Surface_Model_Parameters and Map_Projection_Lander
   
     </xs:documentation>
   </xs:annotation>
@@ -127,7 +125,6 @@
     <xs:sequence>
       <xs:element ref="pds:Local_Internal_Reference" minOccurs="1" maxOccurs="unbounded"> </xs:element>
       <xs:element name="Spatial_Domain" type="cart:Spatial_Domain" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="Secondary_Spatial_Domain" type="cart:Secondary_Spatial_Domain" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="Spatial_Reference_Information" type="cart:Spatial_Reference_Information" minOccurs="1" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
@@ -278,8 +275,8 @@
       <xs:element name="latitude_type" type="cart:latitude_type" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="spheroid_name" type="cart:spheroid_name" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="semi_major_radius" type="cart:semi_major_radius" minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="intermediate_radius" type="cart:intermediate_radius" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="semi_minor_radius" type="cart:semi_minor_radius" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="polar_radius" type="cart:polar_radius" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="longitude_direction" type="cart:longitude_direction" minOccurs="1" maxOccurs="1"> </xs:element>
     </xs:sequence>
     <!-- Begin assert statements for schematron - Enumerated Values -->
@@ -839,26 +836,6 @@
     </xs:complexContent>
   </xs:complexType>
 
-  <xs:complexType name="Secondary_Spatial_Domain">
-    <xs:annotation>
-      <xs:documentation>The Secondary_Spatial_Domain class describes an
-        alternative longitude and latitude bounds to better support IAU
-        approved or historically used geographic areal coordinates. This
-        is only needed if the Spatial_Domain does not meet IAU
-        recommendations or historical uses for the body.
-        </xs:documentation>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element name="Bounding_Coordinates" type="cart:Bounding_Coordinates" minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="longitude_direction" type="cart:longitude_direction" minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="latitude_type" type="cart:latitude_type" minOccurs="1" maxOccurs="1"> </xs:element>
-    </xs:sequence>
-    <!-- Begin assert statements for schematron - Enumerated Values -->
-    <!-- <xs:assert test="cart:longitude_direction = ('Positive East', 'Positive West')"/> -->
-    <!-- <xs:assert test="cart:latitude_type = ('Planetocentric', 'Planetographic')"/> -->
-    <!-- End assert statements for schematron - Enumerated Values -->
-  </xs:complexType>
-
   <xs:complexType name="Sinusoidal">
     <xs:annotation>
       <xs:documentation>The Sinusoidal class contains parameters for the
@@ -1016,6 +993,35 @@
     </xs:sequence>
   </xs:complexType>
 
+  <xs:complexType name="Vector_Cartesian_Position_Base">
+    <xs:annotation>
+      <xs:documentation>The Vector_Cartesian_Position_Base is a three
+        dimensional, rectangular coordinates vector. Uses units of
+        length. The included attributes are not sufficient to identify
+        the endpoints of the vector. </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="x_position" type="cart:x_position" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="y_position" type="cart:y_position" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="z_position" type="cart:z_position" minOccurs="1" maxOccurs="1"> </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Vector_Cartesian_Unit_Base">
+    <xs:annotation>
+      <xs:documentation>This is a generic unit vector in Cartesian
+        space. The "x", "y", and "z" component have no units and are
+        restricted to values between -1.0 and 1.0 inclusive. Further the
+        length of the vector square root of the (sum of the squares of
+        the components) must be 1.0. </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="x_unit" type="cart:x_unit" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="y_unit" type="cart:y_unit" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="z_unit" type="cart:z_unit" minOccurs="1" maxOccurs="1"> </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
   <xs:complexType name="Vector_Length_Base">
     <xs:annotation>
       <xs:documentation>The Vector_Length_Base is an abstract class that
@@ -1048,8 +1054,15 @@
         mosaic to be located arbitrarily in the projection
         plane.</xs:documentation>
     </xs:annotation>
-    <xs:sequence>
-    </xs:sequence>
+    <xs:complexContent>
+      <xs:restriction base="cart:Vector_Cartesian_Position_Base">
+        <xs:sequence>
+          <xs:element name="x_position" type="cart:x_position" minOccurs="1" maxOccurs="1"> </xs:element>
+          <xs:element name="y_position" type="cart:y_position" minOccurs="1" maxOccurs="1"> </xs:element>
+          <xs:element name="z_position" type="cart:z_position" minOccurs="1" maxOccurs="1"> </xs:element>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
   </xs:complexType>
 
   <xs:complexType name="Vector_Projection_X_Axis">
@@ -1062,8 +1075,15 @@
         the projection plane around the projection
         axis.</xs:documentation>
     </xs:annotation>
-    <xs:sequence>
-    </xs:sequence>
+    <xs:complexContent>
+      <xs:restriction base="cart:Vector_Cartesian_Unit_Base">
+        <xs:sequence>
+          <xs:element name="x_unit" type="cart:x_unit" minOccurs="1" maxOccurs="1"> </xs:element>
+          <xs:element name="y_unit" type="cart:y_unit" minOccurs="1" maxOccurs="1"> </xs:element>
+          <xs:element name="z_unit" type="cart:z_unit" minOccurs="1" maxOccurs="1"> </xs:element>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
   </xs:complexType>
 
   <xs:complexType name="Vector_Projection_Y_Axis">
@@ -1076,8 +1096,15 @@
         the projection plane around the projection
         axis.</xs:documentation>
     </xs:annotation>
-    <xs:sequence>
-    </xs:sequence>
+    <xs:complexContent>
+      <xs:restriction base="cart:Vector_Cartesian_Unit_Base">
+        <xs:sequence>
+          <xs:element name="x_unit" type="cart:x_unit" minOccurs="1" maxOccurs="1"> </xs:element>
+          <xs:element name="y_unit" type="cart:y_unit" minOccurs="1" maxOccurs="1"> </xs:element>
+          <xs:element name="z_unit" type="cart:z_unit" minOccurs="1" maxOccurs="1"> </xs:element>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
   </xs:complexType>
 
   <xs:complexType name="Vector_Projection_Z_Axis">
@@ -1095,8 +1122,15 @@
         rotation; the difference in these two indicate the rotation
         amount.</xs:documentation>
     </xs:annotation>
-    <xs:sequence>
-    </xs:sequence>
+    <xs:complexContent>
+      <xs:restriction base="cart:Vector_Cartesian_Unit_Base">
+        <xs:sequence>
+          <xs:element name="x_unit" type="cart:x_unit" minOccurs="1" maxOccurs="1"> </xs:element>
+          <xs:element name="y_unit" type="cart:y_unit" minOccurs="1" maxOccurs="1"> </xs:element>
+          <xs:element name="z_unit" type="cart:z_unit" minOccurs="1" maxOccurs="1"> </xs:element>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
   </xs:complexType>
 
   <xs:complexType name="Vector_Sphere_Center">
@@ -1106,8 +1140,15 @@
         specified by the Coordinate_Space reference in the
         Surface_Model_Parameters class.</xs:documentation>
     </xs:annotation>
-    <xs:sequence>
-    </xs:sequence>
+    <xs:complexContent>
+      <xs:restriction base="cart:Vector_Cartesian_Position_Base">
+        <xs:sequence>
+          <xs:element name="x_position" type="cart:x_position" minOccurs="1" maxOccurs="1"> </xs:element>
+          <xs:element name="y_position" type="cart:y_position" minOccurs="1" maxOccurs="1"> </xs:element>
+          <xs:element name="z_position" type="cart:z_position" minOccurs="1" maxOccurs="1"> </xs:element>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
   </xs:complexType>
 
   <xs:complexType name="Vector_Surface_Ground_Location">
@@ -1117,8 +1158,15 @@
         the coordinates specified by the Coordinate_Space reference in
         the Surface_Model_Parameters class.</xs:documentation>
     </xs:annotation>
-    <xs:sequence>
-    </xs:sequence>
+    <xs:complexContent>
+      <xs:restriction base="cart:Vector_Cartesian_Position_Base">
+        <xs:sequence>
+          <xs:element name="x_position" type="cart:x_position" minOccurs="1" maxOccurs="1"> </xs:element>
+          <xs:element name="y_position" type="cart:y_position" minOccurs="1" maxOccurs="1"> </xs:element>
+          <xs:element name="z_position" type="cart:z_position" minOccurs="1" maxOccurs="1"> </xs:element>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
   </xs:complexType>
 
   <xs:complexType name="Vector_Surface_Normal">
@@ -1128,8 +1176,15 @@
         the coordinates specified by the Coordinate_Space reference in
         the Surface_Model_Parameters class.</xs:documentation>
     </xs:annotation>
-    <xs:sequence>
-    </xs:sequence>
+    <xs:complexContent>
+      <xs:restriction base="cart:Vector_Cartesian_Unit_Base">
+        <xs:sequence>
+          <xs:element name="x_unit" type="cart:x_unit" minOccurs="1" maxOccurs="1"> </xs:element>
+          <xs:element name="y_unit" type="cart:y_unit" minOccurs="1" maxOccurs="1"> </xs:element>
+          <xs:element name="z_unit" type="cart:z_unit" minOccurs="1" maxOccurs="1"> </xs:element>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
   </xs:complexType>
 
   <xs:complexType name="Vertical">
@@ -1296,27 +1351,6 @@
 	   </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="intermediate_radius_WO_Units">
-    <xs:restriction base="pds:ASCII_Real">
-     <xs:minInclusive value="0.0"/>
-     <xs:maxInclusive value="1.7976931348623157e308"/>
-	   </xs:restriction>
-  </xs:simpleType>
-
-  <xs:complexType name="intermediate_radius">
-    <xs:annotation>
-      <xs:documentation>The intermediate_radius attribute provides the
-        value of the intermediate axis of the ellipsoid that defines the
-        approximate shape of a target body. The intermediate_radius axis
-        is usually in the equatorial plane.</xs:documentation>
-    </xs:annotation>
-    <xs:simpleContent>
-      <xs:extension base="cart:intermediate_radius_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
-
   <xs:simpleType name="lander_map_projection_name">
     <xs:annotation>
       <xs:documentation>The map_projection_name attribute provides the
@@ -1460,11 +1494,8 @@
         direction is to the west. For planets with retrograde rotations,
         positive longitude direction is to the east. Generally the
         Positive West longitude_direction is used for planetographc
-        systems and Positive East is used for planetocentric systems. If
-        the data is defined with Spatial_Domain in a manner not
-        recommended by the IAU, there is a optional
-        Secondary_Spatial_Domain section to define a second set of
-        bounding coordinates.</xs:documentation>
+        systems and Positive East is used for planetocentric
+        systems.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
      <xs:minLength value="13"/>
@@ -2233,8 +2264,8 @@
   <xs:complexType name="semi_major_radius">
     <xs:annotation>
       <xs:documentation>The semi_major_axis attribute provides the
-        radius of the equatorial axis of the ellipsoid. In PDS3 this was
-        called A_AXIS_RADIUS.</xs:documentation>
+        radius of the equatorial axis of the
+        ellipsoid.</xs:documentation>
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:semi_major_radius_WO_Units">
@@ -2253,10 +2284,9 @@
   <xs:complexType name="semi_minor_radius">
     <xs:annotation>
       <xs:documentation>The semi_minor_radius attribute provides the
-        value of the polar axis of the ellipsoid that defines the
-        approximate shape of a target body. The semi_minor_radius is
-        normal to the plane defined by the semi-major and intermediate
-        axes.</xs:documentation>
+        value of the intermediate axis of the ellipsoid that defines the
+        approximate shape of a target body. The semi-minor axis is
+        usually in the equatorial plane.</xs:documentation>
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:semi_minor_radius_WO_Units">
@@ -2658,6 +2688,36 @@
     </xs:simpleContent>
   </xs:complexType>
 
+  <xs:simpleType name="x_position_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="x_position">
+    <xs:annotation>
+      <xs:documentation>The x component of a Cartesian position
+        vector.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="cart:x_position_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="x_unit">
+    <xs:annotation>
+      <xs:documentation>The x component of a unit
+        vector.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
   <xs:simpleType name="y_axis_maximum_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="-1.7976931348623157e308"/>
@@ -2719,6 +2779,36 @@
     </xs:simpleContent>
   </xs:complexType>
 
+  <xs:simpleType name="y_position_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="y_position">
+    <xs:annotation>
+      <xs:documentation>The y component of a Cartesian position
+        vector.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="cart:y_position_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="y_unit">
+    <xs:annotation>
+      <xs:documentation>The y component of a unit
+        vector.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
   <xs:simpleType name="z_length_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="-1.7976931348623157e308"/>
@@ -2737,6 +2827,36 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+
+  <xs:simpleType name="z_position_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="z_position">
+    <xs:annotation>
+      <xs:documentation>The z component of a Cartesian position
+        vector.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="cart:z_position_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="z_unit">
+    <xs:annotation>
+      <xs:documentation>The z component of a unit
+        vector.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
 
   <xs:simpleType name="zero_elevation_line">
     <xs:annotation>

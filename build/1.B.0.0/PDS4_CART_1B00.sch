@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:cart  Version:1.9.3.0 - Wed Apr 17 18:44:53 MST 2019 -->
+  <!-- PDS4 Schematron for Name Space Id:cart  Version:1.9.3.0 - Thu Mar 07 23:32:08 MST 2019 -->
   <!-- Generated from the PDS4 Information Model Version 1.11.0.0 - System Build 9a -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -204,12 +204,6 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="cart:Geodetic_Model/cart:intermediate_radius">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="cart:Geodetic_Model/cart:latitude_type">
       <sch:assert test=". = ('Planetocentric', 'Planetographic')">
         The attribute cart:latitude_type must be equal to one of the following values 'Planetocentric', 'Planetographic'.</sch:assert>
@@ -219,6 +213,12 @@
     <sch:rule context="cart:Geodetic_Model/cart:longitude_direction">
       <sch:assert test=". = ('Positive East', 'Positive West')">
         The attribute cart:longitude_direction must be equal to one of the following values 'Positive East', 'Positive West'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="cart:Geodetic_Model/cart:polar_radius">
+      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
+        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -564,18 +564,6 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="cart:Secondary_Spatial_Domain/cart:latitude_type">
-      <sch:assert test=". = ('Planetocentric', 'Planetographic')">
-        The attribute cart:latitude_type must be equal to one of the following values 'Planetocentric', 'Planetographic'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="cart:Secondary_Spatial_Domain/cart:longitude_direction">
-      <sch:assert test=". = ('Positive East', 'Positive West')">
-        The attribute cart:longitude_direction must be equal to one of the following values 'Positive East', 'Positive West'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="cart:Sinusoidal/cart:longitude_of_central_meridian">
       <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
         The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
@@ -603,6 +591,24 @@
     <sch:rule context="cart:Universal_Polar_Stereographic/cart:ups_zone_identifier">
       <sch:assert test=". = ('A', 'B', 'Y', 'Z')">
         The attribute cart:ups_zone_identifier must be equal to one of the following values 'A', 'B', 'Y', 'Z'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="cart:Vector_Cartesian_Position_Base/cart:x_position">
+      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
+        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="cart:Vector_Cartesian_Position_Base/cart:y_position">
+      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
+        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="cart:Vector_Cartesian_Position_Base/cart:z_position">
+      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
+        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
