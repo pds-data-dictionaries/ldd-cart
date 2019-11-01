@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:cart  Version:1.9.3.3 - Thu Oct 31 17:05:57 MST 2019 -->
-  <!-- Generated from the PDS4 Information Model Version 1.12.0.0 - System Build 10a -->
+  <!-- PDS4 Schematron for Name Space Id:cart  Version:1.9.3.3 - Fri Nov 01 09:45:18 MST 2019 -->
+  <!-- Generated from the PDS4 Information Model Version 1.13.0.0 - System Build 10a -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
 

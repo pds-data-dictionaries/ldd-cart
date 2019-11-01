@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:cart  Version:1.9.3.3 - Thu Oct 31 17:05:57 MST 2019 -->
-  <!-- Generated from the PDS4 Information Model Version 1.12.0.0 - System Build 10a -->
+  <!-- PDS4 XML/Schema for Name Space Id:cart  Version:1.9.3.3 - Fri Nov 01 09:45:18 MST 2019 -->
+  <!-- Generated from the PDS4 Information Model Version 1.13.0.0 - System Build 10a -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
   <!--               Dictionary Stack                                            -->
-  <!-- 1.12.0.0 - pds: - Common Dictionary - N/A                                 -->
+  <!-- 1.13.0.0 - pds: - Common Dictionary - N/A                                 -->
   <!-- 1.7.0.0 - geom: - Geometry Dictionary Full - ingest-PDS4_GEOM_1B10_1700.x -->
   <!-- 1.9.3.3 - cart: - Cartography - PDS4_CART_1D00_IngestLDD_CART_1933.xml    -->
   <!--                                                                           -->
   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  targetNamespace="http://pds.nasa.gov/pds4/cart/v1" xmlns:cart="http://pds.nasa.gov/pds4/cart/v1"
-  xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" xmlns:geom="http://pds.nasa.gov/pds4/geom/v1"
-  elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.9.3.3">
-
-  <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1"
-    schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1C00.xsd"/>
-  <xs:import namespace="http://pds.nasa.gov/pds4/geom/v1"
-    schemaLocation="https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1B10_1700.xsd"/>
-
+    targetNamespace="http://pds.nasa.gov/pds4/cart/v1"
+    xmlns:cart="http://pds.nasa.gov/pds4/cart/v1"
+    xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
+    xmlns:geom="http://pds.nasa.gov/pds4/geom/v1"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+    version="1.9.3.3">
+ 
+    <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1D00.xsd"/>
+    <xs:import namespace="http://pds.nasa.gov/pds4/geom/v1" schemaLocation="https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1B10_1700.xsd"/>
+ 
   <xs:annotation>
     <xs:documentation>
 
@@ -132,7 +134,7 @@
 
     </xs:documentation>
   </xs:annotation>
-
+ 
   <xs:element name="Cartography" type="cart:Cartography"> </xs:element>
 
   <xs:complexType name="Bounding_Coordinates">
@@ -143,14 +145,10 @@
         northern-most, and southern-most. </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="west_bounding_coordinate" type="cart:west_bounding_coordinate" minOccurs="1"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="east_bounding_coordinate" type="cart:east_bounding_coordinate" minOccurs="1"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="north_bounding_coordinate" type="cart:north_bounding_coordinate"
-        minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="south_bounding_coordinate" type="cart:south_bounding_coordinate"
-        minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="west_bounding_coordinate" type="cart:west_bounding_coordinate" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="east_bounding_coordinate" type="cart:east_bounding_coordinate" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="north_bounding_coordinate" type="cart:north_bounding_coordinate" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="south_bounding_coordinate" type="cart:south_bounding_coordinate" minOccurs="1" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -178,10 +176,8 @@
     <xs:sequence>
       <xs:element ref="pds:Local_Internal_Reference" minOccurs="1" maxOccurs="unbounded"> </xs:element>
       <xs:element name="Spatial_Domain" type="cart:Spatial_Domain" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="Secondary_Spatial_Domain" type="cart:Secondary_Spatial_Domain" minOccurs="0"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="Spatial_Reference_Information" type="cart:Spatial_Reference_Information"
-        minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="Secondary_Spatial_Domain" type="cart:Secondary_Spatial_Domain" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Spatial_Reference_Information" type="cart:Spatial_Reference_Information" minOccurs="1" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -193,13 +189,10 @@
         pair" and "row and column" methods). </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="pixel_resolution_x" type="cart:pixel_resolution_x" minOccurs="1"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="pixel_resolution_y" type="cart:pixel_resolution_y" minOccurs="1"
-        maxOccurs="1"> </xs:element>
+      <xs:element name="pixel_resolution_x" type="cart:pixel_resolution_x" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="pixel_resolution_y" type="cart:pixel_resolution_y" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="pixel_scale_x" type="cart:pixel_scale_x" minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="pixel_scale_y" type="cart:pixel_scale_y" minOccurs="1" maxOccurs="1">
-      </xs:element>
+      <xs:element name="pixel_scale_y" type="cart:pixel_scale_y" minOccurs="1" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -214,16 +207,12 @@
     <xs:sequence>
       <xs:element name="pixel_scale_x" type="cart:pixel_scale_x" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="pixel_scale_y" type="cart:pixel_scale_y" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="maximum_elevation" type="cart:maximum_elevation" minOccurs="1" maxOccurs="1"
-        > </xs:element>
-      <xs:element name="minimum_elevation" type="cart:minimum_elevation" minOccurs="1" maxOccurs="1"
-        > </xs:element>
+      <xs:element name="maximum_elevation" type="cart:maximum_elevation" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="minimum_elevation" type="cart:minimum_elevation" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="start_azimuth" type="cart:start_azimuth" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="stop_azimuth" type="cart:stop_azimuth" minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="zero_elevation_line" type="cart:zero_elevation_line" minOccurs="1"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="Vector_Projection_Origin" type="cart:Vector_Projection_Origin" minOccurs="0"
-        maxOccurs="1"> </xs:element>
+      <xs:element name="zero_elevation_line" type="cart:zero_elevation_line" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="Vector_Projection_Origin" type="cart:Vector_Projection_Origin" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -238,24 +227,16 @@
     <xs:sequence>
       <xs:element name="pixel_scale_x" type="cart:pixel_scale_x" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="pixel_scale_y" type="cart:pixel_scale_y" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="maximum_elevation" type="cart:maximum_elevation" minOccurs="0" maxOccurs="1"
-        > </xs:element>
-      <xs:element name="minimum_elevation" type="cart:minimum_elevation" minOccurs="0" maxOccurs="1"
-        > </xs:element>
-      <xs:element name="projection_azimuth" type="cart:projection_azimuth" minOccurs="0"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="projection_elevation" type="cart:projection_elevation" minOccurs="1"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="projection_elevation_line" type="cart:projection_elevation_line"
-        minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="maximum_elevation" type="cart:maximum_elevation" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="minimum_elevation" type="cart:minimum_elevation" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="projection_azimuth" type="cart:projection_azimuth" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="projection_elevation" type="cart:projection_elevation" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="projection_elevation_line" type="cart:projection_elevation_line" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="start_azimuth" type="cart:start_azimuth" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="stop_azimuth" type="cart:stop_azimuth" minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="projection_axis_offset" type="cart:projection_axis_offset" minOccurs="0"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="Vector_Projection_Origin" type="cart:Vector_Projection_Origin" minOccurs="0"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="Vector_Projection_Z_Axis" type="cart:Vector_Projection_Z_Axis" minOccurs="0"
-        maxOccurs="1"> </xs:element>
+      <xs:element name="projection_axis_offset" type="cart:projection_axis_offset" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Vector_Projection_Origin" type="cart:Vector_Projection_Origin" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Vector_Projection_Z_Axis" type="cart:Vector_Projection_Z_Axis" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -267,14 +248,10 @@
         another point.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="distance_resolution" type="cart:distance_resolution" minOccurs="1"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="bearing_resolution" type="cart:bearing_resolution" minOccurs="1"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="bearing_reference_direction" type="cart:bearing_reference_direction"
-        minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="bearing_reference_meridian" type="cart:bearing_reference_meridian"
-        minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="distance_resolution" type="cart:distance_resolution" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="bearing_resolution" type="cart:bearing_resolution" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="bearing_reference_direction" type="cart:bearing_reference_direction" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="bearing_reference_meridian" type="cart:bearing_reference_meridian" minOccurs="1" maxOccurs="1"> </xs:element>
     </xs:sequence>
     <!-- Begin assert statements for schematron - Enumerated Values -->
     <!-- <xs:assert test="cart:bearing_reference_direction = ('North', 'South')"/> -->
@@ -301,12 +278,9 @@
         of the body. </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="latitude_of_projection_origin" type="cart:latitude_of_projection_origin"
-        minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="standard_parallel_1" type="cart:standard_parallel_1" minOccurs="1"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="longitude_of_central_meridian" type="cart:longitude_of_central_meridian"
-        minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="latitude_of_projection_origin" type="cart:latitude_of_projection_origin" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="standard_parallel_1" type="cart:standard_parallel_1" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="longitude_of_central_meridian" type="cart:longitude_of_central_meridian" minOccurs="1" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -337,10 +311,8 @@
         </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="upperleft_corner_x" type="cart:upperleft_corner_x" minOccurs="0"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="upperleft_corner_y" type="cart:upperleft_corner_y" minOccurs="0"
-        maxOccurs="1"> </xs:element>
+      <xs:element name="upperleft_corner_x" type="cart:upperleft_corner_x" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="upperleft_corner_y" type="cart:upperleft_corner_y" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -355,12 +327,9 @@
       <xs:element name="a_axis_radius" type="cart:a_axis_radius" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="b_axis_radius" type="cart:b_axis_radius" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="c_axis_radius" type="cart:c_axis_radius" minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="longitude_direction" type="cart:longitude_direction" minOccurs="1"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="coordinate_system_type" type="cart:coordinate_system_type" minOccurs="0"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="coordinate_system_name" type="cart:coordinate_system_name" minOccurs="0"
-        maxOccurs="1"> </xs:element>
+      <xs:element name="longitude_direction" type="cart:longitude_direction" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="coordinate_system_type" type="cart:coordinate_system_type" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="coordinate_system_name" type="cart:coordinate_system_name" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
     <!-- Begin assert statements for schematron - Enumerated Values -->
     <!-- <xs:assert test="cart:latitude_type = ('Planetocentric', 'Planetographic')"/> -->
@@ -377,10 +346,8 @@
         to a reference spheroid.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="latitude_resolution" type="cart:latitude_resolution" minOccurs="0"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="longitude_resolution" type="cart:longitude_resolution" minOccurs="0"
-        maxOccurs="1"> </xs:element>
+      <xs:element name="latitude_resolution" type="cart:latitude_resolution" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="longitude_resolution" type="cart:longitude_resolution" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -393,14 +360,10 @@
         coordinates.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="grid_coordinate_system_name" type="cart:grid_coordinate_system_name"
-        minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="Universal_Transverse_Mercator" type="cart:Universal_Transverse_Mercator"
-        minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="Universal_Polar_Stereographic" type="cart:Universal_Polar_Stereographic"
-        minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="State_Plane_Coordinate_System" type="cart:State_Plane_Coordinate_System"
-        minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="grid_coordinate_system_name" type="cart:grid_coordinate_system_name" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="Universal_Transverse_Mercator" type="cart:Universal_Transverse_Mercator" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Universal_Polar_Stereographic" type="cart:Universal_Polar_Stereographic" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="State_Plane_Coordinate_System" type="cart:State_Plane_Coordinate_System" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
     <!-- Begin assert statements for schematron - Enumerated Values -->
     <!-- <xs:assert test="cart:grid_coordinate_system_name = ('ARC Coordinate System', 'Other Grid System', 'State Plane Coordinate System 1927', 'State Plane Coordinate System 1983', 'Universal Polar Stereographic', 'Universal Transverse Mercator')"/> -->
@@ -420,8 +383,7 @@
         <xs:element name="Planar" type="cart:Planar"> </xs:element>
         <xs:element name="Local" type="cart:Local"> </xs:element>
       </xs:choice>
-      <xs:element name="Geodetic_Model" type="cart:Geodetic_Model" minOccurs="0" maxOccurs="1">
-      </xs:element>
+      <xs:element name="Geodetic_Model" type="cart:Geodetic_Model" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -435,10 +397,8 @@
         </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="longitude_of_central_meridian" type="cart:longitude_of_central_meridian"
-        minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="latitude_of_projection_origin" type="cart:latitude_of_projection_origin"
-        minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="longitude_of_central_meridian" type="cart:longitude_of_central_meridian" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="latitude_of_projection_origin" type="cart:latitude_of_projection_origin" minOccurs="1" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -452,16 +412,11 @@
         </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="standard_parallel_1" type="cart:standard_parallel_1" minOccurs="0"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="standard_parallel_2" type="cart:standard_parallel_2" minOccurs="0"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="longitude_of_central_meridian" type="cart:longitude_of_central_meridian"
-        minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="latitude_of_projection_origin" type="cart:latitude_of_projection_origin"
-        minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="scale_factor_at_projection_origin"
-        type="cart:scale_factor_at_projection_origin" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="standard_parallel_1" type="cart:standard_parallel_1" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="standard_parallel_2" type="cart:standard_parallel_2" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="longitude_of_central_meridian" type="cart:longitude_of_central_meridian" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="latitude_of_projection_origin" type="cart:latitude_of_projection_origin" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="scale_factor_at_projection_origin" type="cart:scale_factor_at_projection_origin" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -472,16 +427,11 @@
         planet. </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="local_description" type="cart:local_description" minOccurs="1" maxOccurs="1"
-        > </xs:element>
-      <xs:element name="local_georeference_information" type="cart:local_georeference_information"
-        minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="Map_Projection_Lander" type="cart:Map_Projection_Lander" minOccurs="0"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="Map_Projection_Rings" type="cart:Map_Projection_Rings" minOccurs="0"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="Surface_Model_Parameters" type="cart:Surface_Model_Parameters" minOccurs="0"
-        maxOccurs="1"> </xs:element>
+      <xs:element name="local_description" type="cart:local_description" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="local_georeference_information" type="cart:local_georeference_information" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Map_Projection_Lander" type="cart:Map_Projection_Lander" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Map_Projection_Rings" type="cart:Map_Projection_Rings" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Surface_Model_Parameters" type="cart:Surface_Model_Parameters" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -493,10 +443,8 @@
         surface of the planet. </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="local_planar_description" type="cart:local_planar_description" minOccurs="1"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="local_planar_georeference_information"
-        type="cart:local_planar_georeference_information" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="local_planar_description" type="cart:local_planar_description" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="local_planar_georeference_information" type="cart:local_planar_georeference_information" minOccurs="1" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -507,8 +455,7 @@
         plane (or Cartesian system). </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="map_projection_name" type="cart:map_projection_name" minOccurs="1"
-        maxOccurs="1"> </xs:element>
+      <xs:element name="map_projection_name" type="cart:map_projection_name" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:choice minOccurs="1" maxOccurs="1">
         <xs:element name="Equirectangular" type="cart:Equirectangular"> </xs:element>
         <xs:element name="Lambert_Azimuthal_Equal_Area" type="cart:Lambert_Azimuthal_Equal_Area"> </xs:element>
@@ -537,8 +484,7 @@
         spacecraft.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="lander_map_projection_name" type="cart:lander_map_projection_name"
-        minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="lander_map_projection_name" type="cart:lander_map_projection_name" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:choice minOccurs="1" maxOccurs="1">
         <xs:element name="Cylindrical" type="cart:Cylindrical"> </xs:element>
         <xs:element name="Perspective" type="cart:Perspective"> </xs:element>
@@ -562,8 +508,7 @@
         planet on a plane.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="rings_map_projection_name" type="cart:rings_map_projection_name"
-        minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="rings_map_projection_name" type="cart:rings_map_projection_name" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:choice minOccurs="1" maxOccurs="1">
         <xs:element name="Ring_Polar" type="cart:Ring_Polar"> </xs:element>
       </xs:choice>
@@ -582,14 +527,10 @@
         </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="standard_parallel_1" type="cart:standard_parallel_1" minOccurs="0"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="longitude_of_central_meridian" type="cart:longitude_of_central_meridian"
-        minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="latitude_of_projection_origin" type="cart:latitude_of_projection_origin"
-        minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="scale_factor_at_projection_origin"
-        type="cart:scale_factor_at_projection_origin" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="standard_parallel_1" type="cart:standard_parallel_1" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="longitude_of_central_meridian" type="cart:longitude_of_central_meridian" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="latitude_of_projection_origin" type="cart:latitude_of_projection_origin" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="scale_factor_at_projection_origin" type="cart:scale_factor_at_projection_origin" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -602,30 +543,18 @@
         </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="latitude_of_projection_origin" type="cart:latitude_of_projection_origin"
-        minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="longitude_of_central_meridian" type="cart:longitude_of_central_meridian"
-        minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="reference_latitude" type="cart:reference_latitude" minOccurs="1"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="reference_longitude" type="cart:reference_longitude" minOccurs="1"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="map_projection_rotation" type="cart:map_projection_rotation" minOccurs="1"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="oblique_proj_pole_latitude" type="cart:oblique_proj_pole_latitude"
-        minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="oblique_proj_pole_longitude" type="cart:oblique_proj_pole_longitude"
-        minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="oblique_proj_pole_rotation" type="cart:oblique_proj_pole_rotation"
-        minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="oblique_proj_x_axis_vector" type="cart:oblique_proj_x_axis_vector"
-        minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="oblique_proj_y_axis_vector" type="cart:oblique_proj_y_axis_vector"
-        minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="oblique_proj_z_axis_vector" type="cart:oblique_proj_z_axis_vector"
-        minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="look_direction" type="cart:look_direction" minOccurs="0" maxOccurs="1">
-      </xs:element>
+      <xs:element name="latitude_of_projection_origin" type="cart:latitude_of_projection_origin" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="longitude_of_central_meridian" type="cart:longitude_of_central_meridian" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="reference_latitude" type="cart:reference_latitude" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="reference_longitude" type="cart:reference_longitude" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="map_projection_rotation" type="cart:map_projection_rotation" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="oblique_proj_pole_latitude" type="cart:oblique_proj_pole_latitude" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="oblique_proj_pole_longitude" type="cart:oblique_proj_pole_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="oblique_proj_pole_rotation" type="cart:oblique_proj_pole_rotation" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="oblique_proj_x_axis_vector" type="cart:oblique_proj_x_axis_vector" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="oblique_proj_y_axis_vector" type="cart:oblique_proj_y_axis_vector" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="oblique_proj_z_axis_vector" type="cart:oblique_proj_z_axis_vector" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="look_direction" type="cart:look_direction" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
     <!-- Begin assert statements for schematron - Enumerated Values -->
     <!-- <xs:assert test="cart:look_direction = ('LEFT', 'RIGHT')"/> -->
@@ -644,12 +573,9 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element name="azimuthal_angle" type="cart:azimuthal_angle" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="azimuth_measure_point_longitude" type="cart:azimuth_measure_point_longitude"
-        minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="latitude_of_projection_origin" type="cart:latitude_of_projection_origin"
-        minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="longitude_of_central_meridian" type="cart:longitude_of_central_meridian"
-        minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="azimuth_measure_point_longitude" type="cart:azimuth_measure_point_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="latitude_of_projection_origin" type="cart:latitude_of_projection_origin" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="longitude_of_central_meridian" type="cart:longitude_of_central_meridian" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -665,8 +591,7 @@
         </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="Oblique_Line_Point_Group" type="cart:Oblique_Line_Point_Group" minOccurs="2"
-        maxOccurs="2"> </xs:element>
+      <xs:element name="Oblique_Line_Point_Group" type="cart:Oblique_Line_Point_Group" minOccurs="2" maxOccurs="2"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -678,10 +603,8 @@
         centered.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="oblique_line_latitude" type="cart:oblique_line_latitude" minOccurs="1"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="oblique_line_longitude" type="cart:oblique_line_longitude" minOccurs="1"
-        maxOccurs="1"> </xs:element>
+      <xs:element name="oblique_line_latitude" type="cart:oblique_line_latitude" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="oblique_line_longitude" type="cart:oblique_line_longitude" minOccurs="1" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -699,10 +622,8 @@
         <xs:element name="Oblique_Line_Azimuth" type="cart:Oblique_Line_Azimuth"> </xs:element>
         <xs:element name="Oblique_Line_Point" type="cart:Oblique_Line_Point"> </xs:element>
       </xs:choice>
-      <xs:element name="longitude_of_central_meridian" type="cart:longitude_of_central_meridian"
-        minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="latitude_of_projection_origin" type="cart:latitude_of_projection_origin"
-        minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="longitude_of_central_meridian" type="cart:longitude_of_central_meridian" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="latitude_of_projection_origin" type="cart:latitude_of_projection_origin" minOccurs="1" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -715,10 +636,8 @@
         </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="longitude_of_central_meridian" type="cart:longitude_of_central_meridian"
-        minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="latitude_of_projection_origin" type="cart:latitude_of_projection_origin"
-        minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="longitude_of_central_meridian" type="cart:longitude_of_central_meridian" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="latitude_of_projection_origin" type="cart:latitude_of_projection_origin" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -729,24 +648,17 @@
         projection plane can be specified.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="pixel_resolution_x" type="cart:pixel_resolution_x" minOccurs="1"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="pixel_resolution_y" type="cart:pixel_resolution_y" minOccurs="0"
-        maxOccurs="1"> </xs:element>
+      <xs:element name="pixel_resolution_x" type="cart:pixel_resolution_x" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="pixel_resolution_y" type="cart:pixel_resolution_y" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="x_axis_maximum" type="cart:x_axis_maximum" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="x_axis_minimum" type="cart:x_axis_minimum" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="y_axis_maximum" type="cart:y_axis_maximum" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="y_axis_minimum" type="cart:y_axis_minimum" minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="Pixel_Position_Origin" type="cart:Pixel_Position_Origin" minOccurs="0"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="Vector_Projection_Origin" type="cart:Vector_Projection_Origin" minOccurs="0"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="Vector_Projection_X_Axis" type="cart:Vector_Projection_X_Axis" minOccurs="0"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="Vector_Projection_Y_Axis" type="cart:Vector_Projection_Y_Axis" minOccurs="0"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="Vector_Projection_Z_Axis" type="cart:Vector_Projection_Z_Axis" minOccurs="0"
-        maxOccurs="1"> </xs:element>
+      <xs:element name="Pixel_Position_Origin" type="cart:Pixel_Position_Origin" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Vector_Projection_Origin" type="cart:Vector_Projection_Origin" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Vector_Projection_X_Axis" type="cart:Vector_Projection_X_Axis" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Vector_Projection_Y_Axis" type="cart:Vector_Projection_Y_Axis" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Vector_Projection_Z_Axis" type="cart:Vector_Projection_Z_Axis" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -758,24 +670,17 @@
         It has a constant scale in meters/pixel.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="pixel_resolution_x" type="cart:pixel_resolution_x" minOccurs="1"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="pixel_resolution_y" type="cart:pixel_resolution_y" minOccurs="1"
-        maxOccurs="1"> </xs:element>
+      <xs:element name="pixel_resolution_x" type="cart:pixel_resolution_x" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="pixel_resolution_y" type="cart:pixel_resolution_y" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="x_axis_maximum" type="cart:x_axis_maximum" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="x_axis_minimum" type="cart:x_axis_minimum" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="y_axis_maximum" type="cart:y_axis_maximum" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="y_axis_minimum" type="cart:y_axis_minimum" minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="Pixel_Position_Origin" type="cart:Pixel_Position_Origin" minOccurs="0"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="Vector_Projection_Origin" type="cart:Vector_Projection_Origin" minOccurs="0"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="Vector_Projection_X_Axis" type="cart:Vector_Projection_X_Axis" minOccurs="0"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="Vector_Projection_Y_Axis" type="cart:Vector_Projection_Y_Axis" minOccurs="0"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="Vector_Projection_Z_Axis" type="cart:Vector_Projection_Z_Axis" minOccurs="0"
-        maxOccurs="1"> </xs:element>
+      <xs:element name="Pixel_Position_Origin" type="cart:Pixel_Position_Origin" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Vector_Projection_Origin" type="cart:Vector_Projection_Origin" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Vector_Projection_X_Axis" type="cart:Vector_Projection_X_Axis" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Vector_Projection_Y_Axis" type="cart:Vector_Projection_Y_Axis" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Vector_Projection_Z_Axis" type="cart:Vector_Projection_Z_Axis" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -787,18 +692,13 @@
     <xs:sequence>
       <xs:element name="pixel_scale_x" type="cart:pixel_scale_x" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="pixel_scale_y" type="cart:pixel_scale_y" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="maximum_elevation" type="cart:maximum_elevation" minOccurs="1" maxOccurs="1"
-        > </xs:element>
-      <xs:element name="minimum_elevation" type="cart:minimum_elevation" minOccurs="1" maxOccurs="1"
-        > </xs:element>
+      <xs:element name="maximum_elevation" type="cart:maximum_elevation" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="minimum_elevation" type="cart:minimum_elevation" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="start_azimuth" type="cart:start_azimuth" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="stop_azimuth" type="cart:stop_azimuth" minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="projection_azimuth" type="cart:projection_azimuth" minOccurs="1"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="projection_elevation" type="cart:projection_elevation" minOccurs="1"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="Camera_Model_Offset" type="cart:Camera_Model_Offset" minOccurs="1"
-        maxOccurs="1"> </xs:element>
+      <xs:element name="projection_azimuth" type="cart:projection_azimuth" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="projection_elevation" type="cart:projection_elevation" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="Camera_Model_Offset" type="cart:Camera_Model_Offset" minOccurs="1" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -847,10 +747,8 @@
         <xs:element name="Grid_Coordinate_System" type="cart:Grid_Coordinate_System"> </xs:element>
         <xs:element name="Local_Planar" type="cart:Local_Planar"> </xs:element>
       </xs:choice>
-      <xs:element name="Planar_Coordinate_Information" type="cart:Planar_Coordinate_Information"
-        minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="Geo_Transformation" type="cart:Geo_Transformation" minOccurs="0"
-        maxOccurs="1"> </xs:element>
+      <xs:element name="Planar_Coordinate_Information" type="cart:Planar_Coordinate_Information" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Geo_Transformation" type="cart:Geo_Transformation" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -861,12 +759,10 @@
         surface.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="planar_coordinate_encoding_method"
-        type="cart:planar_coordinate_encoding_method" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="planar_coordinate_encoding_method" type="cart:planar_coordinate_encoding_method" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:choice minOccurs="1" maxOccurs="1">
         <xs:element name="Coordinate_Representation" type="cart:Coordinate_Representation"> </xs:element>
-        <xs:element name="Distance_and_Bearing_Representation"
-          type="cart:Distance_and_Bearing_Representation"> </xs:element>
+        <xs:element name="Distance_and_Bearing_Representation" type="cart:Distance_and_Bearing_Representation"> </xs:element>
       </xs:choice>
     </xs:sequence>
     <!-- Begin assert statements for schematron - Enumerated Values -->
@@ -883,12 +779,9 @@
         </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="target_center_distance" type="cart:target_center_distance" minOccurs="1"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="longitude_of_central_meridian" type="cart:longitude_of_central_meridian"
-        minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="latitude_of_projection_origin" type="cart:latitude_of_projection_origin"
-        minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="target_center_distance" type="cart:target_center_distance" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="longitude_of_central_meridian" type="cart:longitude_of_central_meridian" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="latitude_of_projection_origin" type="cart:latitude_of_projection_origin" minOccurs="1" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -902,14 +795,10 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element name="pixel_scale" type="cart:pixel_scale" minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="maximum_elevation" type="cart:maximum_elevation" minOccurs="1" maxOccurs="1"
-        > </xs:element>
-      <xs:element name="reference_azimuth" type="cart:reference_azimuth" minOccurs="1" maxOccurs="1"
-        > </xs:element>
-      <xs:element name="Pixel_Position_Nadir_Polar" type="cart:Pixel_Position_Nadir_Polar"
-        minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="Vector_Projection_Origin" type="cart:Vector_Projection_Origin" minOccurs="0"
-        maxOccurs="1"> </xs:element>
+      <xs:element name="maximum_elevation" type="cart:maximum_elevation" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="reference_azimuth" type="cart:reference_azimuth" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="Pixel_Position_Nadir_Polar" type="cart:Pixel_Position_Nadir_Polar" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Vector_Projection_Origin" type="cart:Vector_Projection_Origin" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -923,12 +812,9 @@
         </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="longitude_of_central_meridian" type="cart:longitude_of_central_meridian"
-        minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="scale_factor_at_projection_origin"
-        type="cart:scale_factor_at_projection_origin" minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="latitude_of_projection_origin" type="cart:latitude_of_projection_origin"
-        minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="longitude_of_central_meridian" type="cart:longitude_of_central_meridian" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="scale_factor_at_projection_origin" type="cart:scale_factor_at_projection_origin" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="latitude_of_projection_origin" type="cart:latitude_of_projection_origin" minOccurs="1" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -941,10 +827,8 @@
         </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="longitude_of_central_meridian" type="cart:longitude_of_central_meridian"
-        minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="latitude_of_projection_origin" type="cart:latitude_of_projection_origin"
-        minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="longitude_of_central_meridian" type="cart:longitude_of_central_meridian" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="latitude_of_projection_origin" type="cart:latitude_of_projection_origin" minOccurs="1" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -974,21 +858,14 @@
       <xs:element name="local_time_scale" type="cart:local_time_scale" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="sample_name" type="cart:sample_name" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="line_name" type="cart:line_name" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="first_sample_center" type="cart:first_sample_center" minOccurs="0"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="first_line_center" type="cart:first_line_center" minOccurs="0" maxOccurs="1"
-        > </xs:element>
-      <xs:element name="last_sample_center" type="cart:last_sample_center" minOccurs="0"
-        maxOccurs="1"> </xs:element>
+      <xs:element name="first_sample_center" type="cart:first_sample_center" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="first_line_center" type="cart:first_line_center" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="last_sample_center" type="cart:last_sample_center" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="last_line_center" type="cart:last_line_center" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="min_footprint_sample" type="cart:min_footprint_sample" minOccurs="0"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="min_footprint_line" type="cart:min_footprint_line" minOccurs="0"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="max_footprint_sample" type="cart:max_footprint_sample" minOccurs="0"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="max_footprint_line" type="cart:max_footprint_line" minOccurs="0"
-        maxOccurs="1"> </xs:element>
+      <xs:element name="min_footprint_sample" type="cart:min_footprint_sample" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="min_footprint_line" type="cart:min_footprint_line" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="max_footprint_sample" type="cart:max_footprint_sample" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="max_footprint_line" type="cart:max_footprint_line" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -1002,12 +879,9 @@
         </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="Bounding_Coordinates" type="cart:Bounding_Coordinates" minOccurs="1"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="longitude_direction" type="cart:longitude_direction" minOccurs="1"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="latitude_type" type="cart:latitude_type" minOccurs="1" maxOccurs="1">
-      </xs:element>
+      <xs:element name="Bounding_Coordinates" type="cart:Bounding_Coordinates" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="longitude_direction" type="cart:longitude_direction" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="latitude_type" type="cart:latitude_type" minOccurs="1" maxOccurs="1"> </xs:element>
     </xs:sequence>
     <!-- Begin assert statements for schematron - Enumerated Values -->
     <!-- <xs:assert test="cart:longitude_direction = ('Positive East', 'Positive West')"/> -->
@@ -1024,10 +898,8 @@
         </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="longitude_of_central_meridian" type="cart:longitude_of_central_meridian"
-        minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="latitude_of_projection_origin" type="cart:latitude_of_projection_origin"
-        minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="longitude_of_central_meridian" type="cart:longitude_of_central_meridian" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="latitude_of_projection_origin" type="cart:latitude_of_projection_origin" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -1037,8 +909,7 @@
         geographic areal domain of the data set. </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="Bounding_Coordinates" type="cart:Bounding_Coordinates" minOccurs="1"
-        maxOccurs="1"> </xs:element>
+      <xs:element name="Bounding_Coordinates" type="cart:Bounding_Coordinates" minOccurs="1" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -1049,9 +920,7 @@
         encode, coordinates in a data set. </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="Horizontal_Coordinate_System_Definition"
-        type="cart:Horizontal_Coordinate_System_Definition" minOccurs="1" maxOccurs="1">
-      </xs:element>
+      <xs:element name="Horizontal_Coordinate_System_Definition" type="cart:Horizontal_Coordinate_System_Definition" minOccurs="1" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -1065,8 +934,7 @@
         </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="spcs_zone_identifier" type="cart:spcs_zone_identifier" minOccurs="1"
-        maxOccurs="1"> </xs:element>
+      <xs:element name="spcs_zone_identifier" type="cart:spcs_zone_identifier" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:choice minOccurs="1" maxOccurs="1">
         <xs:element name="Lambert_Conformal_Conic" type="cart:Lambert_Conformal_Conic"> </xs:element>
         <xs:element name="Transverse_Mercator" type="cart:Transverse_Mercator"> </xs:element>
@@ -1086,12 +954,10 @@
         typically occur at seams between images.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="surface_model_type" type="cart:surface_model_type" minOccurs="1"
-        maxOccurs="1"> </xs:element>
+      <xs:element name="surface_model_type" type="cart:surface_model_type" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:choice minOccurs="1" maxOccurs="1">
         <xs:element name="Surface_Model_Planar" type="cart:Surface_Model_Planar"> </xs:element>
-        <xs:element name="Surface_Model_Spherical" type="cart:Surface_Model_Spherical">
-        </xs:element>
+        <xs:element name="Surface_Model_Spherical" type="cart:Surface_Model_Spherical"> </xs:element>
       </xs:choice>
       <xs:element ref="geom:Coordinate_Space_Reference" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
@@ -1105,10 +971,8 @@
         (Vector_Surface_Ground_Location). </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="Vector_Surface_Normal" type="cart:Vector_Surface_Normal" minOccurs="1"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="Vector_Surface_Ground_Location" type="cart:Vector_Surface_Ground_Location"
-        minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="Vector_Surface_Normal" type="cart:Vector_Surface_Normal" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="Vector_Surface_Ground_Location" type="cart:Vector_Surface_Ground_Location" minOccurs="1" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -1120,10 +984,8 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element name="sphere_radius" type="cart:sphere_radius" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="sphere_intersection_count" type="cart:sphere_intersection_count"
-        minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="Vector_Sphere_Center" type="cart:Vector_Sphere_Center" minOccurs="1"
-        maxOccurs="1"> </xs:element>
+      <xs:element name="sphere_intersection_count" type="cart:sphere_intersection_count" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Vector_Sphere_Center" type="cart:Vector_Sphere_Center" minOccurs="1" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -1137,12 +999,9 @@
         </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="scale_factor_at_central_meridian"
-        type="cart:scale_factor_at_central_meridian" minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="longitude_of_central_meridian" type="cart:longitude_of_central_meridian"
-        minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="latitude_of_projection_origin" type="cart:latitude_of_projection_origin"
-        minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="scale_factor_at_central_meridian" type="cart:scale_factor_at_central_meridian" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="longitude_of_central_meridian" type="cart:longitude_of_central_meridian" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="latitude_of_projection_origin" type="cart:latitude_of_projection_origin" minOccurs="1" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -1157,10 +1016,8 @@
         </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="ups_zone_identifier" type="cart:ups_zone_identifier" minOccurs="1"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="Polar_Stereographic" type="cart:Polar_Stereographic" minOccurs="1"
-        maxOccurs="1"> </xs:element>
+      <xs:element name="ups_zone_identifier" type="cart:ups_zone_identifier" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="Polar_Stereographic" type="cart:Polar_Stereographic" minOccurs="1" maxOccurs="1"> </xs:element>
     </xs:sequence>
     <!-- Begin assert statements for schematron - Enumerated Values -->
     <!-- <xs:assert test="cart:ups_zone_identifier = ('A', 'B', 'Y', 'Z')"/> -->
@@ -1179,8 +1036,7 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element name="utm_zone_number" type="cart:utm_zone_number" minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="Transverse_Mercator" type="cart:Transverse_Mercator" minOccurs="1"
-        maxOccurs="1"> </xs:element>
+      <xs:element name="Transverse_Mercator" type="cart:Transverse_Mercator" minOccurs="1" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -1206,8 +1062,7 @@
     <xs:sequence>
       <xs:element name="x_position" type="cart:x_position" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="y_position" type="cart:y_position" minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="z_position" type="cart:z_position" minOccurs="1" maxOccurs="1">
-      </xs:element>
+      <xs:element name="z_position" type="cart:z_position" minOccurs="1" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -1263,8 +1118,7 @@
         <xs:sequence>
           <xs:element name="x_position" type="cart:x_position" minOccurs="1" maxOccurs="1"> </xs:element>
           <xs:element name="y_position" type="cart:y_position" minOccurs="1" maxOccurs="1"> </xs:element>
-          <xs:element name="z_position" type="cart:z_position" minOccurs="1" maxOccurs="1">
-          </xs:element>
+          <xs:element name="z_position" type="cart:z_position" minOccurs="1" maxOccurs="1"> </xs:element>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -1350,8 +1204,7 @@
         <xs:sequence>
           <xs:element name="x_position" type="cart:x_position" minOccurs="1" maxOccurs="1"> </xs:element>
           <xs:element name="y_position" type="cart:y_position" minOccurs="1" maxOccurs="1"> </xs:element>
-          <xs:element name="z_position" type="cart:z_position" minOccurs="1" maxOccurs="1">
-          </xs:element>
+          <xs:element name="z_position" type="cart:z_position" minOccurs="1" maxOccurs="1"> </xs:element>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -1370,8 +1223,7 @@
         <xs:sequence>
           <xs:element name="x_position" type="cart:x_position" minOccurs="1" maxOccurs="1"> </xs:element>
           <xs:element name="y_position" type="cart:y_position" minOccurs="1" maxOccurs="1"> </xs:element>
-          <xs:element name="z_position" type="cart:z_position" minOccurs="1" maxOccurs="1">
-          </xs:element>
+          <xs:element name="z_position" type="cart:z_position" minOccurs="1" maxOccurs="1"> </xs:element>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -1406,34 +1258,30 @@
         layover distortion.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="pixel_resolution_x" type="cart:pixel_resolution_x" minOccurs="1"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="pixel_resolution_y" type="cart:pixel_resolution_y" minOccurs="0"
-        maxOccurs="1"> </xs:element>
+      <xs:element name="pixel_resolution_x" type="cart:pixel_resolution_x" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="pixel_resolution_y" type="cart:pixel_resolution_y" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="x_axis_maximum" type="cart:x_axis_maximum" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="x_axis_minimum" type="cart:x_axis_minimum" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="y_axis_maximum" type="cart:y_axis_maximum" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="y_axis_minimum" type="cart:y_axis_minimum" minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="Pixel_Position_Origin" type="cart:Pixel_Position_Origin" minOccurs="0"
-        maxOccurs="1"> </xs:element>
-      <xs:element name="Vector_Projection_Origin" type="cart:Vector_Projection_Origin" minOccurs="0"
-        maxOccurs="1"> </xs:element>
+      <xs:element name="Pixel_Position_Origin" type="cart:Pixel_Position_Origin" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Vector_Projection_Origin" type="cart:Vector_Projection_Origin" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
-  <xs:annotation>
-    <xs:documentation>This section contains the simpleTypes that provide more constraints
+    <xs:annotation>
+      <xs:documentation>This section contains the simpleTypes that provide more constraints
         than those at the base data type level. The simpleTypes defined here build on the base data
         types. This is another component of the common dictionary and therefore falls within the
         common namespace.
       </xs:documentation>
-  </xs:annotation>
+    </xs:annotation>
 
   <xs:simpleType name="a_axis_radius_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="0.0"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="0.0"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="a_axis_radius">
@@ -1445,16 +1293,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:a_axis_radius_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Length" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="angular_scale_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="angular_scale">
@@ -1464,16 +1312,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:angular_scale_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Pixel_Resolution_Angular" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Pixel_Resolution_Angular" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="azimuth_measure_point_longitude_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-180.0"/>
-      <xs:maxInclusive value="360.0"/>
-    </xs:restriction>
+     <xs:minInclusive value="-180.0"/>
+     <xs:maxInclusive value="360.0"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="azimuth_measure_point_longitude">
@@ -1484,16 +1332,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:azimuth_measure_point_longitude_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="azimuthal_angle_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="0.0"/>
-      <xs:maxInclusive value="360.0"/>
-    </xs:restriction>
+     <xs:minInclusive value="0.0"/>
+     <xs:maxInclusive value="360.0"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="azimuthal_angle">
@@ -1504,16 +1352,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:azimuthal_angle_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="b_axis_radius_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="0.0"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="0.0"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="b_axis_radius">
@@ -1528,7 +1376,7 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:b_axis_radius_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Length" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -1540,9 +1388,9 @@
         measured.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-      <xs:minLength value="5"/>
-      <xs:maxLength value="5"/>
-    </xs:restriction>
+     <xs:minLength value="5"/>
+     <xs:maxLength value="5"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="bearing_reference_meridian">
@@ -1552,16 +1400,16 @@
         measured.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-      <xs:minLength value="4"/>
-      <xs:maxLength value="10"/>
-    </xs:restriction>
+     <xs:minLength value="4"/>
+     <xs:maxLength value="10"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="bearing_resolution_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="0.0"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="0.0"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="bearing_resolution">
@@ -1571,16 +1419,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:bearing_resolution_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="c_axis_radius_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="0.0"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="0.0"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="c_axis_radius">
@@ -1594,7 +1442,7 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:c_axis_radius_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Length" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -1605,8 +1453,8 @@
         e.g. "MEAN EARTH/POLAR AXIS OF DE421"</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Text_Preserved">
-      <xs:minLength value="1"/>
-    </xs:restriction>
+     <xs:minLength value="1"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="coordinate_system_type">
@@ -1627,9 +1475,9 @@
         defining a specific coordinate system. </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-      <xs:minLength value="8"/>
-      <xs:maxLength value="25"/>
-    </xs:restriction>
+     <xs:minLength value="8"/>
+     <xs:maxLength value="25"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="data_count">
@@ -1638,17 +1486,17 @@
         cube.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_NonNegative_Integer">
-      <xs:pattern value="[0-9]+"/>
-      <xs:minInclusive value="1"/>
-      <xs:maxInclusive value="18446744073709551615"/>
-    </xs:restriction>
+    	<xs:pattern value='[0-9]+'/>
+     <xs:minInclusive value="1"/>
+     <xs:maxInclusive value="18446744073709551615"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="distance_resolution_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="0.0"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="0.0"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="distance_resolution">
@@ -1659,16 +1507,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:distance_resolution_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Map_Scale" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Map_Scale" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="east_bounding_coordinate_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-180.0"/>
-      <xs:maxInclusive value="360.0"/>
-    </xs:restriction>
+     <xs:minInclusive value="-180.0"/>
+     <xs:maxInclusive value="360.0"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="east_bounding_coordinate">
@@ -1679,7 +1527,7 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:east_bounding_coordinate_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -1690,9 +1538,9 @@
         element.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="first_sample_center">
@@ -1701,9 +1549,9 @@
         sample element.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="grid_coordinate_system_name">
@@ -1713,9 +1561,9 @@
         system.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-      <xs:minLength value="1"/>
-      <xs:maxLength value="255"/>
-    </xs:restriction>
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="lander_map_projection_name">
@@ -1724,9 +1572,9 @@
         provides the name of the map projection.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-      <xs:minLength value="1"/>
-      <xs:maxLength value="255"/>
-    </xs:restriction>
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="last_line_center">
@@ -1735,9 +1583,9 @@
         element.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="last_sample_center">
@@ -1746,16 +1594,16 @@
         sample element.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="latitude_of_projection_origin_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-90.0"/>
-      <xs:maxInclusive value="90.0"/>
-    </xs:restriction>
+     <xs:minInclusive value="-90.0"/>
+     <xs:maxInclusive value="90.0"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="latitude_of_projection_origin">
@@ -1766,16 +1614,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:latitude_of_projection_origin_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="latitude_resolution_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="0.0"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="0.0"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="latitude_resolution">
@@ -1786,7 +1634,7 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:latitude_resolution_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -1810,9 +1658,9 @@
         </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-      <xs:minLength value="1"/>
-      <xs:maxLength value="255"/>
-    </xs:restriction>
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="line">
@@ -1821,9 +1669,9 @@
         the image.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="line_name">
@@ -1832,8 +1680,8 @@
         TIME HOURS"</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Text_Preserved">
-      <xs:minLength value="1"/>
-    </xs:restriction>
+     <xs:minLength value="1"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="local_description">
@@ -1843,8 +1691,8 @@
         surface of a planet.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Text_Preserved">
-      <xs:minLength value="1"/>
-    </xs:restriction>
+     <xs:minLength value="1"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="local_georeference_information">
@@ -1855,8 +1703,8 @@
         ephemeral data, inertial navigation data).</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Text_Preserved">
-      <xs:minLength value="1"/>
-    </xs:restriction>
+     <xs:minLength value="1"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="local_planar_description">
@@ -1865,8 +1713,8 @@
         a description of the local planar system.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Text_Preserved">
-      <xs:minLength value="1"/>
-    </xs:restriction>
+     <xs:minLength value="1"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="local_planar_georeference_information">
@@ -1878,15 +1726,15 @@
         data).</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Text_Preserved">
-      <xs:minLength value="1"/>
-    </xs:restriction>
+     <xs:minLength value="1"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="local_time_scale_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="local_time_scale">
@@ -1896,7 +1744,7 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:local_time_scale_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Misc" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Misc" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -1919,16 +1767,16 @@
         bounding coordinates.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-      <xs:minLength value="13"/>
-      <xs:maxLength value="13"/>
-    </xs:restriction>
+     <xs:minLength value="13"/>
+     <xs:maxLength value="13"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="longitude_of_central_meridian_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-180.0"/>
-      <xs:maxInclusive value="360.0"/>
-    </xs:restriction>
+     <xs:minInclusive value="-180.0"/>
+     <xs:maxInclusive value="360.0"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="longitude_of_central_meridian">
@@ -1940,16 +1788,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:longitude_of_central_meridian_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="longitude_resolution_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="0.0"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="0.0"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="longitude_resolution">
@@ -1960,7 +1808,7 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:longitude_resolution_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -1981,9 +1829,9 @@
         </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-      <xs:minLength value="1"/>
-      <xs:maxLength value="255"/>
-    </xs:restriction>
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="map_projection_name">
@@ -1995,16 +1843,16 @@
         https://doi.org/10.3133/pp1395.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-      <xs:minLength value="1"/>
-      <xs:maxLength value="255"/>
-    </xs:restriction>
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="map_projection_rotation_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="0.0"/>
-      <xs:maxInclusive value="360.0"/>
-    </xs:restriction>
+     <xs:minInclusive value="0.0"/>
+     <xs:maxInclusive value="360.0"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="map_projection_rotation">
@@ -2014,7 +1862,7 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:map_projection_rotation_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -2025,9 +1873,9 @@
         axis.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="max_footprint_sample">
@@ -2036,16 +1884,16 @@
         axis.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="maximum_elevation_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="maximum_elevation">
@@ -2060,7 +1908,7 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:maximum_elevation_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -2071,9 +1919,9 @@
         axis.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="min_footprint_sample">
@@ -2082,16 +1930,16 @@
         axis.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="minimum_elevation_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="minimum_elevation">
@@ -2104,16 +1952,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:minimum_elevation_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="north_bounding_coordinate_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-90.0"/>
-      <xs:maxInclusive value="90.0"/>
-    </xs:restriction>
+     <xs:minInclusive value="-90.0"/>
+     <xs:maxInclusive value="90.0"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="north_bounding_coordinate">
@@ -2124,16 +1972,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:north_bounding_coordinate_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="oblique_line_latitude_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-90.0"/>
-      <xs:maxInclusive value="90.0"/>
-    </xs:restriction>
+     <xs:minInclusive value="-90.0"/>
+     <xs:maxInclusive value="90.0"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="oblique_line_latitude">
@@ -2143,16 +1991,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:oblique_line_latitude_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="oblique_line_longitude_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-180.0"/>
-      <xs:maxInclusive value="360.0"/>
-    </xs:restriction>
+     <xs:minInclusive value="-180.0"/>
+     <xs:maxInclusive value="360.0"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="oblique_line_longitude">
@@ -2163,16 +2011,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:oblique_line_longitude_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="oblique_proj_pole_latitude_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-90.0"/>
-      <xs:maxInclusive value="90.0"/>
-    </xs:restriction>
+     <xs:minInclusive value="-90.0"/>
+     <xs:maxInclusive value="90.0"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="oblique_proj_pole_latitude">
@@ -2184,16 +2032,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:oblique_proj_pole_latitude_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="oblique_proj_pole_longitude_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-180.0"/>
-      <xs:maxInclusive value="360.0"/>
-    </xs:restriction>
+     <xs:minInclusive value="-180.0"/>
+     <xs:maxInclusive value="360.0"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="oblique_proj_pole_longitude">
@@ -2205,16 +2053,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:oblique_proj_pole_longitude_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="oblique_proj_pole_rotation_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="0.0"/>
-      <xs:maxInclusive value="360.0"/>
-    </xs:restriction>
+     <xs:minInclusive value="0.0"/>
+     <xs:maxInclusive value="360.0"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="oblique_proj_pole_rotation">
@@ -2229,7 +2077,7 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:oblique_proj_pole_rotation_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -2253,8 +2101,8 @@
         </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Text_Preserved">
-      <xs:minLength value="1"/>
-    </xs:restriction>
+     <xs:minLength value="1"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="oblique_proj_y_axis_vector">
@@ -2276,8 +2124,8 @@
         </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Text_Preserved">
-      <xs:minLength value="1"/>
-    </xs:restriction>
+     <xs:minLength value="1"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="oblique_proj_z_axis_vector">
@@ -2299,15 +2147,15 @@
         </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Text_Preserved">
-      <xs:minLength value="1"/>
-    </xs:restriction>
+     <xs:minLength value="1"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="pixel_resolution_x_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="0.0"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="0.0"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="pixel_resolution_x">
@@ -2329,16 +2177,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:pixel_resolution_x_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Map_Scale" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Map_Scale" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="pixel_resolution_y_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="0.0"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="0.0"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="pixel_resolution_y">
@@ -2360,16 +2208,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:pixel_resolution_y_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Map_Scale" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Map_Scale" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="pixel_scale_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="0.0"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="0.0"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="pixel_scale">
@@ -2385,16 +2233,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:pixel_scale_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Map_Scale" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Map_Scale" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="pixel_scale_x_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="0.0"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="0.0"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="pixel_scale_x">
@@ -2425,16 +2273,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:pixel_scale_x_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Map_Scale" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Map_Scale" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="pixel_scale_y_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="0.0"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="0.0"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="pixel_scale_y">
@@ -2465,7 +2313,7 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:pixel_scale_y_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Map_Scale" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Map_Scale" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -2477,17 +2325,17 @@
         positions.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-      <xs:minLength value="1"/>
-      <xs:maxLength value="255"/>
-    </xs:restriction>
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="projection_axis_offset_WO_Units">
     <xs:restriction base="pds:ASCII_NonNegative_Integer">
-      <xs:pattern value="[0-9]+"/>
-      <xs:minInclusive value="1"/>
-      <xs:maxInclusive value="18446744073709551615"/>
-    </xs:restriction>
+    	<xs:pattern value='[0-9]+'/>
+     <xs:minInclusive value="1"/>
+     <xs:maxInclusive value="18446744073709551615"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="projection_axis_offset">
@@ -2501,16 +2349,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:projection_axis_offset_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Length" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="projection_azimuth_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="1"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="1"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="projection_azimuth">
@@ -2522,16 +2370,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:projection_azimuth_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="projection_elevation_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="projection_elevation">
@@ -2546,7 +2394,7 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:projection_elevation_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -2560,16 +2408,16 @@
         specified by Vector_Projection_Z_Axis. </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="1"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="1"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="radial_scale_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="radial_scale">
@@ -2579,16 +2427,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:radial_scale_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Pixel_Resolution_Linear" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Pixel_Resolution_Linear" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="reference_azimuth_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="reference_azimuth">
@@ -2600,16 +2448,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:reference_azimuth_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="reference_latitude_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-90.0"/>
-      <xs:maxInclusive value="90.0"/>
-    </xs:restriction>
+     <xs:minInclusive value="-90.0"/>
+     <xs:maxInclusive value="90.0"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="reference_latitude">
@@ -2631,16 +2479,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:reference_latitude_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="reference_longitude_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-180.0"/>
-      <xs:maxInclusive value="360.0"/>
-    </xs:restriction>
+     <xs:minInclusive value="-180.0"/>
+     <xs:maxInclusive value="360.0"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="reference_longitude">
@@ -2662,7 +2510,7 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:reference_longitude_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -2674,9 +2522,9 @@
         data.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-      <xs:minLength value="1"/>
-      <xs:maxLength value="255"/>
-    </xs:restriction>
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="sample">
@@ -2685,9 +2533,9 @@
         number.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="sample_name">
@@ -2696,8 +2544,8 @@
         "RADIUS KM"</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Text_Preserved">
-      <xs:minLength value="1"/>
-    </xs:restriction>
+     <xs:minLength value="1"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="scale_factor_at_central_meridian">
@@ -2708,9 +2556,9 @@
         central meridian.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="0.0"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="0.0"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="scale_factor_at_projection_origin">
@@ -2721,16 +2569,16 @@
         projection origin. </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="south_bounding_coordinate_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-90.0"/>
-      <xs:maxInclusive value="90.0"/>
-    </xs:restriction>
+     <xs:minInclusive value="-90.0"/>
+     <xs:maxInclusive value="90.0"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="south_bounding_coordinate">
@@ -2741,7 +2589,7 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:south_bounding_coordinate_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -2753,10 +2601,10 @@
         zone.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-      <xs:pattern value="[0-9][0-9][0-9][0-9]"/>
-      <xs:minLength value="4"/>
-      <xs:maxLength value="4"/>
-    </xs:restriction>
+    	<xs:pattern value='[0-9][0-9][0-9][0-9]'/>
+     <xs:minLength value="4"/>
+     <xs:maxLength value="4"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="sphere_intersection_count">
@@ -2772,16 +2620,16 @@
         the SURFACE_MODEL_TYPE keyword. </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Integer">
-      <xs:minInclusive value="1"/>
-      <xs:maxInclusive value="9223372036854775807"/>
-    </xs:restriction>
+     <xs:minInclusive value="1"/>
+     <xs:maxInclusive value="9223372036854775807"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="sphere_radius_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="0.0"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="0.0"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="sphere_radius">
@@ -2792,7 +2640,7 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:sphere_radius_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Length" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -2804,16 +2652,16 @@
         planet's shape. </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-      <xs:minLength value="1"/>
-      <xs:maxLength value="255"/>
-    </xs:restriction>
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="standard_parallel_1_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-90.0"/>
-      <xs:maxInclusive value="90.0"/>
-    </xs:restriction>
+     <xs:minInclusive value="-90.0"/>
+     <xs:maxInclusive value="90.0"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="standard_parallel_1">
@@ -2826,16 +2674,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:standard_parallel_1_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="standard_parallel_2_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-90.0"/>
-      <xs:maxInclusive value="90.0"/>
-    </xs:restriction>
+     <xs:minInclusive value="-90.0"/>
+     <xs:maxInclusive value="90.0"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="standard_parallel_2">
@@ -2849,16 +2697,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:standard_parallel_2_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="start_azimuth_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="0"/>
-      <xs:maxInclusive value="360"/>
-    </xs:restriction>
+     <xs:minInclusive value="0"/>
+     <xs:maxInclusive value="360"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="start_azimuth">
@@ -2876,16 +2724,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:start_azimuth_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="stop_azimuth_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="0"/>
-      <xs:maxInclusive value="360"/>
-    </xs:restriction>
+     <xs:minInclusive value="0"/>
+     <xs:maxInclusive value="360"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="stop_azimuth">
@@ -2903,7 +2751,7 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:stop_azimuth_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -2916,16 +2764,16 @@
         refers to a spherical model. </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-      <xs:minLength value="1"/>
-      <xs:maxLength value="255"/>
-    </xs:restriction>
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="target_center_distance_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="target_center_distance">
@@ -2936,16 +2784,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:target_center_distance_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Length" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="upperleft_corner_x_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="upperleft_corner_x">
@@ -2961,16 +2809,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:upperleft_corner_x_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Length" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="upperleft_corner_y_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="upperleft_corner_y">
@@ -2986,7 +2834,7 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:upperleft_corner_y_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Length" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -2998,9 +2846,9 @@
         zone.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-      <xs:minLength value="1"/>
-      <xs:maxLength value="255"/>
-    </xs:restriction>
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="utm_zone_number">
@@ -3010,16 +2858,16 @@
         zone.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Integer">
-      <xs:minInclusive value="-60"/>
-      <xs:maxInclusive value="60"/>
-    </xs:restriction>
+     <xs:minInclusive value="-60"/>
+     <xs:maxInclusive value="60"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="west_bounding_coordinate_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-180.0"/>
-      <xs:maxInclusive value="360.0"/>
-    </xs:restriction>
+     <xs:minInclusive value="-180.0"/>
+     <xs:maxInclusive value="360.0"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="west_bounding_coordinate">
@@ -3030,7 +2878,7 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:west_bounding_coordinate_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -3041,16 +2889,16 @@
         no units.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="x_axis_maximum_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="x_axis_maximum">
@@ -3064,16 +2912,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:x_axis_maximum_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Length" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="x_axis_minimum_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="x_axis_minimum">
@@ -3085,16 +2933,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:x_axis_minimum_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Length" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="x_length_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="x_length">
@@ -3104,16 +2952,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:x_length_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Length" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="x_position_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="x_position">
@@ -3123,7 +2971,7 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:x_position_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Length" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -3134,9 +2982,9 @@
         vector.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="y">
@@ -3145,16 +2993,16 @@
         no units.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="y_axis_maximum_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="y_axis_maximum">
@@ -3166,16 +3014,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:y_axis_maximum_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Length" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="y_axis_minimum_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="y_axis_minimum">
@@ -3187,16 +3035,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:y_axis_minimum_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Length" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="y_length_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="y_length">
@@ -3206,16 +3054,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:y_length_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Length" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="y_position_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="y_position">
@@ -3225,7 +3073,7 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:y_position_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Length" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -3236,9 +3084,9 @@
         vector.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="z">
@@ -3247,16 +3095,16 @@
         no units.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="z_length_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="z_length">
@@ -3266,16 +3114,16 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:z_length_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Length" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:simpleType name="z_position_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="z_position">
@@ -3285,7 +3133,7 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="cart:z_position_WO_Units">
-        <xs:attribute name="unit" type="pds:Units_of_Length" use="required"/>
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -3296,9 +3144,9 @@
         vector.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="zero_elevation_line">
@@ -3308,19 +3156,19 @@
         Cylindrical lander map projections. </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Real">
-      <xs:minInclusive value="-1.7976931348623157e308"/>
-      <xs:maxInclusive value="1.7976931348623157e308"/>
-    </xs:restriction>
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
   </xs:simpleType>
-
+ 
   <xs:annotation>
     <xs:documentation>
 [
   {
     "dataDictionary": {
       "Title": "PDS4 Data Dictionary" ,
-      "Version": "1.12.0.0" ,
-      "Date": "Thu Oct 31 17:05:57 MST 2019" ,
+      "Version": "1.13.0.0" ,
+      "Date": "Fri Nov 01 09:45:18 MST 2019" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
       "PropertyMapDictionary": [
       ]

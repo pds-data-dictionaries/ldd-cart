@@ -7,10 +7,10 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Thu Oct 31 17:05:57 MST 2019
-   Common Schema          [PDS4_PDS_1C00.xsd]
-   Common Schematron      [PDS4_PDS_1C00.sch]
-   IM Version Id:         1.12.0.0
+   Time                   Fri Nov 01 09:45:18 MST 2019
+   Common Schema          [PDS4_PDS_1D00.xsd]
+   Common Schematron      [PDS4_PDS_1D00.sch]
+   IM Version Id:         1.13.0.0
    IM Namespace Id:       pds
    IM Label Version Id:   1.19
    IM Object Model        [UpperModel.pont]
@@ -239,30 +239,30 @@ Parsed Input - Header:
 Parsed Input - Attributes:
 
    name                   target_center_distance
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description             The target_center_distance attribute provides the distance to target center, in meters, relative to the observing system. 
    unit of measure type   Units_of_Length
 
    name                   upperleft_corner_x
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description             The upperleft_corner_x and upperleft_corner_y attributes provide the projection x and y values, in meters, relative to the map projection origin, at sample 0.5 and line 0.5 (upper left corner of pixel 1,1 within image array). (0.5,0.5) - upper left corner (edge) of pixel 1,1 / #---+---+-> I where # is X,Y location in meters, | * | | relative to map projection origin. +---+---+ where * is pixel coordinate (1.0,1.0) | \ J pixel coordinate (2.5,1.5) 
    unit of measure type   Units_of_Length
 
    name                   upperleft_corner_y
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description             The upperleft_corner_x and upperleft_corner_y attributes provide the projection x and y values, in meters, relative to the map projection origin, at sample 0.5 and line 0.5 (upper left corner of pixel 1,1 within image array). (0.5,0.5) - upper left corner (edge) of pixel 1,1 / #---+---+-> I where # is X,Y location in meters, | * | | relative to map projection origin. +---+---+ where * is pixel coordinate (1.0,1.0) | \ J pixel coordinate (2.5,1.5) 
    unit of measure type   Units_of_Length
 
    name                   scale_factor_at_projection_origin
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description             The scale_factor_at_projection_origin attribute provides a multiplier for reducing a distance obtained from a map by computation or scaling to the actual distance at the projection origin. 
 
    name                   west_bounding_coordinate
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The west_bounding_coordinate attribute provides the western-most coordinate of the limit of coverage expressed in longitude.
    minimum value          -180.0
@@ -270,7 +270,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   east_bounding_coordinate
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The east_bounding_coordinate attribute provides the eastern-most coordinate of the limit of coverage expressed in longitude.
    minimum value          -180.0
@@ -278,7 +278,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   north_bounding_coordinate
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The north_bounding_coordinate attribute provides the northern-most coordinate of the limit of coverage expressed in latitude.
    minimum value          -90.0
@@ -286,7 +286,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   south_bounding_coordinate
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The south_bounding_coordinate attribute provides the southern-most coordinate of the limit of coverage expressed in latitude.
    minimum value          -90.0
@@ -294,127 +294,127 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   spheroid_name
-   version                1.12
+   version                1.13
    value data type        ASCII_Short_String_Collapsed
    description            The spheroid_name attribute provides the identification given to established representations of a planet's shape. 
 
    name                   a_axis_radius
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The a_axis_radius attribute provides the radius of the equatorial axis of the ellipsoid. The IAU calls this "Subplanetary equatorial radius" and mapping applications generally call this "semi_major_axis". 
    minimum value          0.0
    unit of measure type   Units_of_Length
 
    name                   b_axis_radius
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The b_axis_radius attribute provides the value of the intermediate axis of the ellipsoid that defines the approximate shape of a target body. The b_axis_radius is usually in the equatorial plane. The IAU calls this axis "along orbit equatorial radius". Mapping applications, which generally only define a sphere or an ellipse, do not support this radius parameter.
    minimum value          0.0
    unit of measure type   Units_of_Length
 
    name                   c_axis_radius
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The c_axis_radius attribute provides the value of the polar axis of the ellipsoid that defines the approximate shape of a target body. The c_axis_radius is normal to the plane defined by the a_axis_radius and b_axis_radius. The IAU calls this "polar radius". Mapping applications generally call this "semi_minor_axis" 
    minimum value          0.0
    unit of measure type   Units_of_Length
 
    name                   longitude_direction
-   version                1.12
+   version                1.13
    value data type        ASCII_Short_String_Collapsed
    description            The longitude_direction attribute identifies the direction of longitude (e.g. POSITIVE_EAST or POSITIVE_WEST) for a planet. The IAU definition for direction of positive longitude should be adopted: http://astrogeology.usgs.gov/groups/IAU-WGCCRE. Typically, for planets with prograde (direct) rotations, positive longitude direction is to the west. For planets with retrograde rotations, positive longitude direction is to the east. Generally the Positive West longitude_direction is used for planetographic systems and Positive East is used for planetocentric systems. If the data is defined with Spatial_Domain in a manner not recommended by the IAU, there is a optional Secondary_Spatial_Domain section to define a second set of bounding coordinates.
    minimum characters     13
    maximum characters     13
 
    name                   coordinate_system_type
-   version                1.12
+   version                1.13
    value data type        ASCII_Short_String_Collapsed
    description            There are three basic types of coordinate systems: body-fixed rotating, body-fixed non-rotating, and inertial. A body-fixed coordinate system is one associated with the body (e.g., a planet or satellite). The body-fixed system is centered on the body and rotates with the body (unless it is a non-rotating type), whereas an inertial coordinate system is fixed at some point in space. Currently, the PDS has specifically defined two types of body-fixed rotating coordinate systems: planetocentric and planetographic. However, the set of related data elements are modeled such that definitions for other body-fixed rotating coordinate systems, body-fixed non-rotating and inertial coordinate systems can be added as the need arises. Contact a PDS data engineer for assistance in defining a specific coordinate system. 
    minimum characters     8
    maximum characters     25
 
    name                   coordinate_system_name
-   version                1.12
+   version                1.13
    value data type        ASCII_Text_Preserved
    description            The given name of the used coordinate system. e.g. "MEAN EARTH/POLAR AXIS OF DE421"
 
    name                   latitude_type
-   version                1.12
+   version                1.13
    value data type        ASCII_Short_String_Collapsed
    description            The latitude_type attribute defines the type of latitude (planetographic, planetocentric) used within a cartographic product and as reflected in attribute values within associated PDS labels. For planets and satellites, latitude is measured north and south of the equator; north latitudes are designated as positive. The planetocentric latitude is the angle between the equatorial plane and a line from the center of the body. The planetographic latitude is the angle between the equatorial plane and a line that is normal to the body. In summary, both latitudes are equivalent on a sphere (i.e., equatorial radius equal to polar radius); however, they differ on an ellipsoid (e.g., Mars, Earth). For more on latitude_type, please see the IAU publication available here: http://astrogeology.usgs.gov/groups/IAU-WGCCRE 
 
    name                   latitude_resolution
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The latitude_resolution attribute indicates the minimum difference between two adjacent latitude values expressed in angular units of measure.
    minimum value          0.0
    unit of measure type   Units_of_Angle
 
    name                   longitude_resolution
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The longitude_resolution attribute indicates the minimum difference between two adjacent longitude values expressed in angular units of measure.
    minimum value          0.0
    unit of measure type   Units_of_Angle
 
    name                   local_description
-   version                1.12
+   version                1.13
    value data type        ASCII_Text_Preserved
    description            The local_description attribute provides a description of the coordinate system and its orientation to the surface of a planet.
 
    name                   local_georeference_information
-   version                1.12
+   version                1.13
    value data type        ASCII_Text_Preserved
    description            The local_georeference_information attribute provides a description of the information provided to register the local system to a planet (e.g. control points, satellite ephemeral data, inertial navigation data).
 
    name                   planar_coordinate_encoding_method
-   version                1.12
+   version                1.13
    value data type        ASCII_Short_String_Collapsed
    description            The planar_coordinate_encoding_method attribute indicates the means used to represent horizontal positions.
 
    name                   map_projection_name
-   version                1.12
+   version                1.13
    value data type        ASCII_Short_String_Collapsed
    description            The map_projection_name attribute provides the name of the map projection. Definitions when available are from Synder, J.P., 1987, Map Projections: A Working Manual, USGS Numbered Series, Professional Paper 1395, URL: https://doi.org/10.3133/pp1395.
 
    name                   grid_coordinate_system_name
-   version                1.12
+   version                1.13
    value data type        ASCII_Short_String_Collapsed
    description            The grid_coordinate_system_name attribute provides the name of the grid coordinate system.
 
    name                   local_planar_description
-   version                1.12
+   version                1.13
    value data type        ASCII_Text_Preserved
    description            The local_planar_description attribute provides a description of the local planar system.
 
    name                   local_planar_georeference_information
-   version                1.12
+   version                1.13
    value data type        ASCII_Text_Preserved
    description            The local_planar_georeference_information attribute provides a description of the information provided to register the local planar system to a planet (e.g. control points, satellite ephemeral data, inertial navigation data).
 
    name                   pixel_resolution_x
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description             The pixel_resolution_x and pixel_resolution_y attributes indicate the image array pixel resolution (distance/pixel or degree/pixel) relative to the Cartesian (x,y) coordinate system as defined by the map projection. Due to varying properties across different map projections, actual surface distances for an individual pixel may be accurate only at specific location(s) within the image array (e.g. reference latitude or longitude, standard parallels, etc). For most PDS products, x and y resolution values are equal ('square' pixels). The inclusion of both x and y attributes allows for anticipated products where resolution may differ for each axis ('rectangular' pixels). NOTE: Definition of this PDS4 attribute differs from how 'resolution' was defined within PDS3. 
    minimum value          0.0
    unit of measure type   Units_of_Map_Scale
 
    name                   pixel_resolution_y
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description             The pixel_resolution_x and pixel_resolution_y attributes indicate the image array pixel resolution (distance/pixel or degree/pixel) relative to the Cartesian (x,y) coordinate system as defined by the map projection. Due to varying properties across different map projections, actual surface distances for an individual pixel may be accurate only at specific location(s) within the image array (e.g. reference latitude or longitude, standard parallels, etc). For most PDS products, x and y resolution values are equal ('square' pixels). The inclusion of both x and y attributes allows for anticipated products where resolution may differ for each axis ('rectangular' pixels). NOTE: Definition of this PDS4 attribute differs from how 'resolution' was defined within PDS3. 
    minimum value          0.0
    unit of measure type   Units_of_Map_Scale
 
    name                   pixel_scale_x
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description             The pixel_scale_x and pixel_scale_y attributes indicate the image array pixel scale (pixel/degree or pixel/distance) relative to the Cartesian (x,y) coordinate system as defined by the map projection. Due to varying properties across different map projections, actual surface distances for an individual pixel may be accurate only at specific location(s) within the image array (e.g. reference latitude or longitude, standard parallels, etc). For most PDS products, x and y scale values are equal ('square' pixels). The inclusion of both x and y attributes allows for anticipated products where scale may differ for each axis ('rectangular' pixels). NOTE1: For presentation of hard-copy maps, a map scale is traditionally expressed as a 'representative fraction' (the ratio of a hard-copy map to the actual subject surface (e.g. 1:250,000, where one unit of measure on the map equals 250,000 of the same unit on the body surface)). This usage is relevant when map/data are presented on hard-copy media (paper, computer screen,etc). When defining pixel scale within a stored image/array context here, we are expressing a ratio between the image array and the actual surface (thus, pixel/degree or pixel/distance units). NOTE2: Definition of this PDS4 attribute differs from how 'scale' was defined within PDS3 
    minimum value          0.0
    unit of measure type   Units_of_Map_Scale
 
    name                   pixel_scale_y
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description             The pixel_scale_x and pixel_scale_y attributes indicate the image array pixel scale (pixel/degree or pixel/distance) relative to the Cartesian (x,y) coordinate system as defined by the map projection. Due to varying properties across different map projections, actual surface distances for an individual pixel may be accurate only at specific location(s) within the image array (e.g. reference latitude or longitude, standard parallels, etc). For most PDS products, x and y scale values are equal ('square' pixels). The inclusion of both x and y attributes allows for anticipated products where scale may differ for each axis ('rectangular' pixels). NOTE1: For presentation of hard-copy maps, a map scale is traditionally expressed as a 'representative fraction' (the ratio of a hard-copy map to the actual subject surface (e.g. 1:250,000, where one unit of measure on the map equals 250,000 of the same unit on the body surface)). This usage is relevant when map/data are presented on hard-copy media (paper, computer screen,etc). When defining pixel scale within a stored image/array context here, we are expressing a ratio between the image array and the actual surface (thus, pixel/degree or pixel/distance units). NOTE2: Definition of this PDS4 attribute differs from how 'scale' was defined within PDS3 
    minimum value          0.0
@@ -428,42 +428,42 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Map_Scale
 
    name                   pixel_scale
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description             The pixel_scale attribute indicate the image array pixel scale (pixel/degree or pixel/distance) relative to the referenced coordinate system as defined by the map projection. This attribute should be used in lieu of pixel_scale_x and pixel_scale_y when the pixel scale is not x/y aligned. i.e. a radial pixel scale. NOTE: Definition of this PDS4 attribute differs from how 'scale' was defined within PDS3 
    minimum value          0.0
    unit of measure type   Units_of_Map_Scale
 
    name                   distance_resolution
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The distance_resolution attribute provides the minimum distance measurable between two points, expressed in Planar Distance Units of measure.
    minimum value          0.0
    unit of measure type   Units_of_Map_Scale
 
    name                   bearing_resolution
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The bearing_resolution attribute provides the minimum angle measurable between two points.
    minimum value          0.0
    unit of measure type   Units_of_Angle
 
    name                   bearing_reference_direction
-   version                1.12
+   version                1.13
    value data type        ASCII_Short_String_Collapsed
    description            The bearing_reference_direction attribute specifies the direction from which the bearing is measured.
    minimum characters     5
    maximum characters     5
 
    name                   bearing_reference_meridian
-   version                1.12
+   version                1.13
    value data type        ASCII_Short_String_Collapsed
    description            The bearing_reference_meridian attribute specifies the axis from which the bearing is measured.
    minimum characters     4
    maximum characters     10
 
    name                   standard_parallel_1
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The standard_parallel_1 attribute defines the first standard parallel (applicable only for specific projections), the first line of constant latitude at which the surface of the planet and the plane or developable surface intersect. 
    minimum value          -90.0
@@ -471,7 +471,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   standard_parallel_2
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The standard_parallel_2 attribute defines the second standard parallel (applicable only for specific projections, a subset of specific projections where a first standard parallel is applicable), the second line of constant latitude at which the surface of the planet and the plane or developable surface intersect. 
    minimum value          -90.0
@@ -479,7 +479,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   longitude_of_central_meridian
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The longitude_of_central_meridian attribute defines the line of longitude at the center of a map projection generally used as the basis for constructing the projection.
    minimum value          -180.0
@@ -487,7 +487,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   latitude_of_projection_origin
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The latitude_of_projection_origin attribute defines the latitude chosen as the origin of rectangular coordinates for a map projection.
    minimum value          -90.0
@@ -501,32 +501,32 @@ Parsed Input - Attributes:
    minimum value          0.0
 
    name                   scale_factor_at_central_meridian
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The scale_factor_at_central_meridian attribute provides a multiplier for reducing a distance obtained from a map by computation or scaling to the actual distance along the central meridian.
    minimum value          0.0
 
    name                   utm_zone_number
-   version                1.12
+   version                1.13
    value data type        ASCII_Integer
    description            The utm_zone_number attribute provides the identifier for the Universal Transverse Mercator (UTM) zone.
    minimum value          -60
    maximum value          60
 
    name                   ups_zone_identifier
-   version                1.12
+   version                1.13
    value data type        ASCII_Short_String_Collapsed
    description            The ups_zone_identifier attribute provides an identifier for the Universal Polar Stereographic (UPS) zone.
 
    name                   spcs_zone_identifier
-   version                1.12
+   version                1.13
    value data type        ASCII_Short_String_Collapsed
    description            The spcs_zone_identifier attribute identifies the State Plane Coordinate Systems (SPCS) zone.
    minimum characters     4
    maximum characters     4
 
    name                   azimuthal_angle
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The azimuthal_angle attribute provides the angle measured clockwise from north, and expressed in degrees.
    minimum value          0.0
@@ -534,7 +534,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   azimuth_measure_point_longitude
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The azimuth_measure_point_longitude attribute provides the longitude of the map projection origin.
    minimum value          -180.0
@@ -542,7 +542,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   oblique_line_latitude
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The oblique_line_latitude attribute provides the latitude of a point defining the oblique line.
    minimum value          -90.0
@@ -550,7 +550,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   oblique_line_longitude
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The oblique_line_longitude attribute provides the longitude of a point defining the oblique line.
    minimum value          -180.0
@@ -558,107 +558,107 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   lander_map_projection_name
-   version                1.12
+   version                1.13
    value data type        ASCII_Short_String_Collapsed
    description            The lander_map_projection_name attribute provides the name of the map projection.
 
    name                   rings_map_projection_name
-   version                1.12
+   version                1.13
    value data type        ASCII_Short_String_Collapsed
    description            The rings_map_projection_name attribute provides the name of the map projection used for rings data.
 
    name                   x_unit
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The x component of a unit vector.
 
    name                   y_unit
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The y component of a unit vector.
 
    name                   z_unit
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The z component of a unit vector.
 
    name                   x_length
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The x_length attribute represents length in the x-direction.
    unit of measure type   Units_of_Length
 
    name                   y_length
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The y_length attribute represents length in the y-direction.
    unit of measure type   Units_of_Length
 
    name                   z_length
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The z_length attribute represents length in the z-direction.
    unit of measure type   Units_of_Length
 
    name                   x_position
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The x component of a Cartesian position vector.
    unit of measure type   Units_of_Length
 
    name                   y_position
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The y component of a Cartesian position vector.
    unit of measure type   Units_of_Length
 
    name                   z_position
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The z component of a Cartesian position vector.
    unit of measure type   Units_of_Length
 
    name                   x
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The x component of a Cartesian vector which has no units.
 
    name                   y
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The y component of a Cartesian vector which has no units.
 
    name                   z
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The z component of a Cartesian vector which has no units.
 
    name                   x_axis_minimum
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The x_axis_minimum attribute specifies the value of the X coordinate (measured in the projection frame) of a Vertical, Orthographic or Orthorectified lander map projection at the bottom of the image.
    unit of measure type   Units_of_Length
 
    name                   x_axis_maximum
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The x_axis_maximum attribute specifies the value of the X coordinate (measured in the projection frame) of a Vertical, Orthographic or Orthorectified lander map projection at the top of the image. Note that +X is at the top of the image and +Y is at the right, so +X corresponds to North in the Vertical projection.
    unit of measure type   Units_of_Length
 
    name                   y_axis_minimum
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The y_axis_minimum attribute specifies the value of the Y coordinate (measured in the projection frame) of a Vertical, Orthographic or Orthorectified lander map projection at the left edge of the image.
    unit of measure type   Units_of_Length
 
    name                   y_axis_maximum
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The y_axis_minimum attribute specifies the value of the Y coordinate (measured in the projection frame) of a Vertical, Orthographic or Orthorectified lander map projection at the right edge of the image.
    unit of measure type   Units_of_Length
 
    name                   start_azimuth
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The start_azimuth specifies the angular distance from a fixed reference position at which an image or observation starts. Azimuth is measured in a spherical coordinate system, in a plane normal to the principal axis. Azimuth values increase according to the right hand rule relative to the positive direction of the principal axis of the spherical coordinate system. For lander map projections, this attribute specifies the azimuth of the left edge of the output map. Applies to Cylindrical and Cylindrical-Perspective lander map projections only.
    minimum value          0
@@ -666,7 +666,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   stop_azimuth
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The stop_azimuth attribute specifies the angular distance from a fixed reference position at which an image or observation stops. Azimuth is measured in a spherical coordinate system, in a plane normal to the principal axis. Azimuth values increase according to the right hand rule relative to the positive direction of the principal axis of the spherical coordinate system. For lander map projections, this attribute specifies the azimuth of the right edge of the output map. Applies to Cylindrical and Cylindrical-Perspective lander map projections only.
    minimum value          0
@@ -674,84 +674,84 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   minimum_elevation
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The minimum_elevation attribute specifies the elevation (as defined by the coordinate system) of the last line of the image for Cylindrical map projections. Applies to Cylindrical, Perspective and Cylindrical-Perspective lander map projections.
    unit of measure type   Units_of_Angle
 
    name                   maximum_elevation
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The maximum_elevation attribute specifies the elevation (as defined by the coordinate system) of the first line of the image. For the Polar projection, specifies the highest elevation used, i.e. the elevation of the outermost circle of pixels. Applies to lander map projections Cylindrical, Polar, Sinusoidal, Perspective and Cylindrical-Perspective.
    unit of measure type   Units_of_Angle
 
    name                   surface_model_type
-   version                1.12
+   version                1.13
    value data type        ASCII_Short_String_Collapsed
    description            Specifies the type of surface used for the reprojection performed during the mosaicking process. Valid values: Planar - refers to a flat planar model; Spherical - refers to a spherical model. 
 
    name                   sphere_radius
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The sphere_radius attribute specifies the radius of the spherical body. In PDS3, this was specified using the SURFACE_NORMAL_VECTOR keyword. 
    minimum value          0.0
    unit of measure type   Units_of_Length
 
    name                   sphere_intersection_count
-   version                1.12
+   version                1.13
    value data type        ASCII_Integer
    description            The sphere_intersection_count attribute specifies the number of the intersection to use for the spherical surface model when the camera is outside the sphere. For example, specifying a value of 1 would indicate the first intersection with the sphere should be used (more useful for modeling hills or rocks), while a value of 2 would indicate the second intersection with the sphere should be used (more useful for modeling craters). In PDS3, this was overloaded as part of the SURFACE_MODEL_TYPE keyword. 
    minimum value          1
 
    name                   projection_azimuth
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The projection_azimuth attribute specifies the azimuth of the horizontal center of projection for the Perspective lander map projection (loosely, where the camera model is pointing). 
    minimum value          1
    unit of measure type   Units_of_Angle
 
    name                   projection_elevation
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The projection_elevation attribute specifies the elevation of the vertical center of projection (loosely, where the camera is pointing). For Perspective lander map projection, this applies to the single output camera model; for Cylindrical-Perspective it applies to each columns output camera model, before the rotation specified by Vector_Projection_Z_Axis. 
    unit of measure type   Units_of_Angle
 
    name                   projection_elevation_line
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The projection_elevation_line attribute specifies the image line which corresponds to the projection_elevation attribute for each column of the Cylindrical-Perspective projection, before the rotation specified by Vector_Projection_Z_Axis. 
    minimum value          1
 
    name                   zero_elevation_line
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The zero_elevation_line attribute specifies the image line representing 0.0 degree elevation. Applies to Cylindrical lander map projections. 
 
    name                   reference_azimuth
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The reference_azimuth attribute specifies the azimuth of the line extending from the center of the image to the top center of the image with respect to a polar projection.. 
    unit of measure type   Units_of_Angle
 
    name                   line
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The line attribute specifies the line number in the image.
 
    name                   sample
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            The sample attribute specifies the sample number.
 
    name                   projection_axis_offset
-   version                1.12
+   version                1.13
    value data type        ASCII_NonNegative_Integer
    description            The projection_axis_offset attribute specifies an offset from a projection axis in a map projection. For the Cylindrical-Perspective projection, this is the radius of a circle which represents the rotation around the projection origin of the synthetic camera used to calculate each column.
    minimum value          1
    unit of measure type   Units_of_Length
 
    name                   reference_latitude
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            Provides the ordinary latitude coordinate of the origin (oblique latitude = oblique longitude = 0) for the oblique coordinate system used to specify the OBLIQUE_CYLIDRICAL projection used in Cassini BIDR. NOTE that whereas some past PDS products may utilize oblique projections defined solely in terms of the REFERENCE_LATITUDE and REFERENCE_LONGITUDE (i.e., with a third defining angle always set to zero), the Cassini BIDRs require the full generality of three nonzero rotation angles. These angles are represented by the keywords OBLIQUE_PROJ_POLE_LATITUDE, OBLIQUE_PROJ_POLE_LONGITUDE, and OBLIQUE_PROJ_POLE_ROTATION. The values of REFERENCE_LATITUDE and REFERENCE_LONGITUDE are consistent with the latter three angles but do not uniquely define the oblique coordinate system on their own. 
    minimum value          -90.0
@@ -759,7 +759,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   reference_longitude
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            Provides the ordinary longitude coordinate of the origin (oblique latitude = oblique longitude = 0) for the oblique coordinate system used to specify the OBLIQUE_CYLIDRICAL projection used in Cassini BIDR. NOTE that whereas some past PDS products may utilize oblique projections defined solely in terms of the REFERENCE_LATITUDE and REFERENCE_LONGITUDE (i.e., with a third defining angle always set to zero), the Cassini BIDRs require the full generality of three nonzero rotation angles. These angles are represented by the keywords OBLIQUE_PROJ_POLE_LATITUDE, OBLIQUE_PROJ_POLE_LONGITUDE, and OBLIQUE_PROJ_POLE_ROTATION. The values of REFERENCE_LATITUDE and REFERENCE_LONGITUDE are consistent with the latter three angles but do not uniquely define the oblique coordinate system on their own. 
    minimum value          -180.0
@@ -767,7 +767,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   map_projection_rotation
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            Included for generality, always 90 degrees for Cassini BIDRs.
    minimum value          0.0
@@ -775,7 +775,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   oblique_proj_pole_latitude
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            One of the three angles defining the oblique coordinate system used in the OBLIQUE_CYLINDRICAL projection. This is the ordinary latitude of the pole (Z axis) of the oblique system. 
    minimum value          -90.0
@@ -783,7 +783,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   oblique_proj_pole_longitude
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            One of the three angles defining the oblique coordinate system used in the OBLIQUE_CYLINDRICAL projection. This is the ordinary longitude of the pole (Z axis) of the oblique system. 
    minimum value          -180.0
@@ -791,7 +791,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   oblique_proj_pole_rotation
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            One of the three angles defining the oblique coordinate system used in the OBLIQUE_CYLINDRICAL projection. This is a rotation around the polar (Z) axis of the oblique system that completes the transformation from standard to oblique coordinates. The value is positive east (obeys right hand rule) and is in the range 0 to 360 degrees. 
    minimum value          0.0
@@ -799,96 +799,96 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   oblique_proj_x_axis_vector
-   version                1.12
+   version                1.13
    value data type        ASCII_Text_Preserved
    description            Unit vector in the direction of the X axis of the oblique coordinate system used in the OBLIQUE_CYLINDRICAL projection, in terms of the X, Y, and Z axes of the standard body-fixed coordinate system. In each system, the X axis points from the body center toward longitude and latitude (0,0) in that system, the Z axis to (0,90), and the Y-axis completes a right-handed set. The OBLIQUE_PROJ_X/Y/Z_AXIS_VECTORS makeup the rows of a rotation matrix that when multiplied on the left of a vector referenced to the standard coordinate system converts it into its equivalent in the oblique coordinate system. This rotation matrix is the product of successively applied rotations by OBLIQUE_PROJ_POLE_LONGITUDE around the Z axis, 90 OBLIQUE_PROJ_POLE_LATITUDE around the once-rotated Y axis, and OBLIQUE_PROJ_POLE_ROTATION around the twice-rotated Z axis. 
 
    name                   oblique_proj_y_axis_vector
-   version                1.12
+   version                1.13
    value data type        ASCII_Text_Preserved
    description            Unit vector in the direction of the Y axis of the oblique coordinate system used in the OBLIQUE_CYLINDRICAL projection, in terms of the X, Y, and Z axes of the standard body-fixed coordinate system. In each system, the X axis points from the body center toward longitude and latitude (0,0) in that system, the Z axis to (0,90), and the Y-axis completes a right-handed set. The OBLIQUE_PROJ_X/Y/Z_AXIS_VECTORS makeup the rows of a rotation matrix that when multiplied on the left of a vector referenced to the standard coordinate system converts it into its equivalent in the oblique coordinate system. This rotation matrix is the product of successively applied rotations by OBLIQUE_PROJ_POLE_LONGITUDE around the Z axis, 90 OBLIQUE_PROJ_POLE_LATITUDE around the once-rotated Y axis, and OBLIQUE_PROJ_POLE_ROTATION around the twice-rotated Z axis. 
 
    name                   oblique_proj_z_axis_vector
-   version                1.12
+   version                1.13
    value data type        ASCII_Text_Preserved
    description            Unit vector in the direction of the Z axis of the oblique coordinate system used in the OBLIQUE_CYLINDRICAL projection, in terms of the X, Y, and Z axes of the standard body-fixed coordinate system. In each system, the X axis points from the body center toward longitude and latitude (0,0) in that system, the Z axis to (0,90), and the Y-axis completes a right-handed set. The OBLIQUE_PROJ_X/Y/Z_AXIS_VECTORS makeup the rows of a rotation matrix that when multiplied on the left of a vector referenced to the standard coordinate system converts it into its equivalent in the oblique coordinate system. This rotation matrix is the product of successively applied rotations by OBLIQUE_PROJ_POLE_LONGITUDE around the Z axis, 90 OBLIQUE_PROJ_POLE_LATITUDE around the once-rotated Y axis, and OBLIQUE_PROJ_POLE_ROTATION around the twice-rotated Z axis. 
 
    name                   look_direction
-   version                1.12
+   version                1.13
    value data type        ASCII_Short_String_Collapsed
    description            The value (RIGHT or LEFT) indicates the side of the spacecraft ground-track to which the antenna is pointed for data acquired within this file. The SAR images stored in theBIDR files are always acquired on only one side of the ground track for each Titan pass. This value also indicates from which side the SAR image is illuminated. If the spacecraft images to the left of its ground track (LOOK_DIRECTION=LEFT), the image will be illuminated from the (viewer's) left side, and, conversely, if the spacecraft looks to the right, the illumination will come from the right in the image file. The direction of illumination is critical to interpretation of features in the image. 
 
    name                   data_count
-   version                1.12
+   version                1.13
    value data type        ASCII_NonNegative_Integer
    description            Number of measurements combined to create the cube.
    minimum value          1
 
    name                   angular_scale
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            Grid spacing. Unit is radian/pixel.
    unit of measure type   Units_of_Pixel_Resolution_Angular
 
    name                   radial_scale
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            Grid spacing. Unit is km/pixel.
    unit of measure type   Units_of_Pixel_Resolution_Linear
 
    name                   local_time_scale
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            Grid spacing. Unit is local hours/pixel.
    unit of measure type   Units_of_Misc
 
    name                   sample_name
-   version                1.12
+   version                1.13
    value data type        ASCII_Text_Preserved
    description            Coordinate name for the sample axis. e.g. "RADIUS KM"
 
    name                   line_name
-   version                1.12
+   version                1.13
    value data type        ASCII_Text_Preserved
    description            Coordinate name for the line axis. e.g. "LOCAL TIME HOURS"
 
    name                   first_sample_center
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            Sample coordinate at the center of the first sample element.
 
    name                   first_line_center
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            Line coordinate at the center of the first line element.
 
    name                   last_sample_center
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            Sample coordinate at the center of the last sample element.
 
    name                   last_line_center
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            Line coordinate at the center of the last line element.
 
    name                   min_footprint_sample
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            Minimum size of footprints along the sample axis.
 
    name                   min_footprint_line
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            Minimum size of footprints along the line axis.
 
    name                   max_footprint_sample
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            Maximum size of footprints along the sample axis.
 
    name                   max_footprint_line
-   version                1.12
+   version                1.13
    value data type        ASCII_Real
    description            Maximum size of footprints along the line axis.
 
