@@ -905,8 +905,8 @@
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Point Perspective</value>
-        <value_meaning>Simimlar to Orthographic, this projection is often used to show the body
-          as seen from space. This appears to be the same as the the Vertical Perspective 
+        <value_meaning>Similar to Orthographic, this projection is often used to show the body
+          as seen from space. This appears to be the same as the Vertical Perspective 
           projection as define in Synder, J.P., 1987, Map Projections: A Working Manual.  
           Vertical Perspective projections are azimuthal. Central meridian and a particular 
           parallel (if shown) are straight lines. Other meridians and parallels are usually 
@@ -1392,7 +1392,7 @@
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Astronomic</value>
-        <value_meaning>A astronimic bearing is measured in relation to the North Star, 
+        <value_meaning>A astronomic bearing is measured in relation to the North Star, 
         Polaris on Earth.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
