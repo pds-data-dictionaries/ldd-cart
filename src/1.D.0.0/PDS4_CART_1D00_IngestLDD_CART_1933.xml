@@ -131,12 +131,19 @@
    1.9.3.3
    THare 20191027
    - Removed Map_Projection_Base. This was suppose to be an abstract clss for group liking map projection
-     parameters, but there was no good method to group across the current allowable ma projections and
+     parameters, but there was no good method to group across the current allowable map projections and
      it made it harder to know which map projection required which parameters.
    - Added Orthographic, Mercator, and Lambert Azimuthal Equal-area
    - removed straight_vertical_longitude_from_pole, just use longitude_of_central_meridian (aka Longitude of 
      projection center) for polar stereographic which is more normally seen. need to update:
      https://github.com/OSGeo/gdal/blob/33a8a0edc764253b582e194d330eec3b83072863/gdal/frmts/pds/pds4dataset.cpp#L2280
+
+   1.9.3.4
+   THare 20200127
+   - Minor update for Oblique Cylindrical to help define that the XML-odd 3-value vector strings (oblique_proj_x_axis_vector,
+     oblique_proj_y_axis_vector, oblique_proj_z_axis_vector) as optional and really for documention purposes.
+   - Minor update to Polar Stereographic to make scale_factor_at_projection_origin optional and added documention
+     to help clarify that attribute projection.
 </comment>
   
   <last_modification_date_time>2019-10-27T00:00:00Z</last_modification_date_time>
@@ -909,9 +916,12 @@
       <DD_Permissible_Value>
         <value>Polar Stereographic</value>
         <value_meaning>Related to the Stereographic projection but generally centered directly 
-          at the North or South Pole of the body. This resembles other polar azimuthals, 
-          with straight radiating meridians and concentric circles for parallels. The parallels 
-          are spaced at increasingly wide distances the farther the latitude is from the pole.
+          at the North or South Pole of the body (e.g. latitude_of_projection_origin set at 90 
+          or -90 respectively). This resembles other polar azimuthals, with straight radiating 
+          meridians and concentric circles for parallels. The parallels are spaced at increasingly 
+          wide distances the farther the latitude is from the pole. Note, if you do supply the optional
+          attribute scale_factor_at_projection_origin, the default scale (+k_0) for planetary polar 
+          data will mostly likely be set to 1.0.
         </value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
@@ -2191,7 +2201,7 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Jordan Padams</submitter_name>
     <definition>The reference_azimuth attribute specifies the azimuth of the line extending from the center of the 
-      image to the top center of the image with respect to a polar projection..
+      image to the top center of the image with respect to a polar projection.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -2376,7 +2386,8 @@
     <local_identifier>oblique_proj_x_axis_vector</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Paul Geissler</submitter_name>
-    <definition>Unit vector in the direction of the X axis of the oblique coordinate system used in the OBLIQUE_CYLINDRICAL 
+    <definition>This is a redundant attirubte and as such is optional mostly available for documentation for the parameters.
+      Unit vector in the direction of the X axis of the oblique coordinate system used in the OBLIQUE_CYLINDRICAL 
       projection, in terms of the X, Y, and Z axes of the standard body-fixed coordinate system. In each system, the X axis 
       points from the body center toward longitude and latitude (0,0) in that system, the Z axis to (0,90), and the Y-axis 
       completes a right-handed set. The OBLIQUE_PROJ_X/Y/Z_AXIS_VECTORS makeup the rows of a rotation matrix that when multiplied 
@@ -2398,7 +2409,8 @@
     <local_identifier>oblique_proj_y_axis_vector</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Paul Geissler</submitter_name>
-    <definition>Unit vector in the direction of the Y axis of the oblique coordinate system used in the OBLIQUE_CYLINDRICAL projection, 
+    <definition>This is a redundant attirubte and as such is optional mostly available for documentation for the parameters.
+      Unit vector in the direction of the Y axis of the oblique coordinate system used in the OBLIQUE_CYLINDRICAL projection, 
       in terms of the X, Y, and Z axes of the standard body-fixed coordinate system. In each system, the X axis points from the body center 
       toward longitude and latitude (0,0) in that system, the Z axis to (0,90), and the Y-axis completes a right-handed set. The 
       OBLIQUE_PROJ_X/Y/Z_AXIS_VECTORS makeup the rows of a rotation matrix that when multiplied on the left of a vector referenced to 
@@ -2419,7 +2431,8 @@
     <local_identifier>oblique_proj_z_axis_vector</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Paul Geissler</submitter_name>
-    <definition>Unit vector in the direction of the Z axis of the oblique coordinate system used in the OBLIQUE_CYLINDRICAL projection, 
+    <definition>This is a redundant attirubte and as such is optional mostly available for documentation for the parameters.
+      Unit vector in the direction of the Z axis of the oblique coordinate system used in the OBLIQUE_CYLINDRICAL projection, 
       in terms of the X, Y, and Z axes of the standard body-fixed coordinate system. In each system, the X axis points from the body center 
       toward longitude and latitude (0,0) in that system, the Z axis to (0,90), and the Y-axis completes a right-handed set. The 
       OBLIQUE_PROJ_X/Y/Z_AXIS_VECTORS makeup the rows of a rotation matrix that when multiplied on the left of a vector referenced to 
@@ -3561,10 +3574,19 @@
     <version_id>1.0</version_id>
     <local_identifier>Polar_Stereographic</local_identifier>
     <submitter_name>Elizabeth D. Rye</submitter_name>
-    <definition>The Polar_Stereographic class contains parameters for the
-      Polar Stereographic projection.
+    <definition>The Polar_Stereographic class contains parameters for the Polar Stereographic projection.
       Synder 1987, DOI:10.3133/pp1395, page 154: https://pubs.usgs.gov/pp/1395/report.pdf#page=166
       PROJ: https://proj.org/operations/projections/stere.html
+
+      Note that most applications will either define latitude_of_projection_origin 
+      or scale_factor_at_projection_origin, but not both. Here we define latitude_of_projection_origin
+      as mandatory and at CART LDD versoin 1934 have made scale_factor_at_projection_origin optional. 
+      For context, these two keywords have the same impact on the final product but are just different 
+      ways to define it. Thus, for example in the PROJ library, if both are made available, the
+      latitude_of_projection_origin (+lat_ts) will be used instead of 
+      scale_factor_at_projection_origin (+k_0). Note, if you do supply the optional attribute 
+      scale_factor_at_projection_origin, the default scale (+k_0) for planetary polar 
+      data will mostly likely be set to 1.0.
     </definition>
     <!-- T.H. Removed, simply use longitude_of_central_meridian which is normally done.
       <DD_Association>
@@ -3580,15 +3602,15 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>scale_factor_at_projection_origin</identifier_reference>
+      <identifier_reference>latitude_of_projection_origin</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>latitude_of_projection_origin</identifier_reference>
+      <identifier_reference>scale_factor_at_projection_origin</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
@@ -3708,9 +3730,9 @@
     <version_id>1.0</version_id>
     <local_identifier>Universal_Polar_Stereographic</local_identifier>
     <submitter_name>Elizabeth D. Rye</submitter_name>
-    <definition>The Universal_Polar_Stereographic class defines a grid
-      system based on the polar stereographic projection, applied to the
-      planet's polar regions north of 84 degrees north and south of 80 degrees south.
+    <definition>The Universal_Polar_Stereographic class, generally used for Earth data sets, defines
+      a grid system based on the polar stereographic projection, applied to the planet's polar regions 
+      north of 84 degrees north and south of 80 degrees south.
       Synder 1987, DOI:10.3133/pp1395, page 157: https://pubs.usgs.gov/pp/1395/report.pdf#page=169
       PROJ: https://proj.org/operations/projections/ups.html
     </definition>
