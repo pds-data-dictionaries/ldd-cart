@@ -24,7 +24,7 @@
     xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"    
     xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1D00.xsd    http://pds.nasa.gov/pds4/geom/v1 https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1B10_1700.xsd">
   <name>Cartography</name>
-  <ldd_version_id>1.9.3.3</ldd_version_id>
+  <ldd_version_id>1.9.4.0</ldd_version_id>
   <full_name>Trent Hare</full_name>
   <steward_id>img</steward_id>
   <namespace_id>cart</namespace_id>
@@ -144,7 +144,11 @@
      oblique_proj_y_axis_vector, oblique_proj_z_axis_vector) as optional and really for documention purposes.
    - Minor update to Polar Stereographic to make scale_factor_at_projection_origin optional and added documention
      to help clarify that attribute projection.
-</comment>
+
+   1.9.4.0
+   THare 20200319
+   - Add new class Vector_Projection_Z_Axis_Initial
+  </comment>
   
   <last_modification_date_time>2019-10-27T00:00:00Z</last_modification_date_time>
   <DD_Attribute>
@@ -4640,8 +4644,26 @@
       projections, this vector defines the projection axis for the mosaic. All points along a line parallel to this axis are projected 
       to the same spot in the projection plane. For the Cylindrical-Perspective projections, this defines the new axis of the circle 
       around which the synthetic camera orbits (i.e. the normal to the circle), after the cameras have been rotated to correct for 
-      rover tilt. CAMERA_ROTATION_AXIS_VECTOR contains the axis before rotation; the difference in these two indicate the rotation 
+      rover tilt. Vector_Projection_Z_Axis_Initial contains the axis before rotation; the difference in these two indicate the rotation 
       amount.</definition>
+    <DD_Association>
+      <identifier_reference>Vector_Cartesian_Unit_Base</identifier_reference>
+      <reference_type>parent_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+  
+  <DD_Class>
+    <name>Vector_Projection_Z_Axis_Initial</name>
+    <version_id>1.0</version_id>
+    <local_identifier>Vector_Projection_Z_Axis_Initial</local_identifier>
+    <submitter_name>Trent Hare</submitter_name>
+    <definition>The Vector_Projection_Z_Axis_Initial class specifies the initial unit vector defining
+      the Z axis for a given projection.  For Cylindrical-Perspective projections, this
+      defines the original axis of the circle around which the synthetic camera orbits,
+      before the cameras have been rotated to correct for rover tilt. Vector_Projection_Z_Axis 
+      contains the axis after rotation; the difference in these two indicate the rotation amount.</definition>
     <DD_Association>
       <identifier_reference>Vector_Cartesian_Unit_Base</identifier_reference>
       <reference_type>parent_of</reference_type>
