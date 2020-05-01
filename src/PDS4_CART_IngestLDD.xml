@@ -104,8 +104,8 @@
 	   When a best-fit sphere or a body is already defined as a sphere, a single radius value will be listed across all three 
 	   parameters a_axis_radius, b_axis_radius, and c_axis_radius. For an ellipse, the a_axis_radius and b_axis_radius will be
 	   defined by a single radius value and a different (generally smaller) radius value for the c_axis_radius. Lastly, the
-       default units for the these parameters was set to meters "m".
-     
+     default units for the these parameters was set to meters "m".
+ 
     THare and CDeCesare 20190430
     - Upgraded to v1B10 of IM.
     - Undid changes from 1.9.1.1.
@@ -146,8 +146,18 @@
      to help clarify that attribute projection.
 
    1.9.4.0
-   THare 20200319
+   THare 20200501
    - Add new class Vector_Projection_Z_Axis_Initial
+   - Under Oblique Cylindrical set reference_latitude and reference_longitude as optional. Unfortunately,
+     some older PDS3 labels have these two values (and an implied angle always set to zero) instead of using the
+     more appropriate values: oblique_proj_pole_latitude, oblique_proj_pole_longitude, oblique_proj_pole_rotation
+     Implementations for this map projection on use the later 3 attributes (e.g. ISIS3/4 and PROJ) not reference_*.
+     So when older labels only use reference_*, those should be converted to use the 3 oblique_proj_pole_* attributes
+     (note it is not a simple mapping, requiring a calculated update to get from reference_* to oblique_proj_pole_*)
+  - Removed scale_factor_at_center_line as it is currently not being used anywhere
+  - Removed pixel_resolution as pixel_resolution_x and pixel_resolution_y should be used (and it was not used anywhere)
+    If square, simply repeat the same value in both pixel_resolution_x and pixel_resolution_y
+
   </comment>
   
   <last_modification_date_time>2019-10-27T00:00:00Z</last_modification_date_time>
@@ -1254,7 +1264,7 @@
     </DD_Value_Domain>
   </DD_Attribute>
   
-  <DD_Attribute>
+  <!--DD_Attribute>
     <name>pixel_resolution</name>
     <version_id>1.0</version_id>
     <local_identifier>pixel_resolution</local_identifier>
@@ -1276,7 +1286,7 @@
       <unit_of_measure_type>Units_of_Map_Scale</unit_of_measure_type>
       <specified_unit_id>pixel/deg</specified_unit_id>
     </DD_Value_Domain>
-  </DD_Attribute>
+  </DD_Attribute-->
   
   <DD_Attribute>
     <name>pixel_scale</name>
@@ -1503,7 +1513,7 @@
     </DD_Value_Domain>
   </DD_Attribute>
 
-  <DD_Attribute>
+  <!--DD_Attribute>
     <name>scale_factor_at_center_line</name>
     <version_id>1.0</version_id>
     <local_identifier>scale_factor_at_center_line</local_identifier>
@@ -1518,7 +1528,7 @@
       <minimum_value>0.0</minimum_value>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
-  </DD_Attribute>
+  </DD_Attribute-->
 
   <!--DD_Attribute>, removed, just use longitude_of_central_meridian
     <name>straight_vertical_longitude_from_pole</name>
@@ -3784,13 +3794,13 @@
     <DD_Association>
       <identifier_reference>reference_latitude</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>reference_longitude</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
       <DD_Association>
