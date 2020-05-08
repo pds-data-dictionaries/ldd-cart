@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Fri Mar 20 16:50:30 MST 2020
+   Time                   Fri May 01 15:42:07 MST 2020
    Common Schema          [PDS4_PDS_1D00.xsd]
    Common Schematron      [PDS4_PDS_1D00.sch]
    IM Version Id:         1.13.0.0
@@ -30,15 +30,13 @@ Parameters:
 
 Summary:
    Classes                63
-   Attributes             105
+   Attributes             103
    Associations           255
    Error messages         0
-   Warning messages       3
-   Information messages   76
+   Warning messages       1
+   Information messages   74
 
 Detailed validation messages
-   WARNING  Attribute: <pixel_resolution> - This local attribute was not used in an Association.
-   WARNING  Attribute: <scale_factor_at_center_line> - This local attribute was not used in an Association.
    WARNING  Header:  - New namespace id has been specified:cart
    INFO     Attribute: <west_bounding_coordinate> - The default minimum value provided by the attribute's data type is being overridden with -180.0
    INFO     Attribute: <west_bounding_coordinate> - The default maximum value provided by the attribute's data type is being overridden with 360.0
@@ -61,7 +59,6 @@ Detailed validation messages
    INFO     Attribute: <pixel_resolution_y> - The default minimum value provided by the attribute's data type is being overridden with 0.0
    INFO     Attribute: <pixel_scale_x> - The default minimum value provided by the attribute's data type is being overridden with 0.0
    INFO     Attribute: <pixel_scale_y> - The default minimum value provided by the attribute's data type is being overridden with 0.0
-   INFO     Attribute: <pixel_resolution> - The default minimum value provided by the attribute's data type is being overridden with 0.0
    INFO     Attribute: <pixel_scale> - The default minimum value provided by the attribute's data type is being overridden with 0.0
    INFO     Attribute: <distance_resolution> - The default minimum value provided by the attribute's data type is being overridden with 0.0
    INFO     Attribute: <bearing_resolution> - The default minimum value provided by the attribute's data type is being overridden with 0.0
@@ -77,7 +74,6 @@ Detailed validation messages
    INFO     Attribute: <longitude_of_central_meridian> - The default maximum value provided by the attribute's data type is being overridden with 360.0
    INFO     Attribute: <latitude_of_projection_origin> - The default minimum value provided by the attribute's data type is being overridden with -90.0
    INFO     Attribute: <latitude_of_projection_origin> - The default maximum value provided by the attribute's data type is being overridden with 90.0
-   INFO     Attribute: <scale_factor_at_center_line> - The default minimum value provided by the attribute's data type is being overridden with 0.0
    INFO     Attribute: <scale_factor_at_central_meridian> - The default minimum value provided by the attribute's data type is being overridden with 0.0
    INFO     Attribute: <utm_zone_number> - The default minimum value provided by the attribute's data type is being overridden with -60
    INFO     Attribute: <utm_zone_number> - The default maximum value provided by the attribute's data type is being overridden with 60
@@ -199,8 +195,8 @@ Parsed Input - Header:
 	   When a best-fit sphere or a body is already defined as a sphere, a single radius value will be listed across all three 
 	   parameters a_axis_radius, b_axis_radius, and c_axis_radius. For an ellipse, the a_axis_radius and b_axis_radius will be
 	   defined by a single radius value and a different (generally smaller) radius value for the c_axis_radius. Lastly, the
-       default units for the these parameters was set to meters "m".
-     
+     default units for the these parameters was set to meters "m".
+ 
     THare and CDeCesare 20190430
     - Upgraded to v1B10 of IM.
     - Undid changes from 1.9.1.1.
@@ -241,8 +237,18 @@ Parsed Input - Header:
      to help clarify that attribute projection.
 
    1.9.4.0
-   THare 20200319
+   THare 20200501
    - Add new class Vector_Projection_Z_Axis_Initial
+   - Under Oblique Cylindrical set reference_latitude and reference_longitude as optional. Unfortunately,
+     some older PDS3 labels have these two values (and an implied angle always set to zero) instead of using the
+     more appropriate values: oblique_proj_pole_latitude, oblique_proj_pole_longitude, oblique_proj_pole_rotation
+     Implementations for this map projection on use the later 3 attributes (e.g. ISIS3/4 and PROJ) not reference_*.
+     So when older labels only use reference_*, those should be converted to use the 3 oblique_proj_pole_* attributes
+     (note it is not a simple mapping, requiring a calculated update to get from reference_* to oblique_proj_pole_*)
+  - Removed scale_factor_at_center_line as it is currently not being used anywhere
+  - Removed pixel_resolution as pixel_resolution_x and pixel_resolution_y should be used (and it was not used anywhere)
+    If square, simply repeat the same value in both pixel_resolution_x and pixel_resolution_y
+
   
    Last Modification Time 2019-10-27T00:00:00Z
    PDS4 Merge Flag        false
@@ -431,13 +437,6 @@ Parsed Input - Attributes:
    minimum value          0.0
    unit of measure type   Units_of_Map_Scale
 
-   name                   pixel_resolution
-   version                1.0
-   value data type        ASCII_Real
-   description             The pixel_resolution attribute indicate the image array pixel resolution (distance/pixel or degree/pixel) relative to the referenced coordinate system as defined by the map projection. This attribute should be used in lieu of pixel_resolution_x and pixel_resolution_y when the pixel resolution is not x/y aligned. i.e. a radial pixel resolution. NOTE: Definition of this PDS4 attribute differs from how 'resolution' was defined within PDS3 
-   minimum value          0.0
-   unit of measure type   Units_of_Map_Scale
-
    name                   pixel_scale
    version                1.13
    value data type        ASCII_Real
@@ -504,12 +503,6 @@ Parsed Input - Attributes:
    minimum value          -90.0
    maximum value          90.0
    unit of measure type   Units_of_Angle
-
-   name                   scale_factor_at_center_line
-   version                1.0
-   value data type        ASCII_Real
-   description            The scale_factor_at_center_line attribute provides a multiplier for reducing a distance obtained from a map by computation or scaling to the actual distance along the center line.
-   minimum value          0.0
 
    name                   scale_factor_at_central_meridian
    version                1.13
@@ -1676,12 +1669,12 @@ Parsed Input - Classes:
       reference type        attribute_of
 
       local identifier      reference_latitude
-      minimum occurrences   1
+      minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
       local identifier      reference_longitude
-      minimum occurrences   1
+      minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
