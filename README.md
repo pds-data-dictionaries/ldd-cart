@@ -17,7 +17,7 @@ The build process insures compatiblity of the LDD with the core information mode
 
 This LDD has been built for the following versions of the PDS4 information models.
 
-- [1.D.0.0_1.9.3.0](build/1.D.0.0_1.9.3.0)
+- [1.D.0.0_1.9.4.0](build/1.D.0.0_1.9.4.0)
 	
 ## Notes
 
