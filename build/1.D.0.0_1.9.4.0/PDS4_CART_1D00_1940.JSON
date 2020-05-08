@@ -3,7 +3,7 @@
     "dataDictionary": {
       "Title": "PDS4 Data Dictionary" ,
       "Version": "1.13.0.0" ,
-      "Date": "Fri Mar 20 16:50:30 MST 2020" ,
+      "Date": "Fri May 01 15:42:07 MST 2020" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
       "classDictionary": [
         {
@@ -1752,7 +1752,7 @@
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
-                "minimumCardinality": "1" ,
+                "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1030" ,
                 "attributeId": [
@@ -1768,7 +1768,7 @@
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
-                "minimumCardinality": "1" ,
+                "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1040" ,
                 "attributeId": [
