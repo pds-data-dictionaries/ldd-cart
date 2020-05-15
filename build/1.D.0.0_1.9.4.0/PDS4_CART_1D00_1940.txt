@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Fri May 01 15:42:07 MST 2020
+   Time                   Fri May 15 16:12:10 MST 2020
    Common Schema          [PDS4_PDS_1D00.xsd]
    Common Schematron      [PDS4_PDS_1D00.sch]
    IM Version Id:         1.13.0.0
@@ -124,7 +124,7 @@ Parsed Input - Header:
     products.  This information is largely adapted from the Federal Geographic 
 	  Data Committee (FGDC) "Content Standard for Digital Geospatial Metadata", 
 	  with extensions (changes/additions) to satisfy planetary requirements.
-    
+    g
     ## CHANGE LOG ##
     1.9.0.0
     - Upgraded to v1900 of the IM
@@ -237,7 +237,7 @@ Parsed Input - Header:
      to help clarify that attribute projection.
 
    1.9.4.0
-   THare 20200501
+   THare 20200515
    - Add new class Vector_Projection_Z_Axis_Initial
    - Under Oblique Cylindrical set reference_latitude and reference_longitude as optional. Unfortunately,
      some older PDS3 labels have these two values (and an implied angle always set to zero) instead of using the
@@ -250,7 +250,7 @@ Parsed Input - Header:
     If square, simply repeat the same value in both pixel_resolution_x and pixel_resolution_y
 
   
-   Last Modification Time 2019-10-27T00:00:00Z
+   Last Modification Time 2020-05-15T16:00:00Z
    PDS4 Merge Flag        false
 
 Parsed Input - Attributes:
