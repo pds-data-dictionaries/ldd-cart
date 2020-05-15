@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Fri May 15 16:12:10 MST 2020
+   Time                   Fri May 15 16:33:39 MST 2020
    Common Schema          [PDS4_PDS_1D00.xsd]
    Common Schematron      [PDS4_PDS_1D00.sch]
    IM Version Id:         1.13.0.0
@@ -124,7 +124,7 @@ Parsed Input - Header:
     products.  This information is largely adapted from the Federal Geographic 
 	  Data Committee (FGDC) "Content Standard for Digital Geospatial Metadata", 
 	  with extensions (changes/additions) to satisfy planetary requirements.
-    g
+
     ## CHANGE LOG ##
     1.9.0.0
     - Upgraded to v1900 of the IM

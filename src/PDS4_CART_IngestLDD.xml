@@ -32,7 +32,7 @@
     products.  This information is largely adapted from the Federal Geographic 
 	  Data Committee (FGDC) "Content Standard for Digital Geospatial Metadata", 
 	  with extensions (changes/additions) to satisfy planetary requirements.
-    g
+
     ## CHANGE LOG ##
     1.9.0.0
     - Upgraded to v1900 of the IM
