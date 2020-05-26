@@ -156,6 +156,7 @@
   - Removed scale_factor_at_center_line as it is currently not being used anywhere
   - Removed pixel_resolution as pixel_resolution_x and pixel_resolution_y should be used (and it was not used anywhere)
     If square, simply repeat the same value in both pixel_resolution_x and pixel_resolution_y
+  - Updated projection_axis_offset to be ASCII_REAL
 
   </comment>
   
@@ -2250,7 +2251,7 @@
   </DD_Attribute>
   <DD_Attribute>
     <name>projection_axis_offset</name>
-    <version_id>1.0</version_id>
+    <version_id>1.1</version_id>
     <local_identifier>projection_axis_offset</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Jordan Padams</submitter_name>
@@ -2259,8 +2260,7 @@
       projection origin of the synthetic camera used to calculate each column.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_NonNegative_Integer</value_data_type>
-      <minimum_value>1</minimum_value>
+      <value_data_type>ASCII_Real</value_data_type>
       <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>

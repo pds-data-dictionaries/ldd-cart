@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Fri May 15 16:33:39 MST 2020
+   Time                   Tue May 26 08:51:03 MST 2020
    Common Schema          [PDS4_PDS_1D00.xsd]
    Common Schematron      [PDS4_PDS_1D00.sch]
    IM Version Id:         1.13.0.0
@@ -34,7 +34,7 @@ Summary:
    Associations           255
    Error messages         0
    Warning messages       1
-   Information messages   74
+   Information messages   73
 
 Detailed validation messages
    WARNING  Header:  - New namespace id has been specified:cart
@@ -98,7 +98,6 @@ Detailed validation messages
    INFO     Attribute: <sphere_intersection_count> - The default minimum value provided by the attribute's data type is being overridden with 1
    INFO     Attribute: <projection_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 1
    INFO     Attribute: <projection_elevation_line> - The default minimum value provided by the attribute's data type is being overridden with 1
-   INFO     Attribute: <projection_axis_offset> - The default minimum value provided by the attribute's data type is being overridden with 1
    INFO     Attribute: <reference_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90.0
    INFO     Attribute: <reference_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90.0
    INFO     Attribute: <reference_longitude> - The default minimum value provided by the attribute's data type is being overridden with -180.0
@@ -248,6 +247,7 @@ Parsed Input - Header:
   - Removed scale_factor_at_center_line as it is currently not being used anywhere
   - Removed pixel_resolution as pixel_resolution_x and pixel_resolution_y should be used (and it was not used anywhere)
     If square, simply repeat the same value in both pixel_resolution_x and pixel_resolution_y
+  - Updated projection_axis_offset to be ASCII_REAL
 
   
    Last Modification Time 2020-05-15T16:00:00Z
@@ -749,9 +749,8 @@ Parsed Input - Attributes:
 
    name                   projection_axis_offset
    version                1.13
-   value data type        ASCII_NonNegative_Integer
+   value data type        ASCII_Real
    description            The projection_axis_offset attribute specifies an offset from a projection axis in a map projection. For the Cylindrical-Perspective projection, this is the radius of a circle which represents the rotation around the projection origin of the synthetic camera used to calculate each column.
-   minimum value          1
    unit of measure type   Units_of_Length
 
    name                   reference_latitude
