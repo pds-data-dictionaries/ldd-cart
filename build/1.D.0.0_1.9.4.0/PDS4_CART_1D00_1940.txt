@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Fri May 01 15:42:07 MST 2020
+   Time                   Wed Jul 08 16:31:49 MST 2020
    Common Schema          [PDS4_PDS_1D00.xsd]
    Common Schematron      [PDS4_PDS_1D00.sch]
    IM Version Id:         1.13.0.0
@@ -34,7 +34,7 @@ Summary:
    Associations           255
    Error messages         0
    Warning messages       1
-   Information messages   74
+   Information messages   73
 
 Detailed validation messages
    WARNING  Header:  - New namespace id has been specified:cart
@@ -98,7 +98,6 @@ Detailed validation messages
    INFO     Attribute: <sphere_intersection_count> - The default minimum value provided by the attribute's data type is being overridden with 1
    INFO     Attribute: <projection_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 1
    INFO     Attribute: <projection_elevation_line> - The default minimum value provided by the attribute's data type is being overridden with 1
-   INFO     Attribute: <projection_axis_offset> - The default minimum value provided by the attribute's data type is being overridden with 1
    INFO     Attribute: <reference_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90.0
    INFO     Attribute: <reference_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90.0
    INFO     Attribute: <reference_longitude> - The default minimum value provided by the attribute's data type is being overridden with -180.0
@@ -124,7 +123,7 @@ Parsed Input - Header:
     products.  This information is largely adapted from the Federal Geographic 
 	  Data Committee (FGDC) "Content Standard for Digital Geospatial Metadata", 
 	  with extensions (changes/additions) to satisfy planetary requirements.
-    
+
     ## CHANGE LOG ##
     1.9.0.0
     - Upgraded to v1900 of the IM
@@ -237,7 +236,7 @@ Parsed Input - Header:
      to help clarify that attribute projection.
 
    1.9.4.0
-   THare 20200501
+   THare 20200515
    - Add new class Vector_Projection_Z_Axis_Initial
    - Under Oblique Cylindrical set reference_latitude and reference_longitude as optional. Unfortunately,
      some older PDS3 labels have these two values (and an implied angle always set to zero) instead of using the
@@ -248,9 +247,10 @@ Parsed Input - Header:
   - Removed scale_factor_at_center_line as it is currently not being used anywhere
   - Removed pixel_resolution as pixel_resolution_x and pixel_resolution_y should be used (and it was not used anywhere)
     If square, simply repeat the same value in both pixel_resolution_x and pixel_resolution_y
+  - Updated projection_axis_offset to be ASCII_REAL
 
   
-   Last Modification Time 2019-10-27T00:00:00Z
+   Last Modification Time 2020-05-15T16:00:00Z
    PDS4 Merge Flag        false
 
 Parsed Input - Attributes:
@@ -749,9 +749,8 @@ Parsed Input - Attributes:
 
    name                   projection_axis_offset
    version                1.13
-   value data type        ASCII_NonNegative_Integer
+   value data type        ASCII_Real
    description            The projection_axis_offset attribute specifies an offset from a projection axis in a map projection. For the Cylindrical-Perspective projection, this is the radius of a circle which represents the rotation around the projection origin of the synthetic camera used to calculate each column.
-   minimum value          1
    unit of measure type   Units_of_Length
 
    name                   reference_latitude
