@@ -19,7 +19,6 @@
 <Ingest_LDD
     xmlns="http://pds.nasa.gov/pds4/pds/v1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:cart="http://pds.nasa.gov/pds4/cart/v1"
     xmlns:geom="http://pds.nasa.gov/pds4/geom/v1"
     xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"    
     xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1D00.xsd    http://pds.nasa.gov/pds4/geom/v1 https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1B10_1700.xsd">
@@ -33,7 +32,7 @@
     products.  This information is largely adapted from the Federal Geographic 
 	  Data Committee (FGDC) "Content Standard for Digital Geospatial Metadata", 
 	  with extensions (changes/additions) to satisfy planetary requirements.
-    
+
     ## CHANGE LOG ##
     1.9.0.0
     - Upgraded to v1900 of the IM
@@ -146,7 +145,7 @@
      to help clarify that attribute projection.
 
    1.9.4.0
-   THare 20200501
+   THare 20200515
    - Add new class Vector_Projection_Z_Axis_Initial
    - Under Oblique Cylindrical set reference_latitude and reference_longitude as optional. Unfortunately,
      some older PDS3 labels have these two values (and an implied angle always set to zero) instead of using the
@@ -157,16 +156,17 @@
   - Removed scale_factor_at_center_line as it is currently not being used anywhere
   - Removed pixel_resolution as pixel_resolution_x and pixel_resolution_y should be used (and it was not used anywhere)
     If square, simply repeat the same value in both pixel_resolution_x and pixel_resolution_y
+  - Updated projection_axis_offset to be ASCII_REAL
 
   </comment>
   
-  <last_modification_date_time>2019-10-27T00:00:00Z</last_modification_date_time>
+  <last_modification_date_time>2020-05-15T16:00:00Z</last_modification_date_time>
   <DD_Attribute>
     <name>target_center_distance</name>
     <version_id>1.0</version_id>
     <local_identifier>target_center_distance</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Chris Isbell - USGS</submitter_name>
+    <submitter_name>Chris Isbell</submitter_name>
     <definition>
       The target_center_distance attribute provides the distance to target center, 
       in meters, relative to the observing system.
@@ -2251,7 +2251,7 @@
   </DD_Attribute>
   <DD_Attribute>
     <name>projection_axis_offset</name>
-    <version_id>1.0</version_id>
+    <version_id>1.1</version_id>
     <local_identifier>projection_axis_offset</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Jordan Padams</submitter_name>
@@ -2260,8 +2260,7 @@
       projection origin of the synthetic camera used to calculate each column.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_NonNegative_Integer</value_data_type>
-      <minimum_value>1</minimum_value>
+      <value_data_type>ASCII_Real</value_data_type>
       <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
