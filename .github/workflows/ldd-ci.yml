@@ -93,7 +93,7 @@ jobs:
 
       - name: Complete Regression Tests (if applicable)
         run: |
-          if [ -d "$REG_TEST_DIR" ]; then
+          if ls $REG_TEST_DIR/*.xml 1> /dev/null 2>&1; then
 
             # Get the PDS core dictionaries
             wget -q --directory-prefix=/tmp "https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_$IM_VERSION_ALPHA.xsd"
@@ -115,7 +115,7 @@ jobs:
             # TBD some regression test FAIL
           fi
 
-      - name: Add Dictionaries to Pull Request
+      - name: Add Dictionaries to Branch
         run: |
             git config --local user.email "action@github.com"
             git config --local user.name "GitHub Action"
