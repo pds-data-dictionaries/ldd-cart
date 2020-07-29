@@ -1,0 +1,3 @@
+[submodule "src/dependencies/ldd-geom"]
+	path = src/dependencies/ldd-geom
+	url = https://github.com/pds-data-dictionaries/ldd-geom
