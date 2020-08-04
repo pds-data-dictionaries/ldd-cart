@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML product label for PDS4 V1.14.0.0  Wed Jul 29 16:35:25 UTC 2020 -->
+  <!-- PDS4 XML product label for PDS4 V1.14.0.0  Tue Aug 04 22:41:00 UTC 2020 -->
   <!-- Generated from the PDS4 Information Model V1.14.0.0 - System Build 10b -->
   <!-- *** This PDS4 XML product label is an operational deliverable. *** -->
 <?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.sch"
@@ -10,14 +10,14 @@
     xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1
     https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.xsd">
     <Identification_Area>
-        <logical_identifier>urn:nasa:pds:system_bundle:xml_schema:geom-xml_schema</logical_identifier>
+        <logical_identifier>urn:nasa:pds:system_bundle:xml_schema:cart-xml_schema</logical_identifier>
         <version_id>1.0</version_id>
-        <title>PDS4 XML Schema - GEOM V1.7.3.0</title>
+        <title>PDS4 XML Schema - CART V1.9.4.0</title>
         <information_model_version>1.14.0.0</information_model_version>
         <product_class>Product_XML_Schema</product_class>
         <Modification_History>
             <Modification_Detail>
-                <modification_date>2020-07-29</modification_date>
+                <modification_date>2020-08-04</modification_date>
                 <version_id>1.0</version_id>
                 <description>This is the system generated PDS4 product label for PDS4 XML Schema and Schematron files.</description>
             </Modification_Detail>
@@ -25,13 +25,13 @@
     </Identification_Area>
     <File_Area_XML_Schema>
         <File>
-            <file_name>PDS4_GEOM_1E00_1730.xsd</file_name>
-            <creation_date_time>2020-07-29T09:35:25</creation_date_time>
-            <file_size unit="byte">361343</file_size>
-            <records>7246</records>
+            <file_name>PDS4_CART_1E00_1940.xsd</file_name>
+            <creation_date_time>2020-08-04T15:41:00</creation_date_time>
+            <file_size unit="byte">156457</file_size>
+            <records>3246</records>
         </File>
         <XML_Schema>
-            <name>PDS4_GEOM_1E00_1730.xsd</name>
+            <name>PDS4_CART_1E00_1940.xsd</name>
             <offset unit="byte">0</offset>
             <parsing_standard_id>XML Schema Version 1.1</parsing_standard_id>
             <description>This is a PDS4 XML Schema file for the declared namespace.</description>
@@ -39,13 +39,13 @@
     </File_Area_XML_Schema>
     <File_Area_XML_Schema>
         <File>
-            <file_name>PDS4_GEOM_1E00_1730.sch</file_name>
-            <creation_date_time>2020-07-29T09:35:25</creation_date_time>
-            <file_size unit="byte">123137</file_size>
-            <records>1663</records>
+            <file_name>PDS4_CART_1E00_1940.sch</file_name>
+            <creation_date_time>2020-08-04T15:41:00</creation_date_time>
+            <file_size unit="byte">47144</file_size>
+            <records>798</records>
         </File>
         <XML_Schema>
-            <name>PDS4_GEOM_1E00_1730.sch</name>
+            <name>PDS4_CART_1E00_1940.sch</name>
             <offset unit="byte">0</offset>
             <parsing_standard_id>Schematron ISO/IEC 19757-3:2006</parsing_standard_id>
             <description>This is the PDS4 Schematron file for the declared namespace. Schematron provides rule-based validation for XML Schema.</description>
