@@ -6,7 +6,7 @@ The Cartography dictionary contains classes, elements, attributes, and rules des
 
 Only one LDD source version is kept such that it can be managed by github.
 
-- [1.D.0.0](src)
+- [src](src)
 
 ## Versions
 
@@ -17,6 +17,7 @@ The build process insures compatiblity of the LDD with the core information mode
 
 This LDD has been built for the following versions of the PDS4 information models.
 
+- [1.E.0.0_1.9.5.0](build/development)
 - [1.D.0.0_1.9.4.0](build/1.D.0.0_1.9.4.0)
 	
 ## Notes
