@@ -8,7 +8,7 @@
                      https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.xsd">
 
     <name>Geometry Dictionary Full</name>
-    <ldd_version_id>1.8.1.0</ldd_version_id>
+    <ldd_version_id>1.9.0.0</ldd_version_id>
     <dictionary_type>Discipline</dictionary_type>
     <full_name>Edward A. Guinness</full_name>
     <steward_id>geo</steward_id>
@@ -230,9 +230,13 @@
         - Added new attribute geometry_state, pds:description, pds:local_identifier to the start
                of the Geometry_Lander class
         - Added a Vector_Device_Gravity_Magnitude class to Articulation_Device_Parameters to support M2020.
+        version 1.9.0.0 2020-10-16 thru 2020-11-30
+        - Made  celestial_north_clock_angle and ecliptic_north_clock_angle nillable. 
+               Added enumerated values for reference_type in Body_Identification_Base and Frame_Identification_Base.
+               Added enumerated values for coordinate_space_frame_type.
     </comment>
 
-    <last_modification_date_time>2020-08-28</last_modification_date_time>
+    <last_modification_date_time>2020-11-30</last_modification_date_time>
 
 <!-- Attributes -->
     
@@ -889,7 +893,7 @@
         <name>celestial_north_clock_angle</name>
         <version_id>1.0</version_id>
         <local_identifier>celestial_north_clock_angle</local_identifier>
-        <nillable_flag>false</nillable_flag>
+        <nillable_flag>true</nillable_flag>
         <submitter_name>Mitchell K. Gordon</submitter_name>
         <definition>The celestial_north_clock_angle attribute specifies the 
                     direction of celestial north at the center of an image. 
@@ -933,7 +937,7 @@
         <name>ecliptic_north_clock_angle</name>
         <version_id>1.0</version_id>
         <local_identifier>ecliptic_north_clock_angle</local_identifier>
-        <nillable_flag>false</nillable_flag>
+        <nillable_flag>true</nillable_flag>
         <submitter_name>Mitchell K. Gordon</submitter_name>
         <definition>The ecliptic_north_clock_angle attribute specifies the 
                     direction of ecliptic north at the center of an image. 
@@ -2567,9 +2571,348 @@
             Coordinate_Space_Index and the optional solution_id in the Coordinate_Space_Indexed class,
             this serves to fully name an instance of a coordinate space. 
         </definition>
+        
+<!-- PDS3 styled names  -->
+
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+            <DD_Permissible_Value>
+             <value>APXS_Frame</value>
+             <value_meaning>Frame defining the APXS instrument on a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>ARM_CUSTOM_TCP_FRAME</value>
+             <value_meaning>Frame describing a user-defined Tool Control Point for a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>ARM_DOCKING_POST_FRAME</value>
+             <value_meaning>Frame describing the docking post on a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>ARM_DRILL_FRAME</value>
+             <value_meaning>Frame describing the drill on a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>ARM_DRT_FRAME</value>
+             <value_meaning>Frame describing the Dust Removal Tool on a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>ARM_FCS_FRAME</value>
+             <value_meaning>Frame describing the FCS (Facility Contact Switch) device on a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>ARM_FRAME</value>
+             <value_meaning>Frame describing a defined portion of a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>ARM_GDRT_FRAME</value>
+             <value_meaning>Frame describing the GDRT (Gaseous Dust Removal Tool) device on a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>ARM_MAHLI_FRAME</value>
+             <value_meaning>Frame describing the MAHLI instrument on a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>ARM_PIXL_FRAME</value>
+             <value_meaning>Frame describing the PIXL instrument on a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>ARM_PORTION_FRAME</value>
+             <value_meaning>Frame describing the sample portioner device on a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>ARM_SCOOP_TCP_FRAME</value>
+             <value_meaning>Frame describing the Tool Control Point for the scoop on a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>ARM_SCOOP_TIP_FRAME</value>
+             <value_meaning>Frame describing the tip of a scoop on a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>ARM_SHERLOC_FRAME</value>
+             <value_meaning>Frame describing the SHERLOC instrument on a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>ARM_TURRET_FRAME</value>
+             <value_meaning>Frame describing the turret on a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>ARM_WATSON_FRAME</value>
+             <value_meaning>Frame describing the Watson instrument component on a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>CINT_FRAME</value>
+             <value_meaning>Frame describing the LVS camera during descent.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>HELI_G_FRAME</value>
+             <value_meaning>Helicopter frame defined attached to the ground at takeoff.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>HELI_M_FRAME</value>
+             <value_meaning>Helicopter frame roughly analogous to ROVER_MECH_FRAME.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>HELI_S1_FRAME</value>
+             <value_meaning>Helicopter frame roughly analogous to ROVER_NAV_FRAME defined for IMU #1.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>HELI_S2_FRAME</value>
+             <value_meaning>Helicopter frame roughly analogous to ROVER_NAV_FRAME defined for IMU #2.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>LANDER_FRAME</value>
+             <value_meaning>Analogous to ROVER_NAV_FRAME for non-mobile missions.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>LOCAL_LEVEL_FRAME</value>
+             <value_meaning>Frame coincident with ROVER_NAV/LANDER_FRAME that is oriented according to cartographic directions and gravity.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>MCMF_FRAME</value>
+             <value_meaning>Mars Centered Mars Fixed Frame defined with origin at the planet center.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>PIXL_BASE_FRAME</value>
+             <value_meaning>Frame describing the base of the PIXL instrument.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>PIXL_SENSOR_FRAME</value>
+             <value_meaning>Frame describing the movable sensor head of the PIXL instrument.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>ROVER_MECH_FRAME</value>
+             <value_meaning>Frame generally similar to ROVER_NAV_FRAME  but with different origin and possibly axis orientation that is more conducive to mechanical operations ("MECH" for "Mechanical").  The origin is typically (but not necessarily) tied to a specific bit of hardware.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>ROVER_NAV_FRAME</value>
+             <value_meaning>Frame attached to the rover oriented with respect to the rover that moves with the rover ("NAV" for "Navigation").  The origin is generally in a location conducive to navigation (e.g. at the center of turning between the middle wheels at nominal ground level on MSL/M20 type rovers) which may not be attached to any physical hardware.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>RSM_FRAME</value>
+             <value_meaning>Frame defining a Remote Sensing Mast.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>RSM_HEAD_FRAME</value>
+             <value_meaning>Frame defining a Remote Sensing Mast.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>SITE_FRAME</value>
+             <value_meaning>Instance of LOCAL_LEVEL_FRAME that is fixed to the ground. Used for local operations to reduce error propagation due to position uncertainty.</value_meaning>
+            </DD_Permissible_Value>
+
+<!-- Title case value names  -->
+
+            <DD_Permissible_Value>
+             <value>APXS_Frame</value>
+             <value_meaning>Frame defining the APXS instrument on a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>Arm_Custom_TCP_Frame</value>
+             <value_meaning>Frame describing a user-defined Tool Control Point for a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>Arm_Docking_Post_Frame</value>
+             <value_meaning>Frame describing the docking post on a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>Arm_Drill_Frame</value>
+             <value_meaning>Frame describing the drill on a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>Arm_DRT_Frame</value>
+             <value_meaning>Frame describing the Dust Removal Tool on a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>Arm_FCS_Frame</value>
+             <value_meaning>Frame describing the FCS (Facility Contact Switch) device on a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>Arm_Frame</value>
+             <value_meaning>Frame describing a defined portion of a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>Arm_GDRT_Frame</value>
+             <value_meaning>Frame describing the GDRT (Gaseous Dust Removal Tool) device on a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>Arm_MAHLI_Frame</value>
+             <value_meaning>Frame describing the MAHLI instrument on a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>Arm_PIXL_Frame</value>
+             <value_meaning>Frame describing the PIXL instrument on a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>Arm_Portion_Frame</value>
+             <value_meaning>Frame describing the sample portioner device on a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>Arm_Scoop_TCP_Frame</value>
+             <value_meaning>Frame describing the Tool Control Point for the scoop on a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>Arm_Scoop_TIP_Frame</value>
+             <value_meaning>Frame describing the tip of a scoop on a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>Arm_SHERLOC_Frame</value>
+             <value_meaning>Frame describing the SHERLOC instrument on a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>Arm_Turret_Frame</value>
+             <value_meaning>Frame describing the turret on a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>Arm_WATSON_Frame</value>
+             <value_meaning>Frame describing the Watson instrument component on a movable arm.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>CINT_Frame</value>
+             <value_meaning>Frame describing the LVS camera during descent.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>Heli_G_Frame</value>
+             <value_meaning>Helicopter frame defined attached to the ground at takeoff.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>Heli_M_Frame</value>
+             <value_meaning>Helicopter frame roughly analogous to ROVER_MECH_FRAME.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>Heli_S1_Frame</value>
+             <value_meaning>Helicopter frame roughly analogous to ROVER_NAV_FRAME defined for IMU #1.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>Heli_S2_Frame</value>
+             <value_meaning>Helicopter frame roughly analogous to ROVER_NAV_FRAME defined for IMU #2.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>Lander_Frame</value>
+             <value_meaning>Analogous to ROVER_NAV_FRAME for non-mobile missions.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>Local_Level_Frame</value>
+             <value_meaning>Frame coincident with ROVER_NAV/LANDER_FRAME that is oriented according to cartographic directions and gravity.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>Mast_Frame</value>
+             <value_meaning>TBD</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>MB_Frame</value>
+             <value_meaning>TBD</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>MCMF_Frame</value>
+             <value_meaning>Mars Centered Mars Fixed Frame defined with origin at the planet center.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>MI_Frame</value>
+             <value_meaning>TBD</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>PIXL_Base_Frame</value>
+             <value_meaning>Frame describing the base of the PIXL instrument.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>PIXL_Sensor_Frame</value>
+             <value_meaning>Frame describing the movable sensor head of the PIXL instrument.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>Rat_Frame</value>
+             <value_meaning>TBD</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>Rover_Frame</value>
+             <value_meaning>TBD</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>Rover_Mech_Frame</value>
+             <value_meaning>Frame generally similar to ROVER_NAV_FRAME  but with different origin and possibly axis orientation that is more conducive to mechanical operations ("MECH" for "Mechanical").  The origin is typically (but not necessarily) tied to a specific bit of hardware.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>Rover_Nav_Frame</value>
+             <value_meaning>Frame attached to the rover oriented with respect to the rover that moves with the rover ("NAV" for "Navigation").  The origin is generally in a location conducive to navigation (e.g. at the center of turning between the middle wheels at nominal ground level on MSL/M20 type rovers) which may not be attached to any physical hardware.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>RSM_Frame</value>
+             <value_meaning>Frame defining a Remote Sensing Mast.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>RSM_Head_FramE</value>
+             <value_meaning>Frame defining a Remote Sensing Mast.</value_meaning>
+            </DD_Permissible_Value>
+            
+            <DD_Permissible_Value>
+             <value>Site_Frame</value>
+             <value_meaning>Instance of LOCAL_LEVEL_FRAME that is fixed to the ground. Used for local operations to reduce error propagation due to position uncertainty.</value_meaning>
+            </DD_Permissible_Value>
         </DD_Value_Domain>
     </DD_Attribute>
     
@@ -9685,6 +10028,18 @@
     </DD_Rule>
 
     <DD_Rule>
+        <local_identifier>Body_Identification_Base_0</local_identifier>  
+        <rule_context>//geom:Body_Identification_Base/pds:Internal_Reference</rule_context>
+        <DD_Rule_Statement>
+            <rule_type>Assert</rule_type>
+            <rule_test>pds:reference_type = 'geometry_to_body'
+            </rule_test>
+            <rule_message>For Internal_Reference in Body_Identification_Base, reference_type must equal 'geometry_to_body'
+            </rule_message>
+        </DD_Rule_Statement>
+    </DD_Rule>
+
+    <DD_Rule>
         <local_identifier>Coordinate_System_Origin_Identification_0</local_identifier>
         <rule_context>//geom:Coordinate_System_Origin_Identification</rule_context>
         <DD_Rule_Statement>
@@ -9768,6 +10123,18 @@
             <rule_test>pds:reference_type = 'geometry_to_reference_frame'
             </rule_test>
             <rule_message>For Internal_Reference in geom:Reference_Frame_Identification, reference_type must equal 'geometry_to_reference_frame'
+            </rule_message>
+        </DD_Rule_Statement>
+    </DD_Rule>
+
+    <DD_Rule>
+        <local_identifier>Frame_Identification_Base_0</local_identifier>
+        <rule_context>//geom:Frame_Identification_Base/pds:Internal_Reference</rule_context>
+        <DD_Rule_Statement>
+            <rule_type>Assert</rule_type>
+            <rule_test>pds:reference_type = 'geometry_to_reference_frame'
+            </rule_test>
+            <rule_message>For Internal_Reference in geom:Frame_Identification_Base, reference_type must equal 'geometry_to_reference_frame'
             </rule_message>
         </DD_Rule_Statement>
     </DD_Rule>
