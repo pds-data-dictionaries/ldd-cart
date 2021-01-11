@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:cart  Version:1.9.5.0 - Wed Dec 09 04:04:34 UTC 2020 -->
-  <!-- Generated from the PDS4 Information Model Version 1.14.0.0 - System Build 10b -->
+  <!-- PDS4 Schematron for Name Space Id:cart  Version:1.9.5.0 - Mon Dec 21 21:48:19 UTC 2020 -->
+  <!-- Generated from the PDS4 Information Model Version 1.15.0.0 - System Build 11a -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
 
@@ -645,8 +645,8 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="cart:Ring_Polar/cart:angular_scale">
-      <sch:assert test="@unit = ('arcsec/pixel', 'deg/pixel', 'radian/pixel')">
-        The attribute @unit must be equal to one of the following values 'arcsec/pixel', 'deg/pixel', 'radian/pixel'.</sch:assert>
+      <sch:assert test="@unit = ('HA/pixel', 'arcsec/pixel', 'deg/pixel', 'radian/pixel')">
+        The attribute @unit must be equal to one of the following values 'HA/pixel', 'arcsec/pixel', 'deg/pixel', 'radian/pixel'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
