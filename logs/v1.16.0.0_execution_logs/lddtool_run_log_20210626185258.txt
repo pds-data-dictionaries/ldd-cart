@@ -1,0 +1,1434 @@
+
+>>  INFO The configured IM Versions are:[1G00, 1F00, 1E00, 1D00, 1C00, 1B10, 1B00]
+>>  INFO The provided IM Version 1G00 is valid
+>>  INFO LDDTOOL Version: 13.0.2
+>>  INFO IM Version Id: 1.16.0.0
+>>  INFO IM Namespace Id: pds
+>>  INFO IM Label Version Id: 1.0
+>>  INFO Date: Sat Jun 26 18:52:58 UTC 2021
+>>  INFO PARENT_DIR: /tmp/lddtool-13.0.2
+>>  INFO SCRIPT_DIR: /tmp/lddtool-13.0.2/bin
+>>  INFO LIB_DIR: /tmp/lddtool-13.0.2/lib
+
+>>> INFO Init:  - Config.Properties Namespace Id Found:geom
+>>> INFO Init:  - Config.Properties Namespace Id Using:geom
+>>> INFO Init:  - LDD Dictionary_Type is Discipline
+>>> INFO Init:  - Config.Properties Namespace Id Found:geom
+>>> INFO Init:  - Config.Properties Namespace Id Using:geom
+>>> INFO Init:  - LDD Dictionary_Type is Discipline
+>>> INFO Init:  - Config.Properties Namespace Id Found:cart
+>>> INFO Init:  - Config.Properties Namespace Id Using:cart
+>>> INFO Init:  - LDD Dictionary_Type is Discipline
+>>> INFO Attribute: <north_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <north_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <east_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <east_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <right_ascension_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <right_ascension_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <declination_angle> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <declination_angle> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <celestial_north_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <celestial_north_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <celestial_east_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <celestial_east_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <ecliptic_north_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <ecliptic_north_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <ecliptic_east_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <ecliptic_east_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <sun_direction_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <sun_direction_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <central_body_positive_pole_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <central_body_positive_pole_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <target_positive_pole_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <target_positive_pole_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <target_north_pole_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <target_north_pole_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <central_body_north_pole_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <central_body_north_pole_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <rotation_direction> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <horizontal_pixel_field_of_view> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <horizontal_pixel_field_of_view> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <vertical_pixel_field_of_view> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <vertical_pixel_field_of_view> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <pixel_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <pixel_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <pixel_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <pixel_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <subsolar_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subsolar_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <start_subsolar_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <start_subsolar_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <stop_subsolar_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <stop_subsolar_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <minimum_subsolar_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <minimum_subsolar_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <maximum_subsolar_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <maximum_subsolar_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <subsolar_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <subsolar_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <start_subsolar_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <start_subsolar_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <stop_subsolar_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <stop_subsolar_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <minimum_subsolar_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <minimum_subsolar_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <maximum_subsolar_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <maximum_subsolar_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <subsolar_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subsolar_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <start_subsolar_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <start_subsolar_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <stop_subsolar_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <stop_subsolar_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <minimum_subsolar_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <minimum_subsolar_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <maximum_subsolar_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <maximum_subsolar_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <subspacecraft_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subspacecraft_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <start_subspacecraft_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <start_subspacecraft_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <stop_subspacecraft_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <stop_subspacecraft_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <minimum_subspacecraft_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <minimum_subspacecraft_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <maximum_subspacecraft_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <maximum_subspacecraft_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <subspacecraft_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <subspacecraft_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <start_subspacecraft_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <start_subspacecraft_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <stop_subspacecraft_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <stop_subspacecraft_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <minimum_subspacecraft_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <minimum_subspacecraft_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <maximum_subspacecraft_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <maximum_subspacecraft_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <subspacecraft_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subspacecraft_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <start_subspacecraft_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <start_subspacecraft_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <stop_subspacecraft_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <stop_subspacecraft_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <minimum_subspacecraft_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <minimum_subspacecraft_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <maximum_subspacecraft_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <maximum_subspacecraft_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <start_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <start_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <stop_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <stop_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <minimum_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <minimum_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <maximum_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <maximum_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <start_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <start_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <stop_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <stop_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <minimum_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <minimum_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <maximum_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <maximum_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <interpolation_sequence> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <emission_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <emission_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <minimum_emission_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <minimum_emission_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <maximum_emission_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <maximum_emission_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <start_emission_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <start_emission_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <stop_emission_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <stop_emission_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <incidence_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <incidence_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <minimum_incidence_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <minimum_incidence_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <maximum_incidence_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <maximum_incidence_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <start_incidence_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <start_incidence_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <stop_incidence_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <stop_incidence_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <phase_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <phase_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <minimum_phase_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <minimum_phase_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <maximum_phase_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <maximum_phase_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <start_phase_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <start_phase_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <stop_phase_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <stop_phase_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <solar_elongation> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <solar_elongation> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <minimum_solar_elongation> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <minimum_solar_elongation> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <maximum_solar_elongation> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <maximum_solar_elongation> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <start_solar_elongation> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <start_solar_elongation> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <stop_solar_elongation> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <stop_solar_elongation> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <x> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <y> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <z> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <x_unit> - The default minimum value provided by the attribute's data type is being overridden with -1
+>>> INFO Attribute: <x_unit> - The default maximum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <y_unit> - The default minimum value provided by the attribute's data type is being overridden with -1
+>>> INFO Attribute: <y_unit> - The default maximum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <z_unit> - The default minimum value provided by the attribute's data type is being overridden with -1
+>>> INFO Attribute: <z_unit> - The default maximum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <longitude_position> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <longitude_position> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <latitude_position> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <latitude_position> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <target_name> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <solar_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <solar_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <solar_elevation> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <solar_elevation> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <start_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <start_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <stop_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <stop_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <north_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <north_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <east_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <east_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <right_ascension_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <right_ascension_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <declination_angle> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <declination_angle> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <celestial_north_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <celestial_north_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <celestial_east_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <celestial_east_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <ecliptic_north_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <ecliptic_north_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <ecliptic_east_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <ecliptic_east_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <sun_direction_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <sun_direction_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <central_body_positive_pole_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <central_body_positive_pole_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <target_positive_pole_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <target_positive_pole_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <target_north_pole_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <target_north_pole_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <central_body_north_pole_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <central_body_north_pole_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <rotation_direction> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <horizontal_pixel_field_of_view> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <horizontal_pixel_field_of_view> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <vertical_pixel_field_of_view> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <vertical_pixel_field_of_view> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <pixel_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <pixel_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <pixel_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <pixel_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <subsolar_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subsolar_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <start_subsolar_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <start_subsolar_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <stop_subsolar_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <stop_subsolar_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <minimum_subsolar_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <minimum_subsolar_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <maximum_subsolar_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <maximum_subsolar_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <subsolar_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <subsolar_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <start_subsolar_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <start_subsolar_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <stop_subsolar_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <stop_subsolar_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <minimum_subsolar_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <minimum_subsolar_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <maximum_subsolar_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <maximum_subsolar_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <subsolar_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subsolar_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <start_subsolar_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <start_subsolar_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <stop_subsolar_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <stop_subsolar_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <minimum_subsolar_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <minimum_subsolar_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <maximum_subsolar_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <maximum_subsolar_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <subspacecraft_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subspacecraft_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <start_subspacecraft_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <start_subspacecraft_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <stop_subspacecraft_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <stop_subspacecraft_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <minimum_subspacecraft_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <minimum_subspacecraft_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <maximum_subspacecraft_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <maximum_subspacecraft_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <subspacecraft_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <subspacecraft_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <start_subspacecraft_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <start_subspacecraft_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <stop_subspacecraft_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <stop_subspacecraft_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <minimum_subspacecraft_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <minimum_subspacecraft_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <maximum_subspacecraft_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <maximum_subspacecraft_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <subspacecraft_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subspacecraft_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <start_subspacecraft_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <start_subspacecraft_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <stop_subspacecraft_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <stop_subspacecraft_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <minimum_subspacecraft_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <minimum_subspacecraft_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <maximum_subspacecraft_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <maximum_subspacecraft_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <start_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <start_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <stop_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <stop_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <minimum_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <minimum_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <maximum_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <maximum_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <start_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <start_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <stop_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <stop_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <minimum_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <minimum_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <maximum_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <maximum_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <interpolation_sequence> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <emission_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <emission_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <minimum_emission_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <minimum_emission_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <maximum_emission_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <maximum_emission_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <start_emission_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <start_emission_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <stop_emission_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <stop_emission_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <incidence_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <incidence_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <minimum_incidence_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <minimum_incidence_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <maximum_incidence_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <maximum_incidence_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <start_incidence_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <start_incidence_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <stop_incidence_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <stop_incidence_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <phase_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <phase_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <minimum_phase_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <minimum_phase_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <maximum_phase_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <maximum_phase_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <start_phase_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <start_phase_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <stop_phase_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <stop_phase_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <solar_elongation> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <solar_elongation> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <minimum_solar_elongation> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <minimum_solar_elongation> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <maximum_solar_elongation> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <maximum_solar_elongation> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <start_solar_elongation> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <start_solar_elongation> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <stop_solar_elongation> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <stop_solar_elongation> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <x> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <y> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <z> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <x_unit> - The default minimum value provided by the attribute's data type is being overridden with -1
+>>> INFO Attribute: <x_unit> - The default maximum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <y_unit> - The default minimum value provided by the attribute's data type is being overridden with -1
+>>> INFO Attribute: <y_unit> - The default maximum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <z_unit> - The default minimum value provided by the attribute's data type is being overridden with -1
+>>> INFO Attribute: <z_unit> - The default maximum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <longitude_position> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <longitude_position> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <latitude_position> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <latitude_position> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <target_name> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <solar_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <solar_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <solar_elevation> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <solar_elevation> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <start_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <start_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <stop_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <stop_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <west_bounding_coordinate> - The default minimum value provided by the attribute's data type is being overridden with -180.0
+>>> INFO Attribute: <west_bounding_coordinate> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <east_bounding_coordinate> - The default minimum value provided by the attribute's data type is being overridden with -180.0
+>>> INFO Attribute: <east_bounding_coordinate> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <north_bounding_coordinate> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <north_bounding_coordinate> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <south_bounding_coordinate> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <south_bounding_coordinate> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <a_axis_radius> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <b_axis_radius> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <c_axis_radius> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <longitude_direction> - The default minimum characters provided by the attribute's data type is being overridden with 13
+>>> INFO Attribute: <longitude_direction> - The default maximum characters provided by the attribute's data type is being overridden with 13
+>>> INFO Attribute: <coordinate_system_type> - The default minimum characters provided by the attribute's data type is being overridden with 8
+>>> INFO Attribute: <coordinate_system_type> - The default maximum characters provided by the attribute's data type is being overridden with 25
+>>> INFO Attribute: <latitude_resolution> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <longitude_resolution> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <pixel_resolution_x> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <pixel_resolution_y> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <pixel_scale_x> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <pixel_scale_y> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <pixel_scale> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <distance_resolution> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <bearing_resolution> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <bearing_reference_direction> - The default minimum characters provided by the attribute's data type is being overridden with 5
+>>> INFO Attribute: <bearing_reference_direction> - The default maximum characters provided by the attribute's data type is being overridden with 5
+>>> INFO Attribute: <bearing_reference_meridian> - The default minimum characters provided by the attribute's data type is being overridden with 4
+>>> INFO Attribute: <bearing_reference_meridian> - The default maximum characters provided by the attribute's data type is being overridden with 10
+>>> INFO Attribute: <standard_parallel_1> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <standard_parallel_1> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <standard_parallel_2> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <standard_parallel_2> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <longitude_of_central_meridian> - The default minimum value provided by the attribute's data type is being overridden with -180.0
+>>> INFO Attribute: <longitude_of_central_meridian> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <latitude_of_projection_origin> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <latitude_of_projection_origin> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <scale_factor_at_central_meridian> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <utm_zone_number> - The default minimum value provided by the attribute's data type is being overridden with -60
+>>> INFO Attribute: <utm_zone_number> - The default maximum value provided by the attribute's data type is being overridden with 60
+>>> INFO Attribute: <spcs_zone_identifier> - The default minimum characters provided by the attribute's data type is being overridden with 4
+>>> INFO Attribute: <spcs_zone_identifier> - The default maximum characters provided by the attribute's data type is being overridden with 4
+>>> INFO Attribute: <azimuthal_angle> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <azimuthal_angle> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <azimuth_measure_point_longitude> - The default minimum value provided by the attribute's data type is being overridden with -180.0
+>>> INFO Attribute: <azimuth_measure_point_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <oblique_line_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <oblique_line_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <oblique_line_longitude> - The default minimum value provided by the attribute's data type is being overridden with -180.0
+>>> INFO Attribute: <oblique_line_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <x> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <y> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <z> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <start_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <start_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <stop_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <stop_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <sphere_radius> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <sphere_intersection_count> - The default minimum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <projection_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <projection_elevation_line> - The default minimum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <reference_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <reference_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <reference_longitude> - The default minimum value provided by the attribute's data type is being overridden with -180.0
+>>> INFO Attribute: <reference_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <map_projection_rotation> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <map_projection_rotation> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <oblique_proj_pole_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <oblique_proj_pole_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <oblique_proj_pole_longitude> - The default minimum value provided by the attribute's data type is being overridden with -180.0
+>>> INFO Attribute: <oblique_proj_pole_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <oblique_proj_pole_rotation> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <oblique_proj_pole_rotation> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <data_count> - The default minimum value provided by the attribute's data type is being overridden with 1
+>>> WARNING Attribute: <x_unit> - The terms 'unit', 'units', 'unit_of_measure' should not be used as the rightmost part of an attribute's name.
+>>> WARNING Attribute: <y_unit> - The terms 'unit', 'units', 'unit_of_measure' should not be used as the rightmost part of an attribute's name.
+>>> WARNING Attribute: <z_unit> - The terms 'unit', 'units', 'unit_of_measure' should not be used as the rightmost part of an attribute's name.
+>>> WARNING Header:  - New steward has been specified:geo
+>>> WARNING Header:  - New namespace id has been specified:geom
+>>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
+>>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
+>>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
+>>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
+>>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
+>>> WARNING Attribute: <x_unit> - The terms 'unit', 'units', 'unit_of_measure' should not be used as the rightmost part of an attribute's name.
+>>> WARNING Attribute: <y_unit> - The terms 'unit', 'units', 'unit_of_measure' should not be used as the rightmost part of an attribute's name.
+>>> WARNING Attribute: <z_unit> - The terms 'unit', 'units', 'unit_of_measure' should not be used as the rightmost part of an attribute's name.
+>>> WARNING Header:  - New steward has been specified:geo
+>>> WARNING Header:  - New namespace id has been specified:geom
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Body_Identification_Base
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Frame_Identification_Base
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Central_Body_Identification
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Coordinate_System_Origin_Identification
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Observer_Identification
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Reference_Frame_Identification
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Geometry_Target_Identification
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Index
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_SPICE
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Indexed
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Identification
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Reference
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Coordinate_System_Identification
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Polynomial_Coefficients_1
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Polynomial_Coefficients_2
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Polynomial_Coefficients_3
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Rotate_From
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Rotate_To
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Quaternion_Base
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Quaternion_Model_Transform
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Quaternion_Plus_Direction
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Quaternion_Plus_To_From
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.SPICE_Kernel_Identification
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.SPICE_Kernel_Files
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.List_Index_Base
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.List_Index_Angle
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.List_Index_Length
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.List_Index_No_Units
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.List_Index_Text
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.List_Index_Temperature
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Display_Direction
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Reference_Pixel
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Object_Orientation_North_East
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Object_Orientation_RA_Dec
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Object_Orientation_Clock_Angles
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Image_Display_Geometry
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Expanded_Geometry
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Orbiter_Identification
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Pixel_Size_Projected
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Pixel_Dimensions
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Distance_Generic
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Distances_Specific
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Distances
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Pixel_Intercept
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Footprint_Vertices
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Specific
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Surface_Geometry
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Illumination_Specific
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Illumination_Min_Max
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Illumination_Start_Stop
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Illumination_Geometry
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Base
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Extended_Base
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Velocity_Base
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Velocity_Extended_Base
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Acceleration_Base
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Acceleration_Extended_Base
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Position_Base
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Position_Extended_Base
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Velocity_Base
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Velocity_Extended_Base
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Unit
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_No_Units
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Pixel
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Generic
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Velocity_Generic
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Acceleration_Generic
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Position_Generic
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Velocity_Generic
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Central_Body_To_Spacecraft
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Central_Body_To_Target
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Spacecraft_To_Target
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Position_Central_Body_To_Spacecraft
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Position_Central_Body_To_Target
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Position_Spacecraft_To_Target
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Position_SSB_To_Central_Body
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Position_SSB_To_Spacecraft
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Position_SSB_To_Target
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Sun_To_Central_Body
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Sun_To_Spacecraft
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Sun_To_Target
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Earth_To_Central_Body
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Earth_To_Spacecraft
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Earth_To_Target
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Velocity_Spacecraft_Relative_To_Central_Body
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Velocity_Spacecraft_Relative_To_Target
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Velocity_Spacecraft_Relative_To_Earth
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Velocity_Spacecraft_Relative_To_SSB
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Velocity_Spacecraft_Relative_To_Sun
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Velocity_Target_Relative_To_Central_Body
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Velocity_Target_Relative_To_Spacecraft
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Velocity_Target_Relative_To_Earth
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Velocity_Target_Relative_To_SSB
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Velocity_Target_Relative_To_Sun
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Velocity_Spacecraft_Relative_To_Target
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Velocity_Target_Relative_To_Central_Body
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Velocity_Target_Relative_To_Spacecraft
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vectors_Cartesian_Specific
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vectors_Planetocentric_Specific
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Generic_Vectors
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Model_Transform
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vectors
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Geometry_Orbiter
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Commanded_Position
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Commanded_Geometry
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Device_Angle_Index
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Device_Angle
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Device_Component_State_Index
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Device_Component_State
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Device_Motor_Counts_Index
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Device_Motor_Counts
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Device_Pose
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Device_Gravity
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Device_Gravity_Magnitude
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Device_Temperature_Index
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Device_Temperature
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Axis
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Center
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Horizontal
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Vertical
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Optical
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Radial_Terms
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Entrance_Terms
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Axis_X
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Axis_Y
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Solar_Direction
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Normal_X
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Normal_Y
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.CAHV_Model
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.CAHVOR_Model
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.CAHVORE_Model
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.PSPH_Model
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Interpolation
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Present
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Vector_Origin_Offset
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Quality
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Motion_Counter_Index
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Articulation_Device_Parameters
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Camera_Model_Parameters
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Definition
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Derived_Geometry
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Motion_Counter
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Geometry_Lander
+>>> WARNING Found duplicate class - lClass.identifier:0001_NASA_PDS_1.geom.Geometry
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Body_Identification_Base.geom.body_spice_name
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Body_Identification_Base.pds.name
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Frame_Identification_Base.geom.frame_spice_name
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Frame_Identification_Base.pds.name
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Frame_Identification_Base.pds.comment
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_SPICE.geom.body_spice_name
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_SPICE.geom.frame_spice_name
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Indexed.geom.coordinate_space_frame_type
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Indexed.geom.solution_id
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Coordinate_System_Identification.geom.coordinate_system_type
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Coordinate_System_Identification.geom.coordinate_system_time_utc
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Coordinate_System_Identification.pds.comment
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Polynomial_Coefficients_1.geom.c0
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Polynomial_Coefficients_2.geom.c0
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Polynomial_Coefficients_2.geom.c1
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Polynomial_Coefficients_3.geom.c0
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Polynomial_Coefficients_3.geom.c1
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Polynomial_Coefficients_3.geom.c2
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Quaternion_Base.geom.qcos
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Quaternion_Base.geom.qsin1
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Quaternion_Base.geom.qsin2
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Quaternion_Base.geom.qsin3
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Quaternion_Plus_Direction.geom.rotation_direction
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.SPICE_Kernel_Identification.pds.kernel_type
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.SPICE_Kernel_Identification.geom.spice_kernel_file_name
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.SPICE_Kernel_Identification.geom.kernel_provenance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.SPICE_Kernel_Files.pds.comment
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.List_Index_Base.geom.index_sequence_number
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.List_Index_Base.geom.index_name
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.List_Index_Base.geom.index_id
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.List_Index_Angle.geom.index_value_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.List_Index_Length.geom.index_value_length
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.List_Index_No_Units.geom.index_value_number
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.List_Index_Text.geom.index_value_string
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.List_Index_Temperature.geom.index_value_temperature
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.List_Index_Temperature.geom.index_value_number
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Display_Direction.pds.comment
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Display_Direction.geom.horizontal_display_axis
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Display_Direction.geom.horizontal_display_direction
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Display_Direction.geom.vertical_display_axis
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Display_Direction.geom.vertical_display_direction
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Reference_Pixel.geom.vertical_coordinate_pixel
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Reference_Pixel.geom.horizontal_coordinate_pixel
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Object_Orientation_North_East.geom.north_azimuth
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Object_Orientation_North_East.geom.east_azimuth
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Object_Orientation_RA_Dec.geom.reference_pixel_location
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Object_Orientation_RA_Dec.geom.right_ascension_hour_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Object_Orientation_RA_Dec.geom.right_ascension_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Object_Orientation_RA_Dec.geom.declination_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Object_Orientation_RA_Dec.geom.celestial_north_clock_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Object_Orientation_RA_Dec.geom.ecliptic_north_clock_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Object_Orientation_Clock_Angles.geom.celestial_north_clock_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Object_Orientation_Clock_Angles.geom.celestial_east_clock_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Object_Orientation_Clock_Angles.geom.ecliptic_north_clock_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Object_Orientation_Clock_Angles.geom.ecliptic_east_clock_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Object_Orientation_Clock_Angles.geom.central_body_north_pole_clock_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Object_Orientation_Clock_Angles.geom.central_body_positive_pole_clock_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Object_Orientation_Clock_Angles.geom.target_north_pole_clock_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Object_Orientation_Clock_Angles.geom.target_positive_pole_clock_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Object_Orientation_Clock_Angles.geom.sun_direction_clock_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Pixel_Size_Projected.geom.reference_location
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Pixel_Size_Projected.geom.distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Pixel_Size_Projected.geom.horizontal_pixel_footprint
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Pixel_Size_Projected.geom.vertical_pixel_footprint
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Pixel_Dimensions.geom.pixel_field_of_view_method
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Pixel_Dimensions.geom.horizontal_pixel_field_of_view
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Pixel_Dimensions.geom.vertical_pixel_field_of_view
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distance_Generic.geom.distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Specific.geom.spacecraft_geocentric_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Specific.geom.spacecraft_heliocentric_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Specific.geom.spacecraft_central_body_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Specific.geom.spacecraft_target_center_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Specific.geom.spacecraft_target_boresight_intercept_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Specific.geom.spacecraft_target_subspacecraft_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Specific.geom.target_geocentric_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Specific.geom.target_heliocentric_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Specific.geom.target_ssb_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.minimum_spacecraft_geocentric_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.maximum_spacecraft_geocentric_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.minimum_spacecraft_heliocentric_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.maximum_spacecraft_heliocentric_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.minimum_spacecraft_central_body_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.maximum_spacecraft_central_body_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.minimum_spacecraft_target_center_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.maximum_spacecraft_target_center_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.minimum_spacecraft_target_boresight_intercept_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.maximum_spacecraft_target_boresight_intercept_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.minimum_spacecraft_target_subspacecraft_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.maximum_spacecraft_target_subspacecraft_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.minimum_target_geocentric_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.maximum_target_geocentric_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.minimum_target_heliocentric_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.maximum_target_heliocentric_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.minimum_target_ssb_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.maximum_target_ssb_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.start_spacecraft_geocentric_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.stop_spacecraft_geocentric_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.start_spacecraft_heliocentric_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.stop_spacecraft_heliocentric_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.start_spacecraft_central_body_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.stop_spacecraft_central_body_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.start_spacecraft_target_center_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.stop_spacecraft_target_center_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.start_spacecraft_target_boresight_intercept_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.stop_spacecraft_target_boresight_intercept_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.start_spacecraft_target_subspacecraft_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.stop_spacecraft_target_subspacecraft_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.start_target_geocentric_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.stop_target_geocentric_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.start_target_heliocentric_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.stop_target_heliocentric_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.start_target_ssb_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.stop_target_ssb_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Distances.pds.comment
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Pixel_Intercept.geom.reference_pixel_location
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Pixel_Intercept.geom.pixel_latitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Pixel_Intercept.geom.pixel_longitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Specific.geom.subsolar_azimuth
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Specific.geom.subsolar_latitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Specific.geom.subsolar_longitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Specific.geom.subspacecraft_azimuth
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Specific.geom.subspacecraft_latitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Specific.geom.subspacecraft_longitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.minimum_latitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.maximum_latitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.minimum_longitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.maximum_longitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.minimum_subsolar_azimuth
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.maximum_subsolar_azimuth
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.minimum_subsolar_latitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.maximum_subsolar_latitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.minimum_subsolar_longitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.maximum_subsolar_longitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.minimum_subspacecraft_azimuth
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.maximum_subspacecraft_azimuth
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.minimum_subspacecraft_latitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.maximum_subspacecraft_latitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.minimum_subspacecraft_longitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.maximum_subspacecraft_longitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.lat_long_method
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.start_latitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.stop_latitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.start_longitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.stop_longitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.start_subsolar_azimuth
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.stop_subsolar_azimuth
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.start_subsolar_latitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.stop_subsolar_latitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.start_subsolar_longitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.stop_subsolar_longitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.start_subspacecraft_azimuth
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.stop_subspacecraft_azimuth
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.start_subspacecraft_latitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.stop_subspacecraft_latitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.start_subspacecraft_longitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.stop_subspacecraft_longitude
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Surface_Geometry.pds.comment
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Illumination_Specific.geom.reference_location
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Illumination_Specific.geom.reference_pixel_location
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Illumination_Specific.geom.emission_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Illumination_Specific.geom.incidence_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Illumination_Specific.geom.phase_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Illumination_Specific.geom.solar_elongation
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Illumination_Min_Max.geom.minimum_emission_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Illumination_Min_Max.geom.maximum_emission_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Illumination_Min_Max.geom.minimum_incidence_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Illumination_Min_Max.geom.maximum_incidence_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Illumination_Min_Max.geom.minimum_phase_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Illumination_Min_Max.geom.maximum_phase_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Illumination_Min_Max.geom.minimum_solar_elongation
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Illumination_Min_Max.geom.maximum_solar_elongation
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Illumination_Start_Stop.geom.start_emission_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Illumination_Start_Stop.geom.stop_emission_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Illumination_Start_Stop.geom.start_incidence_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Illumination_Start_Stop.geom.stop_incidence_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Illumination_Start_Stop.geom.start_phase_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Illumination_Start_Stop.geom.stop_phase_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Illumination_Start_Stop.geom.start_solar_elongation
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Illumination_Start_Stop.geom.stop_solar_elongation
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Illumination_Geometry.pds.comment
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Base.geom.x_position
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Base.geom.y_position
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Base.geom.z_position
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Extended_Base.geom.light_time_correction_applied
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Velocity_Base.geom.x_velocity
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Velocity_Base.geom.y_velocity
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Velocity_Base.geom.z_velocity
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Velocity_Extended_Base.geom.light_time_correction_applied
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Acceleration_Base.geom.x_acceleration
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Acceleration_Base.geom.y_acceleration
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Acceleration_Base.geom.z_acceleration
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Acceleration_Extended_Base.geom.light_time_correction_applied
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Position_Base.geom.radius_position
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Position_Base.geom.longitude_position
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Position_Base.geom.latitude_position
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Position_Extended_Base.geom.light_time_correction_applied
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Velocity_Base.geom.radial_velocity
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Velocity_Base.geom.longitude_velocity
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Velocity_Base.geom.latitude_velocity
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Velocity_Extended_Base.geom.light_time_correction_applied
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Unit.geom.x_unit
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Unit.geom.y_unit
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Unit.geom.z_unit
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_No_Units.geom.x
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_No_Units.geom.y
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_No_Units.geom.z
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Pixel.geom.x_pixel
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Pixel.geom.y_pixel
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Pixel.geom.z_pixel
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Generic_Vectors.pds.comment
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Vectors.pds.comment
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Geometry_Orbiter.geom.geometry_reference_time_utc
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Geometry_Orbiter.geom.geometry_start_time_utc
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Geometry_Orbiter.geom.geometry_stop_time_utc
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Geometry_Orbiter.geom.geometry_reference_time_tdb
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Commanded_Geometry.geom.command_type
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Device_Angle.pds.local_identifier
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Device_Component_State.pds.local_identifier
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Device_Motor_Counts.pds.local_identifier
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Device_Pose.pds.name
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Device_Temperature.pds.local_identifier
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.CAHVORE_Model.geom.cahvore_model_type
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.CAHVORE_Model.geom.cahvore_model_parameter
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.PSPH_Model.geom.psph_model_scale_x
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.PSPH_Model.geom.psph_model_scale_y
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Interpolation.geom.interpolation_algorithm
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Interpolation.geom.interpolation_variable
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Interpolation.geom.interpolation_value
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Interpolation.geom.interpolation_sequence
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Quality.geom.quaternion_measurement_method
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Quality.geom.attitude_propagation_counter
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Quality.geom.attitude_propagation_duration
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Articulation_Device_Parameters.pds.local_identifier
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Articulation_Device_Parameters.geom.device_id
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Articulation_Device_Parameters.geom.device_name
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Articulation_Device_Parameters.geom.device_mode
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Articulation_Device_Parameters.geom.device_phase
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Articulation_Device_Parameters.geom.selected_instrument_id
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Camera_Model_Parameters.geom.model_type
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Camera_Model_Parameters.geom.calibration_source_id
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Camera_Model_Parameters.geom.solution_id
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Definition.pds.local_identifier
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Definition.geom.positive_azimuth_direction
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Definition.geom.positive_elevation_direction
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Definition.geom.quaternion_measurement_method
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Derived_Geometry.geom.target_name
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Derived_Geometry.geom.incidence_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Derived_Geometry.geom.emission_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Derived_Geometry.geom.phase_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Derived_Geometry.geom.instrument_azimuth
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Derived_Geometry.geom.instrument_elevation
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Derived_Geometry.geom.solar_azimuth
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Derived_Geometry.geom.solar_elevation
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Derived_Geometry.geom.start_azimuth
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Derived_Geometry.geom.stop_azimuth
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Derived_Geometry.geom.target_heliocentric_distance
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Derived_Geometry.geom.solar_image_clock_angle
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Motion_Counter.pds.name
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Motion_Counter.pds.local_identifier
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Geometry_Lander.geom.geometry_state
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Geometry_Lander.pds.description
+>>> WARNING Found duplicate attribute - lDOMAttr.identifier:0001_NASA_PDS_1.geom.Geometry_Lander.pds.local_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Body_Identification_Base.geom.body_spice_name
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Body_Identification_Base.pds.name
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Body_Identification_Base.pds.Internal_Reference
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Frame_Identification_Base.geom.frame_spice_name
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Frame_Identification_Base.pds.name
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Frame_Identification_Base.pds.comment
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Frame_Identification_Base.pds.Internal_Reference
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_SPICE.geom.body_spice_name
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_SPICE.geom.frame_spice_name
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Indexed.geom.coordinate_space_frame_type
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Indexed.geom.Coordinate_Space_Index
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Indexed.geom.solution_id
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Identification.geom.Coordinate_Space_Indexed
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Identification.geom.Coordinate_Space_SPICE
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Identification.pds.Local_Internal_Reference
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Coordinate_System_Identification.geom.coordinate_system_type
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Coordinate_System_Identification.geom.coordinate_system_time_utc
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Coordinate_System_Identification.pds.comment
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Coordinate_System_Identification.geom.Coordinate_System_Origin_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Coordinate_System_Identification.geom.Reference_Frame_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Polynomial_Coefficients_1.geom.c0
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Polynomial_Coefficients_2.geom.c0
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Polynomial_Coefficients_2.geom.c1
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Polynomial_Coefficients_3.geom.c0
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Polynomial_Coefficients_3.geom.c1
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Polynomial_Coefficients_3.geom.c2
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Quaternion_Base.geom.qcos
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Quaternion_Base.geom.qsin1
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Quaternion_Base.geom.qsin2
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Quaternion_Base.geom.qsin3
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Quaternion_Plus_Direction.geom.rotation_direction
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Quaternion_Plus_To_From.geom.Rotate_From
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Quaternion_Plus_To_From.geom.Rotate_To
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.SPICE_Kernel_Identification.pds.kernel_type
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.SPICE_Kernel_Identification.geom.spice_kernel_file_name
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.SPICE_Kernel_Identification.geom.kernel_provenance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.SPICE_Kernel_Identification.pds.Internal_Reference
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.SPICE_Kernel_Files.geom.SPICE_Kernel_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.SPICE_Kernel_Files.pds.comment
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.List_Index_Base.geom.index_sequence_number
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.List_Index_Base.geom.index_name
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.List_Index_Base.geom.index_id
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.List_Index_Angle.geom.index_value_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.List_Index_Length.geom.index_value_length
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.List_Index_No_Units.geom.index_value_number
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.List_Index_Text.geom.index_value_string
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.List_Index_Temperature.geom.index_value_temperature
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.List_Index_Temperature.geom.index_value_number
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Display_Direction.pds.comment
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Display_Direction.geom.horizontal_display_axis
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Display_Direction.geom.horizontal_display_direction
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Display_Direction.geom.vertical_display_axis
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Display_Direction.geom.vertical_display_direction
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Reference_Pixel.geom.vertical_coordinate_pixel
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Reference_Pixel.geom.horizontal_coordinate_pixel
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Object_Orientation_North_East.geom.north_azimuth
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Object_Orientation_North_East.geom.east_azimuth
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Object_Orientation_North_East.geom.Reference_Frame_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Object_Orientation_RA_Dec.geom.Reference_Pixel
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Object_Orientation_RA_Dec.geom.reference_pixel_location
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Object_Orientation_RA_Dec.geom.right_ascension_hour_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Object_Orientation_RA_Dec.geom.right_ascension_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Object_Orientation_RA_Dec.geom.declination_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Object_Orientation_RA_Dec.geom.celestial_north_clock_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Object_Orientation_RA_Dec.geom.ecliptic_north_clock_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Object_Orientation_RA_Dec.geom.Reference_Frame_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Object_Orientation_Clock_Angles.geom.celestial_north_clock_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Object_Orientation_Clock_Angles.geom.celestial_east_clock_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Object_Orientation_Clock_Angles.geom.ecliptic_north_clock_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Object_Orientation_Clock_Angles.geom.ecliptic_east_clock_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Object_Orientation_Clock_Angles.geom.central_body_north_pole_clock_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Object_Orientation_Clock_Angles.geom.central_body_positive_pole_clock_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Object_Orientation_Clock_Angles.geom.target_north_pole_clock_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Object_Orientation_Clock_Angles.geom.target_positive_pole_clock_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Object_Orientation_Clock_Angles.geom.sun_direction_clock_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Image_Display_Geometry.pds.Local_Internal_Reference
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Image_Display_Geometry.geom.Display_Direction
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Image_Display_Geometry.geom.Central_Body_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Image_Display_Geometry.geom.Geometry_Target_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Image_Display_Geometry.geom.Object_Orientation_North_East
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Image_Display_Geometry.geom.Object_Orientation_RA_Dec
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Image_Display_Geometry.geom.Object_Orientation_Clock_Angles
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Image_Display_Geometry.geom.Quaternion_Plus_To_From
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Expanded_Geometry.pds.Local_Internal_Reference
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Expanded_Geometry.pds.Internal_Reference
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Orbiter_Identification.geom.Central_Body_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Orbiter_Identification.geom.Geometry_Target_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Orbiter_Identification.geom.Coordinate_System_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Pixel_Size_Projected.geom.reference_location
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Pixel_Size_Projected.geom.distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Pixel_Size_Projected.geom.horizontal_pixel_footprint
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Pixel_Size_Projected.geom.vertical_pixel_footprint
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Pixel_Dimensions.geom.pixel_field_of_view_method
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Pixel_Dimensions.geom.horizontal_pixel_field_of_view
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Pixel_Dimensions.geom.vertical_pixel_field_of_view
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Pixel_Dimensions.geom.Pixel_Size_Projected
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distance_Generic.geom.Observer_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distance_Generic.geom.Geometry_Target_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distance_Generic.geom.distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Specific.geom.spacecraft_geocentric_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Specific.geom.spacecraft_heliocentric_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Specific.geom.spacecraft_central_body_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Specific.geom.spacecraft_target_center_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Specific.geom.spacecraft_target_boresight_intercept_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Specific.geom.spacecraft_target_subspacecraft_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Specific.geom.target_geocentric_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Specific.geom.target_heliocentric_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Specific.geom.target_ssb_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.minimum_spacecraft_geocentric_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.maximum_spacecraft_geocentric_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.minimum_spacecraft_heliocentric_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.maximum_spacecraft_heliocentric_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.minimum_spacecraft_central_body_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.maximum_spacecraft_central_body_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.minimum_spacecraft_target_center_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.maximum_spacecraft_target_center_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.minimum_spacecraft_target_boresight_intercept_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.maximum_spacecraft_target_boresight_intercept_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.minimum_spacecraft_target_subspacecraft_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.maximum_spacecraft_target_subspacecraft_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.minimum_target_geocentric_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.maximum_target_geocentric_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.minimum_target_heliocentric_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.maximum_target_heliocentric_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.minimum_target_ssb_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Min_Max.geom.maximum_target_ssb_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.start_spacecraft_geocentric_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.stop_spacecraft_geocentric_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.start_spacecraft_heliocentric_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.stop_spacecraft_heliocentric_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.start_spacecraft_central_body_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.stop_spacecraft_central_body_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.start_spacecraft_target_center_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.stop_spacecraft_target_center_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.start_spacecraft_target_boresight_intercept_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.stop_spacecraft_target_boresight_intercept_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.start_spacecraft_target_subspacecraft_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.stop_spacecraft_target_subspacecraft_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.start_target_geocentric_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.stop_target_geocentric_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.start_target_heliocentric_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.stop_target_heliocentric_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.start_target_ssb_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances_Start_Stop.geom.stop_target_ssb_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances.pds.comment
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances.geom.Distances_Specific
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances.geom.Distances_Min_Max
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances.geom.Distances_Start_Stop
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Distances.geom.Distance_Generic
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Pixel_Intercept.geom.reference_pixel_location
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Pixel_Intercept.geom.Reference_Pixel
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Pixel_Intercept.geom.pixel_latitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Pixel_Intercept.geom.pixel_longitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Footprint_Vertices.geom.Pixel_Intercept
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Specific.geom.Pixel_Intercept
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Specific.geom.Footprint_Vertices
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Specific.geom.subsolar_azimuth
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Specific.geom.subsolar_latitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Specific.geom.subsolar_longitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Specific.geom.subspacecraft_azimuth
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Specific.geom.subspacecraft_latitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Specific.geom.subspacecraft_longitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.minimum_latitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.maximum_latitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.minimum_longitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.maximum_longitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.minimum_subsolar_azimuth
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.maximum_subsolar_azimuth
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.minimum_subsolar_latitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.maximum_subsolar_latitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.minimum_subsolar_longitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.maximum_subsolar_longitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.minimum_subspacecraft_azimuth
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.maximum_subspacecraft_azimuth
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.minimum_subspacecraft_latitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.maximum_subspacecraft_latitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.minimum_subspacecraft_longitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Min_Max.geom.maximum_subspacecraft_longitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.lat_long_method
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.start_latitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.stop_latitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.start_longitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.stop_longitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.start_subsolar_azimuth
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.stop_subsolar_azimuth
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.start_subsolar_latitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.stop_subsolar_latitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.start_subsolar_longitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.stop_subsolar_longitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.start_subspacecraft_azimuth
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.stop_subspacecraft_azimuth
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.start_subspacecraft_latitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.stop_subspacecraft_latitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.start_subspacecraft_longitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry_Start_Stop.geom.stop_subspacecraft_longitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry.pds.comment
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry.geom.Surface_Geometry_Specific
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry.geom.Surface_Geometry_Min_Max
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Surface_Geometry.geom.Surface_Geometry_Start_Stop
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Illumination_Specific.geom.reference_location
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Illumination_Specific.geom.reference_pixel_location
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Illumination_Specific.geom.Reference_Pixel
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Illumination_Specific.geom.emission_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Illumination_Specific.geom.incidence_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Illumination_Specific.geom.phase_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Illumination_Specific.geom.solar_elongation
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Illumination_Min_Max.geom.minimum_emission_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Illumination_Min_Max.geom.maximum_emission_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Illumination_Min_Max.geom.minimum_incidence_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Illumination_Min_Max.geom.maximum_incidence_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Illumination_Min_Max.geom.minimum_phase_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Illumination_Min_Max.geom.maximum_phase_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Illumination_Min_Max.geom.minimum_solar_elongation
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Illumination_Min_Max.geom.maximum_solar_elongation
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Illumination_Start_Stop.geom.start_emission_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Illumination_Start_Stop.geom.stop_emission_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Illumination_Start_Stop.geom.start_incidence_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Illumination_Start_Stop.geom.stop_incidence_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Illumination_Start_Stop.geom.start_phase_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Illumination_Start_Stop.geom.stop_phase_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Illumination_Start_Stop.geom.start_solar_elongation
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Illumination_Start_Stop.geom.stop_solar_elongation
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Illumination_Geometry.pds.comment
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Illumination_Geometry.geom.Illumination_Specific
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Illumination_Geometry.geom.Illumination_Min_Max
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Illumination_Geometry.geom.Illumination_Start_Stop
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Base.geom.x_position
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Base.geom.y_position
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Base.geom.z_position
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Extended_Base.geom.light_time_correction_applied
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Extended_Base.geom.Coordinate_System_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Velocity_Base.geom.x_velocity
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Velocity_Base.geom.y_velocity
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Velocity_Base.geom.z_velocity
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Velocity_Extended_Base.geom.light_time_correction_applied
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Velocity_Extended_Base.geom.Coordinate_System_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Acceleration_Base.geom.x_acceleration
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Acceleration_Base.geom.y_acceleration
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Acceleration_Base.geom.z_acceleration
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Acceleration_Extended_Base.geom.light_time_correction_applied
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Acceleration_Extended_Base.geom.Coordinate_System_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Position_Base.geom.radius_position
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Position_Base.geom.longitude_position
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Position_Base.geom.latitude_position
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Position_Extended_Base.geom.light_time_correction_applied
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Position_Extended_Base.geom.Coordinate_System_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Velocity_Base.geom.radial_velocity
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Velocity_Base.geom.longitude_velocity
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Velocity_Base.geom.latitude_velocity
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Velocity_Extended_Base.geom.light_time_correction_applied
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Velocity_Extended_Base.geom.Coordinate_System_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Unit.geom.x_unit
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Unit.geom.y_unit
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Unit.geom.z_unit
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_No_Units.geom.x
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_No_Units.geom.y
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_No_Units.geom.z
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Pixel.geom.x_pixel
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Pixel.geom.y_pixel
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Pixel.geom.z_pixel
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Generic.geom.Observer_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Position_Generic.geom.Geometry_Target_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Velocity_Generic.geom.Observer_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Velocity_Generic.geom.Geometry_Target_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Acceleration_Generic.geom.Observer_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Cartesian_Acceleration_Generic.geom.Geometry_Target_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Position_Generic.geom.Observer_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Position_Generic.geom.Geometry_Target_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Velocity_Generic.geom.Observer_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vector_Planetocentric_Velocity_Generic.geom.Geometry_Target_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors_Cartesian_Specific.geom.Vector_Cartesian_Position_Central_Body_To_Spacecraft
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors_Cartesian_Specific.geom.Vector_Cartesian_Position_Central_Body_To_Target
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors_Cartesian_Specific.geom.Vector_Cartesian_Position_Spacecraft_To_Target
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors_Cartesian_Specific.geom.Vector_Cartesian_Position_SSB_To_Central_Body
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors_Cartesian_Specific.geom.Vector_Cartesian_Position_SSB_To_Spacecraft
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors_Cartesian_Specific.geom.Vector_Cartesian_Position_SSB_To_Target
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors_Cartesian_Specific.geom.Vector_Cartesian_Position_Sun_To_Central_Body
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors_Cartesian_Specific.geom.Vector_Cartesian_Position_Sun_To_Spacecraft
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors_Cartesian_Specific.geom.Vector_Cartesian_Position_Sun_To_Target
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors_Cartesian_Specific.geom.Vector_Cartesian_Position_Earth_To_Central_Body
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors_Cartesian_Specific.geom.Vector_Cartesian_Position_Earth_To_Spacecraft
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors_Cartesian_Specific.geom.Vector_Cartesian_Position_Earth_To_Target
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors_Cartesian_Specific.geom.Vector_Cartesian_Velocity_Spacecraft_Relative_To_Central_Body
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors_Cartesian_Specific.geom.Vector_Cartesian_Velocity_Spacecraft_Relative_To_Target
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors_Cartesian_Specific.geom.Vector_Cartesian_Velocity_Spacecraft_Relative_To_Earth
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors_Cartesian_Specific.geom.Vector_Cartesian_Velocity_Spacecraft_Relative_To_SSB
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors_Cartesian_Specific.geom.Vector_Cartesian_Velocity_Spacecraft_Relative_To_Sun
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors_Cartesian_Specific.geom.Vector_Cartesian_Velocity_Target_Relative_To_Central_Body
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors_Cartesian_Specific.geom.Vector_Cartesian_Velocity_Target_Relative_To_Spacecraft
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors_Cartesian_Specific.geom.Vector_Cartesian_Velocity_Target_Relative_To_Earth
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors_Cartesian_Specific.geom.Vector_Cartesian_Velocity_Target_Relative_To_SSB
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors_Cartesian_Specific.geom.Vector_Cartesian_Velocity_Target_Relative_To_Sun
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors_Planetocentric_Specific.geom.Vector_Planetocentric_Position_Central_Body_To_Spacecraft
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors_Planetocentric_Specific.geom.Vector_Planetocentric_Position_Central_Body_To_Target
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors_Planetocentric_Specific.geom.Vector_Planetocentric_Position_Spacecraft_To_Target
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors_Planetocentric_Specific.geom.Vector_Planetocentric_Velocity_Spacecraft_Relative_To_Target
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors_Planetocentric_Specific.geom.Vector_Planetocentric_Velocity_Target_Relative_To_Central_Body
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors_Planetocentric_Specific.geom.Vector_Planetocentric_Velocity_Target_Relative_To_Spacecraft
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Generic_Vectors.pds.comment
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Generic_Vectors.geom.Vector_Cartesian_Position_Generic
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Generic_Vectors.geom.Vector_Cartesian_Velocity_Generic
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Generic_Vectors.geom.Vector_Cartesian_Acceleration_Generic
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Generic_Vectors.geom.Vector_Planetocentric_Position_Generic
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Generic_Vectors.geom.Vector_Planetocentric_Velocity_Generic
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors.pds.comment
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors.geom.Vectors_Cartesian_Specific
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors.geom.Vectors_Planetocentric_Specific
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Vectors.geom.Generic_Vectors
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Geometry_Orbiter.geom.geometry_reference_time_utc
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Geometry_Orbiter.geom.geometry_start_time_utc
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Geometry_Orbiter.geom.geometry_stop_time_utc
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Geometry_Orbiter.geom.geometry_reference_time_tdb
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Geometry_Orbiter.geom.Orbiter_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Geometry_Orbiter.geom.Pixel_Dimensions
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Geometry_Orbiter.geom.Distances
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Geometry_Orbiter.geom.Surface_Geometry
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Geometry_Orbiter.geom.Illumination_Geometry
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Geometry_Orbiter.geom.Vectors
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Commanded_Geometry.geom.command_type
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Commanded_Geometry.geom.Device_Angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Commanded_Geometry.geom.Commanded_Position
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Commanded_Geometry.geom.Coordinate_Space_Reference
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Device_Angle.pds.local_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Device_Angle.geom.Device_Angle_Index
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Device_Component_State.pds.local_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Device_Component_State.geom.Device_Component_State_Index
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Device_Motor_Counts.pds.local_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Device_Motor_Counts.geom.Device_Motor_Counts_Index
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Device_Pose.pds.name
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Device_Pose.geom.Quaternion_Plus_Direction
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Device_Pose.geom.Vector_Origin_Offset
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Device_Temperature.pds.local_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Device_Temperature.geom.Device_Temperature_Index
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.CAHV_Model.geom.Vector_Center
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.CAHV_Model.geom.Vector_Axis
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.CAHV_Model.geom.Vector_Horizontal
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.CAHV_Model.geom.Vector_Vertical
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.CAHVOR_Model.geom.Vector_Optical
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.CAHVOR_Model.geom.Radial_Terms
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.CAHVORE_Model.geom.Entrance_Terms
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.CAHVORE_Model.geom.cahvore_model_type
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.CAHVORE_Model.geom.cahvore_model_parameter
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.PSPH_Model.geom.Vector_Center
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.PSPH_Model.geom.Vector_Axis_X
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.PSPH_Model.geom.Vector_Axis_Y
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.PSPH_Model.geom.Vector_Normal_X
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.PSPH_Model.geom.Vector_Normal_Y
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.PSPH_Model.geom.psph_model_scale_x
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.PSPH_Model.geom.psph_model_scale_y
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Interpolation.geom.interpolation_algorithm
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Interpolation.geom.interpolation_variable
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Interpolation.geom.interpolation_value
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Interpolation.geom.interpolation_sequence
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Quality.geom.quaternion_measurement_method
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Quality.geom.attitude_propagation_counter
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Quality.geom.attitude_propagation_duration
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Articulation_Device_Parameters.pds.local_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Articulation_Device_Parameters.geom.device_id
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Articulation_Device_Parameters.geom.device_name
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Articulation_Device_Parameters.geom.device_mode
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Articulation_Device_Parameters.geom.device_phase
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Articulation_Device_Parameters.geom.selected_instrument_id
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Articulation_Device_Parameters.geom.Device_Angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Articulation_Device_Parameters.geom.Device_Component_State
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Articulation_Device_Parameters.geom.Device_Motor_Counts
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Articulation_Device_Parameters.geom.Device_Pose
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Articulation_Device_Parameters.geom.Vector_Device_Gravity
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Articulation_Device_Parameters.geom.Vector_Device_Gravity_Magnitude
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Articulation_Device_Parameters.geom.Device_Temperature
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Articulation_Device_Parameters.geom.Coordinate_Space_Present
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Articulation_Device_Parameters.geom.Coordinate_Space_Reference
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Articulation_Device_Parameters.geom.Commanded_Geometry
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Camera_Model_Parameters.geom.model_type
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Camera_Model_Parameters.geom.calibration_source_id
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Camera_Model_Parameters.geom.solution_id
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Camera_Model_Parameters.pds.Internal_Reference
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Camera_Model_Parameters.geom.CAHV_Model
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Camera_Model_Parameters.geom.CAHVOR_Model
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Camera_Model_Parameters.geom.CAHVORE_Model
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Camera_Model_Parameters.geom.PSPH_Model
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Camera_Model_Parameters.geom.Reference_Frame_Identification
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Camera_Model_Parameters.geom.Coordinate_Space_Reference
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Camera_Model_Parameters.geom.Quaternion_Model_Transform
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Camera_Model_Parameters.geom.Vector_Model_Transform
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Camera_Model_Parameters.geom.Interpolation
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Definition.pds.local_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Definition.geom.positive_azimuth_direction
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Definition.geom.positive_elevation_direction
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Definition.geom.Coordinate_Space_Present
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Definition.geom.Vector_Origin_Offset
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Definition.geom.Quaternion_Plus_Direction
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Definition.geom.quaternion_measurement_method
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Definition.geom.Coordinate_Space_Reference
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Coordinate_Space_Definition.geom.Coordinate_Space_Quality
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Derived_Geometry.geom.target_name
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Derived_Geometry.geom.incidence_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Derived_Geometry.geom.emission_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Derived_Geometry.geom.phase_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Derived_Geometry.geom.instrument_azimuth
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Derived_Geometry.geom.instrument_elevation
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Derived_Geometry.geom.solar_azimuth
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Derived_Geometry.geom.solar_elevation
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Derived_Geometry.geom.start_azimuth
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Derived_Geometry.geom.stop_azimuth
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Derived_Geometry.geom.target_heliocentric_distance
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Derived_Geometry.geom.solar_image_clock_angle
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Derived_Geometry.geom.Vector_Solar_Direction
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Derived_Geometry.geom.Coordinate_Space_Reference
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Motion_Counter.pds.name
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Motion_Counter.pds.local_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Motion_Counter.geom.Motion_Counter_Index
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Geometry_Lander.geom.geometry_state
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Geometry_Lander.pds.description
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Geometry_Lander.pds.local_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Geometry_Lander.geom.Articulation_Device_Parameters
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Geometry_Lander.geom.Camera_Model_Parameters
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Geometry_Lander.geom.Coordinate_Space_Definition
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Geometry_Lander.geom.Derived_Geometry
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Geometry_Lander.geom.Motion_Counter
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Geometry.geom.SPICE_Kernel_Files
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Geometry.geom.Expanded_Geometry
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Geometry.geom.Image_Display_Geometry
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Geometry.geom.Geometry_Orbiter
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:0001_NASA_PDS_1.geom.Geometry.geom.Geometry_Lander
+>>> WARNING Found duplicate attribute - lAttr.identifier:Body_Identification_Base_0
+>>> WARNING Found duplicate attribute - lAttr.identifier:Central_Body_Identification_0
+>>> WARNING Found duplicate attribute - lAttr.identifier:Central_Body_Identification_1
+>>> WARNING Found duplicate attribute - lAttr.identifier:Coordinate_System_Origin_Identification_0
+>>> WARNING Found duplicate attribute - lAttr.identifier:Coordinate_System_Origin_Identification_1
+>>> WARNING Found duplicate attribute - lAttr.identifier:Distances_1
+>>> WARNING Found duplicate attribute - lAttr.identifier:Distances_2
+>>> WARNING Found duplicate attribute - lAttr.identifier:Expanded_Geometry_1
+>>> WARNING Found duplicate attribute - lAttr.identifier:Expanded_Geometry_2
+>>> WARNING Found duplicate attribute - lAttr.identifier:Frame_Identification_Base_0
+>>> WARNING Found duplicate attribute - lAttr.identifier:Geometry_Orbiter_0
+>>> WARNING Found duplicate attribute - lAttr.identifier:Geometry_Target_Identification_0
+>>> WARNING Found duplicate attribute - lAttr.identifier:Geometry_Target_Identification_1
+>>> WARNING Found duplicate attribute - lAttr.identifier:Illumination_1
+>>> WARNING Found duplicate attribute - lAttr.identifier:Illumination_2
+>>> WARNING Found duplicate attribute - lAttr.identifier:Illumination_Specific_0
+>>> WARNING Found duplicate attribute - lAttr.identifier:Image_Display_Geometry_0
+>>> WARNING Found duplicate attribute - lAttr.identifier:Observer_Identification_0
+>>> WARNING Found duplicate attribute - lAttr.identifier:Observer_Identification_1
+>>> WARNING Found duplicate attribute - lAttr.identifier:Pixel_Intercept_0
+>>> WARNING Found duplicate attribute - lAttr.identifier:Reference_Frame_Identification_0
+>>> WARNING Found duplicate attribute - lAttr.identifier:Reference_Frame_Identification_1
+>>> WARNING Found duplicate attribute - lAttr.identifier:Rotate_From_0
+>>> WARNING Found duplicate attribute - lAttr.identifier:Rotate_From_1
+>>> WARNING Found duplicate attribute - lAttr.identifier:Rotate_To_0
+>>> WARNING Found duplicate attribute - lAttr.identifier:Rotate_To_1
+>>> WARNING Found duplicate attribute - lAttr.identifier:Surface_Geom_1
+>>> WARNING Found duplicate attribute - lAttr.identifier:Surface_Geom_2
+>>> WARNING Found duplicate attribute - lAttr.identifier:camera_model_parameters_0
+>>> WARNING Found duplicate attribute - lAttr.identifier:coord_space_0
+>>> WARNING Found duplicate attribute - lAttr.identifier:spice_kernel_0
+>>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
+>>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
+>>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
+>>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
+>>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
+>>> WARNING Attribute: <x_unit> - The terms 'unit', 'units', 'unit_of_measure' should not be used as the rightmost part of an attribute's name.
+>>> WARNING Attribute: <y_unit> - The terms 'unit', 'units', 'unit_of_measure' should not be used as the rightmost part of an attribute's name.
+>>> WARNING Attribute: <z_unit> - The terms 'unit', 'units', 'unit_of_measure' should not be used as the rightmost part of an attribute's name.
+>>> WARNING Attribute: <surface_model_type> - An attribute with the enumeration_flag = false must not have any permissible values.
+>>> WARNING Header:  - New namespace id has been specified:cart
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Found duplicate attribute - lDOMProp.identifier:TBD_identifier
+>>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
+>>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
+>>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
+>>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
+>>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
+>>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
+>>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
+
+ -- LDDTool Execution Summary --
+     985 warning(s)
+     0 error(s)
+     0 fatal error(s)
+
+>>  INFO Exit(0)
