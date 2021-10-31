@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:cart  Version:1.9.5.0 - Sun Oct 31 20:43:54 UTC 2021 -->
-  <!-- Generated from the PDS4 Information Model Version 1.17.0.0 - System Build 12.0 -->
+  <!-- PDS4 Schematron for Name Space Id:cart  Version:1.9.5.0 - Sun Oct 31 20:43:48 UTC 2021 -->
+  <!-- Generated from the PDS4 Information Model Version 1.14.0.0 - System Build 10b -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
 
@@ -749,16 +749,16 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="cart:Ring_Polar/cart:angular_scale">
-      <sch:assert test="@unit = ('HA/pixel', 'arcsec/pixel', 'deg/pixel', 'radian/pixel')">
+      <sch:assert test="@unit = ('arcsec/pixel', 'deg/pixel', 'radian/pixel')">
         <title>cart:Ring_Polar/cart:angular_scale/cart:angular_scale</title>
-        The attribute @unit must be equal to one of the following values 'HA/pixel', 'arcsec/pixel', 'deg/pixel', 'radian/pixel'.</sch:assert>
+        The attribute @unit must be equal to one of the following values 'arcsec/pixel', 'deg/pixel', 'radian/pixel'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="cart:Ring_Polar/cart:local_time_scale">
-      <sch:assert test="@unit = ('DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel')">
+      <sch:assert test="@unit = ('DN', 'electron/DN', 'pixel')">
         <title>cart:Ring_Polar/cart:local_time_scale/cart:local_time_scale</title>
-        The attribute @unit must be equal to one of the following values 'DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel'.</sch:assert>
+        The attribute @unit must be equal to one of the following values 'DN', 'electron/DN', 'pixel'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
