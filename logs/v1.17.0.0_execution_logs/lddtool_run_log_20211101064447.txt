@@ -1,0 +1,220 @@
+
+>>  INFO LDDTOOL Version: 13.1.0
+>>  INFO IM Version Id: 1.17.0.0
+>>  INFO IM Namespace Id: pds
+>>  INFO IM Label Version Id: 1.23
+>>  INFO Date: Mon Nov 01 06:44:48 UTC 2021
+>>  INFO PARENT_DIR: /tmp/lddtool-13.1.0
+>>  INFO SCRIPT_DIR: /tmp/lddtool-13.1.0/bin
+>>  INFO LIB_DIR: /tmp/lddtool-13.1.0/lib
+
+>>> INFO Init:  - Config.Properties Namespace Id Found:geom
+>>> INFO Init:  - Config.Properties Namespace Id Using:geom
+>>> INFO Init:  - LDD Dictionary_Type is Discipline
+>>> INFO Attribute: <north_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <north_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <east_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <east_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <right_ascension_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <right_ascension_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <declination_angle> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <declination_angle> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <celestial_north_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <celestial_north_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <celestial_east_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <celestial_east_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <ecliptic_north_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <ecliptic_north_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <ecliptic_east_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <ecliptic_east_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <sun_direction_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <sun_direction_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <central_body_positive_pole_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <central_body_positive_pole_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <target_positive_pole_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <target_positive_pole_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <target_north_pole_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <target_north_pole_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <central_body_north_pole_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <central_body_north_pole_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <rotation_direction> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <horizontal_pixel_field_of_view> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <horizontal_pixel_field_of_view> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <vertical_pixel_field_of_view> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <vertical_pixel_field_of_view> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <pixel_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <pixel_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <pixel_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <pixel_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <subsolar_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subsolar_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <start_subsolar_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <start_subsolar_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <stop_subsolar_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <stop_subsolar_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <minimum_subsolar_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <minimum_subsolar_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <maximum_subsolar_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <maximum_subsolar_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <subsolar_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <subsolar_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <start_subsolar_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <start_subsolar_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <stop_subsolar_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <stop_subsolar_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <minimum_subsolar_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <minimum_subsolar_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <maximum_subsolar_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <maximum_subsolar_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <subsolar_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subsolar_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <start_subsolar_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <start_subsolar_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <stop_subsolar_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <stop_subsolar_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <minimum_subsolar_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <minimum_subsolar_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <maximum_subsolar_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <maximum_subsolar_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <subspacecraft_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subspacecraft_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <start_subspacecraft_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <start_subspacecraft_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <stop_subspacecraft_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <stop_subspacecraft_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <minimum_subspacecraft_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <minimum_subspacecraft_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <maximum_subspacecraft_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <maximum_subspacecraft_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <subspacecraft_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <subspacecraft_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <start_subspacecraft_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <start_subspacecraft_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <stop_subspacecraft_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <stop_subspacecraft_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <minimum_subspacecraft_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <minimum_subspacecraft_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <maximum_subspacecraft_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <maximum_subspacecraft_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <subspacecraft_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <subspacecraft_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <start_subspacecraft_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <start_subspacecraft_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <stop_subspacecraft_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <stop_subspacecraft_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <minimum_subspacecraft_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <minimum_subspacecraft_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <maximum_subspacecraft_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <maximum_subspacecraft_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <start_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <start_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <stop_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <stop_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <minimum_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <minimum_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <maximum_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <maximum_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <start_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <start_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <stop_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <stop_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <minimum_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <minimum_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <maximum_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <maximum_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <interpolation_sequence> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <emission_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <emission_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <minimum_emission_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <minimum_emission_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <maximum_emission_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <maximum_emission_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <start_emission_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <start_emission_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <stop_emission_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <stop_emission_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <incidence_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <incidence_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <minimum_incidence_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <minimum_incidence_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <maximum_incidence_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <maximum_incidence_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <start_incidence_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <start_incidence_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <stop_incidence_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <stop_incidence_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <phase_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <phase_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <minimum_phase_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <minimum_phase_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <maximum_phase_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <maximum_phase_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <start_phase_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <start_phase_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <stop_phase_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <stop_phase_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <solar_elongation> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <solar_elongation> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <minimum_solar_elongation> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <minimum_solar_elongation> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <maximum_solar_elongation> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <maximum_solar_elongation> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <start_solar_elongation> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <start_solar_elongation> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <stop_solar_elongation> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <stop_solar_elongation> - The default maximum value provided by the attribute's data type is being overridden with 180
+>>> INFO Attribute: <x> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <y> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <z> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <x_unit> - The default minimum value provided by the attribute's data type is being overridden with -1
+>>> INFO Attribute: <x_unit> - The default maximum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <y_unit> - The default minimum value provided by the attribute's data type is being overridden with -1
+>>> INFO Attribute: <y_unit> - The default maximum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <z_unit> - The default minimum value provided by the attribute's data type is being overridden with -1
+>>> INFO Attribute: <z_unit> - The default maximum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <longitude_position> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <longitude_position> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <latitude_position> - The default minimum value provided by the attribute's data type is being overridden with -90
+>>> INFO Attribute: <latitude_position> - The default maximum value provided by the attribute's data type is being overridden with 90
+>>> INFO Attribute: <target_name> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <solar_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <solar_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <solar_elevation> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <solar_elevation> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <start_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <start_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <stop_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <stop_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> WARNING Attribute: <x_unit> - The terms 'unit', 'units', 'unit_of_measure' should not be used as the rightmost part of an attribute's name.
+>>> WARNING Attribute: <y_unit> - The terms 'unit', 'units', 'unit_of_measure' should not be used as the rightmost part of an attribute's name.
+>>> WARNING Attribute: <z_unit> - The terms 'unit', 'units', 'unit_of_measure' should not be used as the rightmost part of an attribute's name.
+>>> WARNING Header:  - New steward has been specified:geo
+>>> WARNING Header:  - New namespace id has been specified:geom
+>>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
+>>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
+>>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
+>>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
+>>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
+
+ -- LDDTool Execution Summary --
+     10 warning(s)
+     0 error(s)
+     0 fatal error(s)
+
+Input:
+
+     - IM Version: 1H00
+     - PDS4 Flag: true
+     - LDD Flag: true
+     - Export JSON Flag: true
+
+     - Ingest LDD(s): /home/runner/work/ldd-cart/ldd-cart/src/dependencies/ldd-geom/src/PDS4_GEOM_IngestLDD.xml
+
+Output:
+
+     - ./PDS4_GEOM_1H00_1930.xsd
+     - ./PDS4_GEOM_1H00_1930.sch
+     - ./PDS4_GEOM_1H00_1930.xml
+     - ./PDS4_GEOM_1H00_1930.JSON
+
+>>  INFO Exit(0)
