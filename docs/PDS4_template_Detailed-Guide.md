@@ -8,7 +8,7 @@
 
 # [Contents](#contents)
 1. [Introductory Resources](introductory)
-1. [Classes](classes) ([Html](PDS4_CART_IngestLDD.pdf), [PDF](PDS4_CART_IngestLDD.pdf))
+1. [Classes](classes) ([SVG](PDS4_CART_IngestLDD.svg), [Html](PDS4_CART_IngestLDD.pdf), [PDF](PDS4_CART_IngestLDD.pdf))
 1. [Attribute Definitions](attributes)
 
 # [Introductory Resources](#introductory)
