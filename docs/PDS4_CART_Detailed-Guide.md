@@ -19,7 +19,7 @@ As of version 1C00_1933, October 2019, for the cartography data dictionary, ther
 
 For example, given a derived global image map, the cartography section needs to (1) when possible, identify the bounding coordinates in degrees, (2) define the horizontal type, size of the target body, and map projection type, (3) define the required attributes for that map projection, and (4) if the product is an image, define the mapping from the top-left pixel to the map projection’s Cartesian plane and the pixel’s cell size in meters.
 
-![Horizontal Coordinate System Definition UML](images\user-guide-figure1.png)
+![Horizontal Coordinate System Definition UML](images/user-guide-figure1.png)
 >_Figure 1. shows the \<cart:Horizontal_Coordinate_System_Definition> which requires one and only one type \<cart:Geographic>, \<cart:Planar>, or \<cart:Local>. While \<cart:Geodetic_Model>, which defines the size of the target body (e.g. radius of the body), may not always be required if the projection used is for a landed or rings projection._
 
 # [Classes](#classes)
@@ -28,7 +28,7 @@ For example, given a derived global image map, the cartography section needs to 
 
 Within Figure 1, \<cart:Spatial_Domain> is required and lists the bounding box in degrees (longitude and latitude ranges). While this may become optional, with the introduction of ring map projections, which do not map into a latitude and longitude system, these values can simply be defined with zeros or nil. The \<cart:Secondary_Spatial_Domain> was added to assist when a data provider would like to support the bounding degrees in two different systems (e.g. Positive East Longitudes and Positive West Longitudes). Generally Positive East Longitudes are better supported in modern mapping applications, whereas, Positive West Longitudes are needed to support historical uses for example in previous archives or research publications. The IAU allows both systems, but highly recommends using the system historically used in past publications. _(add in more about East/West)._ 
 
-![top level of the cartography data dictionary UML](images\user-guide-figure2.png)
+![top level of the cartography data dictionary UML](images/user-guide-figure2.png)
 >_Figure 1. The is the top level of the cartography data dictionary._
 
 ## \<Spatial_Reference_Information>

@@ -29,7 +29,7 @@ use this dictionary? Who is the steward of this dictionary (person and node
 name)? How often is it updated? To whom should questions about it be directed?
 (Give an email address or link to a page with contact information.)*
 
-![Image 1 UML](images\user-guide-figure1.png)
+![Image 1 UML](images/user-guide-figure1.png)
 >_Figure 1. shows the the UML image of ..._
 
 # [Organization of Classes and Attributes](#organization)
