@@ -4,16 +4,17 @@
 # [Contents](#contents)
 1. [Introductory Resources](introductory)
 1. [Overview](overview)
-1. [Classes](organization) ([Html](https://github.com/pds-data-dictionaries/ldd-cart/blob/v1.9.6.0/docs/PDS4_CART_IngestLDD.pdf), [PDF](https://github.com/pds-data-dictionaries/ldd-cart/blob/v1.9.6.0/docs/PDS4_CART_IngestLDD.pdf))
-1. [Attribute Definitions](definitions)
+1. [Classes](organization) ([Html](PDS4_CART_IngestLDD.pdf), [PDF](PDS4_CART_IngestLDD.pdf))
+1. [Attribute Definitions](attributes)
 1. [Examples](examples)
    * [Transverse Mercator](transverse-mercator)
    * [Equirectangular](equirectangular)
    * See more on the [CART Wiki](https://github.com/pds-data-dictionaries/ldd-cart/wiki)
+   * Conversion tutorials [CART Wiki](https://github.com/pds-data-dictionaries/ldd-cart/wiki)
 
 # [Introductory Resources](#introductory)
 
-- [Quick Introduction](https://github.com/pds-data-dictionaries/ldd-cart/blob/main/README.md) to the Cartography Dictionary
+- [Quick Introduction](../README.md) to the Cartography Dictionary
 - Using Local Dictionaries [SBN Wiki](https://sbnwiki.astro.umd.edu/wiki/Using_Local_Dictionaries)
 - Schema Referencing in PDS4 Labels [SBN Wiki](https://sbnwiki.astro.umd.edu/wiki/Schema_Referencing_in_PDS4_Labels)
 - Data Dictionary Creation [Resources](https://pds-data-dictionaries.github.io/getting-started/getting-started.html)
@@ -34,7 +35,7 @@ As of version 1C00_1933, October 2019, for the cartography data dictionary, ther
 
 For example, given a derived global image map, the cartography section needs to (1) when possible, identify the bounding coordinates in degrees, (2) define the horizontal type, size of the target body, and map projection type, (3) define the required attributes for that map projection, and (4) if the product is an image, define the mapping from the top-left pixel to the map projection’s Cartesian plane and the pixel’s cell size in meters.
 
-## Classes
+## [Classes](#classes)
 
 ### \<Spatial_Domain> and \<cart:Secondary_Spatial_Domain>
 
@@ -64,7 +65,7 @@ The \<cart:Planar> will characteristically be the most widely-used horizontal ty
 
 The \<cart:Local> provides a description of any coordinate system not necessarily aligned with the surface of the target body. As such, it provides a location for the seven landed map projections and the one currently supported ring map projection (Ring_Polar).
 
-# [Definitions](#definitions)
+## [Attribute Definitions](#attributes)
 
 ### \<upperleft_corner_x> and \<upperleft_corner_y>
 
