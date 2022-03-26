@@ -10,7 +10,7 @@
    1. Introductory Resources
    1. Overview
    1. Organization of Classes and Attributes
-   1. 
+   1. Class View ([html](https://github.com/pds-data-dictionaries/ldd-cart/blob/v1.9.6.0/docs/PDS4_CART_IngestLDD.pdf), [PDF](https://github.com/pds-data-dictionaries/ldd-cart/blob/v1.9.6.0/docs/PDS4_CART_IngestLDD.pdf))
    1. Examples
 
 # Introductory Resources
