@@ -1,4 +1,4 @@
-# Cartography Discipline Namespace
+# Cartography (cart) Discipline Namespace
 
 The Cartography displine namespace contains classes, elements, attributes, and rules describing map projections, including orbital-, lander-, and rings-related definitions and descriptions. The PDS Cartography namespace is largely based on the existing Federal Geographic Data Committee (FGDC) Content Standard for Digital Geospatial Metadata, with modifications and extensions applied by PDS as needed for planetary mapping applications. This namespace is strongly recommended for any map projected (derived) PDS4 products whether they are an image-based (e.g. Array_2D, Array_3D_Map, etc.) or GIS vector-based (table-based with defined point, line or polygon geometries). The Cartography and Imaging Node at the U.S. Geological Survey and Jet Propulsion Laboratories (JPL) are the stewards of this namespace. Expect updates at least once or twice per year.
 
