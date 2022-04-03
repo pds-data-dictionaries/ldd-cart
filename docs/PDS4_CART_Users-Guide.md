@@ -1,4 +1,4 @@
-# PDS4 Cartography Discipline Data Dictionary User’s Guide
+# Cartography (cart) Discipline Namespace User’s Guide
 
 # [Contents](#contents)
 1. [Introductory Resources](introductory)
@@ -13,7 +13,7 @@
 # [Introductory Resources](#introductory)
 
 - [CART Quick Introduction](../README.md) to the Cartography Dictionary
-- [CART Detailed Guide](PDS4_CART_Detailed-Guide.md)
+- [CART Detailed Guide](../docs)
 - Using Local Dictionaries [SBN Wiki](https://sbnwiki.astro.umd.edu/wiki/Using_Local_Dictionaries)
 - Schema Referencing in PDS4 Labels [SBN Wiki](https://sbnwiki.astro.umd.edu/wiki/Schema_Referencing_in_PDS4_Labels)
 - Data Dictionary Creation [Resources](https://pds-data-dictionaries.github.io/getting-started/getting-started.html)
