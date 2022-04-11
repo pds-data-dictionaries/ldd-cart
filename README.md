@@ -17,7 +17,7 @@ Steward: [Trent Hare, IMG Node](@thareUSGS)
  
 # Latest Release
 
-* Schema packages [on GitHub](../../../releases/latest)
+* Schema packages [on GitHub](../../releases/latest)
 * [Change log](CHANGELOG.md)
 
 # Feedback
