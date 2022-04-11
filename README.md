@@ -17,9 +17,8 @@ Steward: [Trent Hare, IMG Node](@thareUSGS)
  
 # Latest Release
 
-* [PDS Namespace](https://pds.nasa.gov/datastandards/dictionaries/#disp)
-* [GitHub](../../../releases/latest)
-* Change log [CHANGELOG.md](CHANGELOG.md)
+* Schema packages [on GitHub](../../../releases/latest)
+* [Change log](CHANGELOG.md)
 
 # Feedback
 
@@ -28,4 +27,4 @@ Have a bug or feature request? Create one in the [PDS4 Issue Repo](https://githu
 
 # Developer Support
 
-[For more information](src/README.md)
+* [PDS Namespace Developer Documentation](https://pds-data-dictionaries.github.io/)
