@@ -12,7 +12,6 @@ Steward: [Trent Hare, IMG Node](@thareUSGS)
 * [Detailed Documentation](docs)
   - UML view [SVG](docs/PDS4_CART_IngestLDD.svg)
   - Graphical view [PDF](docs/PDS4_CART_IngestLDD.pdf)
-* [Other PDS Namespace Documentation](https://pds-data-dictionaries.github.io/)
 
  
 # Latest Release
