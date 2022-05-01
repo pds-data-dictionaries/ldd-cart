@@ -1,16 +1,19 @@
 # Changelog
 
 ## 1.9.6.0
--THare 20220224
+- THare 20220224
 - update attribute local_time_scale to Units_of_Pixel_Resolution_Angular for RMS
 - update to GEOM 1G00_1950
+- Updates based on DMSP meeting comments:
+  - Changed grid coordinate to XSChoice
+  - update latitude_of_projection_origin to be mandatory for Orthographic.
 
 ## 1.9.5.0
--THare 20201204
+- THare 20201204
 - updates for 1.E.0.0 and 1.F.0.0, adding dictionary_type and building with new GEOM 1E00_1900
 
 ## 1.9.4.0
--THare 20200515
+- THare 20200515
 - Add new class Vector_Projection_Z_Axis_Initial
 - Under Oblique Cylindrical set reference_latitude and reference_longitude as optional. Unfortunately,
       some older PDS3 labels have these two values (and an implied angle always set to zero) instead of using the
@@ -24,14 +27,14 @@
 - Updated projection_axis_offset to be ASCII_REAL
   
 ## 1.9.3.4
--THare 20200127
+- THare 20200127
 - Minor update for Oblique Cylindrical to help define that the XML-odd 3-value vector strings (oblique_proj_x_axis_vector,
       oblique_proj_y_axis_vector, oblique_proj_z_axis_vector) as optional and really for documentation purposes.
 - Minor update to Polar Stereographic to make scale_factor_at_projection_origin optional and added documentation
       to help clarify that attribute projection.
 
 ## 1.9.3.3
--THare 20191027
+- THare 20191027
 - Removed Map_Projection_Base. This was suppose to be an abstract class for group liking map projection
       parameters, but there was no good method to group across the current allowable map projections and
       it made it harder to know which map projection required which parameters.
@@ -41,14 +44,14 @@
       https://github.com/OSGeo/gdal/blob/33a8a0edc764253b582e194d330eec3b83072863/gdal/frmts/pds/pds4dataset.cpp#L2280
 
 ## 1.9.3.2
--THare 20190909
+- THare 20190909
 - add Ring section, Map_Projection_Rings, for ring map projections to meet conversion of Cassini PDS3 data to PDS4.
 - Rings initially falls under Horizontal_Coordinate_System_Definition using Local (not tied to a surface) and
       enforces the need for a defined Geodetic_Model (body name, radius values, latitude type, and longitude direction).
 - Updated spatial_domain_or_lander_check to spatial_domain_or_lander_or_rings_check rule.
 
 ## 1.9.3.1
--THare and CDeCesare 20190613
+- THare and CDeCesare 20190613
 - updated line and sample attributes to allow for non-negate values under Camera_Model_Offset, 
       Pixel_Position_Nadir_Polar, Pixel_Position_Origin  
 
@@ -57,13 +60,13 @@
 - updated definitions for Surface_Model_Parameters and Surface_Model_Planar, surface_model_type, 
       Vector_Surface_Ground_Location, Vector_Surface_Normal
 
--THare and CDeCesare 20190430
+- THare and CDeCesare 20190430
 - Upgraded to v1B10 of IM.
 - Undid changes from 1.9.1.1.
     - Coordinate_Space_Reference is now re-used from the GEOM class as-is, so that CART doesn't need to re-implement it.
 
 ## 1.9.3.0
--THare and PGeissler 20190424
+- THare and PGeissler 20190424
 - 'Planar_Coordinate_Information' is no longer mandated to better support vector files. It should be added for images
 - 'cart.latitude_resolution' and 'cart:longitude_resolution' to be optional, not needed for vector GIS labels
 - Added Secondary_Spatial_Domain as an optional or alternative method to list IAU recommended or historically used 
@@ -86,19 +89,18 @@
       default units for the these parameters was set to meters "m".
 
 ## 1.9.2.0
--PGeissler and THare 20181221
+- PGeissler and THare 20181221
 - Added Oblique Cylindrical Map Projection 
-- Note: To support Cassini BIDR. This is a somewhat specialize map projection which requires several new projection parameters
-            including: reference_latitude, reference_longitude, map_projection_rotation, oblique_proj_pole_latitude, 
-			oblique_proj_pole_longitude, oblique_proj_pole_rotation, oblique_proj_x_axis_vector, oblique_proj_y_axis_vector, and
-			oblique_proj_z_axis_vector. The original parameter center_latitude is now mapped to latitude_of_projection_origin and
-			the original parameter center_longitude is now mapped to longitude_of_central_meridian. line, sample offsets are
-			remapped into meters using upperleft_corner_x and upperleft_corner_y. 
+- Note: To support Cassini BIDR. This is a somewhat specialize map projection which requires several new projection
+      parameters including: reference_latitude, reference_longitude, map_projection_rotation, oblique_proj_pole_latitude, 
+	oblique_proj_pole_longitude, oblique_proj_pole_rotation, oblique_proj_x_axis_vector, oblique_proj_y_axis_vector, and oblique_proj_z_axis_vector. The original parameter center_latitude is now mapped to latitude_of_projection_origin and
+	the original parameter center_longitude is now mapped to longitude_of_central_meridian. line, sample offsets are
+	remapped into meters using upperleft_corner_x and upperleft_corner_y. 
 - Added many definitions for map projections (cartographic and lander). 
 - Removed "General Vertical Near-sided Projection" since it has functionally been replaced by "Point Perspective".
 
 ## 1.9.1.1
--CDeCesare 20181116
+- CDeCesare 20181116
 - Removed definitions of classes which are already defined by GEOM dictionary: Vector_Cartesian_Unit_Base, Vector_Cartesian_Position_Base, Vector_Cartesian_No_Units
 - Updated references that point at Vector_Cartesian_Unit_Base to instead point at geom.Vector_Cartesian_Unit
 - Updated references that point at Vector_Cartesian_Position_Base to instead point at geom.Vector_Cartesian_Position_Base
@@ -112,7 +114,7 @@
         optical offsets, focal parameters, image array segment definitions, etc, will need to be added as needed.
 
 ## 1.9.0.2
--CIsbell 24July2018
+- CIsbell 24July2018
 - Added/corrected unit_of_measure_type where appropriate to correctly include 
       'Units_of_Pixel_Scale_Map' and 'Units_of_Pixel_Resolution_Map'
 
@@ -132,3 +134,11 @@
 - Created spatial_domain_or_lander_check rule to check this
 - Added Local_Internal_Reference at top-level of Cartography dictionary
 - Created local_reference_type_check_cart rule to enforce value of Local_Internal_Reference
+
+## 1.7.0.0 
+- Generated 2014-02-13T18:31:07Z by eduxbury using mk_img_ldd.pl from the Imaging Node MySQL img_ldd database.
+- removed 'cart.' prefix from all local_id entries then, change to v1700 (Sept 7, 2016)
+- updated standard_parallel_1/2 items per entries throughout
+- renamed ellipsoid_name to spheroid_name
+- update Oblique_Mercator per redundancies (already in Map_Projection_Base) (Oct 17, 2016)
+- updated spheroid_name as optional, and not enumerated
