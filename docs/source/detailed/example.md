@@ -56,3 +56,4 @@ For context, in PDS3, the method to locate the image plane to the Cartesian plan
  where SAMPLE_PROJECTION_OFFSET, LINE_PROJECTION_OFFSET, and MAP_SCALE (in km) are
     from the original IMAGE_MAP_PROJECTION group of the PDS3 label. If MAP_SCALE is
     not in km the convert to meters accordingly.
+

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://pds.jpl.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1E00_1810.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
@@ -28,6 +28,7 @@
   </comment>
   
   <last_modification_date_time>2022-05-01T16:10:00Z</last_modification_date_time>
+
   <DD_Attribute>
     <name>target_center_distance</name>
     <version_id>1.0</version_id>
