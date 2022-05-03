@@ -7,6 +7,7 @@
 - Updates based on DMSP meeting comments:
   - Changed grid coordinate to XSChoice
   - update latitude_of_projection_origin to be mandatory for Orthographic.
+  - update upperleft_corner_x and upperleft_corner_y to be required in Geo_Transformation class
 
 ## 1.9.5.0
 - THare 20201204

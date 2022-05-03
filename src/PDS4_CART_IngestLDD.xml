@@ -5,6 +5,7 @@
 <!-- PDS4 Local Data Dictionary Ingest File -->
 <!-- 
     See "CHANGELOG.md" file on GitHub for updates
+    https://github.com/pds-data-dictionaries/ldd-cart
 -->
 
 <Ingest_LDD
@@ -27,7 +28,7 @@
     URL: https://www.fgdc.gov/ 
   </comment>
   
-  <last_modification_date_time>2022-05-01T16:10:00Z</last_modification_date_time>
+  <last_modification_date_time>2022-05-03T10:00:00Z</last_modification_date_time>
 
   <DD_Attribute>
     <name>target_center_distance</name>
@@ -4736,13 +4737,13 @@
     <DD_Association>
       <identifier_reference>upperleft_corner_x</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>upperleft_corner_y</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
