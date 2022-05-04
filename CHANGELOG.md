@@ -8,7 +8,8 @@
   - Changed grid coordinate to XSChoice
   - update latitude_of_projection_origin to be mandatory for Orthographic.
   - update upperleft_corner_x and upperleft_corner_y to be required in Geo_Transformation class
-
+  - updated latitude_resolution and longitude_resolution of the Geographic class to be required.
+  
 ## 1.9.5.0
 - THare 20201204
 - updates for 1.E.0.0 and 1.F.0.0, adding dictionary_type and building with new GEOM 1E00_1900
