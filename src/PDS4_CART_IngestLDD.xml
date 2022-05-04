@@ -26,7 +26,7 @@
     https://github.com/pds-data-dictionaries/ldd-cart
   </comment>
   
-  <last_modification_date_time>2022-05-04T13:05:00Z</last_modification_date_time>
+  <last_modification_date_time>2022-05-04T16:45:00Z</last_modification_date_time>
 
   <DD_Attribute>
     <name>target_center_distance</name>
@@ -796,9 +796,9 @@
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Robinson</value>
-        <value_meaning>Also called orthophanic, Robinson is a compromise projection used for global 
-          maps. Meridians are equally spaced and resemble elliptical arcs, concave toward the central 
-          meridian. The poles are 0.53 times the length of the equator.</value_meaning>
+        <value_meaning>Classified as a pseudocylindrical projecton. Generally this projection
+          is used for global maps. The projection is a compromise and is neither equal-area nor 
+          conformal. The meridians are gently curved leaving the poles fairly distored.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Sinusoidal</value>
@@ -2852,7 +2852,9 @@
       <identifier_reference>Point_Perspective</identifier_reference>
       <identifier_reference>Polar_Stereographic</identifier_reference>
       <identifier_reference>Polyconic</identifier_reference>
+      <identifier_reference>Robinson</identifier_reference>
       <identifier_reference>Sinusoidal</identifier_reference>
+      <identifier_reference>Stereographic</identifier_reference>
       <identifier_reference>Transverse_Mercator</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
@@ -3337,7 +3339,24 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
-  
+
+  <DD_Class>
+    <name>Robinson</name>
+    <version_id>1.0</version_id>
+    <local_identifier>Robinson</local_identifier>
+    <submitter_name>Trent Hare</submitter_name>
+    <definition>The Robinson class contains parameters for the Pseudocylindrical Robinson projection.
+      longitude_of_central_meridian is required (most will simply use 0.0).
+      PROJ: https://proj.org/operations/projections/robin.html
+    </definition>
+    <DD_Association>
+      <identifier_reference>longitude_of_central_meridian</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+
   <DD_Class>
     <name>Sinusoidal</name>
     <version_id>1.0</version_id>
@@ -3361,7 +3380,48 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
-  
+
+  <DD_Class>
+    <name>Stereographic</name>
+    <version_id>1.0</version_id>
+    <local_identifier>Stereographic</local_identifier>
+    <submitter_name>Trent Hare</submitter_name>
+    <definition>The Stereographic class contains parameters Stereographic projection. While this
+      can be used for polar regions (generally where latitude_of_projection_origin = +-90), it
+      is more appropriate to use the Polar_Stereographic class (should be identical in use).
+      Synder 1987, DOI:10.3133/pp1395, page 154: https://pubs.usgs.gov/pp/1395/report.pdf#page=166
+      PROJ: https://proj.org/operations/projections/stere.html
+      
+      Note that most applications will either define latitude_of_projection_origin 
+      or scale_factor_at_projection_origin, but not both. Here we define latitude_of_projection_origin
+      as mandatory and have made scale_factor_at_projection_origin optional. 
+      For context, these two keywords have the same impact on the final product but are just different 
+      ways to define it. Thus, for example in the PROJ library, if both are made available, the
+      latitude_of_projection_origin (+lat_ts) will be used instead of 
+      scale_factor_at_projection_origin (+k_0). Note, if you do supply the optional attribute 
+      scale_factor_at_projection_origin, the default scale (+k_0) for planetary polar 
+      data will mostly likely be set to 1.0 in software.
+    </definition>
+    <DD_Association>
+      <identifier_reference>longitude_of_central_meridian</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>latitude_of_projection_origin</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>scale_factor_at_projection_origin</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+
   <DD_Class>
     <name>Transverse_Mercator</name>
     <version_id>1.0</version_id>

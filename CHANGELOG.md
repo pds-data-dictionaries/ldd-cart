@@ -9,6 +9,8 @@
   - update latitude_of_projection_origin to be mandatory for Orthographic.
   - update upperleft_corner_x and upperleft_corner_y to be required in Geo_Transformation class
   - updated latitude_resolution and longitude_resolution of the Geographic class to be required.
+  - Added Stereographic class for upcoming lunar mission.
+  - Added Robinson class, often used for derived global maps.
   
 ## 1.9.5.0
 - THare 20201204
