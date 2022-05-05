@@ -1,27 +1,14 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://pds.jpl.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1E00_1810.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-<!-- PDS4 Local Data Dictionary Ingest File -->
-<!-- Generated 2014-02-13T18:31:07Z by eduxbury using mk_img_ldd.pl 
-    from the Imaging Node MySQL img_ldd database.
-    
-    ... removed 'cart.' prefix from all local_id entries
-    ... then, change to v1700 (Sept 7, 2016)
-        updated standard_parallel_1/2 items per entries throughout
-        renamed ellipsoid_name to spheroid_name
-    ... then, update Oblique_Mercator per redundancies (already in Map_Projection_Base) (Oct 17, 2016)
-    ... updated spheroid_name as optional, and not enumerated
-
-    ... See "CHANGE LOG" below for updates progression and detail
-  -->
 
 <Ingest_LDD
     xmlns="http://pds.nasa.gov/pds4/pds/v1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:geom="http://pds.nasa.gov/pds4/geom/v1"
     xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"    
-    xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.xsd    http://pds.nasa.gov/pds4/geom/v1 https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1E00_1810.xsd">
+    xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.xsd    
+                        http://pds.nasa.gov/pds4/geom/v1 https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1E00_1810.xsd">
   <name>Cartography</name>
   <ldd_version_id>1.9.6.0</ldd_version_id>
   <dictionary_type>Discipline</dictionary_type>
@@ -29,148 +16,18 @@
   <steward_id>img</steward_id>
   <namespace_id>cart</namespace_id>
   <comment>
-    Contains classes and attributes used to describe cartographic
+    Contains classes and attributes used to describe PDS v4 cartographic
     products.  This information is largely adapted from the Federal Geographic 
     Data Committee (FGDC) "Content Standard for Digital Geospatial Metadata", 
     with extensions (changes/additions) to satisfy planetary requirements.
-
-    ## CHANGE LOG ##
-    1.9.0.0
-    - Upgraded to v1900 of the IM
-    - Created new Map_Projection_Lander class with associated map projections and attributes
-    - New pixel_scale attribute that defines a pixel scale not x/y aligned
-    - Change units for pixel_scale_x/y to Units_of_Pixel_Scale_Map
-    - Change units for pixel_resolution_x/y to Units_of_Pixel_Resolution_Map
-    - Change local_georeference_information to optional in the case where Map_Projection_Lander is specified.
-    - Created Local_child_check rule to check this
-    - Change Spatial_Domain to optional in the case where Map_Projection_Lander is specified since domain is the horizon
-    - Created spatial_domain_or_lander_check rule to check this
-    - Added Local_Internal_Reference at top-level of Cartography dictionary
-    - Created local_reference_type_check_cart rule to enforce value of Local_Internal_Reference
+    URL: https://www.fgdc.gov/ 
     
-    1.9.0.1
-    - Changed all class local_identifier to identifier_reference per v1900 IM update
-    - Changed Coordinate_Space_Reference to inherit from Geometry dictionary
-    
-    1.9.0.2
-    - CIsbell 24July2018
-    - Added/corrected unit_of_measure_type where appropriate to correctly include 
-      'Units_of_Pixel_Scale_Map' and 'Units_of_Pixel_Resolution_Map'
-    
-    1.9.1.0
-    - Added Point Perspective Map Projection (CIsbell).
-    - Note: As of 24July2018, parameters/attributes here include only those required to define the 'fundamental' Point Perspective (PP)
-        Projection. That is, along with the common base projection parameters required for all projections, the additional PP
-        requirements of target_center_distance and nadir point (longitude_of_central_meridian, latitude_of_projection_origin) 
-        will define the basic PP projection. Additional parameters for a more 'complex' PP (line/sample sub-spacecraft offsets
-        optical offsets, focal parameters, image array segment definitions, etc, will need to be added as needed.
-
-    1.9.1.1
-    - CDeCesare 20181116
-    - Removed definitions of classes which are already defined by GEOM dictionary: Vector_Cartesian_Unit_Base, Vector_Cartesian_Position_Base, Vector_Cartesian_No_Units
-    - Updated references that point at Vector_Cartesian_Unit_Base to instead point at geom.Vector_Cartesian_Unit
-    - Updated references that point at Vector_Cartesian_Position_Base to instead point at geom.Vector_Cartesian_Position_Base
-
-    1.9.2.0
-    PGeissler and THare 20181221
-    - Added Oblique Cylindrical Map Projection 
-    - Note: To support Cassini BIDR. This is a somewhat specialize map projection which requires several new projection parameters
-            including: reference_latitude, reference_longitude, map_projection_rotation, oblique_proj_pole_latitude, 
-			oblique_proj_pole_longitude, oblique_proj_pole_rotation, oblique_proj_x_axis_vector, oblique_proj_y_axis_vector, and
-			oblique_proj_z_axis_vector. The original parameter center_latitude is now mapped to latitude_of_projection_origin and
-			the original parameter center_longitude is now mapped to longitude_of_central_meridian. line, sample offsets are
-			remapped into meters using upperleft_corner_x and upperleft_corner_y. 
-    - Added many definitions for map projections (cartographic and lander). 
-    - Removed "General Vertical Near-sided Projection" since it has functionally been replaced by "Point Perspective".
-
-    1.9.3.0
-    THare and PGeissler 20190424
-    - 'Planar_Coordinate_Information' is no longer mandated to better support vector files. It should be added for images
-    - 'cart.latitude_resolution' and 'cart:longitude_resolution' to be optional, not needed for vector GIS labels
-    - Added Secondary_Spatial_Domain as an optional or alternative method to list IAU recommended or historically used 
-      bounding coordinate section to support both positive East and positive West systems in the same label.
-    - Rename all three radius parameter names. These were renamed to clarify the parameter names since the name 
-        semi_major_radius is flawed and confusing as semi and radius both mean "half". This keyword should have
-        originally been named semi_major_axis (as used by the Federal Geospatial Data Consortium [FGDC]). To better
-        align with PDS version 3, we are moving these parameters names back to a_axis_radius, b_axis_radius, and 
-        c_axis_radius. Thus we are renaming: 
-    - semi_major_radius to a_axis_radius. 
-    - semi_minor_radius to b_axis_radius
-    - polar_radius to c_axis_radius
-      To be clear, most mapping applications call a_axis_radius the semi_major_axis and c_axis_radius the semi_minor_radius.
-      The b_axis_radius value is generally not seen in mapping applications which typical do not support triaxial definitions
-      for map projections. For most all cases, when a triaxial definition is defined, the IAU defines a best fit sphere. 
-      see: https://astrogeology.usgs.gov/groups/IAU-WGCCRE.
-      When a best-fit sphere or a body is already defined as a sphere, a single radius value will be listed across all three 
-      parameters a_axis_radius, b_axis_radius, and c_axis_radius. For an ellipse, the a_axis_radius and b_axis_radius will be
-      defined by a single radius value and a different (generally smaller) radius value for the c_axis_radius. Lastly, the
-      default units for the these parameters was set to meters "m".
-
-    THare and CDeCesare 20190430
-    - Upgraded to v1B10 of IM.
-    - Undid changes from 1.9.1.1.
-    - Coordinate_Space_Reference is now re-used from the GEOM class as-is, so that CART doesn't need to re-implement it.
-
-    THare 20190520
-    - simple misspellings
-    - updated definitions for Surface_Model_Parameters and Surface_Model_Planar, surface_model_type, 
-      Vector_Surface_Ground_Location, Vector_Surface_Normal
-
-    1.9.3.1
-    THare and CDeCesare 20190613
-    - updated line and sample attributes to allow for non-negate values under Camera_Model_Offset, 
-      Pixel_Position_Nadir_Polar, Pixel_Position_Origin  
-
-    1.9.3.2
-    THare 20190909
-    - add Ring section, Map_Projection_Rings, for ring map projections to meet conversion of Cassini PDS3 data to PDS4.
-    - Rings intially falls under Horizontal_Coordinate_System_Definition using Local (not tied to a surface) and
-      enforces the need for a defined Geodetic_Model (body name, radius values, latitude type, and longitude direction).
-    - Updated spatial_domain_or_lander_check to spatial_domain_or_lander_or_rings_check rule.
-
-    1.9.3.3
-    THare 20191027
-    - Removed Map_Projection_Base. This was suppose to be an abstract clss for group liking map projection
-      parameters, but there was no good method to group across the current allowable map projections and
-      it made it harder to know which map projection required which parameters.
-    - Added Orthographic, Mercator, and Lambert Azimuthal Equal-area
-    - removed straight_vertical_longitude_from_pole, just use longitude_of_central_meridian (aka Longitude of 
-      projection center) for polar stereographic which is more normally seen. need to update:
-      https://github.com/OSGeo/gdal/blob/33a8a0edc764253b582e194d330eec3b83072863/gdal/frmts/pds/pds4dataset.cpp#L2280
-
-    1.9.3.4
-    THare 20200127
-    - Minor update for Oblique Cylindrical to help define that the XML-odd 3-value vector strings (oblique_proj_x_axis_vector,
-      oblique_proj_y_axis_vector, oblique_proj_z_axis_vector) as optional and really for documention purposes.
-    - Minor update to Polar Stereographic to make scale_factor_at_projection_origin optional and added documention
-      to help clarify that attribute projection.
-
-    1.9.4.0
-    THare 20200515
-    - Add new class Vector_Projection_Z_Axis_Initial
-    - Under Oblique Cylindrical set reference_latitude and reference_longitude as optional. Unfortunately,
-      some older PDS3 labels have these two values (and an implied angle always set to zero) instead of using the
-      more appropriate values: oblique_proj_pole_latitude, oblique_proj_pole_longitude, oblique_proj_pole_rotation
-      Implementations for this map projection on use the later 3 attributes (e.g. ISIS3/4 and PROJ) not reference_*.
-      So when older labels only use reference_*, those should be converted to use the 3 oblique_proj_pole_* attributes
-      (note it is not a simple mapping, requiring a calculated update to get from reference_* to oblique_proj_pole_*)
-    - Removed scale_factor_at_center_line as it is currently not being used anywhere
-    - Removed pixel_resolution as pixel_resolution_x and pixel_resolution_y should be used (and it was not used anywhere)
-      If square, simply repeat the same value in both pixel_resolution_x and pixel_resolution_y
-    - Updated projection_axis_offset to be ASCII_REAL
-  
-    1.9.5.0
-    THare 20201204
-    - updates for 1.E.0.0 and 1.F.0.0, adding dictionary_type and building with new GEOM 1E00_1900
-
-    1.9.6.0
-    THare 20220224
-    - update attribute local_time_scale to Units_of_Pixel_Resolution_Angular for RMS
-    - update to GEOM 1G00_1950
-
+    See "CHANGELOG.md" file on GitHub for updates
+    https://github.com/pds-data-dictionaries/ldd-cart
   </comment>
   
-  <last_modification_date_time>2022-02-24T14:10:00Z</last_modification_date_time>
+  <last_modification_date_time>2022-05-04T16:45:00Z</last_modification_date_time>
+
   <DD_Attribute>
     <name>target_center_distance</name>
     <version_id>1.0</version_id>
@@ -189,7 +46,6 @@
     </DD_Value_Domain>
   </DD_Attribute>
 
-  <!-- added/enabled: 20150331 (rj) -->
   <DD_Attribute>
     <name>upperleft_corner_x</name>
     <version_id>1.0</version_id>
@@ -356,7 +212,8 @@
          longitude of a spatial area (e.g., a map, mosaic, bin, feature or region) is the minimum numerical value
          of longitude unless it crosses the Prime Meridian.
 
-         For the Earth, Moon and Sun, PDS also supports the traditional use of the range (-180,180) in which case the easternmost (rightmost) longitude is the maximum numerical value of longitude unless it crosses 180.</definition>
+         For the Earth, Moon and Sun, PDS also supports the traditional use of the range (-180,180) in which case the easternmost
+         (rightmost) longitude is the maximum numerical value of longitude unless it crosses 180.</definition>
       <language>English</language>
       <preferred_flag>false</preferred_flag>
     </Terminological_Entry>-->
@@ -456,37 +313,6 @@
     </DD_Value_Domain>
   </DD_Attribute>
 
-  <!-- 20151021: Per C.Isbell - removed 'cart.horizontal_datum_name'
-  <DD_Attribute>
-    <name>horizontal_datum_name</name>
-    <version_id>1.0</version_id>
-    <local_identifier>cart.horizontal_datum_name</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Elizabeth D. Rye</submitter_name>
-    <definition>The horizontal_datum_name attribute provides the
-      identification given to reference system used for defining the
-      coordinates of points.</definition>
-    <comment>Needs additional standard values for other planets.</comment>
-    <DD_Value_Domain>
-      <enumeration_flag>true</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
-      <DD_Permissible_Value>
-        <value>North American Datum of 1927</value>
-        <value_meaning>TBD</value_meaning>
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>North American Datum of 1983</value>
-        <value_meaning>TBD</value_meaning>
-      </DD_Permissible_Value>
-    </DD_Value_Domain>
-  </DD_Attribute>
-  -->
-  
-  <!-- 20151021: Per C.Isbell - renamed 'ellipsoid_name' to 'spheroid_name'
-       20160816: C.Isbell, removed Earth names (inserted "TBD" names per pending planetary use)
-       20161018: C.Isbell, actually, then removed enumeration. Made optional.
-  -->
   <DD_Attribute>
     <name>spheroid_name</name>
     <version_id>1.0</version_id>
@@ -506,7 +332,6 @@
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
-      <!-- removed permissible value enumeration, see C.Isbell prev version -->
     </DD_Value_Domain>
   </DD_Attribute>
 
@@ -541,7 +366,8 @@
       of a target body. The b_axis_radius is usually in the equatorial
       plane. The IAU calls this axis "along orbit equatorial radius". Mapping
 	    applications, which generally only define a sphere or an ellipse, do not
-	    support this radius parameter.</definition>
+	    support this radius parameter and this can be set to the same radius value
+      as the a_axis_radius</definition>
     <comment>In PDS3 this was named B_AXIS_RADIUS.</comment>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -590,7 +416,8 @@
       is used for planetographic systems and Positive East is used for 
       planetocentric systems. If the data is defined with Spatial_Domain in a manner
       not recommended by the IAU, there is a optional Secondary_Spatial_Domain section
-      to define a second set of bounding coordinates.</definition>
+      to define a second set of bounding coordinates such that both Positive East and
+      Positive West bounding coordinates can be provided.</definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -667,7 +494,6 @@
     </DD_Value_Domain>
   </DD_Attribute>
 
-  <!-- 20151021: Per C.Isbell - added 'cart.latitude_type' -->
   <DD_Attribute>
     <name>latitude_type</name>
     <version_id>1.0</version_id>
@@ -708,13 +534,20 @@
   
   <DD_Attribute>
     <name>latitude_resolution</name>
-    <version_id>1.0</version_id>
+    <version_id>1.1</version_id>
     <local_identifier>latitude_resolution</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Elizabeth D. Rye</submitter_name>
-    <definition>The latitude_resolution attribute indicates the minimum
+    <definition>Latitude is the angular distance north or south from the equator.
+      The latitude_resolution attribute indicates the minimum
       difference between two adjacent latitude values expressed in angular
-      units of measure.</definition>
+      units of measure. For raster data, the value is normally the pixel 
+      size in angular units (currently degrees). For vector data (points, lines, 
+      polygons), it is a little less concrete and usually indicates the fuzzy 
+      tolerance or clustering/streaming setting that establishes the minimum 
+      distance at which two points will NOT be automatically merged during data 
+      collection. This should also be reported in angular units (currently degrees).
+    </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -726,13 +559,20 @@
 
   <DD_Attribute>
     <name>longitude_resolution</name>
-    <version_id>1.0</version_id>
+    <version_id>1.1</version_id>
     <local_identifier>longitude_resolution</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Elizabeth D. Rye</submitter_name>
-    <definition>The longitude_resolution attribute indicates the minimum
-      difference between two adjacent longitude values expressed in angular
-      units of measure.</definition>
+    <definition>Longitude is the angular distance east or west from the defined 
+      central or prime meridian. The longitude_resolution attribute indicates the 
+      minimum difference between two adjacent latitude values expressed in angular
+      units of measure. For raster data, the value is normally the pixel 
+      size in angular units (currently degrees). For vector data (points, lines, 
+      polygons), it is a little less concrete and usually indicates the fuzzy 
+      tolerance or clustering/streaming setting that establishes the minimum 
+      distance at which two points will NOT be automatically merged during data 
+      collection. This should also be reported in angular units (currently degrees).
+    </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -945,7 +785,7 @@
           meridians and concentric circles for parallels. The parallels are spaced at increasingly 
           wide distances the farther the latitude is from the pole. Note, if you do supply the optional
           attribute scale_factor_at_projection_origin, the default scale (+k_0) for planetary polar 
-          data will mostly likely be set to 1.0.
+          data should be set to 1.0.
         </value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
@@ -956,15 +796,15 @@
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Robinson</value>
-        <value_meaning>Also called orthophanic, Robinson is a compromise projection used for global 
-          maps. Meridians are equally spaced and resemble elliptical arcs, concave toward the central 
-          meridian. The poles are 0.53 times the length of the equator.</value_meaning>
+        <value_meaning>Classified as a pseudocylindrical projecton. Generally this projection
+          is used for global maps. The projection is a compromise and is neither equal-area nor 
+          conformal. The meridians are gently curved leaving the poles fairly distored.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Sinusoidal</value>
         <value_meaning>Projection is mathematically based on a cylinder tangent on the equator. 
           Meridian spacing is equal and decreases toward the poles. Parallel spacing is equal. 
-          There is no angular deformation along the central meridian and the equator. Cannot be 
+          There is no angular deformation along the central meridian and the equator. Regional maps cannot be 
           edge-joined in an east-west direction if each map has its own central meridian.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
@@ -986,8 +826,8 @@
         <value_meaning>Projection is mathematically based on a cylinder tangent to a meridian. 
           Shape is true only within any small area. Areal enlargement increases away from the 
           tangent meridian. Reasonably accurate projection within a 15 degree band along the line of 
-          tangency. Cannot be edge-joined in an east-west direction if each map has its own 
-          central meridian.</value_meaning>
+          tangency. Regional maps cannot be edge-joined in an east-west direction if each map has 
+          its own central meridian.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>van der Grinten</value>
@@ -1005,7 +845,9 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Elizabeth D. Rye</submitter_name>
     <definition>The grid_coordinate_system_name attribute provides the name
-      of the grid coordinate system.</definition>
+      of the grid coordinate system. These are currently defining Earth-centric gridded
+      systems and remain incase they are used for PDS archives or grid systems are
+      implemented for non-Earth bodies.</definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -1095,47 +937,6 @@
     </DD_Value_Domain>
   </DD_Attribute>
 
-  <!-- 20151021: Per C.Isbell - removed 'cart.abscissa_resolution'
-  <DD_Attribute>
-    <name>abscissa_resolution</name>
-    <version_id>1.0</version_id>
-    <local_identifier>cart.abscissa_resolution</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Elizabeth D. Rye</submitter_name>
-    <definition>The abscissa_resolution attribute provides the (nominal)
-      minimum distance between the "x" or column values of two adjacent
-      points.</definition>
-    <DD_Value_Domain>
-      <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Real</value_data_type>
-      <minimum_value>0.0</minimum_value>
-      <unit_of_measure_type>Units_of_Map_Scale</unit_of_measure_type>
-      <specified_unit_id>km/pixel</specified_unit_id>
-    </DD_Value_Domain>
-  </DD_Attribute>
-  -->
-  
-  <!-- 20151021: Per C.Isbell - removed 'cart.ordinate_resolution'
-  <DD_Attribute>
-    <name>ordinate_resolution</name>
-    <version_id>1.0</version_id>
-    <local_identifier>cart.ordinate_resolution</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Elizabeth D. Rye</submitter_name>
-    <definition>The ordinate_resolution attribute provides the (nominal)
-      minimum distance between the "y" or row values of two adjacent
-      points.</definition>
-    <DD_Value_Domain>
-      <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Real</value_data_type>
-      <minimum_value>0.0</minimum_value>
-      <unit_of_measure_type>Units_of_Map_Scale</unit_of_measure_type>
-      <specified_unit_id>km/pixel</specified_unit_id>
-    </DD_Value_Domain>
-  </DD_Attribute>
-  -->
-
-  <!-- 20151021: Per C.Isbell - added 'cart.pixel_resolution_x' -->
   <DD_Attribute>
     <name>pixel_resolution_x</name>
     <version_id>1.0</version_id>
@@ -1165,7 +966,6 @@
     </DD_Value_Domain>
   </DD_Attribute>
   
-  <!-- 20151021: Per C.Isbell - added 'cart.pixel_resolution_y' -->
   <DD_Attribute>
     <name>pixel_resolution_y</name>
     <version_id>1.0</version_id>
@@ -1195,7 +995,6 @@
     </DD_Value_Domain>
   </DD_Attribute>
 
-  <!-- 20151021: Per C.Isbell - added 'cart.pixel_scale_x' -->
   <DD_Attribute>
     <name>pixel_scale_x</name>
     <version_id>1.0</version_id>
@@ -1213,7 +1012,7 @@
         inclusion of both x and y attributes allows for anticipated products where
         scale may differ for each axis ('rectangular' pixels).
         
-        NOTE1: For presentation of hard-copy maps, a map scale is traditionally
+        NOTE 1: For presentation of hard-copy maps, a map scale is traditionally
         expressed as a 'representative fraction' (the ratio of a hard-copy map to the
         actual subject surface (e.g. 1:250,000, where one unit of measure on the map
         equals 250,000 of the same unit on the body surface)). This usage is relevant
@@ -1222,7 +1021,7 @@
         expressing a ratio between the image array and the actual surface (thus,
         pixel/degree or pixel/distance units).
         
-        NOTE2: Definition of this PDS4 attribute differs from how 'scale' was defined within PDS3
+        NOTE 2: Definition of this PDS4 attribute differs from how 'scale' was defined within PDS3
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -1231,11 +1030,9 @@
       <!--<unit_of_measure_type>Units_of_Pixel_Scale_Map</unit_of_measure_type>-->
       <unit_of_measure_type>Units_of_Map_Scale</unit_of_measure_type>
       <specified_unit_id>pixel/deg</specified_unit_id>
-      
     </DD_Value_Domain>
   </DD_Attribute>
 
-  <!-- 20151021: Per C.Isbell - added 'cart.pixel_scale_y' -->
   <DD_Attribute>
     <name>pixel_scale_y</name>
     <version_id>1.0</version_id>
@@ -1273,30 +1070,6 @@
       <specified_unit_id>pixel/deg</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
-  
-  <!--DD_Attribute>
-    <name>pixel_resolution</name>
-    <version_id>1.0</version_id>
-    <local_identifier>pixel_resolution</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Jordan Padams</submitter_name>
-    <definition>
-      The pixel_resolution attribute indicate the image
-      array pixel resolution (distance/pixel or degree/pixel) relative to the
-      referenced coordinate system as defined by the map projection. This attribute should be used in 
-      lieu of pixel_resolution_x and pixel_resolution_y when the pixel resolution is not  x/y aligned.
-      i.e. a radial pixel resolution.
-      
-      NOTE: Definition of this PDS4 attribute differs from how 'resolution' was defined within PDS3
-    </definition>
-    <DD_Value_Domain>
-      <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Real</value_data_type>
-      <minimum_value>0.0</minimum_value>
-      <unit_of_measure_type>Units_of_Map_Scale</unit_of_measure_type>
-      <specified_unit_id>pixel/deg</specified_unit_id>
-    </DD_Value_Domain>
-  </DD_Attribute-->
   
   <DD_Attribute>
     <name>pixel_scale</name>
@@ -1428,19 +1201,6 @@
     </DD_Value_Domain>
   </DD_Attribute>
 
-<!-- 20160816: C.Isbell , remove standard_parallel and replace with standard_parallel_1
-                          Add standard_parallel_2 -->
-<!--
-  <DD_Attribute>
-    <name>standard_parallel</name>
-    <version_id>1.0</version_id>
-    <local_identifier>cart.standard_parallel</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Elizabeth D. Rye</submitter_name>
-    <definition>The standard_parallel attribute defines the line of
-      constant latitude at which the surface of the planet and the plane or
-      developable surface intersect.</definition>
--->
   <DD_Attribute>
     <name>standard_parallel_1</name>
     <version_id>1.0</version_id>
@@ -1522,42 +1282,6 @@
       <specified_unit_id>deg</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
-
-  <!--DD_Attribute>
-    <name>scale_factor_at_center_line</name>
-    <version_id>1.0</version_id>
-    <local_identifier>scale_factor_at_center_line</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Elizabeth D. Rye</submitter_name>
-    <definition>The scale_factor_at_center_line attribute provides a
-      multiplier for reducing a distance obtained from a map by computation
-      or scaling to the actual distance along the center line.</definition>
-    <DD_Value_Domain>
-      <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Real</value_data_type>
-      <minimum_value>0.0</minimum_value>
-      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
-    </DD_Value_Domain>
-  </DD_Attribute-->
-
-  <!--DD_Attribute>, removed, just use longitude_of_central_meridian
-    <name>straight_vertical_longitude_from_pole</name>
-    <version_id>1.0</version_id>
-    <local_identifier>straight_vertical_longitude_from_pole</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Elizabeth D. Rye</submitter_name>
-    <definition>The straight_vertical_longitude_from_pole attribute
-      provides the longitude oriented straight up from the North or South
-      Pole.</definition>
-    <DD_Value_Domain>
-      <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Real</value_data_type>
-      <minimum_value>-180.0</minimum_value>
-      <maximum_value>360.0</maximum_value>
-      <unit_of_measure_type>Units_of_Angle</unit_of_measure_type>
-      <specified_unit_id>deg</specified_unit_id>
-    </DD_Value_Domain>
-  </DD_Attribute-->
 
   <DD_Attribute>
     <name>scale_factor_at_central_meridian</name>
@@ -1781,7 +1505,7 @@
     </DD_Value_Domain>
   </DD_Attribute>
   
-  <!-- Map_Projection_Rings, added THare 20190909 -->
+  <!-- Map_Projection_Rings -->
   <DD_Attribute>
     <name>rings_map_projection_name</name>
     <version_id>1.0</version_id>
@@ -1968,7 +1692,7 @@
       <value_data_type>ASCII_Real</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
-  <!-- Base Vector attributed END -->
+  <!-- Base Vector attributes END -->
   
   <DD_Attribute>
     <name>x_axis_minimum</name>
@@ -2276,7 +2000,7 @@
   </DD_Attribute>
   <!-- Map_Projection_Lander attributes END -->
 
-  <!-- P Geissler edits: attributes of Oblique Cylindrical projection -->
+  <!-- added attributes of Oblique Cylindrical projection -->
   <!-- CENTER_LATITUDE  maps to latitude_of_projection_origin -->
   <!-- CENTER_LONGITUDE maps to longitude_of_central_meridian -->
   <DD_Attribute>
@@ -2498,7 +2222,7 @@
     </DD_Value_Domain>
   </DD_Attribute>
 
-  <!-- Map_Projection_Rings attributes START, THare Sep. 2019 -->
+  <!-- Map_Projection_Rings attributes START -->
   <!-- definitions (although brief) from Cassini Composite Infrared Spectrometer (CIRS) SIS,
         Version 1.1, Relevant to PDS v3.2, December 22, 2015. filename CUBESIS.PDF -->
   <DD_Attribute>
@@ -2735,7 +2459,10 @@
     <local_identifier>Spatial_Domain</local_identifier>
     <submitter_name>Elizabeth D. Rye</submitter_name>
     <definition>The Spatial_Domain class describes the geographic areal
-      domain of the data set.
+      domain of the data set. This is the primary domain for the defined
+      data. Both west and east coordinates can be defined within this class. 
+      A secondary spatial domain class has also been created, if there is a need to
+      provide bounding coordinates historically used for a body (e.g., west longitude).
     </definition>
     <DD_Association>
       <identifier_reference>Bounding_Coordinates</identifier_reference>
@@ -2899,36 +2626,18 @@
     <local_identifier>Geodetic_Model</local_identifier>
     <submitter_name>Elizabeth D. Rye</submitter_name>
     <definition>The Geodetic_Model class provides parameters describing the shape of the planet.</definition>
-    <!-- 20151021: Per C.Isbell - added 'cart.latitude_type' -->
     <DD_Association>
       <identifier_reference>latitude_type</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
-    <!-- 20151021: Per C.Isbell - removed 'cart.horizontal_datum_name'
-    <DD_Association>
-      <identifier_reference>cart.horizontal_datum_name</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    -->
-    <!-- 20151021: Per C.Isbell - renamed 'ellipsoid_name' to 'spheroid_name', optional -->
     <DD_Association>
       <identifier_reference>spheroid_name</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
-    <!-- 20151021: Per C.Isbell - removed 'cart.reference_frame_name'
-    <DD_Association>
-      <identifier_reference>cart.reference_frame_name</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    -->
     <DD_Association>
       <identifier_reference>a_axis_radius</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -2986,13 +2695,13 @@
     <DD_Association>
       <identifier_reference>latitude_resolution</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>longitude_resolution</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <Terminological_Entry>
@@ -3143,7 +2852,9 @@
       <identifier_reference>Point_Perspective</identifier_reference>
       <identifier_reference>Polar_Stereographic</identifier_reference>
       <identifier_reference>Polyconic</identifier_reference>
+      <identifier_reference>Robinson</identifier_reference>
       <identifier_reference>Sinusoidal</identifier_reference>
+      <identifier_reference>Stereographic</identifier_reference>
       <identifier_reference>Transverse_Mercator</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
@@ -3176,21 +2887,12 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
+      <identifier_reference>XSChoice#</identifier_reference>
       <identifier_reference>Universal_Transverse_Mercator</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
       <identifier_reference>Universal_Polar_Stereographic</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
       <identifier_reference>State_Plane_Coordinate_System</identifier_reference>
       <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <Terminological_Entry>
@@ -3246,26 +2948,6 @@
       perpendicular reference axes (the "coordinate pair" and "row and
       column" methods).
     </definition>
-
-    <!-- 20151021: Per C.Isbell - removed 'cart.abscissa_resolution' , name changed to pixel_resolution_x 
-    <DD_Association>
-      <identifier_reference>cart.abscissa_resolution</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    -->
-    <!-- 20151021: Per C.Isbell - removed 'cart.ordinate_resolution', name changed to pixel_resolution_y
-    <DD_Association>
-      <identifier_reference>cart.ordinate_resolution</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    -->
-
-    <!-- 20151021: Per C.Isbell - added 'cart.pixel_resolution_x' -->
-    <!-- 20151022: Per C.Isbell - Both pixel_resolution_x|y and pixel_scale_x|y pairs must be present within a cartographic label -->
     <!-- 20190222: Per T.Hare - pixel_resolution_x|y and pixel_scale_x|y pairs are only madatory if Planar_Coordinate_Information is present-->
     <DD_Association>
       <identifier_reference>pixel_resolution_x</identifier_reference>
@@ -3273,23 +2955,18 @@
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
-
-    <!-- 20151021: Per C.Isbell - added 'cart.pixel_resolution_y' -->
     <DD_Association>
       <identifier_reference>pixel_resolution_y</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
-
-    <!-- 20151021: Per C.Isbell - added 'cart.pixel_scale_x' -->
     <DD_Association>
       <identifier_reference>pixel_scale_x</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
-    <!-- 20151021: Per C.Isbell - added 'cart.pixel_scale_y' -->
     <DD_Association>
       <identifier_reference>pixel_scale_y</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -3346,6 +3023,7 @@
       and reverse:
       lambda = (x / R cos(phi_1)) + lambda_0
       phi = (y / R) + phi_1
+      
       where:
       lambda is the longitude of the location to project on the body;
       phi is the latitude of the location to project on the body;
@@ -3534,10 +3212,11 @@
 
   <DD_Class>
     <name>Orthographic</name>
-    <version_id>1.0</version_id>
+    <version_id>1.1</version_id>
     <local_identifier>Orthographic</local_identifier>
     <submitter_name>Trent Hare</submitter_name>
     <definition>The Orthographic class contains parameters for the Orthographic projection.
+      While required, some applications will default to 0.0 if not definied. Here we want to explicit.
       Synder 1987, DOI:10.3133/pp1395, page 145: https://pubs.usgs.gov/pp/1395/report.pdf#page=157
       PROJ: https://proj.org/operations/projections/ortho.html
     </definition>
@@ -3550,7 +3229,7 @@
     <DD_Association>
       <identifier_reference>latitude_of_projection_origin</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
@@ -3660,13 +3339,31 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
-  
+
+  <DD_Class>
+    <name>Robinson</name>
+    <version_id>1.0</version_id>
+    <local_identifier>Robinson</local_identifier>
+    <submitter_name>Trent Hare</submitter_name>
+    <definition>The Robinson class contains parameters for the Pseudocylindrical Robinson projection.
+      longitude_of_central_meridian is required (most will simply use 0.0).
+      PROJ: https://proj.org/operations/projections/robin.html
+    </definition>
+    <DD_Association>
+      <identifier_reference>longitude_of_central_meridian</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+
   <DD_Class>
     <name>Sinusoidal</name>
     <version_id>1.0</version_id>
     <local_identifier>Sinusoidal</local_identifier>
     <submitter_name>Elizabeth D. Rye</submitter_name>
     <definition>The Sinusoidal class contains parameters for the Sinusoidal projection.
+      latitude_of_projection_origin is optional, although most implementations will simply use 0.0.
       Synder 1987, DOI:10.3133/pp1395, page 243: https://pubs.usgs.gov/pp/1395/report.pdf#page=255
       PROJ: https://proj.org/operations/projections/sinu.html
     </definition>
@@ -3683,7 +3380,48 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
-  
+
+  <DD_Class>
+    <name>Stereographic</name>
+    <version_id>1.0</version_id>
+    <local_identifier>Stereographic</local_identifier>
+    <submitter_name>Trent Hare</submitter_name>
+    <definition>The Stereographic class contains parameters Stereographic projection. While this
+      can be used for polar regions (generally where latitude_of_projection_origin = +-90), it
+      is more appropriate to use the Polar_Stereographic class (should be identical in use).
+      Synder 1987, DOI:10.3133/pp1395, page 154: https://pubs.usgs.gov/pp/1395/report.pdf#page=166
+      PROJ: https://proj.org/operations/projections/stere.html
+      
+      Note that most applications will either define latitude_of_projection_origin 
+      or scale_factor_at_projection_origin, but not both. Here we define latitude_of_projection_origin
+      as mandatory and have made scale_factor_at_projection_origin optional. 
+      For context, these two keywords have the same impact on the final product but are just different 
+      ways to define it. Thus, for example in the PROJ library, if both are made available, the
+      latitude_of_projection_origin (+lat_ts) will be used instead of 
+      scale_factor_at_projection_origin (+k_0). Note, if you do supply the optional attribute 
+      scale_factor_at_projection_origin, the default scale (+k_0) for planetary polar 
+      data will mostly likely be set to 1.0 in software.
+    </definition>
+    <DD_Association>
+      <identifier_reference>longitude_of_central_meridian</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>latitude_of_projection_origin</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>scale_factor_at_projection_origin</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+
   <DD_Class>
     <name>Transverse_Mercator</name>
     <version_id>1.0</version_id>
@@ -3973,7 +3711,6 @@
     </Terminological_Entry>
   </DD_Class>
 
-  <!-- jpadams START -->
   <DD_Class>
     <name>Map_Projection_Lander</name>
     <version_id>1.0</version_id>
@@ -5075,13 +4812,13 @@
     <DD_Association>
       <identifier_reference>upperleft_corner_x</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>upperleft_corner_y</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
