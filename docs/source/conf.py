@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Cartopgraphy Namespace'
+project = 'Cartography Namespace'
 # copyright = overidden by CSS specified below
 author = 'NASA Planetary Data System'
 
