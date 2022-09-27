@@ -1,9 +1,20 @@
 # Changelog
 
+## 1.9.7.0
+- THare 20220927
+- Removed extraneous validation, since it is already checked for using schema XSChoice rules.
+- Update lat/longitude_resolution to optional under the Geographic class. This continues to cause issues for vector files which don't have a resolution as needed by an image.
+- Add new geographic_description such that Geographic coordinate class can be described for a vector-based file. Keeping it optional to maintain backwards compatibility.
+- Add new Infinity enumeration to surface_model_type. No class currently needed for an infinite surface.
+- Updates based on DMSP:
+  - See https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/228 for several clarifications for attributes including updating min/max values, adding specified_unit_id, etc.
+  - Update to pixel_scale, pixel_scale_x, pixel_scale_y, to remove deprecated use of Units_of_Map_Scale for Units_of_Pixel_Scale_Map which removes to use of pixel/deg in favor of deg/pixel (distance/pixel). 
+
+
 ## 1.9.6.0
 - THare 20220224
-- update attribute local_time_scale to Units_of_Pixel_Resolution_Angular for RMS
-- update to GEOM 1G00_1950
+- Update attribute local_time_scale to Units_of_Pixel_Resolution_Angular for RMS
+- Update to GEOM 1G00_1950
 - Updates based on DMSP meeting comments:
   - Changed grid coordinate to XSChoice
   - update latitude_of_projection_origin to be mandatory for Orthographic.
