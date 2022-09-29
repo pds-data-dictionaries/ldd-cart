@@ -1,9 +1,9 @@
 
->>  INFO LDDTOOL Version: 10.0.0
->>  INFO IM Version Id: 1.17.0.0
+>>  INFO LDDTOOL Version: 14.1.0
+>>  INFO IM Version Id: 1.15.0.0
 >>  INFO IM Namespace Id: pds
->>  INFO IM Label Version Id: 1.23
->>  INFO Date: Tue Sep 27 21:17:13 UTC 2022
+>>  INFO IM Label Version Id: 1.21
+>>  INFO Date: Thu Sep 29 00:08:40 UTC 2022
 >>  INFO PARENT_DIR: /tmp/lddtool-14.1.0
 >>  INFO SCRIPT_DIR: /tmp/lddtool-14.1.0/bin
 >>  INFO LIB_DIR: /tmp/lddtool-14.1.0/lib
@@ -396,7 +396,7 @@
 >>> INFO Attribute: <latitude_of_projection_origin> - The default minimum value provided by the attribute's data type is being overridden with -90.0
 >>> INFO Attribute: <latitude_of_projection_origin> - The default maximum value provided by the attribute's data type is being overridden with 90.0
 >>> INFO Attribute: <scale_factor_at_central_meridian> - The default minimum value provided by the attribute's data type is being overridden with 0.0
->>> INFO Attribute: <utm_zone_number> - The default minimum value provided by the attribute's data type is being overridden with -60
+>>> INFO Attribute: <utm_zone_number> - The default minimum value provided by the attribute's data type is being overridden with 1
 >>> INFO Attribute: <utm_zone_number> - The default maximum value provided by the attribute's data type is being overridden with 60
 >>> INFO Attribute: <spcs_zone_identifier> - The default minimum characters provided by the attribute's data type is being overridden with 4
 >>> INFO Attribute: <spcs_zone_identifier> - The default maximum characters provided by the attribute's data type is being overridden with 4
@@ -448,6 +448,7 @@
 >>> INFO Attribute: <data_count> - The default minimum value provided by the attribute's data type is being overridden with 1
 >>> INFO Attribute: <angular_scale> - The default minimum value provided by the attribute's data type is being overridden with 0.0
 >>> INFO Attribute: <radial_scale> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <local_time_scale> - The default minimum value provided by the attribute's data type is being overridden with 0.0
 >>> INFO Attribute: <north_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
 >>> INFO Attribute: <north_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
 >>> INFO Attribute: <east_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
@@ -827,7 +828,7 @@
 >>> INFO Attribute: <latitude_of_projection_origin> - The default minimum value provided by the attribute's data type is being overridden with -90.0
 >>> INFO Attribute: <latitude_of_projection_origin> - The default maximum value provided by the attribute's data type is being overridden with 90.0
 >>> INFO Attribute: <scale_factor_at_central_meridian> - The default minimum value provided by the attribute's data type is being overridden with 0.0
->>> INFO Attribute: <utm_zone_number> - The default minimum value provided by the attribute's data type is being overridden with -60
+>>> INFO Attribute: <utm_zone_number> - The default minimum value provided by the attribute's data type is being overridden with 1
 >>> INFO Attribute: <utm_zone_number> - The default maximum value provided by the attribute's data type is being overridden with 60
 >>> INFO Attribute: <spcs_zone_identifier> - The default minimum characters provided by the attribute's data type is being overridden with 4
 >>> INFO Attribute: <spcs_zone_identifier> - The default maximum characters provided by the attribute's data type is being overridden with 4
@@ -879,6 +880,7 @@
 >>> INFO Attribute: <data_count> - The default minimum value provided by the attribute's data type is being overridden with 1
 >>> INFO Attribute: <angular_scale> - The default minimum value provided by the attribute's data type is being overridden with 0.0
 >>> INFO Attribute: <radial_scale> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <local_time_scale> - The default minimum value provided by the attribute's data type is being overridden with 0.0
 >>> INFO Attribute: <north_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
 >>> INFO Attribute: <north_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
 >>> INFO Attribute: <east_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
@@ -1258,7 +1260,7 @@
 >>> INFO Attribute: <latitude_of_projection_origin> - The default minimum value provided by the attribute's data type is being overridden with -90.0
 >>> INFO Attribute: <latitude_of_projection_origin> - The default maximum value provided by the attribute's data type is being overridden with 90.0
 >>> INFO Attribute: <scale_factor_at_central_meridian> - The default minimum value provided by the attribute's data type is being overridden with 0.0
->>> INFO Attribute: <utm_zone_number> - The default minimum value provided by the attribute's data type is being overridden with -60
+>>> INFO Attribute: <utm_zone_number> - The default minimum value provided by the attribute's data type is being overridden with 1
 >>> INFO Attribute: <utm_zone_number> - The default maximum value provided by the attribute's data type is being overridden with 60
 >>> INFO Attribute: <spcs_zone_identifier> - The default minimum characters provided by the attribute's data type is being overridden with 4
 >>> INFO Attribute: <spcs_zone_identifier> - The default maximum characters provided by the attribute's data type is being overridden with 4
@@ -1310,6 +1312,10 @@
 >>> INFO Attribute: <data_count> - The default minimum value provided by the attribute's data type is being overridden with 1
 >>> INFO Attribute: <angular_scale> - The default minimum value provided by the attribute's data type is being overridden with 0.0
 >>> INFO Attribute: <radial_scale> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <local_time_scale> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> WARNING Attribute: <x_length> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <y_length> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <z_length> - This local attribute was not used in an Association.
 >>> WARNING Class: <Body_Identification_Base> - The class name is duplicated in this local data dictionary.
 >>> WARNING Class: <Frame_Identification_Base> - The class name is duplicated in this local data dictionary.
 >>> WARNING Class: <Central_Body_Identification> - The class name is duplicated in this local data dictionary.
@@ -1459,7 +1465,6 @@
 >>> WARNING Class: <Geometry_Lander> - The class name is duplicated in this local data dictionary.
 >>> WARNING Class: <Geometry> - The class name is duplicated in this local data dictionary.
 >>> WARNING Class: <Vector_Cartesian_Position_Base> - The class name is duplicated in this local data dictionary.
->>> WARNING Class: <Vector_Cartesian_No_Units> - The class name is duplicated in this local data dictionary.
 >>> WARNING Attribute: <geometry_reference_time_utc> - The attribute name is duplicated in this local data dictionary.
 >>> WARNING Attribute: <geometry_reference_time_tdb> - The attribute name is duplicated in this local data dictionary.
 >>> WARNING Attribute: <geometry_start_time_utc> - The attribute name is duplicated in this local data dictionary.
@@ -1707,13 +1712,13 @@
 >>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
 
  -- LDDTool Execution Summary --
-     395 warning(s)
+     397 warning(s)
      0 error(s)
      0 fatal error(s)
 
 Input:
 
-     - IM Version: 1H00
+     - IM Version: 1F00
      - PDS4 Flag: true
      - LDD Flag: true
      - IM Version: true
@@ -1723,9 +1728,9 @@ Input:
 
 Output:
 
-     - ./PDS4_CART_1H00_1960.xsd
-     - ./PDS4_CART_1H00_1960.sch
-     - ./PDS4_CART_1H00_1960.xml
-     - ./PDS4_CART_1H00_1960.JSON
+     - ./PDS4_CART_1F00_1960.xsd
+     - ./PDS4_CART_1F00_1960.sch
+     - ./PDS4_CART_1F00_1960.xml
+     - ./PDS4_CART_1F00_1960.JSON
 
 >>  INFO Exit(0)
