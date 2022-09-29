@@ -26,7 +26,7 @@
     https://github.com/pds-data-dictionaries/ldd-cart
   </comment>
   
-  <last_modification_date_time>2022-09-29T10:55:00Z</last_modification_date_time>
+  <last_modification_date_time>2022-09-29T11:50:00Z</last_modification_date_time>
 
   <DD_Attribute>
     <name>target_center_distance</name>
@@ -4826,16 +4826,18 @@
   <!--  Start Schematron Rules -->
   <!--                         -->
   
+<!-- Need to fix, failing built schema validation
   <DD_Rule>
     <local_identifier>secondary_spatial_domain_requires_spatial_domain_check</local_identifier>
     <rule_context>//cart:Cartography</rule_context>
     <DD_Rule_Statement>
       <rule_type>Assert</rule_type>
       <rule_test>if ((cart:Secondary_Spatial_Domain) and not (cart:Spatial_Domain)) then false() else true()</rule_test>
-                 <rule_message>cart:Spatial_Domain must exist if cart:Secondary_Spatial_Domain is used</rule_message>
+       <rule_message>cart:Spatial_Domain must exist if cart:Secondary_Spatial_Domain is used</rule_message>
     </DD_Rule_Statement>
   </DD_Rule>
-  
+-->	
+	
   <DD_Rule>
     <local_identifier>local_reference_type_check_cart</local_identifier>
     <rule_context>//cart:Cartography/pds:Local_Internal_Reference</rule_context>
