@@ -1320,7 +1320,10 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Elizabeth D. Rye</submitter_name>
     <definition>The ups_zone_identifier attribute provides an identifier
-      for the Universal Polar Stereographic (UPS) zone. For chart see: https://pubs.usgs.gov/pp/1395/report.pdf#page=74</definition>
+      for the Universal Polar Stereographic (UPS) zone. 
+      For chart see: Synder 1987, DOI:10.3133/pp1395, page 62. 
+      https://pubs.usgs.gov/pp/1395/report.pdf#page=74 
+    </definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -4826,17 +4829,15 @@
   <!--  Start Schematron Rules -->
   <!--                         -->
   
-<!-- Need to fix, failing built schema validation
   <DD_Rule>
     <local_identifier>secondary_spatial_domain_requires_spatial_domain_check</local_identifier>
     <rule_context>//cart:Cartography</rule_context>
     <DD_Rule_Statement>
       <rule_type>Assert</rule_type>
       <rule_test>if ((cart:Secondary_Spatial_Domain) and not (cart:Spatial_Domain)) then false() else true()</rule_test>
-       <rule_message>cart:Spatial_Domain must exist if cart:Secondary_Spatial_Domain is used</rule_message>
+      <rule_message>cart:Spatial_Domain must exist if cart:Secondary_Spatial_Domain is used</rule_message>
     </DD_Rule_Statement>
   </DD_Rule>
--->	
 	
   <DD_Rule>
     <local_identifier>local_reference_type_check_cart</local_identifier>
