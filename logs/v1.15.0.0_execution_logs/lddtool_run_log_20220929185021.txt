@@ -1,9 +1,9 @@
 
->>  INFO LDDTOOL Version: 10.0.0
->>  INFO IM Version Id: 1.17.0.0
+>>  INFO LDDTOOL Version: 14.1.0
+>>  INFO IM Version Id: 1.15.0.0
 >>  INFO IM Namespace Id: pds
->>  INFO IM Label Version Id: 1.23
->>  INFO Date: Thu Sep 29 17:57:32 UTC 2022
+>>  INFO IM Label Version Id: 1.21
+>>  INFO Date: Thu Sep 29 18:50:22 UTC 2022
 >>  INFO PARENT_DIR: /tmp/lddtool-14.1.0
 >>  INFO SCRIPT_DIR: /tmp/lddtool-14.1.0/bin
 >>  INFO LIB_DIR: /tmp/lddtool-14.1.0/lib
@@ -1718,7 +1718,7 @@
 
 Input:
 
-     - IM Version: 1H00
+     - IM Version: 1F00
      - PDS4 Flag: true
      - LDD Flag: true
      - IM Version: true
@@ -1728,9 +1728,9 @@ Input:
 
 Output:
 
-     - ./PDS4_CART_1H00_1970.xsd
-     - ./PDS4_CART_1H00_1970.sch
-     - ./PDS4_CART_1H00_1970.xml
-     - ./PDS4_CART_1H00_1970.JSON
+     - ./PDS4_CART_1F00_1970.xsd
+     - ./PDS4_CART_1F00_1970.sch
+     - ./PDS4_CART_1F00_1970.xml
+     - ./PDS4_CART_1F00_1970.JSON
 
 >>  INFO Exit(0)

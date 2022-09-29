@@ -1,12 +1,14 @@
 
->>  INFO LDDTOOL Version: 10.0.0
->>  INFO IM Version Id: 1.16.0.0
+>>  INFO LDDTOOL Version: 14.1.0
+>>  INFO IM Version Id: 1.14.0.0
 >>  INFO IM Namespace Id: pds
->>  INFO IM Label Version Id: 1.22
->>  INFO Date: Thu Sep 29 17:57:27 UTC 2022
+>>  INFO IM Label Version Id: 1.20
+>>  INFO Date: Thu Sep 29 18:50:15 UTC 2022
 >>  INFO PARENT_DIR: /tmp/lddtool-14.1.0
 >>  INFO SCRIPT_DIR: /tmp/lddtool-14.1.0/bin
 >>  INFO LIB_DIR: /tmp/lddtool-14.1.0/lib
+>>  WARNING Class omitted from build - Class Identifier:0001_NASA_PDS_1.pds.Schematron_Rule
+>>  WARNING Class omitted from build - Class Identifier:0001_NASA_PDS_1.pds.Schematron_Assert
 
 >>> INFO Init:  - Config.Properties Namespace Id Found:geom
 >>> INFO Init:  - Config.Properties Namespace Id Using:geom
@@ -1712,13 +1714,13 @@
 >>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
 
  -- LDDTool Execution Summary --
-     397 warning(s)
+     399 warning(s)
      0 error(s)
      0 fatal error(s)
 
 Input:
 
-     - IM Version: 1G00
+     - IM Version: 1E00
      - PDS4 Flag: true
      - LDD Flag: true
      - IM Version: true
@@ -1728,9 +1730,9 @@ Input:
 
 Output:
 
-     - ./PDS4_CART_1G00_1970.xsd
-     - ./PDS4_CART_1G00_1970.sch
-     - ./PDS4_CART_1G00_1970.xml
-     - ./PDS4_CART_1G00_1970.JSON
+     - ./PDS4_CART_1E00_1970.xsd
+     - ./PDS4_CART_1E00_1970.sch
+     - ./PDS4_CART_1E00_1970.xml
+     - ./PDS4_CART_1E00_1970.JSON
 
 >>  INFO Exit(0)
