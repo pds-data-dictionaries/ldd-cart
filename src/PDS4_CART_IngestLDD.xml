@@ -35,8 +35,8 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Chris Isbell</submitter_name>
     <definition>
-      The target_center_distance attribute provides the distance to target center, 
-      in meters, relative to the observing system.
+      The target_center_distance attribute provides the distance to target center 
+      relative to the observing system. Recommended units is meters.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -55,8 +55,8 @@
     <submitter_name>Ronald Joyner</submitter_name>
     <definition>
       The upperleft_corner_x and upperleft_corner_y attributes provide the projection x and y values, 
-      in meters, relative to the map projection origin, at sample 0.5 and line 0.5 (upper left corner 
-      of pixel 1,1 within image array).
+      relative to the map projection origin, at sample 0.5 and line 0.5 (upper left corner 
+      of pixel 1,1 within image array). Recommended units is meters.
 
       (0.5,0.5) - upper left corner (edge) of pixel 1,1
       /
@@ -83,8 +83,8 @@
     <submitter_name>Ronald Joyner</submitter_name>
     <definition>
       The upperleft_corner_x and upperleft_corner_y attributes provide the projection x and y values, 
-      in meters, relative to the map projection origin, at sample 0.5 and line 0.5 (upper left corner 
-      of pixel 1,1 within image array).
+      relative to the map projection origin, at sample 0.5 and line 0.5 (upper left corner 
+      of pixel 1,1 within image array). Recommended units is meters.
       
       (0.5,0.5) - upper left corner (edge) of pixel 1,1
       /
@@ -340,7 +340,7 @@
     <submitter_name>Trent M. Hare</submitter_name>
     <definition>The a_axis_radius attribute provides the radius of the equatorial
       axis of the ellipsoid. The IAU calls this "Subplanetary equatorial radius" and
-	    mapping applications generally call this "semi_major_axis".
+	    mapping applications generally call this "semi_major_axis". Recommended units is meters or kilometers.
     </definition>
     <comment>In PDS3 this was named A_AXIS_RADIUS.</comment>
     <DD_Value_Domain>
@@ -362,9 +362,9 @@
       intermediate axis of the ellipsoid that defines the approximate shape
       of a target body. The b_axis_radius is usually in the equatorial
       plane. The IAU calls this axis "along orbit equatorial radius". Mapping
-	    applications, which generally only define a sphere or an ellipse, do not
-	    support this radius parameter and this can be set to the same radius value
-      as the a_axis_radius</definition>
+      applications, which generally only define a sphere or an ellipse, do not
+      support this radius parameter and this can be set to the same radius value
+      as the a_axis_radius. Recommended units is meters or kilometers.</definition>
     <comment>In PDS3 this was named B_AXIS_RADIUS.</comment>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -385,7 +385,7 @@
       polar axis of the ellipsoid that defines the approximate shape of
       a target body.  The c_axis_radius is normal to the plane defined by
       the a_axis_radius and b_axis_radius. The IAU calls this "polar radius".
-	  Mapping applications generally call this "semi_minor_axis"
+      Mapping applications generally call this "semi_minor_axis". Recommended units is meters or kilometers.
     </definition>
     <comment>In PDS3 this was named C_AXIS_RADIUS.</comment>
     <DD_Value_Domain>
@@ -399,12 +399,12 @@
 
   <DD_Attribute>
     <name>longitude_direction</name>
-    <version_id>1.0</version_id>
+    <version_id>1.1</version_id>
     <local_identifier>longitude_direction</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Elizabeth D. Rye</submitter_name>
     <definition>The longitude_direction attribute identifies the direction
-      of longitude (e.g. POSITIVE_EAST or POSITIVE_WEST) for a planet.	The
+      of longitude (e.g. Positive East or Positive West) for a planet.	The
       IAU definition for direction of positive longitude should be adopted: 
       http://astrogeology.usgs.gov/groups/IAU-WGCCRE. Typically, for planets 
       with prograde (direct) rotations, positive longitude direction is to 
@@ -421,7 +421,7 @@
       <DD_Permissible_Value>
         <value>Positive East</value>
         <value_meaning>Positive East longitudes (i.e., longitudes measured positively 
-        to the east) will be used when the bodies rotation is retrograde. Because 
+        to the east) will be used when the body's rotation is retrograde. Because 
         of tradition, the Earth, Sun, and Moon do not conform with this definition. 
         Their rotations are direct and longitudes run both east and west 180 degree, 
         or east 360 degree.</value_meaning>
@@ -437,7 +437,7 @@
 
   <DD_Attribute>
     <name>coordinate_system_type</name>
-    <version_id>1.0</version_id>
+    <version_id>1.1</version_id>
     <local_identifier>coordinate_system_type</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
@@ -468,7 +468,7 @@
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Inertial</value>
-        <value_meaning>an inertial coordinate system is fixed at some point in space.</value_meaning>
+        <value_meaning>An inertial coordinate system is fixed at some point in space.</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -697,8 +697,9 @@
           allow spherical body definitions. The meridians and parallels are all equidistant
           straight parallel lines, intersecting at right angles. If the Equator is made the
           standard parallel, true to scale and free of distortion, the meridians are spaced at 
-          the same distances as the  parallels, and the graticule appears square. This form is
-          often called the Plate Carree or the Simple Cylindrical projection.</value_meaning>
+          the same distances as the  parallels, and the graticule appears square. In this formation,
+          when the Equator is made the standard parallel, this projection is also known as 
+          Plate Carree or the Simple Cylindrical projection.</value_meaning>
       </DD_Permissible_Value>
       <!-- 20181218 T.Hare, removed since this appears to be related and possibly a subset of Point Perspective
       <DD_Permissible_Value>
@@ -765,7 +766,7 @@
       <DD_Permissible_Value>
         <value>Orthographic</value>
         <value_meaning>The Orthographic projection is geometrically based on a plane tangent 
-          to the earth, and the point of projection is at infinity. The body appears as it 
+          to the body, and the point of projection is at infinity. The body appears as it 
           would from outer space. This projection is a truly graphic representation of the body 
           and is a projection in which distortion becomes a visual aid. It is the most familiar 
           of the azimuthal map projections. Directions from the center of the Orthographic map 
@@ -800,9 +801,9 @@
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Robinson</value>
-        <value_meaning>Classified as a pseudocylindrical projecton. Generally this projection
+        <value_meaning>Classified as a pseudocylindrical projection. Generally this projection
           is used for global maps. The projection is a compromise and is neither equal-area nor 
-          conformal. The meridians are gently curved leaving the poles fairly distored.</value_meaning>
+          conformal. The meridians are gently curved leaving the poles fairly distorted.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Sinusoidal</value>
@@ -837,7 +838,7 @@
         <value>van der Grinten</value>
         <value_meaning>The projection has both areal and angular deformation. It was conceived 
           as a compromise between the Mercator and the Mollweide projection, which shows the world in
-          an ellipse. The Vander Grinten shows the world in a circle.</value_meaning>
+          an ellipse. The van der Grinten shows the world in a circle.</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -858,15 +859,15 @@
       <DD_Permissible_Value>
         <value>Universal Transverse Mercator</value>
         <value_meaning>The UTM is the ellipsoidal Transverse Mercator to which specific parameters, 
-          such as central meridians, have been applied. This is generally used for Earth. The Earth, 
-          between lats. 84 degrees North and 80 degrees South, is divided into 60 zones each generally 6 degrees wide in longitude. 
+          such as central meridians, have been applied. This is generally used for Earth. Latitudes 
+          between 84 degrees North and 80 degrees South is divided into 60 zones each generally 6 degrees wide in longitude. 
           Bounding meridians are evenly divisible by 6 degrees, and zones are numbered from 1 to 60 proceeding 
-          east from the 180th meridian from Greenwich with minor exceptions.</value_meaning>
+          east from the 180th meridian from the Prime Meridian (e.g., Greenwich) with minor exceptions.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Universal Polar Stereographic</value>
-        <value_meaning>Like Universal Transverse Mercator (UTM), UPS is a method to split up the Earth
-          into quads. When the latitude is from 84 degrees North and 80 degrees South to the respective poles, the (UPS) 
+        <value_meaning>Like Universal Transverse Mercator (UTM), UPS is a method used to generally split up the Earth
+          into quads. When the latitude is from 84 degrees North and 80 degrees South to the respective poles, the (UPS)
           projection is used.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
@@ -875,7 +876,7 @@
           System (SPCS) for States with predominant north-south extent. (The Lambert Conformal Conic 
           is used for the others, except for the panhandle of Alaska, which is prepared on the Oblique
           Mercator. Alaska, Florida, and New York use both the Transverse Mercator and the Lambert 
-          Conformal Conic for different zones.) Except for narrow States, such as Delaware, New Hampshire, 
+          Conformal Conic for different zones). Except for narrow States, such as Delaware, New Hampshire, 
           and New Jersey, all States using the Transverse Mercator are divided into two to eight zones, 
           each with its own central meridian, along which the scale is slightly reduced to balance
           the scale throughout the map. Each zone is designed to maintain scale distortion within 1 part 
@@ -884,27 +885,26 @@
       <DD_Permissible_Value>
         <value>State Plane Coordinate System 1983</value>
         <value_meaning>In the United States, it is the projection used in the State Plane Coordinate 
-          System (SPCS) for States with predominant north-south extent. (The Lambert Conformal Conic 
+          System (SPCS) for States with predominant north-south extent. The Lambert Conformal Conic 
           is used for the others, except for the panhandle of Alaska, which is prepared on the Oblique
           Mercator. Alaska, Florida, and New York use both the Transverse Mercator and the Lambert 
-          Conformal Conic for different zones.) Except for narrow States, such as Delaware, New Hampshire, 
+          Conformal Conic for different zones. Except for narrow States, such as Delaware, New Hampshire, 
           and New Jersey, all States using the Transverse Mercator are divided into two to eight zones, 
           each with its own central meridian, along which the scale is slightly reduced to balance
           the scale throughout the map. Each zone is designed to maintain scale distortion within 1 part 
-          in 10,000. 1983 refers to the use of the 1983 North American Datum (NAD83).</value_meaning>
+          in 10,000. In the name, 1983 refers to the use of the 1983 North American Datum (NAD83).</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>ARC Coordinate System</value>
-        <value_meaning>the Equal Arc-second Coordinate System, a plane-rectangular coordinate system 
-          established in Department of Defense, 1990.</value_meaning>
+        <value_meaning>The Equal Arc-second Coordinate System is a plane-rectangular coordinate system 
+          established by the Department of Defense in 1990.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Other Grid System</value>
-        <value_meaning>a complete description of a grid system, not defined elsewhere in this standard, 
-          that was used for the data set. The information provided shall include the name of the grid 
-          system, the names of the parameters and values used for the data set, and the citation of the 
-          specification for the algorithms that describe the mathematical relationship between the body 
-          and the coordinates of the grid system.</value_meaning>
+        <value_meaning>Allows for a grid system not defined elsewhere. The information provided should 
+          include the name of the grid system, the names of the parameters and values used for the 
+          data set, and the citation of the specification for the algorithms that describe the 
+          mathematical relationship between the body and the coordinates of the grid system.</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -1098,9 +1098,8 @@
     <local_identifier>distance_resolution</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Elizabeth D. Rye</submitter_name>
-    <definition>The distance_resolution attribute provides the minimum
-      distance measurable between two points, expressed in Planar Distance
-      Units of measure.</definition>
+    <definition>The distance_resolution attribute provides the minimum distance
+      measurable between two points expressed in Units_of_Pixel_Resolution_Map of measure.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -1178,7 +1177,7 @@
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Magnetic</value>
-        <value_meaning>A magnetic bearing is measured in relation to magnetic north on Earth.
+        <value_meaning>A magnetic bearing is measured in relation to magnetic north.
         </value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
@@ -1188,7 +1187,7 @@
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Geodetic</value>
-        <value_meaning>A geodectic bearing (or true bearing) is measured in relation to true 
+        <value_meaning>A geodetic bearing (or true bearing) is measured in relation to true 
           north via a great circle (or the shortest path connecting two points on the 
           surface of the body).</value_meaning>
       </DD_Permissible_Value>
@@ -1301,11 +1300,14 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Elizabeth D. Rye</submitter_name>
     <definition>The utm_zone_number attribute provides the identifier for
-      the Universal Transverse Mercator (UTM) zone.</definition>
+      the Universal Transverse Mercator (UTM) zone. For the Earth, UTM zones are defined
+      between 84 degrees north latitude and 80 degrees south latitude, is divided into 
+      60 zones each generally 6° wide in longitude. The zones are numbered from 1 to 60 
+      proceeding east from the 180th meridian from Greenwich with minor exceptions.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type>
-      <minimum_value>-60</minimum_value>
+      <minimum_value>1</minimum_value>
       <maximum_value>60</maximum_value>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
@@ -1318,26 +1320,26 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Elizabeth D. Rye</submitter_name>
     <definition>The ups_zone_identifier attribute provides an identifier
-      for the Universal Polar Stereographic (UPS) zone.</definition>
+      for the Universal Polar Stereographic (UPS) zone. For chart see: https://pubs.usgs.gov/pp/1395/report.pdf#page=74</definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
       <DD_Permissible_Value>
         <value>A</value>
-        <value_meaning>UPS Zone Identifier: A</value_meaning>
+        <value_meaning>UPS Zone Identifier: A, south pole from 0 - 180E</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>B</value>
-        <value_meaning>UPS Zone Identifier: B</value_meaning>
+        <value_meaning>UPS Zone Identifier: B, south pole from -180E - 0</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Y</value>
-        <value_meaning>UPS Zone Identifier: Y</value_meaning>
+        <value_meaning>UPS Zone Identifier: Y, north pole from -180E - 0</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Z</value>
-        <value_meaning>UPS Zone Identifier: Z</value_meaning>
+        <value_meaning>UPS Zone Identifier: Z, north pole from 0 - 180E</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -1367,7 +1369,7 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Elizabeth D. Rye</submitter_name>
     <definition>The azimuthal_angle attribute provides the angle measured
-      clockwise from north, and expressed in degrees.</definition>
+      clockwise from north, and expressed in the recommended units of degrees.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -1525,9 +1527,9 @@
           limit or if it intersects the primary body before intersecting the rings, the data
           will not be included.
           
-          Plotted coordinates are derived as follows. If A is the location of the intersection of
-          the CIRS field of view with the body's equatorial plane, the X coordinate is the distance
-          of A from the center of the body (e.g. Saturn), and the Y coordinate is the local time on
+          For Cassini CIRS (composite infrared spectrometer), the plotted coordinates are derived as follows. If A is 
+          the location of the intersection of CIRS field of view with the body's equatorial plane, the X coordinate is 
+          the distance of A from the center of the body (e.g. Saturn), and the Y coordinate is the local time on
           on the body at the intersection with the body's surface of the line between A and the body's
           center. Local time is expressed in fractional hours, from 0.0 (at midnight) to 12.0 
           (at noon), to 24.0 (at midnight).
@@ -1773,7 +1775,7 @@
     <definition>The start_azimuth specifies the angular distance from a fixed reference position at which an image or observation starts. Azimuth is 
       measured in a spherical coordinate system, in a plane normal to the principal axis. Azimuth values increase according to the right hand rule 
       relative to the positive direction of the principal axis of the spherical coordinate system. For lander map projections, this attribute specifies 
-      the azimuth of the left edge of the output map. Applies to Cylindrical and Cylindrical-Perspective lander map projections only.</definition>
+      the azimuth of the left edge of the output map. Applies to Cylindrical, Cylindrical_Perspective, and Perspective lander map projections only.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -1792,7 +1794,7 @@
     <definition>The stop_azimuth attribute specifies the angular distance from a fixed reference position at which an image or observation stops. 
       Azimuth is measured in a spherical coordinate system, in a plane normal to the principal axis. Azimuth values increase according to the 
       right hand rule relative to the positive direction of the principal axis of the spherical coordinate system. For lander map projections, 
-      this attribute specifies the azimuth of the right edge of the output map. Applies to Cylindrical and Cylindrical-Perspective lander map 
+      this attribute specifies the azimuth of the right edge of the output map. Applies to Cylindrical, Cylindrical_Perspective, and Perspective lander map 
       projections only.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -1868,7 +1870,7 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Jordan Padams</submitter_name>
     <definition>The sphere_radius attribute specifies the radius of the spherical body. In PDS3, this was specified using the  
-      SURFACE_NORMAL_VECTOR keyword.
+      SURFACE_NORMAL_VECTOR keyword. Recommended units is meters or kilometers.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -2016,7 +2018,7 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Jordan Padams</submitter_name>
     <definition>The projection_axis_offset attribute specifies an offset from a projection axis in a map projection. 
-      For the Cylindrical-Perspective projection, this is the radius of a circle which represents the rotation around the 
+      For the Cylindrical Perspective projection, this is the radius of a circle which represents the rotation around the 
       projection origin of the synthetic camera used to calculate each column.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -2037,11 +2039,12 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Paul Geissler</submitter_name>
     <definition>Provides the ordinary latitude coordinate of the origin (oblique latitude = oblique longitude = 0) for the 
-      oblique coordinate system used to specify the OBLIQUE_CYLIDRICAL projection used in Cassini BIDR. NOTE that whereas some 
-      past PDS products may utilize oblique projections defined solely in terms of the REFERENCE_LATITUDE and 
-      REFERENCE_LONGITUDE (i.e., with a third defining angle always set to zero), the Cassini BIDRs require the full 
-      generality of three nonzero rotation angles. These angles are represented by the keywords OBLIQUE_PROJ_POLE_LATITUDE, 
-      OBLIQUE_PROJ_POLE_LONGITUDE, and  OBLIQUE_PROJ_POLE_ROTATION. The values of REFERENCE_LATITUDE and  REFERENCE_LONGITUDE 
+      oblique coordinate system used to specify the Oblique Cylindrical projection, for example, as used in Cassini BIDR (basic image data record). 
+      
+      Note that whereas some past PDS products may utilize oblique projections defined solely in terms of the reference_latitude and 
+      reference_longitude (i.e., with a third defining angle always set to zero), the Cassini BIDRs require the full 
+      generality of three nonzero rotation angles. These angles are represented by the keywords oblique_proj_pole_latitude, 
+      oblique_proj_pole_longitude, and  oblique_proj_pole_rotation. The values of reference_latitude and reference_longitude 
       are consistent with the latter three angles but do not uniquely define the oblique coordinate system on their own.
     </definition>
     <DD_Value_Domain>
@@ -2061,12 +2064,13 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Paul Geissler</submitter_name>
     <definition>Provides the ordinary longitude coordinate of the origin (oblique latitude = oblique longitude = 0) for the 
-      oblique coordinate system used to specify the  OBLIQUE_CYLIDRICAL projection used in Cassini BIDR. NOTE that whereas some 
-      past PDS products may utilize oblique projections defined solely in terms of the REFERENCE_LATITUDE and REFERENCE_LONGITUDE 
-      (i.e., with a third defining angle always set to zero), the Cassini BIDRs require the full generality of three nonzero 
-      rotation angles. These angles are represented by the keywords OBLIQUE_PROJ_POLE_LATITUDE, OBLIQUE_PROJ_POLE_LONGITUDE, 
-      and OBLIQUE_PROJ_POLE_ROTATION. The values of REFERENCE_LATITUDE and REFERENCE_LONGITUDE are consistent with the latter 
-      three angles but do not uniquely define the oblique coordinate system on their own.
+      oblique coordinate system used to specify the Oblique Cylindrical projection, for example, as used in Cassini BIDR (basic image data record). 
+      
+      Note that whereas some past PDS products may utilize oblique projections defined solely in terms of the reference_latitude 
+      and reference_longitude (i.e., with a third defining angle always set to zero), the Cassini BIDRs require the full generality 
+      of three nonzero rotation angles. These angles are represented by the keywords oblique_proj_pole_latitude, 
+      oblique_proj_pole_longitude, and oblique_proj_pole_rotation. The values of reference_latitude and reference_longitude are 
+      consistent with the latter three angles but do not uniquely define the oblique coordinate system on their own.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -2084,7 +2088,15 @@
     <local_identifier>map_projection_rotation</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Paul Geissler</submitter_name>
-    <definition>Included for generality, always 90 degrees for Cassini BIDRs.</definition>
+    <definition>Provides the clockwise rotation of the line and sample coordinate system with respect to
+      the map projection origin. 
+      
+      Note that a value of 90.0 is used for all Cassini BIDRs (basic image data record) 
+      indicating that lines of the projected image have constant oblique-system longitude and columns have constant
+      oblique-system latitude. As stated in the Cassini BIDR SIS (software interface specification), for these
+      images, it was convenient to represent longitude in the line direction so that the images, which are elongated 
+      along the equator of the oblique system, are larger in the line direction than in the sample direction.
+    </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -2102,7 +2114,7 @@
     <local_identifier>oblique_proj_pole_latitude</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Paul Geissler</submitter_name>
-    <definition>One of the three angles defining the oblique coordinate system used in the OBLIQUE_CYLINDRICAL 
+    <definition>One of the three angles defining the oblique coordinate system used in the Oblique Cylindrical 
       projection. This is the ordinary latitude of the pole (Z axis) of the oblique system.
     </definition>
     <DD_Value_Domain>
@@ -2121,7 +2133,7 @@
     <local_identifier>oblique_proj_pole_longitude</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Paul Geissler</submitter_name>
-    <definition>One of the three angles defining the oblique coordinate system used in the OBLIQUE_CYLINDRICAL projection. 
+    <definition>One of the three angles defining the oblique coordinate system used in the Oblique Cylindrical projection. 
       This is the ordinary longitude of the pole (Z axis) of the oblique system.
     </definition>
     <DD_Value_Domain>
@@ -2140,9 +2152,9 @@
     <local_identifier>oblique_proj_pole_rotation</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Paul Geissler</submitter_name>
-    <definition>One of the three angles defining the oblique coordinate system used in the OBLIQUE_CYLINDRICAL projection. 
+    <definition>One of the three angles defining the oblique coordinate system used in the Oblique Cylindrical projection. 
       This is a rotation around the polar (Z) axis of the oblique system that completes the transformation from standard to 
-      oblique coordinates. The value is positive east (obeys right hand rule) and is in the range 0 to 360 degrees.
+      oblique coordinates. The value is positive east (obeys right hand rule) and is recommended to be specified in degrees from 0 to 360.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -2161,13 +2173,13 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Paul Geissler</submitter_name>
     <definition>This is a redundant attribute and as such is optional mostly available for documentation for the parameters.
-      Unit vector in the direction of the X axis of the oblique coordinate system used in the OBLIQUE_CYLINDRICAL 
+      Unit vector in the direction of the X axis of the oblique coordinate system used in the Oblique Cylindrical 
       projection, in terms of the X, Y, and Z axes of the standard body-fixed coordinate system. In each system, the X axis 
       points from the body center toward longitude and latitude (0,0) in that system, the Z axis to (0,90), and the Y-axis 
-      completes a right-handed set. The OBLIQUE_PROJ_X/Y/Z_AXIS_VECTORS makeup the rows of a rotation matrix that when multiplied 
+      completes a right-handed set. The oblique_proj_x/y/z_axis_vector(s) make up the rows of a rotation matrix that when multiplied 
       on the left of a vector referenced to the standard coordinate system converts it into its equivalent in the oblique coordinate 
-      system. This rotation matrix is the product of successively applied rotations by OBLIQUE_PROJ_POLE_LONGITUDE around the Z 
-      axis, 90 OBLIQUE_PROJ_POLE_LATITUDE around the once-rotated Y axis, and OBLIQUE_PROJ_POLE_ROTATION around the twice-rotated 
+      system. This rotation matrix is the product of successively applied rotations by oblique_proj_pole_longitude around the Z 
+      axis, 90 oblique_proj_pole_latitude around the once-rotated Y axis, and oblique_proj_pole_rotation around the twice-rotated 
       Z axis.
     </definition>
     <DD_Value_Domain>
@@ -2183,14 +2195,14 @@
     <local_identifier>oblique_proj_y_axis_vector</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Paul Geissler</submitter_name>
-    <definition>This is a redundant attirubte and as such is optional mostly available for documentation for the parameters.
-      Unit vector in the direction of the Y axis of the oblique coordinate system used in the OBLIQUE_CYLINDRICAL projection, 
+    <definition>This is a redundant attribute and as such is optional mostly available for documentation for the parameters.
+      Unit vector in the direction of the Y axis of the oblique coordinate system used in the Oblique Cylindrical projection, 
       in terms of the X, Y, and Z axes of the standard body-fixed coordinate system. In each system, the X axis points from the body center 
       toward longitude and latitude (0,0) in that system, the Z axis to (0,90), and the Y-axis completes a right-handed set. The 
-      OBLIQUE_PROJ_X/Y/Z_AXIS_VECTORS makeup the rows of a rotation matrix that when multiplied on the left of a vector referenced to 
+      oblique_proj_x/y/z_axis_vector(s) make up the rows of a rotation matrix that when multiplied on the left of a vector referenced to 
       the standard coordinate system converts it into its equivalent in the oblique coordinate system. This rotation matrix is the 
-      product of successively applied rotations by OBLIQUE_PROJ_POLE_LONGITUDE around the Z axis, 90 OBLIQUE_PROJ_POLE_LATITUDE around 
-      the once-rotated Y axis, and OBLIQUE_PROJ_POLE_ROTATION around the twice-rotated Z axis.
+      product of successively applied rotations by oblique_proj_pole_longitude around the Z axis, 90 oblique_proj_pole_latitude around 
+      the once-rotated Y axis, and oblique_proj_pole_rotation around the twice-rotated Z axis.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -2205,14 +2217,14 @@
     <local_identifier>oblique_proj_z_axis_vector</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Paul Geissler</submitter_name>
-    <definition>This is a redundant attirubte and as such is optional mostly available for documentation for the parameters.
-      Unit vector in the direction of the Z axis of the oblique coordinate system used in the OBLIQUE_CYLINDRICAL projection, 
+    <definition>This is a redundant attribute and as such is optional mostly available for documentation for the parameters.
+      Unit vector in the direction of the Z axis of the oblique coordinate system used in the Oblique Cylindrical projection, 
       in terms of the X, Y, and Z axes of the standard body-fixed coordinate system. In each system, the X axis points from the body center 
       toward longitude and latitude (0,0) in that system, the Z axis to (0,90), and the Y-axis completes a right-handed set. The 
-      OBLIQUE_PROJ_X/Y/Z_AXIS_VECTORS makeup the rows of a rotation matrix that when multiplied on the left of a vector referenced to 
+      oblique_proj_x/y/z_axis_vector(s) make up the rows of a rotation matrix that when multiplied on the left of a vector referenced to 
       the standard coordinate system converts it into its equivalent in the oblique coordinate system. This rotation matrix is the product 
-      of successively applied rotations by OBLIQUE_PROJ_POLE_LONGITUDE around the Z axis, 90 OBLIQUE_PROJ_POLE_LATITUDE around the 
-      once-rotated Y axis, and OBLIQUE_PROJ_POLE_ROTATION around the twice-rotated Z axis.
+      of successively applied rotations by oblique_proj_pole_longitude around the Z axis, 90 oblique_proj_pole_latitude around the 
+      once-rotated Y axis, and oblique_proj_pole_rotation around the twice-rotated Z axis.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -2227,12 +2239,12 @@
     <local_identifier>look_direction</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Paul Geissler</submitter_name>
-    <definition>The value (Rigth, Left or Both) indicates the side of the spacecraft ground-track to which the antenna is pointed for data 
-      acquired within this file. The SAR images stored in the BIDR files are always acquired on only one side of the ground track for 
-      each Titan pass. This value also indicates from which side the SAR image is illuminated. If the spacecraft images to the left 
-      of its ground track (LOOK_DIRECTION=Left), the image will be illuminated from the (viewer's) left side, and, conversely, if the 
-      spacecraft looks to the right, the illumination will come from the right in the image file. The direction of illumination is 
-      critical to interpretation of features in the image.
+    <definition>The value (Right, Left or Both) indicates the side of the spacecraft ground-track to which the antenna is pointed for data 
+      acquired within this file. The SAR (synthetic aperture radar) images stored in the BIDR (basic image data record) files are always 
+      acquired on only one side of the ground-track for each Titan pass. This value also indicates from which side the SAR image is 
+      illuminated. If the spacecraft images to the left of its ground-track (look_direction=Left), the image will be illuminated from 
+      the (viewer's) left side, and, conversely, if the spacecraft looks to the right, the illumination will come from the right in the 
+      image file. The direction of illumination is critical to interpretation of features in the image.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
@@ -2247,16 +2259,16 @@
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Right</value>
-        <value_meaning>Antenna pointed right of spacecraft groundtrack</value_meaning>
+        <value_meaning>Antenna pointed right of spacecraft ground-track</value_meaning>
       </DD_Permissible_Value>
-      <!-- will leave originally definied in caps for backwards comptibility, but will be depricated-->
+      <!-- will leave originally defined in caps for backwards compatibility, but will be deprecated-->
       <DD_Permissible_Value>
         <value>LEFT</value>
         <value_meaning>Antenna pointed left of spacecraft ground-track</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>RIGHT</value>
-        <value_meaning>Antenna pointed right of spacecraft groundtrack</value_meaning>
+        <value_meaning>Antenna pointed right of spacecraft ground-track</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -2284,7 +2296,7 @@
     <local_identifier>angular_scale</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
-    <definition>Grid spacing. Unit is radian/pixel.</definition>
+    <definition>Grid spacing. Recommended unit is radian/pixel.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -2299,7 +2311,7 @@
     <local_identifier>radial_scale</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
-    <definition>Grid spacing. Unit is km/pixel.</definition>
+    <definition>Grid spacing. Recommended unit is km/pixel.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -2314,11 +2326,13 @@
     <local_identifier>local_time_scale</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
-    <definition>Grid spacing. Unit is angle/pixel (e.g., deg/pixel, HA/pixel or hour angle per pixel).</definition>
+    <definition>Grid spacing. Recommended unit for Units_of_Pixel_Resolution_Angular is deg/pixel or HA/pixel (hour angle per pixel).</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
+      <minimum_value>0.0</minimum_value>
       <unit_of_measure_type>Units_of_Pixel_Resolution_Angular</unit_of_measure_type>
+      <specified_unit_id>deg/pixel</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -2327,7 +2341,7 @@
     <local_identifier>sample_name</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
-    <definition>Coordinate name for the sample axis. e.g. "Radius Km"</definition>
+    <definition>Coordinate name for the sample axis. e.g. "Radius Km".</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>UTF8_Text_Preserved</value_data_type>
@@ -2339,7 +2353,7 @@
     <local_identifier>line_name</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
-    <definition>Coordinate name for the line axis. e.g. "Local Time Hours"</definition>
+    <definition>Coordinate name for the line axis. e.g. "Local Time Hours".</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>UTF8_Text_Preserved</value_data_type>
@@ -2484,14 +2498,6 @@
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
-    <Terminological_Entry>
-      <name>Cartography</name>
-      <definition>The Cartography class provides a description of how a 3D sphere, spheroid, or elliptical spheroid or the 
-        celestial sphere is mapped onto a plane.
-      </definition>
-      <language>English</language>
-      <preferred_flag>true</preferred_flag>
-    </Terminological_Entry>
   </DD_Class>
   
   <DD_Class>
@@ -2551,10 +2557,10 @@
       <name>Secondary_Spatial_Domain</name>
       <definition>The Secondary_Spatial_Domain class optionally describes a second or alternative 
         geographic areal domain of the data set which is recommended by the IAU or has historical use in previous
-        PDS archives. For example, if Spatial_Domain is defined using a POSITIVE_EAST longitude_direction, this
-        section can define to list the Bounding_Coordinates using POSITIVE_WEST coordinates and a different
-        latitude_type. This was implemented for the Europa Clipper mission to support both POSITIVE_EAST 
-        (within Spatial_Domain) and the historical use of POSITIVE_WEST for Europa (within Secondary_Spatial_Domain).
+        PDS archives. For example, if Spatial_Domain is defined using a Positive East longitude_direction, this
+        section can define to list the Bounding_Coordinates using Positive West coordinates and a different
+        latitude_type. This was implemented for the Europa Clipper mission to support both Positive East 
+        (within Spatial_Domain) and the historical use of Positive West for Europa (within Secondary_Spatial_Domain).
       </definition>
       <language>English</language>
       <preferred_flag>true</preferred_flag>
@@ -3150,7 +3156,7 @@
     <DD_Association>
       <identifier_reference>standard_parallel_1</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
@@ -3264,7 +3270,7 @@
     <local_identifier>Orthographic</local_identifier>
     <submitter_name>Trent Hare</submitter_name>
     <definition>The Orthographic class contains parameters for the Orthographic projection.
-      While required, some applications will default to 0.0 if not definied. Here we want to explicit.
+      While required, some applications will default to 0.0 if not defined. Here we want to explicit.
       Synder 1987, DOI:10.3133/pp1395, page 145: https://pubs.usgs.gov/pp/1395/report.pdf#page=157
       PROJ: https://proj.org/operations/projections/ortho.html
     </definition>
@@ -3330,7 +3336,7 @@
 
       Note that most applications will either define latitude_of_projection_origin 
       or scale_factor_at_projection_origin, but not both. Here we define latitude_of_projection_origin
-      as mandatory and at CART LDD versoin 1934 have made scale_factor_at_projection_origin optional. 
+      as mandatory and at CART LDD version 1934 have made scale_factor_at_projection_origin optional. 
       For context, these two keywords have the same impact on the final product but are just different 
       ways to define it. Thus, for example in the PROJ library, if both are made available, the
       latitude_of_projection_origin (+lat_ts) will be used instead of 
@@ -4483,32 +4489,6 @@
   </DD_Class>
   
   <DD_Class>
-    <name>Vector_Length_Base</name>
-    <version_id>1.0</version_id>
-    <local_identifier>Vector_Length_Base</local_identifier>
-    <submitter_name>Jordan Padams</submitter_name>
-    <definition>The Vector_Length_Base is an abstract class that forms the base of length-based x, y, z vectors.</definition>
-    <DD_Association>
-      <identifier_reference>x_length</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>y_length</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>z_length</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-  </DD_Class>
-  
-  <DD_Class>
     <name>Vector_Cartesian_Unit_Base</name>
     <version_id>1.0</version_id>
     <local_identifier>Vector_Cartesian_Unit_Base</local_identifier>
@@ -4567,36 +4547,6 @@
     </DD_Association>
     <DD_Association>
       <identifier_reference>z_position</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-  </DD_Class>
-  
-  <DD_Class>
-    <name>Vector_Cartesian_No_Units</name>
-    <version_id>1.0</version_id>
-    <local_identifier>Vector_Cartesian_No_Units</local_identifier>
-    <submitter_name>Elizabeth Rye</submitter_name>
-    <definition>This is a generic vector in Cartesian space.
-      The "x", "y", and "z" component have no units.
-    </definition>
-    <abstract_flag>false</abstract_flag>
-    <element_flag>false</element_flag>
-    <DD_Association>
-      <identifier_reference>x</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>y</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>z</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -4677,7 +4627,7 @@
     <submitter_name>Elizabeth D. Rye</submitter_name>
     <definition>The Oblique_Line_Point_Group class provides the coordinates
       in latitude and longitude of one end point of the line along which an
-      oblique mercator map projection is centered.</definition>
+      Oblique Mercator map projection is centered.</definition>
     <DD_Association>
       <identifier_reference>oblique_line_latitude</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -4693,8 +4643,8 @@
     <Terminological_Entry>
       <name>Oblique_Line_Point_Group</name>
       <definition>The Oblique_Line_Point_Group class provides the coordinates in 
-        latitude and longitude of one end point of the line along which an oblique 
-        mercator map projection is centered.</definition>
+        latitude and longitude of one end point of the line along which an Oblique 
+        Mercator map projection is centered.</definition>
       <language>English</language>
       <preferred_flag>true</preferred_flag>
     </Terminological_Entry>
@@ -4834,7 +4784,7 @@
     <version_id>1.0</version_id>
     <local_identifier>Geo_Transformation</local_identifier>
     <submitter_name>Ronald Joyner</submitter_name>
-    <definition>The GEO_Transformation describes the relationship between raster 
+    <definition>The Geo_Transformation describes the relationship between raster 
       positions (in pixel/line coordinates) and georeferenced coordinates. This is 
       defined by an affine transform. The affine transform consists of six coefficients 
       which map pixel/line coordinates into georeferenced space using the following relationship:
@@ -4877,14 +4827,12 @@
   <!--                         -->
   
   <DD_Rule>
-    <local_identifier>spatial_domain_or_lander_or_rings_check</local_identifier>
+    <local_identifier>secondary_spatial_domain_requires_spatial_domain_check</local_identifier>
     <rule_context>//cart:Cartography</rule_context>
     <DD_Rule_Statement>
       <rule_type>Assert</rule_type>
-      <rule_test>exists(cart:Spatial_Domain) or 
-                 exists(cart:Spatial_Reference_Information/cart:Horizontal_Coordinate_System_Definition/cart:Local/cart:Map_Projection_Lander) or
-                 exists(cart:Spatial_Reference_Information/cart:Horizontal_Coordinate_System_Definition/cart:Local/cart:Map_Projection_Rings)</rule_test>
-      <rule_message>cart:Spatial_Domain or cart:Map_Projection_Lander or cart:Map_Projection_Rings must be specified</rule_message>
+      <rule_test>if ((cart:Secondary_Spatial_Domain) and not (cart:Spatial_Domain)) then false() else true()</rule_test>
+                 <rule_message>cart:Spatial_Domain must exist if cart:Secondary_Spatial_Domain is used</rule_message>
     </DD_Rule_Statement>
   </DD_Rule>
   
@@ -4898,4 +4846,6 @@
     </DD_Rule_Statement>
   </DD_Rule>
   
+<!-- need: map projection name to map projection class name Schematron Checks -->
+
 </Ingest_LDD>

@@ -8,7 +8,10 @@
 - Add new Infinity enumeration to surface_model_type. No class currently needed for an infinite surface.
 - Updates based on DMSP:
   - See https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/228 for several clarifications for attributes including updating min/max values, adding specified_unit_id, etc.
-  - Update to pixel_scale, pixel_scale_x, pixel_scale_y, to remove deprecated use of Units_of_Map_Scale for Units_of_Pixel_Scale_Map which removes to use of pixel/deg in favor of deg/pixel (distance/pixel). 
+  - See https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/224
+  - Update to pixel_scale, pixel_scale_x, pixel_scale_y, to remove deprecated use of Units_of_Map_Scale for Units_of_Pixel_Scale_Map which removes to use of pixel/deg in favor of deg/pixel (distance/pixel).
+  - Removed unused classes  Vector_Cartesian_No_Units and Vector_Length_Base (currently leaving their now unused attributes x/y/z and x/y/z_length but will deprecate).
+
 
 
 ## 1.9.6.0
