@@ -1,7 +1,7 @@
 # Changelog
 
 ## 1.9.7.0
-- THare 20220927
+- THare 20221013
 - Removed extraneous validation, since it is already checked for using schema XSChoice rules.
 - Update lat/longitude_resolution to optional under the Geographic class. This continues to cause issues for vector files which don't have a resolution as needed by an image.
 - Add new geographic_description such that Geographic coordinate class can be described for a vector-based file. Keeping it optional to maintain backwards compatibility.
@@ -9,7 +9,6 @@
 - Updates based on DMSP:
   - See https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/228 for several clarifications for attributes including updating min/max values, adding specified_unit_id, etc.
   - See https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/224
-  - Update to pixel_scale, pixel_scale_x, pixel_scale_y, to remove deprecated use of Units_of_Map_Scale for Units_of_Pixel_Scale_Map which removes to use of pixel/deg in favor of deg/pixel (distance/pixel).
   - Removed unused classes  Vector_Cartesian_No_Units and Vector_Length_Base (currently leaving their now unused attributes x/y/z and x/y/z_length but will deprecate).
 
 

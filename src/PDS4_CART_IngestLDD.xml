@@ -26,7 +26,7 @@
     https://github.com/pds-data-dictionaries/ldd-cart
   </comment>
   
-  <last_modification_date_time>2022-09-29T11:50:00Z</last_modification_date_time>
+  <last_modification_date_time>2022-10-13T09:50:00Z</last_modification_date_time>
 
   <DD_Attribute>
     <name>target_center_distance</name>
@@ -1002,7 +1002,7 @@
     <submitter_name>Chris Isbell</submitter_name>
     <definition>
         The pixel_scale_x and pixel_scale_y attributes indicate the image array
-        pixel scale (degree/pixel or distance/pixel) relative to the Cartesian (x,y)
+        pixel scale (pixel/degree or pixel/distance) relative to the Cartesian (x,y)
         coordinate system as defined by the map projection. Due to varying
         properties across different map projections, actual surface distances for an
         individual pixel may be accurate only at specific location(s) within the
@@ -1018,7 +1018,7 @@
         when map/data are presented on hard-copy media (paper, computer screen,etc).
         When defining pixel scale within a stored image/array context here, we are
         expressing a ratio between the image array and the actual surface (thus,
-        degree/pixel or distance/pixel units).
+        pixel/degree or pixel/distance units).
         
         NOTE 2: Definition of this PDS4 attribute differs from how 'scale' was defined within PDS3
     </definition>
@@ -1026,20 +1026,21 @@
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
       <minimum_value>0.0</minimum_value>
-      <unit_of_measure_type>Units_of_Pixel_Resolution_Map</unit_of_measure_type>
-      <specified_unit_id>deg/pixel</specified_unit_id>
+      <!--<unit_of_measure_type>Units_of_Pixel_Scale_Map</unit_of_measure_type>-->
+      <unit_of_measure_type>Units_of_Map_Scale</unit_of_measure_type>
+      <specified_unit_id>pixel/deg</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
 
   <DD_Attribute>
     <name>pixel_scale_y</name>
-    <version_id>1.1</version_id>
+    <version_id>1.0</version_id>
     <local_identifier>pixel_scale_y</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Chris Isbell</submitter_name>
     <definition>
       The pixel_scale_x and pixel_scale_y attributes indicate the image array
-      pixel scale (degree/pixel or distance/pixel) relative to the Cartesian (x,y)
+      pixel scale (pixel/degree or pixel/distance) relative to the Cartesian (x,y)
       coordinate system as defined by the map projection. Due to varying
       properties across different map projections, actual surface distances for an
       individual pixel may be accurate only at specific location(s) within the
@@ -1055,7 +1056,7 @@
       when map/data are presented on hard-copy media (paper, computer screen,etc).
       When defining pixel scale within a stored image/array context here, we are
       expressing a ratio between the image array and the actual surface (thus,
-      degree/pixel or distance/pixel units).
+      pixel/degree or pixel/distance units).
 
       NOTE 2: Definition of this PDS4 attribute differs from how 'scale' was defined within PDS3
     </definition>
@@ -1063,20 +1064,21 @@
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
       <minimum_value>0.0</minimum_value>
-      <unit_of_measure_type>Units_of_Pixel_Resolution_Map</unit_of_measure_type>
-      <specified_unit_id>deg/pixel</specified_unit_id>
+      <!--<unit_of_measure_type>Units_of_Pixel_Scale_Map</unit_of_measure_type>-->
+      <unit_of_measure_type>Units_of_Map_Scale</unit_of_measure_type>
+      <specified_unit_id>pixel/deg</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
   
   <DD_Attribute>
     <name>pixel_scale</name>
-    <version_id>1.1</version_id>
+    <version_id>1.0</version_id>
     <local_identifier>pixel_scale</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Jordan Padams</submitter_name>
     <definition>
       The pixel_scale attribute indicate the image array
-      pixel scale (degree/pixel or distance/pixel) relative to the
+      pixel scale (pixel/degree or pixel/distance) relative to the
       referenced coordinate system as defined by the map projection. This attribute should be used in 
       lieu of pixel_scale_x and pixel_scale_y when the pixel scale is not  x/y aligned.
       i.e. a radial pixel scale.
@@ -1087,8 +1089,9 @@
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
       <minimum_value>0.0</minimum_value>
-      <unit_of_measure_type>Units_of_Pixel_Resolution_Map</unit_of_measure_type>
-      <specified_unit_id>deg/pixel</specified_unit_id>
+      <!--<unit_of_measure_type>Units_of_Pixel_Scale_Map</unit_of_measure_type>-->
+      <unit_of_measure_type>Units_of_Map_Scale</unit_of_measure_type>
+      <specified_unit_id>pixel/deg</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
   
