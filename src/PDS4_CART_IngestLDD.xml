@@ -10,7 +10,7 @@
     xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.xsd    
                         http://pds.nasa.gov/pds4/geom/v1 https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1E00_1810.xsd">
   <name>Cartography</name>
-  <ldd_version_id>1.9.6.0</ldd_version_id>
+  <ldd_version_id>1.9.7.0</ldd_version_id>
   <dictionary_type>Discipline</dictionary_type>
   <full_name>Trent Hare</full_name>
   <steward_id>img</steward_id>
@@ -26,7 +26,7 @@
     https://github.com/pds-data-dictionaries/ldd-cart
   </comment>
   
-  <last_modification_date_time>2022-05-04T16:45:00Z</last_modification_date_time>
+  <last_modification_date_time>2022-10-13T09:50:00Z</last_modification_date_time>
 
   <DD_Attribute>
     <name>target_center_distance</name>
@@ -35,12 +35,13 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Chris Isbell</submitter_name>
     <definition>
-      The target_center_distance attribute provides the distance to target center, 
-      in meters, relative to the observing system.
+      The target_center_distance attribute provides the distance to target center 
+      relative to the observing system. Recommended units is meters.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
+      <minimum_value>0.0</minimum_value>
       <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
       <specified_unit_id>m</specified_unit_id>
     </DD_Value_Domain>
@@ -54,8 +55,8 @@
     <submitter_name>Ronald Joyner</submitter_name>
     <definition>
       The upperleft_corner_x and upperleft_corner_y attributes provide the projection x and y values, 
-      in meters, relative to the map projection origin, at sample 0.5 and line 0.5 (upper left corner 
-      of pixel 1,1 within image array).
+      relative to the map projection origin, at sample 0.5 and line 0.5 (upper left corner 
+      of pixel 1,1 within image array). Recommended units is meters.
 
       (0.5,0.5) - upper left corner (edge) of pixel 1,1
       /
@@ -82,8 +83,8 @@
     <submitter_name>Ronald Joyner</submitter_name>
     <definition>
       The upperleft_corner_x and upperleft_corner_y attributes provide the projection x and y values, 
-      in meters, relative to the map projection origin, at sample 0.5 and line 0.5 (upper left corner 
-      of pixel 1,1 within image array).
+      relative to the map projection origin, at sample 0.5 and line 0.5 (upper left corner 
+      of pixel 1,1 within image array). Recommended units is meters.
       
       (0.5,0.5) - upper left corner (edge) of pixel 1,1
       /
@@ -117,6 +118,7 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
+      <minimum_value>0.0</minimum_value>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -129,7 +131,7 @@
     <definition>The west_bounding_coordinate attribute provides the
       western-most coordinate of the limit of coverage expressed in
       longitude.</definition>
-    <!--<Terminological_Entry>
+    <Terminological_Entry>
       <name>west_bounding_coordinate</name>
       <definition>The west_bounding_coordinate attribute provides the western-most coordinate of the limit of coverage expressed in longitude.</definition>
       <language>English</language>
@@ -163,7 +165,7 @@
       </definition>
       <language>English</language>
       <preferred_flag>false</preferred_flag>
-    </Terminological_Entry>-->
+    </Terminological_Entry>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -183,7 +185,7 @@
     <definition>The east_bounding_coordinate attribute provides the
       eastern-most coordinate of the limit of coverage expressed in
       longitude.</definition>
-    <!--<Terminological_Entry>
+    <Terminological_Entry>
       <name>east_bounding_coordinate</name>
       <definition>The east_bounding_coordinate attribute provides the eastern-most coordinate of the limit of coverage expressed in longitude.</definition>
       <language>English</language>
@@ -216,7 +218,7 @@
          (rightmost) longitude is the maximum numerical value of longitude unless it crosses 180.</definition>
       <language>English</language>
       <preferred_flag>false</preferred_flag>
-    </Terminological_Entry>-->
+    </Terminological_Entry>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -236,7 +238,7 @@
     <definition>The north_bounding_coordinate attribute provides the
       northern-most coordinate of the limit of coverage expressed in
       latitude.</definition>
-    <!--<Terminological_Entry>
+    <Terminological_Entry>
       <name>north_bounding_coordinate</name>
       <definition>The north_bounding_coordinate attribute provides the northern-most coordinate of the limit of coverage expressed in latitude.</definition>
       <language>English</language>
@@ -259,7 +261,7 @@
       <definition>The maximum_latitude element specifies the northernmost latitude of a spatial area, such as a map, mosaic, bin, feature, or region.</definition>
       <language>English</language>
       <preferred_flag>false</preferred_flag>
-    </Terminological_Entry>-->
+    </Terminological_Entry>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -279,7 +281,7 @@
     <definition>The south_bounding_coordinate attribute provides the
       southern-most coordinate of the limit of coverage expressed in
       latitude.</definition>
-    <!--<Terminological_Entry>
+    <Terminological_Entry>
       <name>south_bounding_coordinate</name>
       <definition>The south_bounding_coordinate attribute provides the southern-most coordinate of the limit of coverage expressed in latitude.</definition>
       <language>English</language>
@@ -302,7 +304,7 @@
       <definition>The minimum_latitude element specifies the southernmost latitude of a spatial area, such as a map, mosaic, bin, feature, or region.</definition>
       <language>English</language>
       <preferred_flag>false</preferred_flag>
-    </Terminological_Entry>-->
+    </Terminological_Entry>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -324,11 +326,6 @@
     </definition>
     <comment>Needs additional standard values for other planets.</comment>
     <DD_Value_Domain>
-      <!-- Can use same value as Target_Identification > Name. Or, enter value as
-           being used within GIS domain standards. Lien: PDS and other entities (GIS,
-           IAU, USGS, NAIF, etc to define values, if needed. See for additional background:
-           http://www.hou.usra.edu/meetings/lpsc2016/pdf/1422.pdf
-      -->
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
@@ -343,7 +340,7 @@
     <submitter_name>Trent M. Hare</submitter_name>
     <definition>The a_axis_radius attribute provides the radius of the equatorial
       axis of the ellipsoid. The IAU calls this "Subplanetary equatorial radius" and
-	    mapping applications generally call this "semi_major_axis".
+	    mapping applications generally call this "semi_major_axis". Recommended units is meters or kilometers.
     </definition>
     <comment>In PDS3 this was named A_AXIS_RADIUS.</comment>
     <DD_Value_Domain>
@@ -365,9 +362,9 @@
       intermediate axis of the ellipsoid that defines the approximate shape
       of a target body. The b_axis_radius is usually in the equatorial
       plane. The IAU calls this axis "along orbit equatorial radius". Mapping
-	    applications, which generally only define a sphere or an ellipse, do not
-	    support this radius parameter and this can be set to the same radius value
-      as the a_axis_radius</definition>
+      applications, which generally only define a sphere or an ellipse, do not
+      support this radius parameter and this can be set to the same radius value
+      as the a_axis_radius. Recommended units is meters or kilometers.</definition>
     <comment>In PDS3 this was named B_AXIS_RADIUS.</comment>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -388,7 +385,7 @@
       polar axis of the ellipsoid that defines the approximate shape of
       a target body.  The c_axis_radius is normal to the plane defined by
       the a_axis_radius and b_axis_radius. The IAU calls this "polar radius".
-	  Mapping applications generally call this "semi_minor_axis"
+      Mapping applications generally call this "semi_minor_axis". Recommended units is meters or kilometers.
     </definition>
     <comment>In PDS3 this was named C_AXIS_RADIUS.</comment>
     <DD_Value_Domain>
@@ -402,12 +399,12 @@
 
   <DD_Attribute>
     <name>longitude_direction</name>
-    <version_id>1.0</version_id>
+    <version_id>1.1</version_id>
     <local_identifier>longitude_direction</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Elizabeth D. Rye</submitter_name>
     <definition>The longitude_direction attribute identifies the direction
-      of longitude (e.g. POSITIVE_EAST or POSITIVE_WEST) for a planet.	The
+      of longitude (e.g. Positive East or Positive West) for a planet.	The
       IAU definition for direction of positive longitude should be adopted: 
       http://astrogeology.usgs.gov/groups/IAU-WGCCRE. Typically, for planets 
       with prograde (direct) rotations, positive longitude direction is to 
@@ -421,13 +418,10 @@
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <minimum_characters>13</minimum_characters>
-      <maximum_characters>13</maximum_characters>
-      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
       <DD_Permissible_Value>
         <value>Positive East</value>
         <value_meaning>Positive East longitudes (i.e., longitudes measured positively 
-        to the east) will be used when the bodies rotation is retrograde. Because 
+        to the east) will be used when the body's rotation is retrograde. Because 
         of tradition, the Earth, Sun, and Moon do not conform with this definition. 
         Their rotations are direct and longitudes run both east and west 180 degree, 
         or east 360 degree.</value_meaning>
@@ -443,7 +437,7 @@
 
   <DD_Attribute>
     <name>coordinate_system_type</name>
-    <version_id>1.0</version_id>
+    <version_id>1.1</version_id>
     <local_identifier>coordinate_system_type</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
@@ -462,8 +456,6 @@
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <minimum_characters>8</minimum_characters>
-      <maximum_characters>25</maximum_characters>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
       <DD_Permissible_Value>
         <value>Body-fixed Rotating</value>
@@ -476,7 +468,7 @@
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Inertial</value>
-        <value_meaning>an inertial coordinate system is fixed at some point in space.</value_meaning>
+        <value_meaning>An inertial coordinate system is fixed at some point in space.</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -490,7 +482,7 @@
     <definition>The given name of the used coordinate system. e.g. "MEAN EARTH/POLAR AXIS OF DE421"</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Text_Preserved</value_data_type>
+      <value_data_type>UTF8_Text_Preserved</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
 
@@ -516,7 +508,6 @@
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
       <DD_Permissible_Value>
         <value>Planetographic</value>
         <value_meaning>The planetographic latitude is the angle between 
@@ -583,6 +574,22 @@
   </DD_Attribute>
 
   <DD_Attribute>
+    <name>geographic_description</name>
+    <version_id>1.0</version_id>
+    <local_identifier>geographic_description</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Trent Hare</submitter_name>
+    <definition>The geographic_description attribute provides a description for the use of the defined
+      geographic coordinate system. This can be useful to describe vector-based files where map-scale
+      (e.g., 1:5M) is used and the use of image-based spacing or resolution need is not meaningful.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>UTF8_Text_Preserved</value_data_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
     <name>local_description</name>
     <version_id>1.0</version_id>
     <local_identifier>local_description</local_identifier>
@@ -593,8 +600,7 @@
       planet.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Text_Preserved</value_data_type>
-      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+      <value_data_type>UTF8_Text_Preserved</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
 
@@ -610,8 +616,7 @@
       data).</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Text_Preserved</value_data_type>
-      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+      <value_data_type>UTF8_Text_Preserved</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
 
@@ -653,7 +658,7 @@
 
   <DD_Attribute>
     <name>map_projection_name</name>
-    <version_id>1.0</version_id>
+    <version_id>1.1</version_id>
     <local_identifier>map_projection_name</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Elizabeth D. Rye</submitter_name>
@@ -664,7 +669,6 @@
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
       <DD_Permissible_Value>
         <value>Albers Conical Equal Area</value>
         <value_meaning>Projection is mathematically based on a cone that is conceptually 
@@ -693,8 +697,9 @@
           allow spherical body definitions. The meridians and parallels are all equidistant
           straight parallel lines, intersecting at right angles. If the Equator is made the
           standard parallel, true to scale and free of distortion, the meridians are spaced at 
-          the same distances as the  parallels, and the graticule appears square. This form is
-          often called the Plate Carree or the Simple Cylindrical projection.</value_meaning>
+          the same distances as the  parallels, and the graticule appears square. In this formation,
+          when the Equator is made the standard parallel, this projection is also known as 
+          Plate Carree or the Simple Cylindrical projection.</value_meaning>
       </DD_Permissible_Value>
       <!-- 20181218 T.Hare, removed since this appears to be related and possibly a subset of Point Perspective
       <DD_Permissible_Value>
@@ -708,7 +713,7 @@
           the point of projection is at the center of the body. It is impossible to show 
           a full hemisphere with one Gnomonic map. It is the only projection in which any 
           straight line is a great circle, and it is the only projection that shows the 
-          shortest distance between any two points as a straight line. </value_meaning>
+          shortest distance between any two points as a straight line.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Lambert Azimuthal Equal Area</value>
@@ -761,7 +766,7 @@
       <DD_Permissible_Value>
         <value>Orthographic</value>
         <value_meaning>The Orthographic projection is geometrically based on a plane tangent 
-          to the earth, and the point of projection is at infinity. The body appears as it 
+          to the body, and the point of projection is at infinity. The body appears as it 
           would from outer space. This projection is a truly graphic representation of the body 
           and is a projection in which distortion becomes a visual aid. It is the most familiar 
           of the azimuthal map projections. Directions from the center of the Orthographic map 
@@ -796,9 +801,9 @@
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Robinson</value>
-        <value_meaning>Classified as a pseudocylindrical projecton. Generally this projection
+        <value_meaning>Classified as a pseudocylindrical projection. Generally this projection
           is used for global maps. The projection is a compromise and is neither equal-area nor 
-          conformal. The meridians are gently curved leaving the poles fairly distored.</value_meaning>
+          conformal. The meridians are gently curved leaving the poles fairly distorted.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Sinusoidal</value>
@@ -833,7 +838,7 @@
         <value>van der Grinten</value>
         <value_meaning>The projection has both areal and angular deformation. It was conceived 
           as a compromise between the Mercator and the Mollweide projection, which shows the world in
-          an ellipse. The Vander Grinten shows the world in a circle.</value_meaning>
+          an ellipse. The van der Grinten shows the world in a circle.</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -851,19 +856,18 @@
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
       <DD_Permissible_Value>
         <value>Universal Transverse Mercator</value>
         <value_meaning>The UTM is the ellipsoidal Transverse Mercator to which specific parameters, 
-          such as central meridians, have been applied. This is generally used for Earth. The Earth, 
-          between lats. 84 degrees North and 80 degrees South, is divided into 60 zones each generally 6 degrees wide in longitude. 
+          such as central meridians, have been applied. This is generally used for Earth. Latitudes 
+          between 84 degrees North and 80 degrees South is divided into 60 zones each generally 6 degrees wide in longitude. 
           Bounding meridians are evenly divisible by 6 degrees, and zones are numbered from 1 to 60 proceeding 
-          east from the 180th meridian from Greenwich with minor exceptions.</value_meaning>
+          east from the 180th meridian from the Prime Meridian (e.g., Greenwich) with minor exceptions.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Universal Polar Stereographic</value>
-        <value_meaning>Like Universal Transverse Mercator (UTM), UPS is a method to split up the Earth
-          into quads. When the latitude is from 84 degrees North and 80 degrees South to the respective poles, the (UPS) 
+        <value_meaning>Like Universal Transverse Mercator (UTM), UPS is a method used to generally split up the Earth
+          into quads. When the latitude is from 84 degrees North and 80 degrees South to the respective poles, the (UPS)
           projection is used.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
@@ -872,7 +876,7 @@
           System (SPCS) for States with predominant north-south extent. (The Lambert Conformal Conic 
           is used for the others, except for the panhandle of Alaska, which is prepared on the Oblique
           Mercator. Alaska, Florida, and New York use both the Transverse Mercator and the Lambert 
-          Conformal Conic for different zones.) Except for narrow States, such as Delaware, New Hampshire, 
+          Conformal Conic for different zones). Except for narrow States, such as Delaware, New Hampshire, 
           and New Jersey, all States using the Transverse Mercator are divided into two to eight zones, 
           each with its own central meridian, along which the scale is slightly reduced to balance
           the scale throughout the map. Each zone is designed to maintain scale distortion within 1 part 
@@ -881,27 +885,26 @@
       <DD_Permissible_Value>
         <value>State Plane Coordinate System 1983</value>
         <value_meaning>In the United States, it is the projection used in the State Plane Coordinate 
-          System (SPCS) for States with predominant north-south extent. (The Lambert Conformal Conic 
+          System (SPCS) for States with predominant north-south extent. The Lambert Conformal Conic 
           is used for the others, except for the panhandle of Alaska, which is prepared on the Oblique
           Mercator. Alaska, Florida, and New York use both the Transverse Mercator and the Lambert 
-          Conformal Conic for different zones.) Except for narrow States, such as Delaware, New Hampshire, 
+          Conformal Conic for different zones. Except for narrow States, such as Delaware, New Hampshire, 
           and New Jersey, all States using the Transverse Mercator are divided into two to eight zones, 
           each with its own central meridian, along which the scale is slightly reduced to balance
           the scale throughout the map. Each zone is designed to maintain scale distortion within 1 part 
-          in 10,000. 1983 refers to the use of the 1983 North American Datum (NAD83).</value_meaning>
+          in 10,000. In the name, 1983 refers to the use of the 1983 North American Datum (NAD83).</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>ARC Coordinate System</value>
-        <value_meaning>the Equal Arc-second Coordinate System, a plane-rectangular coordinate system 
-          established in Department of Defense, 1990.</value_meaning>
+        <value_meaning>The Equal Arc-second Coordinate System is a plane-rectangular coordinate system 
+          established by the Department of Defense in 1990.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Other Grid System</value>
-        <value_meaning>a complete description of a grid system, not defined elsewhere in this standard, 
-          that was used for the data set. The information provided shall include the name of the grid 
-          system, the names of the parameters and values used for the data set, and the citation of the 
-          specification for the algorithms that describe the mathematical relationship between the body 
-          and the coordinates of the grid system.</value_meaning>
+        <value_meaning>Allows for a grid system not defined elsewhere. The information provided should 
+          include the name of the grid system, the names of the parameters and values used for the 
+          data set, and the citation of the specification for the algorithms that describe the 
+          mathematical relationship between the body and the coordinates of the grid system.</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -915,8 +918,7 @@
     <definition>The local_planar_description attribute provides a description of the local planar system.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Text_Preserved</value_data_type>
-      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+      <value_data_type>UTF8_Text_Preserved</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
 
@@ -932,14 +934,13 @@
       ephemeral data, inertial navigation data).</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Text_Preserved</value_data_type>
-      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+      <value_data_type>UTF8_Text_Preserved</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
 
   <DD_Attribute>
     <name>pixel_resolution_x</name>
-    <version_id>1.0</version_id>
+    <version_id>1.1</version_id>
     <local_identifier>pixel_resolution_x</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Chris Isbell</submitter_name>
@@ -960,15 +961,14 @@
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
       <minimum_value>0.0</minimum_value>
-      <!--<unit_of_measure_type>Units_of_Pixel_Resolution_Map</unit_of_measure_type>-->
-      <unit_of_measure_type>Units_of_Map_Scale</unit_of_measure_type>
+      <unit_of_measure_type>Units_of_Pixel_Resolution_Map</unit_of_measure_type>
       <specified_unit_id>m/pixel</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
   
   <DD_Attribute>
     <name>pixel_resolution_y</name>
-    <version_id>1.0</version_id>
+    <version_id>1.1</version_id>
     <local_identifier>pixel_resolution_y</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Chris Isbell</submitter_name>
@@ -989,15 +989,14 @@
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
       <minimum_value>0.0</minimum_value>
-      <!--<unit_of_measure_type>Units_of_Pixel_Resolution_Map</unit_of_measure_type>-->
-      <unit_of_measure_type>Units_of_Map_Scale</unit_of_measure_type>
+      <unit_of_measure_type>Units_of_Pixel_Resolution_Map</unit_of_measure_type>
       <specified_unit_id>m/pixel</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
 
   <DD_Attribute>
     <name>pixel_scale_x</name>
-    <version_id>1.0</version_id>
+    <version_id>1.1</version_id>
     <local_identifier>pixel_scale_x</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Chris Isbell</submitter_name>
@@ -1050,7 +1049,7 @@
       inclusion of both x and y attributes allows for anticipated products where
       scale may differ for each axis ('rectangular' pixels).
 
-      NOTE1: For presentation of hard-copy maps, a map scale is traditionally
+      NOTE 1: For presentation of hard-copy maps, a map scale is traditionally
       expressed as a 'representative fraction' (the ratio of a hard-copy map to the
       actual subject surface (e.g. 1:250,000, where one unit of measure on the map
       equals 250,000 of the same unit on the body surface)). This usage is relevant
@@ -1059,7 +1058,7 @@
       expressing a ratio between the image array and the actual surface (thus,
       pixel/degree or pixel/distance units).
 
-      NOTE2: Definition of this PDS4 attribute differs from how 'scale' was defined within PDS3
+      NOTE 2: Definition of this PDS4 attribute differs from how 'scale' was defined within PDS3
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -1090,6 +1089,7 @@
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
       <minimum_value>0.0</minimum_value>
+      <!--<unit_of_measure_type>Units_of_Pixel_Scale_Map</unit_of_measure_type>-->
       <unit_of_measure_type>Units_of_Map_Scale</unit_of_measure_type>
       <specified_unit_id>pixel/deg</specified_unit_id>
     </DD_Value_Domain>
@@ -1101,14 +1101,13 @@
     <local_identifier>distance_resolution</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Elizabeth D. Rye</submitter_name>
-    <definition>The distance_resolution attribute provides the minimum
-      distance measurable between two points, expressed in Planar Distance
-      Units of measure.</definition>
+    <definition>The distance_resolution attribute provides the minimum distance
+      measurable between two points expressed in Units_of_Pixel_Resolution_Map of measure.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
       <minimum_value>0.0</minimum_value>
-      <unit_of_measure_type>Units_of_Map_Scale</unit_of_measure_type>
+      <unit_of_measure_type>Units_of_Pixel_Resolution_Map</unit_of_measure_type>
       <specified_unit_id>km/pixel</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -1126,6 +1125,7 @@
       <value_data_type>ASCII_Real</value_data_type>
       <minimum_value>0.0</minimum_value>
       <unit_of_measure_type>Units_of_Angle</unit_of_measure_type>
+      <specified_unit_id>rad</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
 
@@ -1140,8 +1140,6 @@
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <minimum_characters>5</minimum_characters>
-      <maximum_characters>5</maximum_characters>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
       <DD_Permissible_Value>
         <value>North</value>
@@ -1167,8 +1165,6 @@
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <minimum_characters>4</minimum_characters>
-      <maximum_characters>10</maximum_characters>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
       <DD_Permissible_Value>
         <value>Assumed</value>
@@ -1184,7 +1180,7 @@
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Magnetic</value>
-        <value_meaning>A magnetic bearing is measured in relation to magnetic north on Earth.
+        <value_meaning>A magnetic bearing is measured in relation to magnetic north.
         </value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
@@ -1194,7 +1190,7 @@
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Geodetic</value>
-        <value_meaning>A geodectic bearing (or true bearing) is measured in relation to true 
+        <value_meaning>A geodetic bearing (or true bearing) is measured in relation to true 
           north via a great circle (or the shortest path connecting two points on the 
           surface of the body).</value_meaning>
       </DD_Permissible_Value>
@@ -1222,7 +1218,6 @@
     </DD_Value_Domain>
   </DD_Attribute>
 
-  <!-- 20160816: C.Isbell , Added standard_parallel_2, see standard_parallel_1 above -->
   <DD_Attribute>
     <name>standard_parallel_2</name>
     <version_id>1.0</version_id>
@@ -1308,11 +1303,14 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Elizabeth D. Rye</submitter_name>
     <definition>The utm_zone_number attribute provides the identifier for
-      the Universal Transverse Mercator (UTM) zone.</definition>
+      the Universal Transverse Mercator (UTM) zone. For the Earth, UTM zones are defined
+      between 84 degrees north latitude and 80 degrees south latitude, is divided into 
+      60 zones each generally 6° wide in longitude. The zones are numbered from 1 to 60 
+      proceeding east from the 180th meridian from Greenwich with minor exceptions.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type>
-      <minimum_value>-60</minimum_value>
+      <minimum_value>1</minimum_value>
       <maximum_value>60</maximum_value>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
@@ -1325,26 +1323,29 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Elizabeth D. Rye</submitter_name>
     <definition>The ups_zone_identifier attribute provides an identifier
-      for the Universal Polar Stereographic (UPS) zone.</definition>
+      for the Universal Polar Stereographic (UPS) zone. 
+      For chart see: Synder 1987, DOI:10.3133/pp1395, page 62. 
+      https://pubs.usgs.gov/pp/1395/report.pdf#page=74 
+    </definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
       <DD_Permissible_Value>
         <value>A</value>
-        <value_meaning>UPS Zone Identifier: A</value_meaning>
+        <value_meaning>UPS Zone Identifier: A, south pole from 0 - 180E</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>B</value>
-        <value_meaning>UPS Zone Identifier: B</value_meaning>
+        <value_meaning>UPS Zone Identifier: B, south pole from -180E - 0</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Y</value>
-        <value_meaning>UPS Zone Identifier: Y</value_meaning>
+        <value_meaning>UPS Zone Identifier: Y, north pole from -180E - 0</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Z</value>
-        <value_meaning>UPS Zone Identifier: Z</value_meaning>
+        <value_meaning>UPS Zone Identifier: Z, north pole from 0 - 180E</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -1374,7 +1375,7 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Elizabeth D. Rye</submitter_name>
     <definition>The azimuthal_angle attribute provides the angle measured
-      clockwise from north, and expressed in degrees.</definition>
+      clockwise from north, and expressed in the recommended units of degrees.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -1451,7 +1452,6 @@
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
       <DD_Permissible_Value>
         <value>Cylindrical</value>
         <value_meaning>This is an in-situ projection used for (non-stereo) panoramas. 
@@ -1481,8 +1481,15 @@
           from the nadir location, with a constant pixel scale.  Azimuth is 
           measured along concentric circles centered at the nadir.</value_meaning>
       </DD_Permissible_Value>
+      <!-- leaving Orthographic to be backwards compatible but will be deprecated. Use Orthographic_Lander -->
       <DD_Permissible_Value>
         <value>Orthographic</value>
+        <value_meaning>This is an in-situ projection that is a generalization of 
+          the Vertical projection, in that any arbitrary projection plane can be 
+          specified.</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Orthographic_Lander</value>
         <value_meaning>This is an in-situ projection that is a generalization of 
           the Vertical projection, in that any arbitrary projection plane can be 
           specified.</value_meaning>
@@ -1517,7 +1524,6 @@
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
       <DD_Permissible_Value>
         <value>Ring_Polar</value>
         <value_meaning>The representation of ring data requires a unique projection. The rings are
@@ -1527,9 +1533,9 @@
           limit or if it intersects the primary body before intersecting the rings, the data
           will not be included.
           
-          Plotted coordinates are derived as follows. If A is the location of the intersection of
-          the CIRS field of view with the body's equatorial plane, the X coordinate is the distance
-          of A from the center of the body (e.g. Saturn), and the Y coordinate is the local time on
+          For Cassini CIRS (composite infrared spectrometer), the plotted coordinates are derived as follows. If A is 
+          the location of the intersection of CIRS field of view with the body's equatorial plane, the X coordinate is 
+          the distance of A from the center of the body (e.g. Saturn), and the Y coordinate is the local time on
           on the body at the intersection with the body's surface of the line between A and the body's
           center. Local time is expressed in fractional hours, from 0.0 (at midnight) to 12.0 
           (at noon), to 24.0 (at midnight).
@@ -1549,6 +1555,8 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
+      <minimum_value>-1</minimum_value>
+      <maximum_value>1</maximum_value>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -1562,6 +1570,8 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
+      <minimum_value>-1</minimum_value>
+      <maximum_value>1</maximum_value>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -1575,6 +1585,8 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
+      <minimum_value>-1</minimum_value>
+      <maximum_value>1</maximum_value>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -1588,7 +1600,9 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
+      <minimum_value>0.0</minimum_value>
       <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+      <specified_unit_id>m</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -1601,7 +1615,9 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
+      <minimum_value>0.0</minimum_value>
       <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+      <specified_unit_id>m</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -1614,7 +1630,9 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
+      <minimum_value>0.0</minimum_value>
       <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+      <specified_unit_id>m</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -1658,7 +1676,7 @@
   </DD_Attribute>
   <DD_Attribute>
     <name>x</name>
-    <version_id>1.0</version_id>
+    <version_id>1.1</version_id>
     <local_identifier>x</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Elizabeth Rye</submitter_name>
@@ -1666,11 +1684,12 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
     <name>y</name>
-    <version_id>1.0</version_id>
+    <version_id>1.1</version_id>
     <local_identifier>y</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Elizabeth Rye</submitter_name>
@@ -1678,11 +1697,12 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
     <name>z</name>
-    <version_id>1.0</version_id>
+    <version_id>1.1</version_id>
     <local_identifier>z</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Elizabeth Rye</submitter_name>
@@ -1690,6 +1710,7 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
   <!-- Base Vector attributes END -->
@@ -1753,39 +1774,41 @@
   </DD_Attribute>
   <DD_Attribute>
     <name>start_azimuth</name>
-    <version_id>1.0</version_id>
+    <version_id>1.1</version_id>
     <local_identifier>start_azimuth</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Jordan Padams</submitter_name>
     <definition>The start_azimuth specifies the angular distance from a fixed reference position at which an image or observation starts. Azimuth is 
       measured in a spherical coordinate system, in a plane normal to the principal axis. Azimuth values increase according to the right hand rule 
       relative to the positive direction of the principal axis of the spherical coordinate system. For lander map projections, this attribute specifies 
-      the azimuth of the left edge of the output map. Applies to Cylindrical and Cylindrical-Perspective lander map projections only.</definition>
+      the azimuth of the left edge of the output map. Applies to Cylindrical, Cylindrical_Perspective, and Perspective lander map projections only.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
-      <minimum_value>0</minimum_value>
+      <minimum_value>-360</minimum_value>
       <maximum_value>360</maximum_value>
       <unit_of_measure_type>Units_of_Angle</unit_of_measure_type>
+      <specified_unit_id>deg</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
     <name>stop_azimuth</name>
-    <version_id>1.0</version_id>
+    <version_id>1.1</version_id>
     <local_identifier>stop_azimuth</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Jordan Padams</submitter_name>
     <definition>The stop_azimuth attribute specifies the angular distance from a fixed reference position at which an image or observation stops. 
       Azimuth is measured in a spherical coordinate system, in a plane normal to the principal axis. Azimuth values increase according to the 
       right hand rule relative to the positive direction of the principal axis of the spherical coordinate system. For lander map projections, 
-      this attribute specifies the azimuth of the right edge of the output map. Applies to Cylindrical and Cylindrical-Perspective lander map 
+      this attribute specifies the azimuth of the right edge of the output map. Applies to Cylindrical, Cylindrical_Perspective, and Perspective lander map 
       projections only.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
-      <minimum_value>0</minimum_value>
+      <minimum_value>-360</minimum_value>
       <maximum_value>360</maximum_value>
       <unit_of_measure_type>Units_of_Angle</unit_of_measure_type>
+      <specified_unit_id>deg</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -1821,24 +1844,28 @@
   </DD_Attribute>
   <DD_Attribute>
     <name>surface_model_type</name>
-    <version_id>1.0</version_id>
+    <version_id>1.1</version_id>
     <local_identifier>surface_model_type</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Jordan Padams</submitter_name>
     <definition>Specifies the type of surface used for the reprojection performed during the mosaicking process. 
-      Valid values: Planar - refers to a flat planar model; Spherical - refers to a spherical model. 
+      Valid values: Infinity, Planar, or Spherical. 
     </definition>
     <DD_Value_Domain>
-      <enumeration_flag>false</enumeration_flag>
+      <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
       <DD_Permissible_Value>
-        <value>Spherical</value>
-        <value_meaning>spherical surface model</value_meaning>
+        <value>Infinity</value>
+        <value_meaning>Infinity planar surface. Defines a surface that extends to infinity in all directions.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Planar</value>
         <value_meaning>flat planar surface model</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Spherical</value>
+        <value_meaning>spherical surface model</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -1849,18 +1876,19 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Jordan Padams</submitter_name>
     <definition>The sphere_radius attribute specifies the radius of the spherical body. In PDS3, this was specified using the  
-      SURFACE_NORMAL_VECTOR keyword.
+      SURFACE_NORMAL_VECTOR keyword. Recommended units is meters or kilometers.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
       <minimum_value>0.0</minimum_value>
       <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+      <specified_unit_id>m</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
     <name>sphere_intersection_count</name>
-    <version_id>1.0</version_id>
+    <version_id>1.1</version_id>
     <local_identifier>sphere_intersection_count</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Jordan Padams</submitter_name>
@@ -1872,7 +1900,7 @@
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Integer</value_data_type>
+      <value_data_type>ASCII_NonNegative_Integer</value_data_type>
       <minimum_value>1</minimum_value>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
@@ -1889,14 +1917,15 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
-      <minimum_value>1</minimum_value>
+      <minimum_value>-360</minimum_value>
+      <maximum_value>360</maximum_value>
       <unit_of_measure_type>Units_of_Angle</unit_of_measure_type>
       <specified_unit_id>deg</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
     <name>projection_elevation</name>
-    <version_id>1.0</version_id>
+    <version_id>1.1</version_id>
     <local_identifier>projection_elevation</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Jordan Padams</submitter_name>
@@ -1907,13 +1936,15 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
+      <minimum_value>-90.0</minimum_value>
+      <maximum_value>90.0</maximum_value>
       <unit_of_measure_type>Units_of_Angle</unit_of_measure_type>
       <specified_unit_id>deg</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
     <name>projection_elevation_line</name>
-    <version_id>1.0</version_id>
+    <version_id>1.1</version_id>
     <local_identifier>projection_elevation_line</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Jordan Padams</submitter_name>
@@ -1923,7 +1954,7 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
-      <minimum_value>1</minimum_value>
+      <minimum_value>0.0</minimum_value>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -1944,7 +1975,7 @@
   </DD_Attribute>
   <DD_Attribute>
     <name>reference_azimuth</name>
-    <version_id>1.0</version_id>
+    <version_id>1.1</version_id>
     <local_identifier>reference_azimuth</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Jordan Padams</submitter_name>
@@ -1954,7 +1985,10 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
+      <minimum_value>-360</minimum_value>
+      <maximum_value>360</maximum_value>
       <unit_of_measure_type>Units_of_Angle</unit_of_measure_type>
+      <specified_unit_id>deg</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -1990,12 +2024,13 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Jordan Padams</submitter_name>
     <definition>The projection_axis_offset attribute specifies an offset from a projection axis in a map projection. 
-      For the Cylindrical-Perspective projection, this is the radius of a circle which represents the rotation around the 
+      For the Cylindrical Perspective projection, this is the radius of a circle which represents the rotation around the 
       projection origin of the synthetic camera used to calculate each column.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
       <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+      <specified_unit_id>m</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
   <!-- Map_Projection_Lander attributes END -->
@@ -2010,11 +2045,12 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Paul Geissler</submitter_name>
     <definition>Provides the ordinary latitude coordinate of the origin (oblique latitude = oblique longitude = 0) for the 
-      oblique coordinate system used to specify the OBLIQUE_CYLIDRICAL projection used in Cassini BIDR. NOTE that whereas some 
-      past PDS products may utilize oblique projections defined solely in terms of the REFERENCE_LATITUDE and 
-      REFERENCE_LONGITUDE (i.e., with a third defining angle always set to zero), the Cassini BIDRs require the full 
-      generality of three nonzero rotation angles. These angles are represented by the keywords OBLIQUE_PROJ_POLE_LATITUDE, 
-      OBLIQUE_PROJ_POLE_LONGITUDE, and  OBLIQUE_PROJ_POLE_ROTATION. The values of REFERENCE_LATITUDE and  REFERENCE_LONGITUDE 
+      oblique coordinate system used to specify the Oblique Cylindrical projection, for example, as used in Cassini BIDR (basic image data record). 
+      
+      Note that whereas some past PDS products may utilize oblique projections defined solely in terms of the reference_latitude and 
+      reference_longitude (i.e., with a third defining angle always set to zero), the Cassini BIDRs require the full 
+      generality of three nonzero rotation angles. These angles are represented by the keywords oblique_proj_pole_latitude, 
+      oblique_proj_pole_longitude, and  oblique_proj_pole_rotation. The values of reference_latitude and reference_longitude 
       are consistent with the latter three angles but do not uniquely define the oblique coordinate system on their own.
     </definition>
     <DD_Value_Domain>
@@ -2034,12 +2070,13 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Paul Geissler</submitter_name>
     <definition>Provides the ordinary longitude coordinate of the origin (oblique latitude = oblique longitude = 0) for the 
-      oblique coordinate system used to specify the  OBLIQUE_CYLIDRICAL projection used in Cassini BIDR. NOTE that whereas some 
-      past PDS products may utilize oblique projections defined solely in terms of the REFERENCE_LATITUDE and REFERENCE_LONGITUDE 
-      (i.e., with a third defining angle always set to zero), the Cassini BIDRs require the full generality of three nonzero 
-      rotation angles. These angles are represented by the keywords OBLIQUE_PROJ_POLE_LATITUDE, OBLIQUE_PROJ_POLE_LONGITUDE, 
-      and OBLIQUE_PROJ_POLE_ROTATION. The values of REFERENCE_LATITUDE and REFERENCE_LONGITUDE are consistent with the latter 
-      three angles but do not uniquely define the oblique coordinate system on their own.
+      oblique coordinate system used to specify the Oblique Cylindrical projection, for example, as used in Cassini BIDR (basic image data record). 
+      
+      Note that whereas some past PDS products may utilize oblique projections defined solely in terms of the reference_latitude 
+      and reference_longitude (i.e., with a third defining angle always set to zero), the Cassini BIDRs require the full generality 
+      of three nonzero rotation angles. These angles are represented by the keywords oblique_proj_pole_latitude, 
+      oblique_proj_pole_longitude, and oblique_proj_pole_rotation. The values of reference_latitude and reference_longitude are 
+      consistent with the latter three angles but do not uniquely define the oblique coordinate system on their own.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -2057,7 +2094,15 @@
     <local_identifier>map_projection_rotation</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Paul Geissler</submitter_name>
-    <definition>Included for generality, always 90 degrees for Cassini BIDRs.</definition>
+    <definition>Provides the clockwise rotation of the line and sample coordinate system with respect to
+      the map projection origin. 
+      
+      Note that a value of 90.0 is used for all Cassini BIDRs (basic image data record) 
+      indicating that lines of the projected image have constant oblique-system longitude and columns have constant
+      oblique-system latitude. As stated in the Cassini BIDR SIS (software interface specification), for these
+      images, it was convenient to represent longitude in the line direction so that the images, which are elongated 
+      along the equator of the oblique system, are larger in the line direction than in the sample direction.
+    </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -2075,7 +2120,7 @@
     <local_identifier>oblique_proj_pole_latitude</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Paul Geissler</submitter_name>
-    <definition>One of the three angles defining the oblique coordinate system used in the OBLIQUE_CYLINDRICAL 
+    <definition>One of the three angles defining the oblique coordinate system used in the Oblique Cylindrical 
       projection. This is the ordinary latitude of the pole (Z axis) of the oblique system.
     </definition>
     <DD_Value_Domain>
@@ -2094,7 +2139,7 @@
     <local_identifier>oblique_proj_pole_longitude</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Paul Geissler</submitter_name>
-    <definition>One of the three angles defining the oblique coordinate system used in the OBLIQUE_CYLINDRICAL projection. 
+    <definition>One of the three angles defining the oblique coordinate system used in the Oblique Cylindrical projection. 
       This is the ordinary longitude of the pole (Z axis) of the oblique system.
     </definition>
     <DD_Value_Domain>
@@ -2113,9 +2158,9 @@
     <local_identifier>oblique_proj_pole_rotation</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Paul Geissler</submitter_name>
-    <definition>One of the three angles defining the oblique coordinate system used in the OBLIQUE_CYLINDRICAL projection. 
+    <definition>One of the three angles defining the oblique coordinate system used in the Oblique Cylindrical projection. 
       This is a rotation around the polar (Z) axis of the oblique system that completes the transformation from standard to 
-      oblique coordinates. The value is positive east (obeys right hand rule) and is in the range 0 to 360 degrees.
+      oblique coordinates. The value is positive east (obeys right hand rule) and is recommended to be specified in degrees from 0 to 360.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -2133,14 +2178,14 @@
     <local_identifier>oblique_proj_x_axis_vector</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Paul Geissler</submitter_name>
-    <definition>This is a redundant attirubte and as such is optional mostly available for documentation for the parameters.
-      Unit vector in the direction of the X axis of the oblique coordinate system used in the OBLIQUE_CYLINDRICAL 
+    <definition>This is a redundant attribute and as such is optional mostly available for documentation for the parameters.
+      Unit vector in the direction of the X axis of the oblique coordinate system used in the Oblique Cylindrical 
       projection, in terms of the X, Y, and Z axes of the standard body-fixed coordinate system. In each system, the X axis 
       points from the body center toward longitude and latitude (0,0) in that system, the Z axis to (0,90), and the Y-axis 
-      completes a right-handed set. The OBLIQUE_PROJ_X/Y/Z_AXIS_VECTORS makeup the rows of a rotation matrix that when multiplied 
+      completes a right-handed set. The oblique_proj_x/y/z_axis_vector(s) make up the rows of a rotation matrix that when multiplied 
       on the left of a vector referenced to the standard coordinate system converts it into its equivalent in the oblique coordinate 
-      system. This rotation matrix is the product of successively applied rotations by OBLIQUE_PROJ_POLE_LONGITUDE around the Z 
-      axis, 90 OBLIQUE_PROJ_POLE_LATITUDE around the once-rotated Y axis, and OBLIQUE_PROJ_POLE_ROTATION around the twice-rotated 
+      system. This rotation matrix is the product of successively applied rotations by oblique_proj_pole_longitude around the Z 
+      axis, 90 oblique_proj_pole_latitude around the once-rotated Y axis, and oblique_proj_pole_rotation around the twice-rotated 
       Z axis.
     </definition>
     <DD_Value_Domain>
@@ -2156,14 +2201,14 @@
     <local_identifier>oblique_proj_y_axis_vector</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Paul Geissler</submitter_name>
-    <definition>This is a redundant attirubte and as such is optional mostly available for documentation for the parameters.
-      Unit vector in the direction of the Y axis of the oblique coordinate system used in the OBLIQUE_CYLINDRICAL projection, 
+    <definition>This is a redundant attribute and as such is optional mostly available for documentation for the parameters.
+      Unit vector in the direction of the Y axis of the oblique coordinate system used in the Oblique Cylindrical projection, 
       in terms of the X, Y, and Z axes of the standard body-fixed coordinate system. In each system, the X axis points from the body center 
       toward longitude and latitude (0,0) in that system, the Z axis to (0,90), and the Y-axis completes a right-handed set. The 
-      OBLIQUE_PROJ_X/Y/Z_AXIS_VECTORS makeup the rows of a rotation matrix that when multiplied on the left of a vector referenced to 
+      oblique_proj_x/y/z_axis_vector(s) make up the rows of a rotation matrix that when multiplied on the left of a vector referenced to 
       the standard coordinate system converts it into its equivalent in the oblique coordinate system. This rotation matrix is the 
-      product of successively applied rotations by OBLIQUE_PROJ_POLE_LONGITUDE around the Z axis, 90 OBLIQUE_PROJ_POLE_LATITUDE around 
-      the once-rotated Y axis, and OBLIQUE_PROJ_POLE_ROTATION around the twice-rotated Z axis.
+      product of successively applied rotations by oblique_proj_pole_longitude around the Z axis, 90 oblique_proj_pole_latitude around 
+      the once-rotated Y axis, and oblique_proj_pole_rotation around the twice-rotated Z axis.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -2178,14 +2223,14 @@
     <local_identifier>oblique_proj_z_axis_vector</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Paul Geissler</submitter_name>
-    <definition>This is a redundant attirubte and as such is optional mostly available for documentation for the parameters.
-      Unit vector in the direction of the Z axis of the oblique coordinate system used in the OBLIQUE_CYLINDRICAL projection, 
+    <definition>This is a redundant attribute and as such is optional mostly available for documentation for the parameters.
+      Unit vector in the direction of the Z axis of the oblique coordinate system used in the Oblique Cylindrical projection, 
       in terms of the X, Y, and Z axes of the standard body-fixed coordinate system. In each system, the X axis points from the body center 
       toward longitude and latitude (0,0) in that system, the Z axis to (0,90), and the Y-axis completes a right-handed set. The 
-      OBLIQUE_PROJ_X/Y/Z_AXIS_VECTORS makeup the rows of a rotation matrix that when multiplied on the left of a vector referenced to 
+      oblique_proj_x/y/z_axis_vector(s) make up the rows of a rotation matrix that when multiplied on the left of a vector referenced to 
       the standard coordinate system converts it into its equivalent in the oblique coordinate system. This rotation matrix is the product 
-      of successively applied rotations by OBLIQUE_PROJ_POLE_LONGITUDE around the Z axis, 90 OBLIQUE_PROJ_POLE_LATITUDE around the 
-      once-rotated Y axis, and OBLIQUE_PROJ_POLE_ROTATION around the twice-rotated Z axis.
+      of successively applied rotations by oblique_proj_pole_longitude around the Z axis, 90 oblique_proj_pole_latitude around the 
+      once-rotated Y axis, and oblique_proj_pole_rotation around the twice-rotated Z axis.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -2196,28 +2241,40 @@
   
   <DD_Attribute>
     <name>look_direction</name>
-    <version_id>1.0</version_id>
+    <version_id>1.1</version_id>
     <local_identifier>look_direction</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Paul Geissler</submitter_name>
-    <definition>The value (RIGHT or LEFT) indicates the side of the spacecraft ground-track to which the antenna is pointed for data 
-      acquired within this file. The SAR images stored in theBIDR files are always acquired on only one side of the ground track for 
-      each Titan pass. This value also indicates from which side the SAR image is illuminated. If the spacecraft images to the left 
-      of its ground track (LOOK_DIRECTION=LEFT), the image will be illuminated from the (viewer's) left side, and, conversely, if the 
-      spacecraft looks to the right, the illumination will come from the right in the image file. The direction of illumination is 
-      critical to interpretation of features in the image.
+    <definition>The value (Right, Left or Both) indicates the side of the spacecraft ground-track to which the antenna is pointed for data 
+      acquired within this file. The SAR (synthetic aperture radar) images stored in the BIDR (basic image data record) files are always 
+      acquired on only one side of the ground-track for each Titan pass. This value also indicates from which side the SAR image is 
+      illuminated. If the spacecraft images to the left of its ground-track (look_direction=Left), the image will be illuminated from 
+      the (viewer's) left side, and, conversely, if the spacecraft looks to the right, the illumination will come from the right in the 
+      image file. The direction of illumination is critical to interpretation of features in the image.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+      <DD_Permissible_Value>
+        <value>Both</value>
+        <value_meaning>Antenna pointed both left and right of spacecraft ground-track</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Left</value>
+        <value_meaning>Antenna pointed left of spacecraft ground-track</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Right</value>
+        <value_meaning>Antenna pointed right of spacecraft ground-track</value_meaning>
+      </DD_Permissible_Value>
+      <!-- will leave originally defined in caps for backwards compatibility, but will be deprecated-->
       <DD_Permissible_Value>
         <value>LEFT</value>
         <value_meaning>Antenna pointed left of spacecraft ground-track</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>RIGHT</value>
-        <value_meaning>Antenna pointed right of spacecraft groundtrack</value_meaning>
+        <value_meaning>Antenna pointed right of spacecraft ground-track</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -2245,24 +2302,26 @@
     <local_identifier>angular_scale</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
-    <definition>Grid spacing. Unit is radian/pixel.</definition>
+    <definition>Grid spacing. Recommended unit is radian/pixel.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
+      <minimum_value>0.0</minimum_value>
       <unit_of_measure_type>Units_of_Pixel_Resolution_Angular</unit_of_measure_type>
       <specified_unit_id>radian/pixel</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
     <name>radial_scale</name>
-    <version_id>1.0</version_id>
+    <version_id>1.1</version_id>
     <local_identifier>radial_scale</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
-    <definition>Grid spacing. Unit is km/pixel.</definition>
+    <definition>Grid spacing. Recommended unit is km/pixel.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
+      <minimum_value>0.0</minimum_value>
       <unit_of_measure_type>Units_of_Pixel_Resolution_Linear</unit_of_measure_type>
       <specified_unit_id>km/pixel</specified_unit_id>
     </DD_Value_Domain>
@@ -2273,11 +2332,13 @@
     <local_identifier>local_time_scale</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
-    <definition>Grid spacing. Unit is angle/pixel (e.g., deg/pixel, HA/pixel or hour angle per pixel).</definition>
+    <definition>Grid spacing. Recommended unit for Units_of_Pixel_Resolution_Angular is deg/pixel or HA/pixel (hour angle per pixel).</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
+      <minimum_value>0.0</minimum_value>
       <unit_of_measure_type>Units_of_Pixel_Resolution_Angular</unit_of_measure_type>
+      <specified_unit_id>deg/pixel</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -2286,10 +2347,10 @@
     <local_identifier>sample_name</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
-    <definition>Coordinate name for the sample axis. e.g. "RADIUS KM"</definition>
+    <definition>Coordinate name for the sample axis. e.g. "Radius Km".</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Text_Preserved</value_data_type>
+      <value_data_type>UTF8_Text_Preserved</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -2298,10 +2359,10 @@
     <local_identifier>line_name</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
-    <definition>Coordinate name for the line axis. e.g. "LOCAL TIME HOURS"</definition>
+    <definition>Coordinate name for the line axis. e.g. "Local Time Hours".</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Text_Preserved</value_data_type>
+      <value_data_type>UTF8_Text_Preserved</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -2415,8 +2476,8 @@
     <version_id>1.0</version_id>
     <local_identifier>Cartography</local_identifier>
     <submitter_name>Elizabeth D. Rye</submitter_name>
-    <definition>The Cartography class provides a description of how a 3D sphere, spheroid, or elliptical spheroid or the celestial 
-      sphere is mapped onto a plane.
+    <definition>The Cartography class provides a description of how a 3D sphere, spheroid, elliptical spheroid, 
+      the celestial sphere, in-situ location, or planetary rings are mapped onto a Cartesian, local, or geographic plane.
     </definition>
     <element_flag>true</element_flag>
     <DD_Association>
@@ -2443,14 +2504,6 @@
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
-    <Terminological_Entry>
-      <name>Cartography</name>
-      <definition>The Cartography class provides a description of how a 3D sphere, spheroid, or elliptical spheroid or the 
-        celestial sphere is mapped onto a plane.
-      </definition>
-      <language>English</language>
-      <preferred_flag>true</preferred_flag>
-    </Terminological_Entry>
   </DD_Class>
   
   <DD_Class>
@@ -2510,10 +2563,10 @@
       <name>Secondary_Spatial_Domain</name>
       <definition>The Secondary_Spatial_Domain class optionally describes a second or alternative 
         geographic areal domain of the data set which is recommended by the IAU or has historical use in previous
-        PDS archives. For example, if Spatial_Domain is defined using a POSITIVE_EAST longitude_direction, this
-        section can define to list the Bounding_Coordinates using POSITIVE_WEST coordinates and a different
-        latitude_type. This was implemented for the Europa Clipper mission to support both POSITIVE_EAST 
-        (within Spatial_Domain) and the historical use of POSITIVE_WEST for Europa (within Secondary_Spatial_Domain).
+        PDS archives. For example, if Spatial_Domain is defined using a Positive East longitude_direction, this
+        section can define to list the Bounding_Coordinates using Positive West coordinates and a different
+        latitude_type. This was implemented for the Europa Clipper mission to support both Positive East 
+        (within Spatial_Domain) and the historical use of Positive West for Europa (within Secondary_Spatial_Domain).
       </definition>
       <language>English</language>
       <preferred_flag>true</preferred_flag>
@@ -2682,7 +2735,6 @@
     </Terminological_Entry>
   </DD_Class>
   
-  <!-- 20190222: Per THare - changed 'cart.latitude_resolution' and 'cart:longitude_resolution' to be optional, not needed for vector GIS labels -->
   <DD_Class>
     <name>Geographic</name>
     <version_id>1.0</version_id>
@@ -2692,22 +2744,31 @@
       quantities of latitude and longitude which define the position of a
       point on a planetary body's surface with respect to a reference
       spheroid.</definition>
-    <DD_Association>
+      <DD_Association>
+        <identifier_reference>geographic_description</identifier_reference>
+        <reference_type>attribute_of</reference_type>
+        <minimum_occurrences>0</minimum_occurrences>
+        <maximum_occurrences>1</maximum_occurrences>
+      </DD_Association>
+      <DD_Association>
       <identifier_reference>latitude_resolution</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>longitude_resolution</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <Terminological_Entry>
       <name>Geographic</name>
       <definition>The Geographic class provides information about the quantities of latitude and longitude which 
-        define the position of a point on a planetary body's surface with respect to a reference spheroid.
+        define the position of a point on a planetary body's surface with respect to a reference spheroid. When
+        defined for vector-based formats, and where the latitude and longitude are not meaningful, then the
+        geographic_description can be used to explain the coordinate system, for example what scale (e.g., 1:2M) 
+        the file was captured or digitized at. In this regard, scale can be a proxy for the resolution of the file.
       </definition>
       <language>English</language>
       <preferred_flag>true</preferred_flag>
@@ -2732,7 +2793,7 @@
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
-    <!-- 20190209: Per T.Hare - Planar_Coordinate_Information is no longer mandated to support vector files. It should be there for images-->
+
     <DD_Association>
       <identifier_reference>Planar_Coordinate_Information</identifier_reference>
       <reference_type>component_of</reference_type>
@@ -2948,7 +3009,6 @@
       perpendicular reference axes (the "coordinate pair" and "row and
       column" methods).
     </definition>
-    <!-- 20190222: Per T.Hare - pixel_resolution_x|y and pixel_scale_x|y pairs are only madatory if Planar_Coordinate_Information is present-->
     <DD_Association>
       <identifier_reference>pixel_resolution_x</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -3102,7 +3162,7 @@
     <DD_Association>
       <identifier_reference>standard_parallel_1</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
@@ -3216,7 +3276,7 @@
     <local_identifier>Orthographic</local_identifier>
     <submitter_name>Trent Hare</submitter_name>
     <definition>The Orthographic class contains parameters for the Orthographic projection.
-      While required, some applications will default to 0.0 if not definied. Here we want to explicit.
+      While required, some applications will default to 0.0 if not defined. Here we want to explicit.
       Synder 1987, DOI:10.3133/pp1395, page 145: https://pubs.usgs.gov/pp/1395/report.pdf#page=157
       PROJ: https://proj.org/operations/projections/ortho.html
     </definition>
@@ -3282,7 +3342,7 @@
 
       Note that most applications will either define latitude_of_projection_origin 
       or scale_factor_at_projection_origin, but not both. Here we define latitude_of_projection_origin
-      as mandatory and at CART LDD versoin 1934 have made scale_factor_at_projection_origin optional. 
+      as mandatory and at CART LDD version 1934 have made scale_factor_at_projection_origin optional. 
       For context, these two keywords have the same impact on the final product but are just different 
       ways to define it. Thus, for example in the PROJ library, if both are made available, the
       latitude_of_projection_origin (+lat_ts) will be used instead of 
@@ -3713,10 +3773,10 @@
 
   <DD_Class>
     <name>Map_Projection_Lander</name>
-    <version_id>1.0</version_id>
+    <version_id>1.1</version_id>
     <local_identifier>Map_Projection_Lander</local_identifier>
     <submitter_name>Jordan Padams</submitter_name>
-    <definition>The Map_Projection class provides the systematic representation 
+    <definition>The Map_Projection_Lander class provides the systematic representation 
       of all or part of the surface of a planet on a plane or developable surface 
       from the perspective of an in-situ spacecraft.</definition>
     <DD_Association>
@@ -3751,7 +3811,7 @@
     <version_id>1.0</version_id>
     <local_identifier>Surface_Model_Parameters</local_identifier>
     <submitter_name>Jordan Padams</submitter_name>
-    <definition>This class describes the surface model used by the projection. 
+    <definition>The Surface_Model_Parameters class describes the surface model used by the projection. 
       For in-situ mosaics, the surface model describes the surface upon which 
       input images are projected in order to create a unified point of view in 
       a mosaic.  To the extent the surface model does not match the actual 
@@ -3767,7 +3827,7 @@
       <identifier_reference>Surface_Model_Planar</identifier_reference>
       <identifier_reference>Surface_Model_Spherical</identifier_reference>
       <reference_type>component_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
@@ -3777,7 +3837,7 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
-  
+
   <DD_Class>
     <name>Surface_Model_Planar</name>
     <version_id>1.0</version_id>
@@ -3897,7 +3957,7 @@
     <DD_Association>
       <identifier_reference>pixel_scale_x</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
@@ -3909,25 +3969,25 @@
     <DD_Association>
       <identifier_reference>maximum_elevation</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>minimum_elevation</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>start_azimuth</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>stop_azimuth</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
@@ -4370,9 +4430,9 @@
     <version_id>1.0</version_id>
     <local_identifier>Vector_Projection_X_Axis</local_identifier>
     <submitter_name>Jordan Padams</submitter_name>
-    <definition>The Vector_Projection_X_Axis class specifies a unit vector defining the X-axis for a given projection. For Orthographic, Orthorectified, and Vertical 
-      projections, this vector defines how the * axis in the mosaic is oriented in space. The X and Y axis vectors together define 
-      the rotation of the projection plane around the projection axis.</definition>
+    <definition>The Vector_Projection_X_Axis class specifies a unit vector defining the X-axis for a given projection. For Orthographic_Lander, 
+      Orthorectified, and Vertical projections, this vector defines how the specified axis in the mosaic is oriented in space. The X and Y axis vectors 
+      together define the rotation of the projection plane around the projection axis.</definition>
     <DD_Association>
       <identifier_reference>Vector_Cartesian_Unit_Base</identifier_reference>
       <reference_type>parent_of</reference_type>
@@ -4386,9 +4446,9 @@
     <version_id>1.0</version_id>
     <local_identifier>Vector_Projection_Y_Axis</local_identifier>
     <submitter_name>Jordan Padams</submitter_name>
-    <definition>The Vector_Projection_Y_Axis class specifies a unit vector defining the Y-axis for a given projection. For Orthographic, Orthorectified, and Vertical 
-      projections, this vector defines how the * axis in the mosaic is oriented in space. The X and Y axis vectors together define 
-      the rotation of the projection plane around the projection axis.</definition>
+    <definition>The Vector_Projection_Y_Axis class specifies a unit vector defining the Y-axis for a given projection. For Orthographic_Lander, 
+      Orthorectified, and Vertical projections, this vector defines how the specified axis in the mosaic is oriented in space. The X and Y axis vectors 
+      together define the rotation of the projection plane around the projection axis.</definition>
     <DD_Association>
       <identifier_reference>Vector_Cartesian_Unit_Base</identifier_reference>
       <reference_type>parent_of</reference_type>
@@ -4429,32 +4489,6 @@
     <DD_Association>
       <identifier_reference>Vector_Cartesian_Unit_Base</identifier_reference>
       <reference_type>parent_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-  </DD_Class>
-  
-  <DD_Class>
-    <name>Vector_Length_Base</name>
-    <version_id>1.0</version_id>
-    <local_identifier>Vector_Length_Base</local_identifier>
-    <submitter_name>Jordan Padams</submitter_name>
-    <definition>The Vector_Length_Base is an abstract class that forms the base of length-based x, y, z vectors.</definition>
-    <DD_Association>
-      <identifier_reference>x_length</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>y_length</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>z_length</identifier_reference>
-      <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
@@ -4519,36 +4553,6 @@
     </DD_Association>
     <DD_Association>
       <identifier_reference>z_position</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-  </DD_Class>
-  
-  <DD_Class>
-    <name>Vector_Cartesian_No_Units</name>
-    <version_id>1.0</version_id>
-    <local_identifier>Vector_Cartesian_No_Units</local_identifier>
-    <submitter_name>Elizabeth Rye</submitter_name>
-    <definition>This is a generic vector in Cartesian space.
-      The "x", "y", and "z" component have no units.
-    </definition>
-    <abstract_flag>false</abstract_flag>
-    <element_flag>false</element_flag>
-    <DD_Association>
-      <identifier_reference>x</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>y</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>z</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -4629,7 +4633,7 @@
     <submitter_name>Elizabeth D. Rye</submitter_name>
     <definition>The Oblique_Line_Point_Group class provides the coordinates
       in latitude and longitude of one end point of the line along which an
-      oblique mercator map projection is centered.</definition>
+      Oblique Mercator map projection is centered.</definition>
     <DD_Association>
       <identifier_reference>oblique_line_latitude</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -4645,8 +4649,8 @@
     <Terminological_Entry>
       <name>Oblique_Line_Point_Group</name>
       <definition>The Oblique_Line_Point_Group class provides the coordinates in 
-        latitude and longitude of one end point of the line along which an oblique 
-        mercator map projection is centered.</definition>
+        latitude and longitude of one end point of the line along which an Oblique 
+        Mercator map projection is centered.</definition>
       <language>English</language>
       <preferred_flag>true</preferred_flag>
     </Terminological_Entry>
@@ -4786,7 +4790,7 @@
     <version_id>1.0</version_id>
     <local_identifier>Geo_Transformation</local_identifier>
     <submitter_name>Ronald Joyner</submitter_name>
-    <definition>The GEO_Transformation describes the relationship between raster 
+    <definition>The Geo_Transformation describes the relationship between raster 
       positions (in pixel/line coordinates) and georeferenced coordinates. This is 
       defined by an affine transform. The affine transform consists of six coefficients 
       which map pixel/line coordinates into georeferenced space using the following relationship:
@@ -4828,37 +4832,16 @@
   <!--  Start Schematron Rules -->
   <!--                         -->
   
-  <!-- 20151021: Per C.Isbell - added rule to ensure: -->
-  <!--   either pixel_resolution_x|y pair or pixel_scale_x|y pair must be present -->
-  <!--   within a cartographic label. And, both can be present -->
-
-  <!-- 20151022: Per C.Isbell - Both pixel_resolution_x|y and pixel_scale_x|y pairs must be present within a cartographic label -->
-  <!--    So, no need for schematron rules; handled in XSD  -->
-  
-  <!-- Rule to check local_georeference_information of Map_Projection_Lander are specified -->
-  
   <DD_Rule>
-    <local_identifier>Local_child_check</local_identifier>
-    <rule_context>//cart:Horizontal_Coordinate_System_Definition/cart:Local</rule_context>
-    <DD_Rule_Statement>
-      <rule_type>Assert</rule_type>
-      <rule_test>exists(cart:local_georeference_information) or exists(cart:Map_Projection_Lander) or exists(cart:Map_Projection_Rings)</rule_test>
-      <rule_message>In cart:Local, cart:local_georeference_information or cart:Map_Projection_Lander or cart:Map_Projection_Rings must be specified</rule_message>
-    </DD_Rule_Statement>
-  </DD_Rule>
-  
-  <DD_Rule>
-    <local_identifier>spatial_domain_or_lander_or_rings_check</local_identifier>
+    <local_identifier>secondary_spatial_domain_requires_spatial_domain_check</local_identifier>
     <rule_context>//cart:Cartography</rule_context>
     <DD_Rule_Statement>
       <rule_type>Assert</rule_type>
-      <rule_test>exists(cart:Spatial_Domain) or 
-                 exists(cart:Spatial_Reference_Information/cart:Horizontal_Coordinate_System_Definition/cart:Local/cart:Map_Projection_Lander) or
-                 exists(cart:Spatial_Reference_Information/cart:Horizontal_Coordinate_System_Definition/cart:Local/cart:Map_Projection_Rings)</rule_test>
-      <rule_message>cart:Spatial_Domain or cart:Map_Projection_Lander or cart:Map_Projection_Rings must be specified</rule_message>
+      <rule_test>if ((cart:Secondary_Spatial_Domain) and not (cart:Spatial_Domain)) then false() else true()</rule_test>
+      <rule_message>cart:Spatial_Domain must exist if cart:Secondary_Spatial_Domain is used</rule_message>
     </DD_Rule_Statement>
   </DD_Rule>
-  
+	
   <DD_Rule>
     <local_identifier>local_reference_type_check_cart</local_identifier>
     <rule_context>//cart:Cartography/pds:Local_Internal_Reference</rule_context>
@@ -4869,42 +4852,6 @@
     </DD_Rule_Statement>
   </DD_Rule>
   
- <!--
-  <sch:pattern>
-    <sch:rule context="//cart:Coordinate_Representation">
-      <sch:assert test="if ((cart:pixel_resolution_x and not(cart:pixel_resolution_y)) or (not(cart:pixel_resolution_x and cart:pixel_resolution_y))) then false() else true()">
-        The pair of attributes cart:pixel_resolution_x and cart:pixel_resolution_y must be present.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  
-  <sch:pattern>
-    <sch:rule context="//cart:Coordinate_Representation">
-      <sch:assert test="if ((cart:pixel_scale_x and not(cart:pixel_scale_y)) or (not(cart:pixel_scale_x and cart:pixel_scale_y))) then false() else true()">
-        The pair of attributes cart:pixel_scale_x and cart:pixel_scale_y must be present.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  -->
-  <!--end: 20151021 -->
-  <!--
-  <DD_Rule>
-    <local_identifier>Coordinate_Representation - Rule#1</local_identifier>
-    <rule_context>//cart:Coordinate_Representation</rule_context>
-    <DD_Rule_Statement>
-      <rule_type>Assert</rule_type>
-      <rule_test>if ((cart:pixel_resolution_x and not(cart:pixel_resolution_y)) or (not(cart:pixel_resolution_x and cart:pixel_resolution_y))) then false() else true()</rule_test>
-      <rule_message>The pair of attributes cart:pixel_resolution_x and cart:pixel_resolution_y must be present.</rule_message>
-    </DD_Rule_Statement>
-  </DD_Rule>
+<!-- need: map projection name to map projection class name Schematron Checks -->
 
-  <DD_Rule>
-    <local_identifier>Coordinate_Representation - Rule#2</local_identifier>
-    <rule_context>//cart:Coordinate_Representation</rule_context>
-    <DD_Rule_Statement>
-      <rule_type>Assert</rule_type>
-      <rule_test>if ((cart:pixel_scale_x and not(cart:pixel_scale_y)) or (not(cart:pixel_scale_x and cart:pixel_scale_y))) then false() else true()</rule_test>
-      <rule_message>The pair of attributes cart:pixel_scale_x and cart:pixel_scale_y must be present.</rule_message>
-    </DD_Rule_Statement>
-  </DD_Rule>
--->
-  
 </Ingest_LDD>
