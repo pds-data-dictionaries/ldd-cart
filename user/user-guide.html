@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction &mdash; Cartography Namespace  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Classes" href="../detailed/example.html" />
+    <link rel="prev" title="Cartography Namespace Documentation" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Cartography Namespace
+            <img src="../_static/PDS_Planets.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#overview-of-the-overview-of-the-cartography-discipline-dictionary">Overview of the Overview of the Cartography Discipline Dictionary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#organization-of-classes-and-attributes">Organization of Classes and Attributes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#examples">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#equirectangular-pds4-cartography-example"><span class="xref myst">Equirectangular PDS4 Cartography example</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#transverse-mercator-pds4-cartography-example"><span class="xref myst">Transverse Mercator PDS4 Cartography example</span></a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Detailed Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../detailed/example.html">Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../detailed/example.html#attribute-definitions"><span class="xref myst">Attribute Definitions</span></a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cartography Namespace</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Introduction</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/pds-data-dictionaries/ldd-template/blob/main/docs/source/user/user-guide.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <p>Sept 27, 2022
+Trent Hare</p>
+<section id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h1>
+<ol class="arabic simple">
+<li><p>Purpose of this User’s Guide</p></li>
+<li><p>Audience</p></li>
+<li><p>Applicable Documents</p></li>
+</ol>
+</section>
+<section id="overview-of-the-overview-of-the-cartography-discipline-dictionary">
+<h1>Overview of the Overview of the Cartography Discipline Dictionary<a class="headerlink" href="#overview-of-the-overview-of-the-cartography-discipline-dictionary" title="Permalink to this headline"></a></h1>
+<p>A map projection is generally a mathematical method used to represent the 3-dimensional surface of the target body on a 2-dimensional plane. This typically requires (1) definition for the shape and size of the body and (2) the ability to transform from geographic/geocentric (longitude and latitude) coordinates to planar/Cartesian coordinates (X, Y or also called eastings, northings) typically in meters. The various map projections allowed in PDS4 have different required parameter needs. For example, the Sinusoidal projection only has one required parameter to define the central meridian, called &lt;cart:longitude_of_central_meridian&gt;. Whereas, the Equirectangular projection (also called Equidistant Cylindrical) requires both the &lt;cart:longitude_of_central_meridian&gt; and the latitude of true scale or &lt;cart:standard_parallel_1&gt;, which defines at what latitude where the scale is not distorted. Unfortunately, it is not uncommon for various applications to support a different number of parameters. Again for Equirectangular, some applications may also require the latitude of projection center or &lt;cart:latitude_of_projection_origin&gt;. For our purposes we have defined this parameter as optional and implies this parameter should default to 0. Although it is optional, it is recommended that this parameter be explicitly set to zero. The equations used for the allowed map projections should be define in the archive’s Software Interface Specification (SIS). For the more typical cartographic projections, it is common to follow the methods (defined equations) as described in the 1987 USGS Professional Paper #1395, Map projections: A working manual by John P. Snyder (https://doi.org/10.3133/pp1395) or as supported within the open-source PROJ coordinate transformation software library (https://proj.org/) as sponsored by the Open Source Geospatial Foundation (OSGeo). Within the cartography XML schema, when available, the page number for the Snyder manual is listed (digital PDF is available from the link above) and the address to the PROJ specific map projection web page is made available.</p>
+<p>And while related, landed and rings map projections can be very different. Currently we support seven different lander map projections commonly used in rover missions. Lander projections are commonly found or originate within JPL’s VICAR software. For rings, we currently only support one projection. This projection, called &lt;cart:Ring_Polar&gt;, maps the distance from the center of the body in the X axis and the local time into the Y axis of the resulting Cartesian plane.
+For context, the PDS4 cartography data dictionary replaces the original section found in PDS3 archives labeled OBJECT=IMAGE_MAP_PROJECTION. As previously stated, and based on the FGDC standard, the new hierarchical structure in PDS4 allows us to more easily group like sections. For example, to distinguish more typical map projections from landed or ring projections, we have divided available horizontal systems (Cartesian systems) into three categories, see Figure 2. The most used horizontal system will characteristically be &lt;cart:Planar&gt;, where most widely-used cartographic map projections are defined. &lt;cart:Local&gt; allows for landed and rings map projections. And lastly, &lt;cart:Geographic&gt;, not originally allowed in PDS3, simply allows for the most basic of systems using distances provided in angular degrees. This class, &lt;cart:Geographic&gt;, can be used to define both geographic or geocentric coordinate systems. The &lt;cart:latitude_type&gt; attribute, under the &lt;Geodetic_Model&gt; class, is used to distinguish between geographic or geocentric latitude systems (also know as areographic or aerocentric).</p>
+<p><img alt="Horizontal Coordinate System Definition UML" src="../_images/user-guide-figure1.png" /></p>
+<blockquote>
+<div><p><em>Figure 1. shows the &lt;cart:Horizontal_Coordinate_System_Definition&gt; which requires one and only one type &lt;cart:Geographic&gt;, &lt;cart:Planar&gt;, or &lt;cart:Local&gt;. While &lt;cart:Geodetic_Model&gt;, which defines the size of the target body (e.g. radius of the body), may not always be required if the projection used is for a landed or rings projection.</em></p>
+</div></blockquote>
+</section>
+<section id="organization-of-classes-and-attributes">
+<h1>Organization of Classes and Attributes<a class="headerlink" href="#organization-of-classes-and-attributes" title="Permalink to this headline"></a></h1>
+<p>As of version 1H00_1970, September 2022, for the cartography data dictionary, there are more than 60 classes and 150 attributes. That is far too many to describe each class and attribute within this document. Looking at the top-level schematic diagram in figure 2, it shows that to begin with the cartography dictionary is simply structured. While deeper into the structure it appears to be much more complicated, but the overall design remains relatively straight forward. The dictionary appears complicated as we currently support twelve cartographic-based map projection, seven lander-based map projections and one rings map projection. Because each of these map projections have often different required parameters, there are many needed attributes, thus the overall construction appears to be complicated.</p>
+<p>For example, given a derived global image map, the cartography section needs to (1) when possible, identify the bounding coordinates in degrees, (2) define the horizontal type, size of the target body, and map projection type, (3) define the required attributes for that map projection, and (4) if the product is an image, define the mapping from the top-left pixel to the map projection’s Cartesian plane and the pixel’s cell size in meters.</p>
+</section>
+<section id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h1>
+<section id="equirectangular-pds4-cartography-example">
+<h2><span class="xref myst">Equirectangular PDS4 Cartography example</span><a class="headerlink" href="#equirectangular-pds4-cartography-example" title="Permalink to this headline"></a></h2>
+<p>This example only shows the cartography section from a sample map projected (derived) observational data product. Note the two required sections (1) Spatial_Domain and (2) Spatial_Reference_Information (which includes Horizontal_Coordinate_System_Definition and Geodetic_Model).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+   <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">Cartography</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">Local_Internal_Reference</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">local_identifier_reference</span><span class="o">&gt;</span><span class="n">image</span><span class="o">&lt;/</span><span class="n">local_identifier_reference</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">local_reference_type</span><span class="o">&gt;</span><span class="n">cartography_parameters_to_image_object</span><span class="o">&lt;/</span><span class="n">local_reference_type</span><span class="o">&gt;</span>
+   <span class="o">&lt;/</span><span class="n">Local_Internal_Reference</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">Spatial_Domain</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">Bounding_Coordinates</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">west_bounding_coordinate</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="o">&gt;</span><span class="mf">75.8079050438213358</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">west_bounding_coordinate</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">east_bounding_coordinate</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="o">&gt;</span><span class="mf">76.1736166611768368</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">east_bounding_coordinate</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">north_bounding_coordinate</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="o">&gt;</span><span class="mf">20.4232179301976089</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">north_bounding_coordinate</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">south_bounding_coordinate</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="o">&gt;</span><span class="mf">19.60712657606717</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">south_bounding_coordinate</span><span class="o">&gt;</span>
+   <span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">Bounding_Coordinates</span><span class="o">&gt;</span>
+   <span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">Spatial_Domain</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">Spatial_Reference_Information</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">Horizontal_Coordinate_System_Definition</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">Planar</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">Map_Projection</span><span class="o">&gt;</span>
+         <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">map_projection_name</span><span class="o">&gt;</span><span class="n">Equirectangular</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">map_projection_name</span><span class="o">&gt;</span>
+         <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">Equirectangular</span><span class="o">&gt;</span>
+         <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">standard_parallel_1</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="o">&gt;</span><span class="mi">20</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">standard_parallel_1</span><span class="o">&gt;</span>
+         <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">longitude_of_central_meridian</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="o">&gt;</span><span class="mi">180</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">longitude_of_central_meridian</span><span class="o">&gt;</span>
+         <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">latitude_of_projection_origin</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="o">&gt;</span><span class="mi">0</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">latitude_of_projection_origin</span><span class="o">&gt;</span>
+         <span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">Equirectangular</span><span class="o">&gt;</span>
+      <span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">Map_Projection</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">Planar_Coordinate_Information</span><span class="o">&gt;</span>
+         <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">planar_coordinate_encoding_method</span><span class="o">&gt;</span><span class="n">Coordinate</span> <span class="n">Pair</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">planar_coordinate_encoding_method</span><span class="o">&gt;</span>
+         <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">Coordinate_Representation</span><span class="o">&gt;</span>
+         <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">pixel_resolution_x</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;m/pixel&quot;</span><span class="o">&gt;</span><span class="mi">4</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">pixel_resolution_x</span><span class="o">&gt;</span>
+         <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">pixel_resolution_y</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;m/pixel&quot;</span><span class="o">&gt;</span><span class="mi">4</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">pixel_resolution_y</span><span class="o">&gt;</span>
+         <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">pixel_scale_x</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;pixel/deg&quot;</span><span class="o">&gt;</span><span class="mf">14808.3911670365142</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">pixel_scale_x</span><span class="o">&gt;</span>
+         <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">pixel_scale_y</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;pixel/deg&quot;</span><span class="o">&gt;</span><span class="mf">14808.3911670365142</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">pixel_scale_y</span><span class="o">&gt;</span>
+         <span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">Coordinate_Representation</span><span class="o">&gt;</span>
+      <span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">Planar_Coordinate_Information</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">Geo_Transformation</span><span class="o">&gt;</span>
+         <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">upperleft_corner_x</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;m&quot;</span><span class="o">&gt;-</span><span class="mi">5799472</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">upperleft_corner_x</span><span class="o">&gt;</span>
+         <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">upperleft_corner_y</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;m&quot;</span><span class="o">&gt;</span><span class="mi">1209740</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">upperleft_corner_y</span><span class="o">&gt;</span>
+      <span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">Geo_Transformation</span><span class="o">&gt;</span>
+      <span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">Planar</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">Geodetic_Model</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">latitude_type</span><span class="o">&gt;</span><span class="n">Planetocentric</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">latitude_type</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">spheroid_name</span><span class="o">&gt;</span><span class="n">Mars</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">spheroid_name</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">a_axis_radius</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;m&quot;</span><span class="o">&gt;</span><span class="mf">3393833.26099999994</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">a_axis_radius</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">b_axis_radius</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;m&quot;</span><span class="o">&gt;</span><span class="mf">3393833.26099999994</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">b_axis_radius</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">c_axis_radius</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;m&quot;</span><span class="o">&gt;</span><span class="mf">3393833.26099999994</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">c_axis_radius</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">longitude_direction</span><span class="o">&gt;</span><span class="n">Positive</span> <span class="n">East</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">longitude_direction</span><span class="o">&gt;</span>
+      <span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">Geodetic_Model</span><span class="o">&gt;</span>
+   <span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">Horizontal_Coordinate_System_Definition</span><span class="o">&gt;</span>
+   <span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">Spatial_Reference_Information</span><span class="o">&gt;</span>
+   <span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">Cartography</span><span class="o">&gt;</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</section>
+<section id="transverse-mercator-pds4-cartography-example">
+<h2><span class="xref myst">Transverse Mercator PDS4 Cartography example</span><a class="headerlink" href="#transverse-mercator-pds4-cartography-example" title="Permalink to this headline"></a></h2>
+<p>This example only shows the cartography section from a sample map projected (derived) observational data product. Note the two required sections (1) Spatial_Domain and (2) Spatial_Reference_Information (which includes Horizontal_Coordinate_System_Definition and Geodetic_Model).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+   <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">Cartography</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">Local_Internal_Reference</span><span class="o">&gt;</span>
+         <span class="o">&lt;</span><span class="n">local_identifier_reference</span><span class="o">&gt;</span><span class="n">image</span><span class="o">&lt;/</span><span class="n">local_identifier_reference</span><span class="o">&gt;</span>
+         <span class="o">&lt;</span><span class="n">local_reference_type</span><span class="o">&gt;</span><span class="n">cartography_parameters_to_image_object</span><span class="o">&lt;/</span><span class="n">local_reference_type</span><span class="o">&gt;</span>
+      <span class="o">&lt;/</span><span class="n">Local_Internal_Reference</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">Spatial_Domain</span><span class="o">&gt;</span>
+         <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">Bounding_Coordinates</span><span class="o">&gt;</span>
+         <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">west_bounding_coordinate</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="o">&gt;-</span><span class="mf">117.6411</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">west_bounding_coordinate</span><span class="o">&gt;</span>
+         <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">east_bounding_coordinate</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="o">&gt;-</span><span class="mf">117.6281</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">east_bounding_coordinate</span><span class="o">&gt;</span>
+         <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">north_bounding_coordinate</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="o">&gt;</span><span class="mf">33.90241</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">north_bounding_coordinate</span><span class="o">&gt;</span>
+         <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">south_bounding_coordinate</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="o">&gt;</span><span class="mf">33.89153</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">south_bounding_coordinate</span><span class="o">&gt;</span>
+         <span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">Bounding_Coordinates</span><span class="o">&gt;</span>
+      <span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">Spatial_Domain</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">Spatial_Reference_Information</span><span class="o">&gt;</span>
+         <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">Horizontal_Coordinate_System_Definition</span><span class="o">&gt;</span>
+         <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">Planar</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">Map_Projection</span><span class="o">&gt;</span>
+               <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">map_projection_name</span><span class="o">&gt;</span><span class="n">Transverse</span> <span class="n">Mercator</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">map_projection_name</span><span class="o">&gt;</span>
+               <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">Transverse_Mercator</span><span class="o">&gt;</span>
+               <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">scale_factor_at_central_meridian</span><span class="o">&gt;</span><span class="mf">1.0</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">scale_factor_at_central_meridian</span><span class="o">&gt;</span>
+               <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">longitude_of_central_meridian</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="o">&gt;-</span><span class="mi">117</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">longitude_of_central_meridian</span><span class="o">&gt;</span>
+               <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">latitude_of_projection_origin</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="o">&gt;</span><span class="mi">0</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">latitude_of_projection_origin</span><span class="o">&gt;</span>
+               <span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">Transverse_Mercator</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">Map_Projection</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">Planar_Coordinate_Information</span><span class="o">&gt;</span>
+               <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">planar_coordinate_encoding_method</span><span class="o">&gt;</span><span class="n">Coordinate</span> <span class="n">Pair</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">planar_coordinate_encoding_method</span><span class="o">&gt;</span>
+               <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">Coordinate_Representation</span><span class="o">&gt;</span>
+               <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">pixel_resolution_x</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;m/pixel&quot;</span><span class="o">&gt;</span><span class="mi">60</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">pixel_resolution_x</span><span class="o">&gt;</span>
+               <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">pixel_resolution_y</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;m/pixel&quot;</span><span class="o">&gt;</span><span class="mi">60</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">pixel_resolution_y</span><span class="o">&gt;</span>
+               <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">pixel_scale_x</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;pixel/deg&quot;</span><span class="o">&gt;</span><span class="mf">1855.345</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">pixel_scale_x</span><span class="o">&gt;</span>
+               <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">pixel_scale_y</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;pixel/deg&quot;</span><span class="o">&gt;</span><span class="mf">1855.345</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">pixel_scale_y</span><span class="o">&gt;</span>
+               <span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">Coordinate_Representation</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">Planar_Coordinate_Information</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">Geo_Transformation</span><span class="o">&gt;</span>
+               <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">upperleft_corner_x</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;m&quot;</span><span class="o">&gt;-</span><span class="mf">59280.433</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">upperleft_corner_x</span><span class="o">&gt;</span>
+               <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">upperleft_corner_y</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;m&quot;</span><span class="o">&gt;</span><span class="mf">3751320.543</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">upperleft_corner_y</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">Geo_Transformation</span><span class="o">&gt;</span>
+         <span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">Planar</span><span class="o">&gt;</span>
+         <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">Geodetic_Model</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">latitude_type</span><span class="o">&gt;</span><span class="n">Planetocentric</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">latitude_type</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">spheroid_name</span><span class="o">&gt;</span><span class="n">Mars</span> <span class="mi">2000</span> <span class="n">Sphere</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">spheroid_name</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">a_axis_radius</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;m&quot;</span><span class="o">&gt;</span><span class="mf">3396190.0</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">a_axis_radius</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">b_axis_radius</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;m&quot;</span><span class="o">&gt;</span><span class="mf">3396190.0</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">b_axis_radius</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">c_axis_radius</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;m&quot;</span><span class="o">&gt;</span><span class="mf">3396190.0</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">c_axis_radius</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">cart</span><span class="p">:</span><span class="n">longitude_direction</span><span class="o">&gt;</span><span class="n">Positive</span> <span class="n">East</span><span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">longitude_direction</span><span class="o">&gt;</span>
+         <span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">Geodetic_Model</span><span class="o">&gt;</span>
+         <span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">Horizontal_Coordinate_System_Definition</span><span class="o">&gt;</span>
+      <span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">Spatial_Reference_Information</span><span class="o">&gt;</span>
+   <span class="o">&lt;/</span><span class="n">cart</span><span class="p">:</span><span class="n">Cartography</span><span class="o">&gt;</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>See more examples and conversion tutorials on the GitHub <a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-cart/wiki">CART Wiki</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Cartography Namespace Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../detailed/example.html" class="btn btn-neutral float-right" title="Classes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
