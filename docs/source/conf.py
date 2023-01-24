@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Cartography Namespace'
+project = 'Example Namespace'
 # copyright = overidden by CSS specified below
 author = 'NASA Planetary Data System'
 
@@ -88,4 +88,13 @@ html_theme_options = {
     'navigation_depth': 4,
     'includehidden': True,
     'titles_only': False
+}
+
+myst_enable_extensions = [
+    "deflist",
+    "fieldlist"
+]
+
+latex_elements = {
+    'maxlistdepth': '10'
 }
