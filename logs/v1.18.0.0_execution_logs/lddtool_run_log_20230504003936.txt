@@ -1,13 +1,17 @@
 
->>  INFO LDDTOOL Version: 14.1.2
->>  INFO IM Version Id: 1.19.0.0
+>>  INFO LDDTOOL Version: 14.2.3
+>>  INFO IM Version Id: 1.18.0.0
 >>  INFO IM Namespace Id: pds
->>  INFO IM Label Version Id: 1.25
->>  INFO Date: Thu Oct 20 21:49:05 UTC 2022
->>  INFO PARENT_DIR: /tmp/lddtool-14.1.2
->>  INFO SCRIPT_DIR: /tmp/lddtool-14.1.2/bin
->>  INFO LIB_DIR: /tmp/lddtool-14.1.2/lib
+>>  INFO IM Label Version Id: 1.24
+>>  INFO Date: Thu May 04 00:39:36 UTC 2023
+>>  INFO PARENT_DIR: /tmp/lddtool-14.2.3
+>>  INFO SCRIPT_DIR: /tmp/lddtool-14.2.3/bin
+>>  INFO LIB_DIR: /tmp/lddtool-14.2.3/lib
 
+>>> ERROR Class:0001_NASA_PDS_1.cart.Map_Projection_Lander  Association:geom.Coordinate_Space_Reference  Class:geom.Coordinate_Space_Reference - Missing Component Class
+>>> ERROR Association: geom.Coordinate_Space_Reference - Missing Component - Reference Type: component_of
+>>> ERROR Class:0001_NASA_PDS_1.cart.Surface_Model_Parameters  Association:geom.Coordinate_Space_Reference  Class:geom.Coordinate_Space_Reference - Missing Component Class
+>>> ERROR Association: geom.Coordinate_Space_Reference - Missing Component - Reference Type: component_of
 >>> INFO Init:  - Config.Properties Namespace Id Found:geom
 >>> INFO Init:  - Config.Properties Namespace Id Using:geom
 >>> INFO Init:  - LDD Dictionary_Type is Discipline
@@ -1313,8 +1317,11 @@
 >>> INFO Attribute: <angular_scale> - The default minimum value provided by the attribute's data type is being overridden with 0.0
 >>> INFO Attribute: <radial_scale> - The default minimum value provided by the attribute's data type is being overridden with 0.0
 >>> INFO Attribute: <local_time_scale> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> WARNING Attribute: <x> - This local attribute was not used in an Association.
 >>> WARNING Attribute: <x_length> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <y> - This local attribute was not used in an Association.
 >>> WARNING Attribute: <y_length> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <z> - This local attribute was not used in an Association.
 >>> WARNING Attribute: <z_length> - This local attribute was not used in an Association.
 >>> WARNING Class: <Body_Identification_Base> - The class name is duplicated in this local data dictionary.
 >>> WARNING Class: <Frame_Identification_Base> - The class name is duplicated in this local data dictionary.
@@ -1708,28 +1715,27 @@
 >>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
 >>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
 >>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
->>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
->>> WARNING Class: <Coordinate_Space_Reference> - An exposed class was found nested within another exposed class. Nested exposed classes should only be present if there is a specific requirement to expose the additional class.
 
  -- LDDTool Execution Summary --
-     397 warning(s)
-     0 error(s)
+     398 warning(s)
+     4 error(s)
      0 fatal error(s)
 
 Input:
 
-     - IM Version: 1J00
+     - IM Version: 1I00
      - PDS4 Flag: true
      - LDD Flag: true
+     - IM Version: true
      - Export JSON Flag: true
 
      - Ingest LDD(s): /home/runner/work/ldd-cart/ldd-cart/src/dependencies/ldd-geom/src/PDS4_GEOM_IngestLDD.xml, /home/runner/work/ldd-cart/ldd-cart/src/dependencies/ldd-geom/src/PDS4_GEOM_IngestLDD.xml, /home/runner/work/ldd-cart/ldd-cart/src/PDS4_CART_IngestLDD.xml
 
 Output:
 
-     - ./PDS4_CART_1J00_1970.xsd
-     - ./PDS4_CART_1J00_1970.sch
-     - ./PDS4_CART_1J00_1970.xml
-     - ./PDS4_CART_1J00_1970.JSON
+     - ./PDS4_CART_1I00_1970.xsd
+     - ./PDS4_CART_1I00_1970.sch
+     - ./PDS4_CART_1I00_1970.xml
+     - ./PDS4_CART_1I00_1970.JSON
 
->>  INFO Exit(0)
+>>  INFO Exit(1)
