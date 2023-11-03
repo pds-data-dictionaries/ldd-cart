@@ -3,16 +3,16 @@ PDS4 Local Data Dictionary Processing Report
 Configuration:
    LDDTool Version        14.3.0
    LDD Version Id:        1.9.7.0
-   LDD Label Version Id:  1.27
+   LDD Label Version Id:  1.24
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Fri Nov 03 15:49:11 UTC 2023
-   Common Schema          [PDS4_PDS_1L00.xsd]
-   Common Schematron      [PDS4_PDS_1L00.sch]
-   IM Version Id:         1.21.0.0
+   Time                   Fri Nov 03 15:49:15 UTC 2023
+   Common Schema          [PDS4_PDS_1I00.xsd]
+   Common Schematron      [PDS4_PDS_1I00.sch]
+   IM Version Id:         1.18.0.0
    IM Namespace Id:       pds
-   IM Label Version Id:   1.27
+   IM Label Version Id:   1.24
    IM Object Model        [UpperModel.pont]
    IM Data Dictionary     [dd11179.pins]
    IM Configuration File  [MDPTNConfigClassDisp.xml]
@@ -296,106 +296,106 @@ Parsed Input - Header:
 Parsed Input - Attributes:
 
    name                   geometry_reference_time_utc
-   version                1.21
+   version                1.18
    value data type        ASCII_Date_Time_YMD_UTC
    description            For some observations, geometric parameters are given as instantaneous values at a specific time. Another set of instantaneous parameters are the parameters which give the minimum and maximum values in the product. In some cases, these range values are all calculated for the same time. If the label includes single valued geometric parameters or min/max range parameters determined for a specific time, geometry_reference_time_utc gives the time for which these values were calculated and must be given in the label. For some instruments, particularly those with relatively large exposure durations, (e.g., push broom cameras, many imaging spectrometers), many geometric quantities are given as ranges. If those range parameters are associated with the beginning and end of the observation (start_parameter/stop_parameter), geometry_start_time_utc/stop_time must be given. Comments within the label should be used to ensure the parameter vs. time association is unambiguous. 
 
    name                   geometry_reference_time_tdb
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The geometry reference time given in the 'Barycentric Dynamical Time' system, as a number of elapsed seconds since the J2000 epoch. This is consistent with the definition of 'ephemeris time' as used in the SPICE toolkit. The value must correspond to the time specified in the geometry_reference_time_utc attribute. 
    unit of measure type   Units_of_Time
 
    name                   geometry_start_time_utc
-   version                1.21
+   version                1.18
    value data type        ASCII_Date_Time_YMD_UTC
    description            The pair of geometry_start_time_utc/geometry_stop_time_utc may be given in the label for any observation. The pair is generally used for fairly long duration observations (a substantial portion of an hour to several hours). geometry_start_time_utc gives the time at the beginning of the observation. When either geometry_start_time_utc or geometry_stop_time_utc is given, both must be provided. Within the Geometry discipline, there are two options for providing geometric parameters as a range of values. A parameter may be given as a pair where the parameter values are those at the beginning and end of the observation (start_parameter, stop_parameter). If a (start_parameter, stop_parameter) pair is used for any geometric parameter, the pair (geometry_start_time_utc/geometry_stop_time_utc) must be given. Another option to provide geometric parameters as a pair is (minimum_parameter, maximum_parameter) defining a range of values where the values are the minimum and maximum values of that parameter for the entire observation. Comments within the label should be used to ensure the parameter vs. time association is unambiguous. 
 
    name                   geometry_stop_time_utc
-   version                1.21
+   version                1.18
    value data type        ASCII_Date_Time_YMD_UTC
    description            The pair of geometry_start_time_utc/geometry_stop_time_utc may be given in the label for any observation. The pair is generally used for fairly long duration observations (a substantial portion of an hour to several hours). geometry_stop_time_utc gives the time at the end of the observation. When either geometry_start_time_utc or geometry_stop_time_utc is given, both must be provided. Within the Geometry discipline, there are two options for providing geometric parameters as a range of values. A parameter may be given as a pair where the parameter values are those at the beginning and end of the observation (start_parameter, stop_parameter). If a (start_parameter, stop_parameter) pair is used for any geometric parameter, the pair (geometry_start_time_utc/geometry_stop_time_utc) must be given. Another option to provide geometric parameters as a pair is (minimum_parameter, maximum_parameter) defining a range of values where the values are the minimum and maximum values of that parameter for the entire observation. Comments within the label should be used to ensure the parameter vs. time association is unambiguous. 
 
    name                   geometry_state
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            Specifies the state or configuration of this instance of Geometry_Lander applies. Use of this attribute enables multiple instances of Geometry_Lander, describing the geometry under different conditions. Note that it is legal for more than one instance to have the same geometry_state, in which case the local_identifier should be used to differentiate the instances, along with description. If not present, the semantics of "Telemetry" should be assumed. It is not required that instances be retained; a derived product may have an Adjusted instance but remove the Telemetry one, for example.
 
    name                   coordinate_system_type
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The coordinate_system_type distinguishes between options such as rectangular, spherical, planetocentric, etc. 
    nillable               true
 
    name                   coordinate_system_time_utc
-   version                1.21
+   version                1.18
    value data type        ASCII_Date_Time_YMD_UTC
    description            The coordinate_system_time_utc provides the instantiation time for the coordinate system. 
 
    name                   body_spice_name
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The body_spice_name attribute is a NAIF-recognized string identifier for a physical object (spacecraft, planet, instrument transmitter, system barycenter, etc.), associated with the data. 
 
    name                   frame_spice_name
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The frame_spice_name attribute is a NAIF-recognized string identifier for a reference frame associated with the data. 
 
    name                   reference_location
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The reference_location indicates the position to which values in the containing class apply. If the reference location is on a target, the target is the one specified in the parent Geometry_Orbiter class. 
 
    name                   reference_pixel_location
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The reference_pixel_location indicates the position of the pixel to which values in the containing class apply. 
 
    name                   spice_kernel_file_name
-   version                1.21
+   version                1.18
    value data type        ASCII_File_Name
    description            The spice_kernel_file_name attribute provides the file name of a SPICE kernel file used to process the data or to produce geometric quantities given in the label. 
 
    name                   kernel_provenance
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The kernel_provenance attribute indicates whether a kernel file is a predict kernel, a reconstructed kernel, some combination of the two, or a kernel for which the distinction is not applicable. 
 
    name                   vertical_coordinate_pixel
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            vertical_coordinate_pixel (line) is the vertical coordinate of a specific pixel. 
    unit of measure type   Units_of_Misc
 
    name                   horizontal_coordinate_pixel
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            horizontal_coordinate_pixel (sample) is the horizontal coordinate of a specific pixel. 
    unit of measure type   Units_of_Misc
 
    name                   horizontal_display_axis
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The horizontal_display_axis attribute identifies, by name, the axis of an Array (or Array subclass) that is intended to be displayed in the horizontal or "sample" dimension on a display device. The value of this attribute must match the value of one, and only one, axis_name attribute in an Axis_Array class of the associated Array. 
 
    name                   horizontal_display_direction
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The horizontal_display_direction attribute specifies the direction across the screen of a display device that data along the horizontal axis of an Array is supposed to be displayed. 
 
    name                   vertical_display_axis
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The vertical_display_axis attribute identifies, by name, the axis of an Array (or Array subclass) that is intended to be displayed in the vertical or "line" dimension on a display device. The value of this attribute must match the value of one, and only one, axis_name attribute in an Axis_Array class of the associated Array. 
 
    name                   vertical_display_direction
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The vertical_display_direction attribute specifies the direction along the screen of a display device that data along the vertical axis of an Array is supposed to be displayed. 
 
    name                   north_azimuth
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            Assuming the image is displayed as defined by the Display_Direction class, the north_azimuth attribute provides the value of the angle between a line from the image center to the north pole and a reference line in the image plane. The reference line is a horizontal line from the image center to the middle right edge of the image. This angle is measured from the reference line and increases in a clockwise direction. 
    minimum value          0
@@ -403,7 +403,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   east_azimuth
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            Assuming the image is displayed as defined by the Display_Direction class, the east_azimuth attribute provides the value of the angle between a line from the image center to the east and a reference line in the image plane. The reference line is a horizontal line from the image center to the middle right edge of the image. This angle is measured from the reference line and increases in a clockwise direction. 
    minimum value          0
@@ -411,7 +411,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   right_ascension_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The right_ascension_angle attribute provides the value of right ascension (RA) as an angle. Right ascension is measured from the vernal equinox or the first point of Aries, which is the place on the celestial sphere where the Sun crosses the celestial equator from south to north at the March equinox. Right ascension is measured continuously in a full circle from that equinox towards the east. Right ascension is used in conjunction with the declination attribute to specify a point on the sky. Note Right Ascension also may be given in hour angles in which case the appropriate attribute is right_ascension_hour_angle. 
    minimum value          0
@@ -419,13 +419,13 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   right_ascension_hour_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The right_ascension_hour_angle attribute provides the value of right ascension (RA) as in terms of hour angles (hh.xxx...). Right ascension is measured from the vernal equinox or the first point of Aries, which is the place on the celestial sphere where the Sun crosses the celestial equator from south to north at the March equinox. Right ascension is measured continuously in a full circle from that equinox towards the east. Right ascension is used in conjunction with the declination attribute to specify a point on the sky. 
    unit of measure type   Units_of_Time
 
    name                   declination_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The declination_angle (Dec) attribute provides the value of an angle on the celestial sphere, measured north from the celestial equator to the point in question. (For points south of the celestial equator, negative values are used.) Declination is used in conjunction with right ascension (right_ascension_angle or right_ascension_hour_angle) to specify a point on the sky. 
    minimum value          -90
@@ -433,7 +433,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   celestial_north_clock_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The celestial_north_clock_angle attribute specifies the direction of celestial north at the center of an image. It is measured from the 'upward' direction, clockwise to the direction toward celestial north, assuming the image is displayed as defined by the Display_Direction class. 
    nillable               true
@@ -442,7 +442,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   celestial_east_clock_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The celestial_east_clock_angle attribute specifies the direction of celestial east at the center of an image. It is measured from the 'upward' direction, clockwise to the direction toward celestial east, assuming the image is displayed as defined by the Display_Direction class. 
    minimum value          0
@@ -450,7 +450,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   ecliptic_north_clock_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The ecliptic_north_clock_angle attribute specifies the direction of ecliptic north at the center of an image. It is measured from the 'upward' direction, clockwise to the direction toward ecliptic north, assuming the image is displayed as defined by the Display_Direction class. 
    nillable               true
@@ -459,7 +459,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   ecliptic_east_clock_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The ecliptic_east_clock_angle attribute specifies the direction of ecliptic east at the center of an image. It is measured from the 'upward' direction, clockwise to the direction toward ecliptic east, assuming the image is displayed as defined by the Display_Direction class. 
    minimum value          0
@@ -467,7 +467,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   sun_direction_clock_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The sun_direction_clock_angle attribute specifies the direction of the sun as an angle measured from a line 'upward' from the center of the field of view, clockwise to the direction toward sun, assuming the image is displayed as defined by the Display_Direction class. 
    minimum value          0
@@ -475,7 +475,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   central_body_positive_pole_clock_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The central_body_positive_pole_clock_angle element specifies the direction of the central body's rotation axis in an image. It is measured from the 'upward' direction in the image, clockwise to the direction of the positive rotational pole as projected into the image plane, assuming the image is displayed as defined by the Display_Direction class. The positive pole is defined as the pole toward which the thumb points when the fingers of the right hand are curled in the body's direction of rotation. 
    minimum value          0
@@ -483,7 +483,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   target_positive_pole_clock_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The target_positive_pole_clock_angle element specifies the direction of the target body's rotation axis in an image. It is measured from the 'upward' direction in the image, clockwise to the direction of the positive rotational pole as projected into the image plane, assuming the image is displayed as defined by the Display_Direction class. The positive pole is defined as the pole toward which the thumb points when the fingers of the right hand are curled in the body's direction of rotation. 
    minimum value          0
@@ -491,7 +491,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   target_north_pole_clock_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The target_north_pole_clock_angle element specifies the direction of the target body's rotation axis in an image. It is measured from the 'upward' direction in the image, clockwise to the direction of the northern rotational pole as projected into the image plane, assuming the image is displayed as defined by the Display_Direction class. The north pole of a planet or any of its satellites in the solar system is the pole of the rotation axis that is in the same celestial hemisphere relative to the invariable plane of the solar system as Earth's North pole. 
    minimum value          0
@@ -499,7 +499,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   central_body_north_pole_clock_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The central_body_north_pole_clock_angle element specifies the direction of the central body's (e.g., planet's)rotation axis in an image. It is measured from the 'upward' direction in the image, clockwise to the direction of the northern rotational pole as projected into the image plane, assuming the image is displayed as defined by the Display_Direction class. The north pole of a planet or any of its satellites in the solar system is the pole of the rotation axis that is in the same celestial hemisphere relative to the invariable plane of the solar system as Earth's North pole. 
    minimum value          0
@@ -507,48 +507,48 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   qcos
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            qcos is the scalar component of a quaternion. qcos = cos(theta/2), where theta is the angle of rotation. 
 
    name                   qsin1
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            qsin1 is the first element of the vector component of a quaternion. qsin1 = x*sin(theta/2) where theta is the angle of rotation and (x,y,z) is the unit vector around which the rotation occurs. 
 
    name                   qsin2
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            qsin2 is the second element of the vector component of a quaternion. qsin2 = y*sin(theta/2) where theta is the angle of rotation and (x,y,z) is the unit vector around which the rotation occurs. 
 
    name                   qsin3
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            qsin3 is the third element of the vector component of a quaternion. qsin3 = z*sin(theta/2) where theta is the angle of rotation and (x,y,z) is the unit vector around which the rotation occurs. 
 
    name                   rotation_direction
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The rotation_direction attribute identifies the direction of the rotation for a specific quaternion. This is used when the two frames involved are unambiguously identifed in the enclosing classes. 
 
    name                   quaternion_measurement_method
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            Specifies the method by which the coordinate space was measured. This provides an indication of the quality of the definition.
 
    name                   attitude_propagation_counter
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            Count in clock units of how long it has been since the last IMU reset, which relates to how good the attitude measurement is due to IMU drift.
 
    name                   attitude_propagation_duration
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The number of seconds for how long it has been since the last IMU reset, which relates to how good the attitude measurement is due to IMU drift.
    unit of measure type   Units_of_Time
 
    name                   horizontal_pixel_field_of_view
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The horizontal_pixel_field_of_view provides the angular measure of the horizontal field of view of a single pixel, and is sometimes referred to as the instantaneous field of view. The pixel_field_of_view_method attribute will designate the method used to determine this value. If the pixel_field_of_view_method attribute is not specified, see the camera documentation for more details. 
    minimum value          0
@@ -556,7 +556,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   vertical_pixel_field_of_view
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The vertical_pixel_field_of_view provides the angular measure of the vertical field of view of a single pixel, and is sometimes referred to as the instantaneous field of view. The pixel_field_of_view_method attribute will designate the method used to determine this value. If the pixel_field_of_view_method attribute is not specified, see the camera documentation for more details. 
    minimum value          0
@@ -564,24 +564,24 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   pixel_field_of_view_method
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The pixel_field_of_view_method provides the method used to get the values of the horizontal/vertical_pixel_field_view attributes. If the pixel field of view does not vary across the camera field of view, then this value is 'constant'. If the pixel field of view does vary across the camera field of view, the pixel field of view can be determined either by the center pixel of the camera or the average field of view of the pixel. See the camera documentation for more details. 
 
    name                   horizontal_pixel_footprint
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The horizontal_pixel_footprint provides the the size of the horizontal field of view of a single pixel projected onto the target specified in the parent Geometry_Orbiter class. 
    unit of measure type   Units_of_Length
 
    name                   vertical_pixel_footprint
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The vertical_pixel_footprint provides the size of the vertical field of view of a single pixel projected onto the target specified in the parent Geometry_Orbiter class. 
    unit of measure type   Units_of_Length
 
    name                   pixel_latitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The pixel_latitude attribute gives the value of the planetocentric latitude on the target of the projection of a specified pixel. 
    minimum value          -90
@@ -589,7 +589,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   pixel_longitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The pixel_longitude attribute gives the value of the planetocentric longitude on the target of the projection of a specified pixel. 
    minimum value          0
@@ -597,7 +597,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   subsolar_azimuth
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The subsolar_azimuth attribute provides the value of the angle between the line from the center of an image to the subsolar point on the target and a horizontal reference line (in the image plane) extending from the image center to the middle right edge of the image. The values of this angle increase in a clockwise direction. 
    minimum value          0
@@ -605,7 +605,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   start_subsolar_azimuth
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The start_subsolar_azimuth attribute identifies the value of the subsolar azimuth at the beginning of the observation (geometry_start_time_utc). 
    minimum value          0
@@ -613,7 +613,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   stop_subsolar_azimuth
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The stop_subsolar_azimuth attribute identifies the value of the subsolar azimuth at the end of the observation (geometry_stop_time_utc). 
    minimum value          0
@@ -621,7 +621,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   minimum_subsolar_azimuth
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The minimum_subsolar_azimuth attribute identifies the initial end of the range of values for subsolar azimuth in an image. Note that since subsolar azimuth has values in [0,360], if the range in the image crosses the horizontal reference corresponding to zero, the value of minimum_subsolar_azimuth will be greater than the value of the maximum_subsolar_azimuth. 
    minimum value          0
@@ -629,7 +629,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   maximum_subsolar_azimuth
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The maximum_subsolar_azimuth attribute identifies the final end of the range of values for subsolar azimuth in an image. Note that since subsolar azimuth has values in [0,360], if the range in the image crosses the horizontal reference corresponding to zero, the value of minimum_subsolar_azimuth will be greater than the value of the maximum_subsolar_azimuth. 
    minimum value          0
@@ -637,7 +637,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   subsolar_latitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The subsolar_latitude attribute gives the value of the planetocentric latitude at the subsolar point on the target. 
    minimum value          -90
@@ -645,7 +645,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   start_subsolar_latitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The start_subsolar_latitude attribute identifies the value of the subsolar latitude at the beginning of the observation (geometry_start_time_utc). 
    minimum value          -90
@@ -653,7 +653,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   stop_subsolar_latitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The stop_subsolar_latitude attribute identifies the value of the subsolar latitude at the end of the observation (geometry_stop_time_utc). 
    minimum value          -90
@@ -661,7 +661,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   minimum_subsolar_latitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The minimum_subsolar_latitude attribute identifies the initial end of the range of values for subsolar latitude in an image. 
    minimum value          -90
@@ -669,7 +669,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   maximum_subsolar_latitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The maximum_subsolar_latitude attribute identifies the final end of the range of values for subsolar latitude in an image. 
    minimum value          -90
@@ -677,7 +677,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   subsolar_longitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The subsolar_longitude attribute gives the value of the planetocentric longitude at the subsolar point on the target. 
    minimum value          0
@@ -685,7 +685,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   start_subsolar_longitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The start_subsolar_longitude attribute identifies the value of the subsolar longitude at the beginning of the observation (geometry_start_time_utc). 
    minimum value          0
@@ -693,7 +693,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   stop_subsolar_longitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The stop_subsolar_longitude attribute identifies the value of the subsolar longitude at the end of the observation (geometry_stop_time_utc). 
    minimum value          0
@@ -701,7 +701,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   minimum_subsolar_longitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The minimum_subsolar_longitude attribute identifies the initial end of the range of values for subsolar longitude. Note that since subsolar longitude has values in [0,360], if the range in the product crosses the prime meridian, the value of minimum_subsolar_longitude will be greater than the value of the maximum_subsolar_longitude. 
    minimum value          0
@@ -709,7 +709,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   maximum_subsolar_longitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The maximum_subsolar_longitude attribute identifies the final end of the range of values for subsolar longitude in an image. Note that since subsolar longitude has values in [0,360], if the range in the product crosses the prime meridian, the value of minimum_subsolar_longitude will be greater than the value of the maximum_subsolar_longitude. 
    minimum value          0
@@ -717,7 +717,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   subspacecraft_azimuth
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The subspacecraft_azimuth attribute provides the value of the angle between the line from the center of an image to the subspacecraft point on the target and a horizontal reference line (in the image plane) extending from the image center to the middle right edge of the image. The values of this angle increase in a clockwise direction. 
    minimum value          0
@@ -725,7 +725,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   start_subspacecraft_azimuth
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The start_subspacecraft_azimuth attribute identifies the value of the subspacecraft azimuth at the beginning of the observation (geometry_start_time_utc). 
    minimum value          0
@@ -733,7 +733,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   stop_subspacecraft_azimuth
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The stop_subspacecraft_azimuth attribute identifies the value of the subspacecraft azimuth at the end of the observation (geometry_stop_time_utc). 
    minimum value          0
@@ -741,7 +741,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   minimum_subspacecraft_azimuth
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The minimum_subspacecraft_azimuth attribute identifies the initial end of the range of values for subspacecraft azimuth in an image. Note that since subspacecraft azimuth has values in [0,360], if the range in the image crosses the horizontal reference corresponding to zero, the value of minimum_subspacecraft_azimuth will be greater than the value of the maximum_subspacecraft_azimuth. 
    minimum value          0
@@ -749,7 +749,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   maximum_subspacecraft_azimuth
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The maximum_subspacecraft_azimuth attribute identifies the final end of the range of values for subspacecraft azimuth in an image. Note that since subspacecraft azimuth has values in [0,360], if the range in the image crosses the horizontal reference corresponding to zero, the value of minimum_subspacecraft_azimuth will be greater than the value of the maximum_subspacecraft_azimuth. 
    minimum value          0
@@ -757,7 +757,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   subspacecraft_latitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The subspacecraft_latitude attribute gives the value of the planetocentric latitude at the subspacecraft point on the target. 
    minimum value          -90
@@ -765,7 +765,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   start_subspacecraft_latitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The start_subspacecraft_latitude attribute identifies the value of the subspacecraft latitude at the beginning of the observation (geometry_start_time_utc). 
    minimum value          -90
@@ -773,7 +773,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   stop_subspacecraft_latitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The stop_subspacecraft_latitude attribute identifies the value of the subspacecraft latitude at the end of the observation (geometry_stop_time_utc). 
    minimum value          -90
@@ -781,7 +781,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   minimum_subspacecraft_latitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The minimum_subspacecraft_latitude attribute identifies the initial end of the range of values for subspacecraft latitude in an image. 
    minimum value          -90
@@ -789,7 +789,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   maximum_subspacecraft_latitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The maximum_subspacecraft_latitude attribute identifies the final end of the range of values for subspacecraft latitude in an image. 
    minimum value          -90
@@ -797,7 +797,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   subspacecraft_longitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The subspacecraft_longitude attribute gives the value of the planetocentric longitude at the subspacecraft point on the target. 
    minimum value          0
@@ -805,7 +805,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   start_subspacecraft_longitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The start_subspacecraft_longitude attribute identifies the value of the subspacecraft longitude at the beginning of the observation (geometry_start_time_utc). 
    minimum value          0
@@ -813,7 +813,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   stop_subspacecraft_longitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The stop_subspacecraft_longitude attribute identifies the value of the subspacecraft longitude at the end of the observation (geometry_stop_time_utc). 
    minimum value          0
@@ -821,7 +821,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   minimum_subspacecraft_longitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The minimum_subspacecraft_longitude attribute identifies the initial end of the range of values for subspacecraft longitude. Note that since subspacecraft longitude has values in [0,360], if the range in the product crosses the prime meridian, the value of minimum_subspacecraft_longitude will be greater than the value of the maximum_subspacecraft_longitude. 
    minimum value          0
@@ -829,7 +829,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   maximum_subspacecraft_longitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The maximum_subspacecraft_longitude attribute identifies the final end of the range of values for subspacecraft longitude in an image. Note that since subspacecraft longitude has values in [0,360], if the range in the product crosses the prime meridian, the value of minimum_subspacecraft_longitude will be greater than the value of the maximum_subspacecraft_longitude. 
    minimum value          0
@@ -837,12 +837,12 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   lat_long_method
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The lat_long_method is used with the attributes start_latitude, stop_latitude, start_longitude and stop_longitude. For most observations these parameters would be multivalued. lat_long_method is used to characterize the start and stop latitude and longitude. The possible values are: 'center' indicating the latitude and longitude values are those at the center of the field of view at the beginning and end of the observation. 'median' indicating the latitude and longitude values are the median values at the beginning and end of the observation. 'mean' indicating the latitude and longitude values are the mean values at the beginning and end of the observation. 
 
    name                   start_latitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The start_latitude attribute identifies the value of the Planetocentric latitude at the beginning of the observation (geometry_start_time_utc). When either start_latitude or stop_latitude is used, both must be used. In addition the attribute lat_long_method must be used. 
    minimum value          -90
@@ -850,7 +850,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   stop_latitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The stop_latitude attribute identifies the value of the Planetocentric latitude at the end of the observation (geometry_stop_time_utc). When either start_latitude or stop_latitude is used, both must be used. In addition the attribute lat_long_method must be used. 
    minimum value          -90
@@ -858,7 +858,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   minimum_latitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The minimum_latitude attribute identifies the initial end of the range of values for Planetocentric latitude in an image. 
    minimum value          -90
@@ -866,7 +866,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   maximum_latitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The maximum_latitude attribute identifies the final end of the range of values for Planetocentric latitude in an image. 
    minimum value          -90
@@ -874,7 +874,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   start_longitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The start_longitude attribute identifies the value of the Planetocentric longitude at the beginning of the observation (geometry_start_time_utc). 
    minimum value          0
@@ -882,7 +882,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   stop_longitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The stop_longitude attribute identifies the value of the Planetocentric longitude at the end of the observation (geometry_stop_time_utc). 
    minimum value          0
@@ -890,7 +890,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   minimum_longitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The minimum_longitude attribute identifies the initial end of the range of values for Planetocentric longitude. Note that since Planetocentric longitude has values in [0,360], if the range in the product crosses the prime meridian, the value of minimum_longitude will be greater than the value of the maximum_longitude. 
    minimum value          0
@@ -898,7 +898,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   maximum_longitude
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The maximum_longitude attribute identifies the final end of the range of values for Planetocentric longitude in an image. Note that since Planetocentric longitude has values in [0,360], if the range in the product crosses the prime meridian, the value of minimum_longitude will be greater than the value of the maximum_longitude. 
    minimum value          0
@@ -906,152 +906,152 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   calibration_source_id
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The calibration_source_id is used to identify the source used in calibrating the instrument. 
 
    name                   c0
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The first coefficient of a polynomial. 
 
    name                   c1
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The second coefficient of a polynomial. 
 
    name                   c2
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The third coefficient of a polynomial. 
 
    name                   device_id
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The device_id attribute specifies the abbreviated identification of an articulation device. 
 
    name                   device_mode
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The device_mode attribute specifies the deployment state (i.e., physical configuration) of an articulation device at the time of data acquisition. Examples include 'Arm Vibe', 'Deployed', 'Free Space', 'Stowed'. Note: the value set for this attribute is mission-specific and should be declared in a mission-specific dictionary. 
 
    name                   device_phase
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The device_phase attribute specifies the current phase of the mission, from an articulation-device-centric point of view. 
 
    name                   device_name
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The device_name attribute specifies the common name of an articulation device. 
 
    name                   selected_instrument_id
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The selected_instrument_id attribute specifies an abbreviated name or acronym that identifies the selected instrument mounted on the articulation device. 
 
    name                   model_type
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The model_type attribute specifies an identifier for the type or kind of model. The value should be one of a well defined set, providing an application program with sufficient information to know how to handle the rest of the parameters within the model. This value will correlate directly with the specific camera model class that is a subclass of the Camera_Model_Parameters class. 
 
    name                   solution_id
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The solution_id attribute specifies the unique identifier for the solution set to which the values in the group belong. For certain kinds of information, such as pointing correction (pointing models) and rover localization (coordinate system definitions), the "true" value is unknown and only estimates of the true value exist. Thus, more than one set of estimates may exist simultaneously, each valid for its intended purpose. Each of these sets is called a "solution" to the unknown true value. The solution_id attribute is used to identify which solution is being expressed by the containing group. No specific naming convention is defined here, however it is recommended that projects adopt one. The intent is to be able to identify who created the solution, and why. Possible components of the naming convention include user, institution, purpose, request ID, version, program, date/time. 
 
    name                   interpolation_algorithm
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The interpolation_algorithm defines how interpolation was performed. For example, "Piecewise Bilinear" does a piecewise bilinear interpolation between calibration models nearest to the interpolation_value. 
 
    name                   interpolation_variable
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The interpolation_variable defines the parameter across which interpolation is being performed. Examples of variables include Focus, Zoom, and Temperature. 
 
    name                   interpolation_value
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The interpolation_value specifies the value of the variable to which the model was interpolated. The interpretation of the value depends on what the variable is and should be documented in the mission documentation. 
 
    name                   interpolation_sequence
-   version                1.21
+   version                1.18
    value data type        ASCII_Integer
    description            When more than one dimension is interpolated, interpolation_sequence define the ordering. Sequence value 1 was interpolated first, directly from calibration; sequence value 2 was interpolated from those results, etc. 
    minimum value          0
 
    name                   psph_model_scale_x
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description             Column scale factor to convert between x coordinate and rotation around axis x, expressed in radians/pixel. 
 
    name                   psph_model_scale_y
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description             Column scale factor to convert between y coordinate and rotation around axis y, expressed in radians/pixel. 
 
    name                   coordinate_space_frame_type
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The coordinate_space_frame_type attribute identifies the type of frame being described, such as SITE, LOCAL_LEVEL, LANDER, ROVER, ARM, etc. When combined with Coordinate_Space_Index and the optional solution_id in the Coordinate_Space_Indexed class, this serves to fully name an instance of a coordinate space. 
    nillable               true
 
    name                   index_sequence_number
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The index_sequence_number attribute supplies the sequence identifier for the associated value in a group of related values. 
 
    name                   index_name
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The index_name attribute supplies the formal name for the associated value in a group of related values. 
 
    name                   index_id
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The index_id attribute supplies a short name (identifier) for the associated value in a group of related values. 
 
    name                   index_value_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The index_value_angle attribute provides the value of an angle as named by the associated index_id, index_name, or index_sequence_number. 
    unit of measure type   Units_of_Angle
 
    name                   index_value_length
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The index_value_length attribute provides the value of a length as named by the associated index_id or index_name. 
    unit of measure type   Units_of_Length
 
    name                   index_value_number
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The index_value_number attribute provides the value with no applicable units as named by the associated index_id or index_name. 
 
    name                   index_value_string
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The index_value attribute provides the string value as named by the associated index_id or index_name. 
 
    name                   index_value_temperature
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The index_value_temperature attribute provides the value of a temperature as named by the associated index_id or index_name. 
    unit of measure type   Units_of_Temperature
 
    name                   positive_azimuth_direction
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The positive_azimuth_direction attribute specifies the direction in which azimuth is measured in positive degrees for an observer on the surface of a body. The azimuth is measured with respect to the elevation reference plane. A value of 'clockwise' indicates that azimuth is measured positively clockwise, and 'counterclockwise' indicates that azimuth increases positively counter-clockwise. 
 
    name                   positive_elevation_direction
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The positive_elevation_direction attribute provides the direction in which elevation is measured in positive degrees for an observer on the surface of a body. The elevation is measured with respect to the azimuthal reference plane. A value of UP or ZENITH indicates that elevation is measured positively upwards, i.e., the zenith point would be at +90 degrees and the nadir point at -90 degrees. DOWN or NADIR indicates that the elevation is measured positively downwards; the zenith point would be at -90 degrees and the nadir point at +90 degrees. 
 
    name                   emission_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The emission_angle element provides the value of the angle between the surface normal vector at the intercept point and a vector from the intercept point to the spacecraft. The emission_angle varies from 0 degrees when the spacecraft is viewing the subspacecraft point (nadir viewing) to 90 degrees when the intercept is tangent to the surface of the target body. Thus, higher values of emission_angle indicate more oblique viewing of the target. Values in the range of 90 to 180 degrees are possible for ring data. 
    minimum value          0
@@ -1059,7 +1059,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   minimum_emission_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The minimum_emission_angle attribute provides the smallest value during the observation for the emission angle at the target specified in the parent Geometry_Orbiter class. 
    minimum value          0
@@ -1067,7 +1067,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   maximum_emission_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The maximum_emission_angle element provides the largest value during the observation for the emission angle at the target specified in the parent Geometry_Orbiter class. 
    minimum value          0
@@ -1075,7 +1075,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   start_emission_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The start_emission_angle attribute provides the value at the beginning of the observation (geometry_start_time_utc) for the emission angle at the target specified in the parent Geometry_Orbiter class. 
    minimum value          0
@@ -1083,7 +1083,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   stop_emission_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The stop_emission_angle attribute provides the value at the end of the observation (geometry_stop_time_utc) for the emission angle at the target specified in the parent Geometry_Orbiter class. 
    minimum value          0
@@ -1091,7 +1091,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   incidence_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The incidence_angle element provides a measure of the lighting condition at the intercept point. Incidence angle is the angle between the local vertical at the intercept point (surface) and a vector from the intercept point to the sun. The incidence_angle varies from 0 degrees when the intercept point coincides with the subsolar point to 90 degrees when the intercept point is at the terminator (i.e., in the shadowed or dark portion of the target body). 
    minimum value          0
@@ -1099,7 +1099,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   minimum_incidence_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The minimum_incidence_angle attribute provides the smallest value during the observation for the incidence angle at the target specified in the parent Geometry_Orbiter class. 
    minimum value          0
@@ -1107,7 +1107,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   maximum_incidence_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The maximum_incidence_angle element provides the largest value during the observation for the incidence angle at the target specified in the parent Geometry_Orbiter class. 
    minimum value          0
@@ -1115,7 +1115,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   start_incidence_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The start_incidence_angle attribute provides the value at the beginning of the observation (geometry_start_time_utc) for the incidence angle at the target specified in the parent Geometry_Orbiter class. 
    minimum value          0
@@ -1123,7 +1123,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   stop_incidence_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The stop_incidence_angle attribute provides the value at the end of the observation (geometry_stop_time_utc) for the incidence angle at the target specified in the parent Geometry_Orbiter class. 
    minimum value          0
@@ -1131,7 +1131,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   phase_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The phase_angle element provides a measure of the relationship between the instrument viewing position and incident illumination (such as solar light). Phase angle is measured at the target; it is the angle between a vector to the illumination source and a vector to the instrument. If illumination is from behind the instrument, phase_angle will be small. 
    minimum value          0
@@ -1139,7 +1139,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   minimum_phase_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The minimum_phase_angle attribute provides the smallest value during the observation for the phase angle at the target specified in the parent Geometry_Orbiter class. 
    minimum value          0
@@ -1147,7 +1147,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   maximum_phase_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The maximum_phase_angle element provides the largest value during the observation for the phase angle at the target specified in the parent Geometry_Orbiter class. 
    minimum value          0
@@ -1155,7 +1155,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   start_phase_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The start_phase_angle attribute provides the value at the beginning of the observation (geometry_start_time_utc) for the phase angle at the target specified in the parent Geometry_Orbiter class. 
    minimum value          0
@@ -1163,7 +1163,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   stop_phase_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The stop_phase_angle attribute provides the value at the end of the observation (geometry_stop_time_utc) for the phase angle at the target specified in the parent Geometry_Orbiter class. 
    minimum value          0
@@ -1171,7 +1171,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   solar_elongation
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The solar_elongation element gives the angle between the line of sight of observation and the direction of the Sun. Note: For IRAS: The line of sight of observation is the boresight of the telescope as measured by the satellite sun sensor. 
    minimum value          0
@@ -1179,7 +1179,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   minimum_solar_elongation
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The minimum_solar_elongation attribute provides the smallest value during the observation for the solar elongation. 
    minimum value          0
@@ -1187,7 +1187,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   maximum_solar_elongation
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The maximum_solar_elongation element provides the largest value during the observation for the solar elongation. 
    minimum value          0
@@ -1195,7 +1195,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   start_solar_elongation
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The start_solar_elongation attribute provides the value at the beginning of the observation (geometry_start_time_utc) for the solar elongation. 
    minimum value          0
@@ -1203,7 +1203,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   stop_solar_elongation
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The stop_solar_elongation attribute provides the value at the end of the observation (geometry_stop_time_utc) for the solar elongation. 
    minimum value          0
@@ -1211,400 +1211,400 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The distance attribute provides the scalar distance between to objects or points. 
    unit of measure type   Units_of_Length
 
    name                   target_geocentric_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The target_geocentric_distance attribute provides the scalar distance between the center of the target and the center of the Earth. 
    unit of measure type   Units_of_Length
 
    name                   minimum_target_geocentric_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The minimum_target_geocentric_distance attribute provides the smallest value for the distance between the center of the target and the center of the Earth during the observation. 
    unit of measure type   Units_of_Length
 
    name                   maximum_target_geocentric_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The maximum_target_geocentric_distance attribute provides the largest value for the distance between the center of the target and the center of the Earth during the observation. 
    unit of measure type   Units_of_Length
 
    name                   start_target_geocentric_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The start_target_geocentric_distance attribute provides the scalar distance between the center of the target and the center of the Earth at the beginning of the observation (geometry_start_time_utc). 
    unit of measure type   Units_of_Length
 
    name                   stop_target_geocentric_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The stop_target_geocentric_distance attribute provides the scalar distance between the center of the target and the center of the Earth at the end of the observation (geometry_stop_time_utc). 
    unit of measure type   Units_of_Length
 
    name                   target_heliocentric_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The target_heliocentric_distance attribute provides the scalar distance between the center of the target and the center of the Sun. 
    unit of measure type   Units_of_Length
 
    name                   minimum_target_heliocentric_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The minimum_target_heliocentric_distance attribute provides the smallest value for the distance between the center of the target and the center of the Sun during the observation. 
    unit of measure type   Units_of_Length
 
    name                   maximum_target_heliocentric_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The maximum_target_heliocentric_distance attribute provides the largest value for the distance between the center of the target and the center of the Sun during the observation. 
    unit of measure type   Units_of_Length
 
    name                   start_target_heliocentric_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The start_target_heliocentric_distance attribute provides the scalar distance between the center of the target and the center of the Sun at the beginning of the observation (geometry_start_time_utc). 
    unit of measure type   Units_of_Length
 
    name                   stop_target_heliocentric_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The stop_target_heliocentric_distance attribute provides the scalar distance between the center of the target and the center of the Sun at the end of the observation (geometry_stop_time_utc). 
    unit of measure type   Units_of_Length
 
    name                   target_ssb_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The target_ssb_distance attribute provides the scalar distance between the center of the target and the Solar System Barycenter. 
    unit of measure type   Units_of_Length
 
    name                   minimum_target_ssb_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The minimum_target_ssb_distance attribute provides the smallest value for the distance between the center of the target and the Solar System Barycenter during the observation. 
    unit of measure type   Units_of_Length
 
    name                   maximum_target_ssb_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The maximum_target_ssb_distance attribute provides the largest value for the distance between the center of the target and the Solar System Barycenter during the observation. 
    unit of measure type   Units_of_Length
 
    name                   start_target_ssb_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The start_target_ssb_distance attribute provides the scalar distance between the center of the target and the Solar System Barycenter at the beginning of the observation (geometry_start_time_utc). 
    unit of measure type   Units_of_Length
 
    name                   stop_target_ssb_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The stop_target_ssb_distance attribute provides the scalar distance between the center of the target and the Solar System Barycenter at the end of the observation (geometry_stop_time_utc). 
    unit of measure type   Units_of_Length
 
    name                   spacecraft_target_center_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The spacecraft_target_center_distance attribute provides the scalar distance between the spacecraft and the center of the target specified in the parent Geometry_Orbiter class. 
    unit of measure type   Units_of_Length
 
    name                   minimum_spacecraft_target_center_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The minimum_spacecraft_target_center_distance attribute provides the smallest value during the observation for the distance between the spacecraft and the center of the target specified in the parent Geometry_Orbiter class. 
    unit of measure type   Units_of_Length
 
    name                   maximum_spacecraft_target_center_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The maximum_spacecraft_target_center_distance attribute provides the largest value during the observation for the distance between the spacecraft and the center of the target specified in the parent Geometry_Orbiter class. 
    unit of measure type   Units_of_Length
 
    name                   start_spacecraft_target_center_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The start_spacecraft_target_center_distance attribute provides the scalar distance at the beginning of the observation (geometry_start_time_utc) between the spacecraft and the center of the target specified in the parent Geometry_Orbiter class. 
    unit of measure type   Units_of_Length
 
    name                   stop_spacecraft_target_center_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The stop_spacecraft_target_center_distance attribute provides the scalar distance at the end of the observation (geometry_stop_time_utc) between the spacecraft and the center of the target specified in the parent Geometry_Orbiter class. 
    unit of measure type   Units_of_Length
 
    name                   spacecraft_target_boresight_intercept_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The spacecraft_target_boresight_intercept_distance attribute provides the scalar distance between the spacecraft and the boresight vector intercept point on the surface of the target specified in the parent Geometry_Orbiter class. 
    unit of measure type   Units_of_Length
 
    name                   minimum_spacecraft_target_boresight_intercept_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The minimum_spacecraft_target_boresight_intercept_distance attribute provides the smallest value during the observation for the distance between the spacecraft and the boresight vector intercept point on the surface of the target specified in the parent Geometry_Orbiter class. 
    unit of measure type   Units_of_Length
 
    name                   maximum_spacecraft_target_boresight_intercept_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The maximum_spacecraft_target_boresight_intercept_distance attribute provides the largest value during the observation for the distance between the spacecraft and the boresight vector intercept point on the surface of the target specified in the parent Geometry_Orbiter class. 
    unit of measure type   Units_of_Length
 
    name                   start_spacecraft_target_boresight_intercept_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The start_spacecraft_target_boresight_intercept_distance attribute provides the scalar distance at the beginning of the observation (geometry_start_time_utc) between the spacecraft and the boresight vector intercept point on the surface of the target specified in the parent Geometry_Orbiter class. 
    unit of measure type   Units_of_Length
 
    name                   stop_spacecraft_target_boresight_intercept_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The stop_spacecraft_target_boresight_intercept_distance attribute provides the scalar distance at the end of the observation (geometry_stop_time_utc) between the spacecraft and the boresight vector intercept point on the surface of the target specified in the parent Geometry_Orbiter class. 
    unit of measure type   Units_of_Length
 
    name                   spacecraft_target_subspacecraft_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The spacecraft_target_subspacecraft_distance attribute provides the scalar distance between the spacecraft and the subspacecraft point on the surface of the target specified in the parent Geometry_Orbiter class. 
    unit of measure type   Units_of_Length
 
    name                   minimum_spacecraft_target_subspacecraft_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The minimum_spacecraft_target_subspacecraft_distance attribute provides the smallest value during the observation for the distance between the spacecraft and the subspacecraft point on the surface of the target specified in the parent Geometry_Orbiter class. 
    unit of measure type   Units_of_Length
 
    name                   maximum_spacecraft_target_subspacecraft_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The maximum_spacecraft_target_subspacecraft_distance attribute provides the largest value during the observation for the distance between the spacecraft and the subspacecraft point on the surface of the target specified in the parent Geometry_Orbiter class. 
    unit of measure type   Units_of_Length
 
    name                   start_spacecraft_target_subspacecraft_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The start_spacecraft_target_subspacecraft_distance attribute provides the scalar distance at the beginning of the observation (geometry_start_time_utc) between the spacecraft and the subspacecraft point on the surface of the target specified in the parent Geometry_Orbiter class. 
    unit of measure type   Units_of_Length
 
    name                   stop_spacecraft_target_subspacecraft_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The stop_spacecraft_target_subspacecraft_distance attribute provides the scalar distance at the end of the observation (geometry_stop_time_utc) between the spacecraft and the subspacecraft point on the surface of the target specified in the parent Geometry_Orbiter class. 
    unit of measure type   Units_of_Length
 
    name                   spacecraft_central_body_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The spacecraft_central_body_distance attribute provides the scalar distance between the spacecraft and the center of the central body (e.g., the center of Mars when opperating in the Mars system). 
    unit of measure type   Units_of_Length
 
    name                   minimum_spacecraft_central_body_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The minimum_spacecraft_central_body_distance attribute provides the smallest value during the observation for the distance between the spacecraft and the center of the central body (e.g., the center of Mars when opperating in the Mars system). 
    unit of measure type   Units_of_Length
 
    name                   maximum_spacecraft_central_body_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The maximum_spacecraft_central_body_distance attribute provides the largest value during the observation for the distance between the spacecraft and the center of the central body (e.g., the center of Mars when opperating in the Mars system). 
    unit of measure type   Units_of_Length
 
    name                   start_spacecraft_central_body_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The start_spacecraft_central_body_distance attribute provides the scalar distance at the beginning of the observation (geometry_start_time_utc) between the spacecraft and the center of the central body (e.g., the center of Mars when opperating in the Mars system). 
    unit of measure type   Units_of_Length
 
    name                   stop_spacecraft_central_body_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The stop_spacecraft_central_body_distance attribute provides the scalar distance at the end of the observation (geometry_stop_time_utc) between the spacecraft and the center of the central body (e.g., the center of Mars when opperating in the Mars system). 
    unit of measure type   Units_of_Length
 
    name                   spacecraft_geocentric_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The spacecraft_geocentric_distance attribute provides the scalar distance between the spacecraft and the center of Earth. 
    unit of measure type   Units_of_Length
 
    name                   minimum_spacecraft_geocentric_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The minimum_spacecraft_geocentric_distance attribute provides the smallest value during the observation for the distance between the spacecraft and the center of Earth. 
    unit of measure type   Units_of_Length
 
    name                   maximum_spacecraft_geocentric_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The maximum_spacecraft_geocentric_distance attribute provides the largest value during the observation for the distance between the spacecraft and the center of Earth. 
    unit of measure type   Units_of_Length
 
    name                   start_spacecraft_geocentric_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The start_spacecraft_geocentric_distance attribute provides the scalar distance at the beginning of the observation (geometry_start_time_utc) between the spacecraft and the center of Earth. 
    unit of measure type   Units_of_Length
 
    name                   stop_spacecraft_geocentric_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The stop_spacecraft_geocentric_distance attribute provides the scalar distance at the end of the observation (geometry_stop_time_utc) between the spacecraft and the center of Earth. 
    unit of measure type   Units_of_Length
 
    name                   spacecraft_heliocentric_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The spacecraft_heliocentric_distance attribute provides the scalar distance between the spacecraft and the center of the Sun. 
    unit of measure type   Units_of_Length
 
    name                   minimum_spacecraft_heliocentric_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The minimum_spacecraft_heliocentric_distance attribute provides the smallest value during the observation for the distance between the spacecraft and the center of the Sun. 
    unit of measure type   Units_of_Length
 
    name                   maximum_spacecraft_heliocentric_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The maximum_spacecraft_heliocentric_distance attribute provides the largest value during the observation for the distance between the spacecraft and the center of the Sun. 
    unit of measure type   Units_of_Length
 
    name                   start_spacecraft_heliocentric_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The start_spacecraft_heliocentric_distance attribute provides the scalar distance at the beginning of the observation (geometry_start_time_utc) between the spacecraft and the center of the Sun. 
    unit of measure type   Units_of_Length
 
    name                   stop_spacecraft_heliocentric_distance
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The stop_spacecraft_heliocentric_distance attribute provides the scalar distance at the end of the observation (geometry_stop_time_utc) between the spacecraft and the center of the Sun. 
    unit of measure type   Units_of_Length
 
    name                   light_time_correction_applied
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The light_time_correction_applied indicates whether or not light travel time correction and stellar aberration correction were used when calculating the values in the enclosing class. The attribute is nillable with nill_reason = unknown, but only for migrated data. Note: generally, received light travel time is calculated unless a transmitter (e.g., radar, radio) was involved in which the calculation typically is transmitted light time. 
    nillable               true
 
    name                   x_position
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The x component of a Cartesian position vector.
    unit of measure type   Units_of_Length
 
    name                   y_position
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The y component of a Cartesian position vector.
    unit of measure type   Units_of_Length
 
    name                   z_position
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The z component of a Cartesian position vector.
    unit of measure type   Units_of_Length
 
    name                   x_velocity
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The x component of a Cartesian velocity vector.
    unit of measure type   Units_of_Velocity
 
    name                   y_velocity
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The y component of a Cartesian velocity vector.
    unit of measure type   Units_of_Velocity
 
    name                   z_velocity
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The z component of a Cartesian velocity vector.
    unit of measure type   Units_of_Velocity
 
    name                   x_acceleration
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The x component of a Cartesian acceleration vector.
    unit of measure type   Units_of_Acceleration
 
    name                   y_acceleration
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The y component of a Cartesian acceleration vector.
    unit of measure type   Units_of_Acceleration
 
    name                   z_acceleration
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The z component of a Cartesian acceleration vector.
    unit of measure type   Units_of_Acceleration
 
    name                   x_pixel
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The x component of a Cartesian pixel vector; typically used in cameral models. 
 
    name                   y_pixel
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The y component of a Cartesian pixel vector; typically used in cameral models. 
 
    name                   z_pixel
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The z component of a Cartesian pixel vector; typically used in cameral models. 
 
    name                   x
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The x component of a Cartesian vector which has no units.
 
    name                   y
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The y component of a Cartesian vector which has no units.
 
    name                   z
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The z component of a Cartesian vector which has no units.
 
    name                   x_unit
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The x component of a unit Cartesian vector.
    minimum value          -1
    maximum value          1
 
    name                   y_unit
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The y component of a unit Cartesian vector.
    minimum value          -1
    maximum value          1
 
    name                   z_unit
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The z component of a unit Cartesian vector.
    minimum value          -1
    maximum value          1
 
    name                   radius_position
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The radial component of a spherical or cylindrical position vector (e.g., the radius coordinate in Planetocentric coordinates). 
    unit of measure type   Units_of_Length
 
    name                   longitude_position
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The longitudinal component of a Planetocentric position vector. Planetocentric longitude is measured from the IAU approved prime meridian for the body and increases toward the east. 
    minimum value          0
@@ -1612,7 +1612,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   latitude_position
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The latitude component of a Planetocentric position vector. Planetocentric latitude is the angle between the equator plane and a vector connecting the point of interest and the origin of the coordinate system. Latitudes are defined to be positive in the northern (as defined by the IAU) hemisphere. 
    minimum value          -90
@@ -1620,58 +1620,58 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   radial_velocity
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The radial component of a spherical or cylindrical velocity vector.
    unit of measure type   Units_of_Velocity
 
    name                   longitude_velocity
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The longitudinal component of a Planetocentric velocity vector. Planetocentric longitude is measured from the IAU approved prime meridian for the body and increases toward the east. 
    unit of measure type   Units_of_Angular_Velocity
 
    name                   latitude_velocity
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The latitude component of a Planetocentric velocity vector. Planetocentric latitude is the angle between the equator plane and a vector connecting the point of interest and the origin of the coordinate system. Latitudes are defined to be positive in the northern (as defined by the IAU) hemisphere. 
    unit of measure type   Units_of_Angular_Velocity
 
    name                   cahvore_model_type
-   version                1.21
+   version                1.18
    value data type        ASCII_Integer
    description            The cahvore_model_type attribute indicates which variant of the CAHVORE model to use. Type 1 is a perspective-projection model, similar to CAHV and CAHVOR except for the moving entrance pupil. Type 2 is a fish-eye lens model reflecting fundamentally different geometry. Type 3 is a generalization that includes the first two, and is used for most fisheye-type lenses (see cahvore_model_parameter). 
 
    name                   cahvore_model_parameter
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The cahvore_parameter_type attribute is a scalar floating-point number used for CAHVORE Type 3 models (see cahvore_model_type). If the parameter is 1.0, the model is identical to type 1; if 0.0, it is identical to type 2. Most fish-eye lenses use a value in between. 
 
    name                   target_name
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            Specifies the name of the target location for items in this class.
 
    name                   solar_image_clock_angle
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            Describes the direction of the sun in terms of the image plane, defined as a clock angle (clockwise) around the center of the image with 0 pointing to the top of the image, with respect to the display orientation (usually defined by disp:vertical_display_direction). 
    unit of measure type   Units_of_Angle
 
    name                   instrument_azimuth
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The instrument_azimuth attribute specifies the value for an instrument's rotation in the horizontal direction. It may be measured from a low hard stop, or relative to a coordinate frame. Although it may be used for any instrument where it makes sense, it is primarily intended for use in surface-based instruments that measure pointing in terms of azimuth and elevation. If this value is expressed using a coordinate system, the coordinate system is specified by the Coordinate_Space_Reference class. The interpretation of exactly what part of the instrument is being pointed is mission-specific. It could be the boresight, the camera head direction, the CAHV camera model A vector direction, or any of a number of other things. As such, for multimission use this value should be used mostly as an approximation, e.g. identifying scenes which might contain a given object. 
    unit of measure type   Units_of_Angle
 
    name                   instrument_elevation
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The instrument_elevation attribute specifies the value for an instrument's rotation in the vertical direction. It may be usually measured from a low hard stop, or relative to a coordinate frame. Although it may be used for any instrument where it makes sense, it is primarily intended for use in surface-based instruments that measure pointing in terms of azimuth and elevation. If this value is expressed using a coordinate system, the coordinate system is specified by the Coordinate_Space_Reference class. The interpretation of exactly what part of the instrument is being pointed is mission-specific. It could be the boresight, the camera head direction, the CAHV camera model A vector direction, or any of a number of other things. As such, for multimission use this value should be used mostly as an approximation, e.g. identifying scenes that might contain a given object. 
    unit of measure type   Units_of_Angle
 
    name                   solar_azimuth
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The solar_azimuth attribute specifies one of two angular measurements indicating the direction to the Sun as measured from a specific point on the surface of a planet (eg., from a lander or rover). The positive direction of azimuth is set by the positive_azimuth_direction attribute in the reference coordinate space. The azimuth is measured in the clockwise or counterclockwise direction (as viewed from above) with the meridian passing through the positive spin axis of the planet (i.e., the north pole) defining the zero reference. 
    minimum value          0.0
@@ -1679,7 +1679,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   solar_elevation
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The solar_elevation attribute specifies one of two angular measurements indicating the direction to the Sun as measured from a specific point on the surface of a planet (eg., from a lander or rover). The positive direction of the elevation is set by the positive_elevation_direction attribute in the reference coordinate space. The elevation is measured from the plane which is normal to the line passing between the surface point and the planet's center of mass, and that intersects the surface point. 
    minimum value          -90.0
@@ -1687,7 +1687,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   start_azimuth
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The start_azimuth attribute specifies the angular distance from a fixed reference position at which an image or observation starts. Azimuth is measured in a spherical coordinate system, in a plane normal to the principal axis. Azimuth values increase according to the right hand rule relative to the positive direction of the principal axis of the spherical coordinate system. When applied to a site or surface projection coordinate space, specifies the azimuth of the left edge of the output map. Applies to Cylindrical and Cylindrical-Perspective projections only. 
    minimum value          0.0
@@ -1695,7 +1695,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   stop_azimuth
-   version                1.21
+   version                1.18
    value data type        ASCII_Real
    description            The stop_azimuth attribute specifies the angular distance from a fixed reference position at which an image or observation stops. Azimuth is measured in a spherical coordinate system, in a plane normal to the principal axis. Azimuth values increase according to the right hand rule relative to the positive direction of the principal axis of the spherical coordinate system. When applied to a site or surface projection coordinate space, specifies the azimuth of the right edge of the output map. Applies to Cylindrical and Cylindrical-Perspective projections only. 
    minimum value          0.0
@@ -1703,7 +1703,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   command_type
-   version                1.21
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description             Specifies how the device was commanded. 
 
