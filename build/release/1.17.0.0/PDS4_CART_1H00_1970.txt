@@ -1,13 +1,13 @@
 PDS4 Local Data Dictionary Processing Report
 
 Configuration:
-   LDDTool Version        14.2.4
+   LDDTool Version        14.3.0
    LDD Version Id:        1.9.7.0
    LDD Label Version Id:  1.23
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Mon May 08 14:16:24 UTC 2023
+   Time                   Thu Nov 02 23:27:46 UTC 2023
    Common Schema          [PDS4_PDS_1H00.xsd]
    Common Schematron      [PDS4_PDS_1H00.sch]
    IM Version Id:         1.17.0.0
@@ -31,7 +31,7 @@ Parameters:
 Summary:
    Classes                211
    Attributes             321
-   Associations           760
+   Associations           761
    Error messages         0
    Warning messages       0
    Information messages   0
@@ -2695,7 +2695,7 @@ Parsed Input - Classes:
       reference type        parent_of
 
    name                   Display_Direction
-   description            The Display_Direction class specifies which two of the dimensions of an Array object should be displayed and how they should be displayed in the vertical (line) and horizontal (sample) dimensions of a display device. This class is essentially the same as the class of the same name in the Display Dictionary, and is redefined here for convenience. 
+   description            Note: For all image objects, the expectation is that the image orientation will be given using the disp:Display_Direction class. In the unusual case where an image object does not have an associated disp:Display_Direction class, then, and only then, Display_Direction class defined here should be present. The Display_Direction class specifies which two of the dimensions of an Array object should be displayed and how they should be displayed in the vertical (line) and horizontal (sample) dimensions of a display device. This class is essentially the same as the class of the same name in the Display Dictionary, and is redefined here for convenience. 
    is abstract            false
    is choice              false
    subclass of            USER
@@ -2870,7 +2870,7 @@ Parsed Input - Classes:
       reference type        attribute_of
 
    name                   Image_Display_Geometry
-   description            Image_Display_Geometry class provides an unambiguous description of the orientation of the image contents. Given an image, displayed as described by the Display_Direction class, any one of the Object_Orientation_* classes should allow unambiguous orientation of the contents of the image. The Local_Internal_Reference class is used to identify the object to which this instance of the Image_Display_Geometry class applies, and must be used if there is more than one instance of Image_Display_Geometry in the label. The appropriate value for local_reference_type is image_display_to_object. The Object_Orientation_North_East class is typically used for instruments for which the entire field of view is a portion of the target surface (e.g., instruments on Mars orbital spacecraft); otherwise use Object_Orientation_RA_Dec (e.g., flyby missions, missions with orbit radii much larger than the target radius such as Voyager or Cassini). At least one of these must be used. The two *_Identification classes used here are Central_Body (e.g., Saturn if you are using Planetocentric or planetographic coordinates in the Saturn system) and Target when the described object in the FoV is not the Central_Body. For example giving the orientation of the pole of Enceladus in Saturn Planetocentric coordinates, Central_Body = Saturn, Target = Enceladus. Bottom line: put in enough information so someone else can figure out the orientation of the field of view. We also offer an option to provide the pointing information as a quaternion. 
+   description            Image_Display_Geometry class provides an unambiguous description of the orientation of the image contents. This class assumes an image is displayed as described by a disp:Display_Direction class elsewhere in the label. In the unusual case where an image object does not have an associated disp:Display_Direction class, then, and only then, the optionalgeom:Display_Direction class in this class should be present. Coupled with the information in the associated Display_Direction class, any one of the Object_Orientation_* classes should allow unambiguous orientation of the contents of the image. The Local_Internal_Reference class is used to identify the object to which this instance of the Image_Display_Geometry class applies, and must be used if there is more than one instance of Image_Display_Geometry in the label. The appropriate value for local_reference_type is image_display_to_object. The Object_Orientation_North_East class is typically used for instruments for which the entire field of view is a portion of the target surface (e.g., instruments on Mars orbital spacecraft); otherwise use Object_Orientation_RA_Dec (e.g., flyby missions, missions with orbit radii much larger than the target radius such as Voyager or Cassini). At least one of these must be used. The two *_Identification classes used here are Central_Body (e.g., Saturn if you are using Planetocentric or planetographic coordinates in the Saturn system) and Target when the described object in the FoV is not the Central_Body. For example giving the orientation of the pole of Enceladus in Saturn Planetocentric coordinates, Central_Body = Saturn, Target = Enceladus. Bottom line: put in enough information so someone else can figure out the orientation of the field of view. We also offer an option to provide the pointing information as a quaternion. 
    is abstract            false
    is choice              false
    subclass of            USER
@@ -2883,7 +2883,7 @@ Parsed Input - Classes:
       reference type        component_of
 
       local identifier      geom:Display_Direction
-      minimum occurrences   1
+      minimum occurrences   0
       maximum occurrences   1
       reference type        component_of
 
@@ -4851,6 +4851,11 @@ Parsed Input - Classes:
       reference type        component_of
 
       local identifier      geom:Vectors
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
+      local identifier      geom:Quaternion_Plus_To_From
       minimum occurrences   0
       maximum occurrences   1
       reference type        component_of
