@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Example Namespace'
+project = 'Cartography Local Data Dictionary'
 # copyright = overidden by CSS specified below
 author = 'NASA Planetary Data System'
 
@@ -68,7 +68,7 @@ html_logo = '_static/images/PDS_Planets.png'
 html_context = {
     'display_github': True,
     "github_user": "pds-data-dictionaries",
-    "github_repo": "ldd-template",
+    "github_repo": "ldd-cart",
     "github_version": "main/docs/source/"
 }
 
