@@ -1,0 +1,219 @@
+
+>>  INFO LDDTOOL Version: 15.2.2
+>>  INFO IM Version Id: 1.20.0.0
+>>  INFO IM Namespace Id: pds
+>>  INFO IM Label Version Id: 1.26
+>>  INFO Date: Mon Nov 18 19:15:55 UTC 2024
+>>  INFO PARENT_DIR: /tmp/lddtool-15.2.2/Data/
+
+>>> ERROR Class:0001_NASA_PDS_1.cart.Map_Projection_Lander  Association:geom.Coordinate_Space_Reference  Class:geom.Coordinate_Space_Reference - Missing Component Class
+>>> ERROR Association: geom.Coordinate_Space_Reference - Missing Component - Reference Type: component_of
+>>> ERROR Class:0001_NASA_PDS_1.cart.Surface_Model_Parameters  Association:geom.Coordinate_Space_Reference  Class:geom.Coordinate_Space_Reference - Missing Component Class
+>>> ERROR Association: geom.Coordinate_Space_Reference - Missing Component - Reference Type: component_of
+>>> INFO Init:  - Config.Properties Namespace Id Found:geom
+>>> INFO Init:  - Config.Properties Namespace Id Using:geom
+>>> INFO Init:  - LDD Dictionary_Type is Discipline
+>>> INFO Init:  - Config.Properties Namespace Id Found:cart
+>>> INFO Init:  - Config.Properties Namespace Id Using:cart
+>>> INFO Init:  - LDD Dictionary_Type is Discipline
+>>> INFO Attribute: <target_center_distance> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <scale_factor_at_projection_origin> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <west_bounding_coordinate> - The default minimum value provided by the attribute's data type is being overridden with -180.0
+>>> INFO Attribute: <west_bounding_coordinate> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <east_bounding_coordinate> - The default minimum value provided by the attribute's data type is being overridden with -180.0
+>>> INFO Attribute: <east_bounding_coordinate> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <north_bounding_coordinate> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <north_bounding_coordinate> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <south_bounding_coordinate> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <south_bounding_coordinate> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <a_axis_radius> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <b_axis_radius> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <c_axis_radius> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <latitude_resolution> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <longitude_resolution> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <pixel_resolution_x> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <pixel_resolution_y> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <pixel_scale_x> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <pixel_scale_y> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <pixel_scale> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <distance_resolution> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <bearing_resolution> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <standard_parallel_1> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <standard_parallel_1> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <standard_parallel_2> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <standard_parallel_2> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <longitude_of_central_meridian> - The default minimum value provided by the attribute's data type is being overridden with -180.0
+>>> INFO Attribute: <longitude_of_central_meridian> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <latitude_of_projection_origin> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <latitude_of_projection_origin> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <scale_factor_at_central_meridian> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <utm_zone_number> - The default minimum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <utm_zone_number> - The default maximum value provided by the attribute's data type is being overridden with 60
+>>> INFO Attribute: <spcs_zone_identifier> - The default minimum characters provided by the attribute's data type is being overridden with 4
+>>> INFO Attribute: <spcs_zone_identifier> - The default maximum characters provided by the attribute's data type is being overridden with 4
+>>> INFO Attribute: <azimuthal_angle> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <azimuthal_angle> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <azimuth_measure_point_longitude> - The default minimum value provided by the attribute's data type is being overridden with -180.0
+>>> INFO Attribute: <azimuth_measure_point_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <oblique_line_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <oblique_line_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <oblique_line_longitude> - The default minimum value provided by the attribute's data type is being overridden with -180.0
+>>> INFO Attribute: <oblique_line_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <x_unit> - The default minimum value provided by the attribute's data type is being overridden with -1
+>>> INFO Attribute: <x_unit> - The default maximum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <y_unit> - The default minimum value provided by the attribute's data type is being overridden with -1
+>>> INFO Attribute: <y_unit> - The default maximum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <z_unit> - The default minimum value provided by the attribute's data type is being overridden with -1
+>>> INFO Attribute: <z_unit> - The default maximum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <x_length> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <y_length> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <z_length> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <x> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <y> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <z> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <start_azimuth> - The default minimum value provided by the attribute's data type is being overridden with -360
+>>> INFO Attribute: <start_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <stop_azimuth> - The default minimum value provided by the attribute's data type is being overridden with -360
+>>> INFO Attribute: <stop_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <sphere_radius> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <sphere_intersection_count> - The default minimum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <projection_azimuth> - The default minimum value provided by the attribute's data type is being overridden with -360
+>>> INFO Attribute: <projection_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <projection_elevation> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <projection_elevation> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <projection_elevation_line> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <reference_azimuth> - The default minimum value provided by the attribute's data type is being overridden with -360
+>>> INFO Attribute: <reference_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <reference_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <reference_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <reference_longitude> - The default minimum value provided by the attribute's data type is being overridden with -180.0
+>>> INFO Attribute: <reference_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <map_projection_rotation> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <map_projection_rotation> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <oblique_proj_pole_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <oblique_proj_pole_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <oblique_proj_pole_longitude> - The default minimum value provided by the attribute's data type is being overridden with -180.0
+>>> INFO Attribute: <oblique_proj_pole_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <oblique_proj_pole_rotation> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <oblique_proj_pole_rotation> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <data_count> - The default minimum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <angular_scale> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <radial_scale> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <local_time_scale> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <target_center_distance> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <scale_factor_at_projection_origin> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <west_bounding_coordinate> - The default minimum value provided by the attribute's data type is being overridden with -180.0
+>>> INFO Attribute: <west_bounding_coordinate> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <east_bounding_coordinate> - The default minimum value provided by the attribute's data type is being overridden with -180.0
+>>> INFO Attribute: <east_bounding_coordinate> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <north_bounding_coordinate> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <north_bounding_coordinate> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <south_bounding_coordinate> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <south_bounding_coordinate> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <a_axis_radius> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <b_axis_radius> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <c_axis_radius> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <latitude_resolution> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <longitude_resolution> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <pixel_resolution_x> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <pixel_resolution_y> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <pixel_scale_x> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <pixel_scale_y> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <pixel_scale> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <distance_resolution> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <bearing_resolution> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <standard_parallel_1> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <standard_parallel_1> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <standard_parallel_2> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <standard_parallel_2> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <longitude_of_central_meridian> - The default minimum value provided by the attribute's data type is being overridden with -180.0
+>>> INFO Attribute: <longitude_of_central_meridian> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <latitude_of_projection_origin> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <latitude_of_projection_origin> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <scale_factor_at_central_meridian> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <utm_zone_number> - The default minimum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <utm_zone_number> - The default maximum value provided by the attribute's data type is being overridden with 60
+>>> INFO Attribute: <spcs_zone_identifier> - The default minimum characters provided by the attribute's data type is being overridden with 4
+>>> INFO Attribute: <spcs_zone_identifier> - The default maximum characters provided by the attribute's data type is being overridden with 4
+>>> INFO Attribute: <azimuthal_angle> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <azimuthal_angle> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <azimuth_measure_point_longitude> - The default minimum value provided by the attribute's data type is being overridden with -180.0
+>>> INFO Attribute: <azimuth_measure_point_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <oblique_line_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <oblique_line_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <oblique_line_longitude> - The default minimum value provided by the attribute's data type is being overridden with -180.0
+>>> INFO Attribute: <oblique_line_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <x_unit> - The default minimum value provided by the attribute's data type is being overridden with -1
+>>> INFO Attribute: <x_unit> - The default maximum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <y_unit> - The default minimum value provided by the attribute's data type is being overridden with -1
+>>> INFO Attribute: <y_unit> - The default maximum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <z_unit> - The default minimum value provided by the attribute's data type is being overridden with -1
+>>> INFO Attribute: <z_unit> - The default maximum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <x_length> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <y_length> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <z_length> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <x> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <y> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <z> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <start_azimuth> - The default minimum value provided by the attribute's data type is being overridden with -360
+>>> INFO Attribute: <start_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <stop_azimuth> - The default minimum value provided by the attribute's data type is being overridden with -360
+>>> INFO Attribute: <stop_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <sphere_radius> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <sphere_intersection_count> - The default minimum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <projection_azimuth> - The default minimum value provided by the attribute's data type is being overridden with -360
+>>> INFO Attribute: <projection_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <projection_elevation> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <projection_elevation> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <projection_elevation_line> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <reference_azimuth> - The default minimum value provided by the attribute's data type is being overridden with -360
+>>> INFO Attribute: <reference_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
+>>> INFO Attribute: <reference_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <reference_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <reference_longitude> - The default minimum value provided by the attribute's data type is being overridden with -180.0
+>>> INFO Attribute: <reference_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <map_projection_rotation> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <map_projection_rotation> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <oblique_proj_pole_latitude> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <oblique_proj_pole_latitude> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <oblique_proj_pole_longitude> - The default minimum value provided by the attribute's data type is being overridden with -180.0
+>>> INFO Attribute: <oblique_proj_pole_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <oblique_proj_pole_rotation> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <oblique_proj_pole_rotation> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <data_count> - The default minimum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <angular_scale> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <radial_scale> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> INFO Attribute: <local_time_scale> - The default minimum value provided by the attribute's data type is being overridden with 0.0
+>>> WARNING Attribute: <x> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <x_length> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <y> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <y_length> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <z> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <z_length> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <x_unit> - The terms 'unit', 'units', 'unit_of_measure' should not be used as the rightmost part of an attribute's name.
+>>> WARNING Attribute: <y_unit> - The terms 'unit', 'units', 'unit_of_measure' should not be used as the rightmost part of an attribute's name.
+>>> WARNING Attribute: <z_unit> - The terms 'unit', 'units', 'unit_of_measure' should not be used as the rightmost part of an attribute's name.
+
+ -- LDDTool Execution Summary --
+     9 warning(s)
+     4 error(s)
+     0 fatal error(s)
+
+Input:
+
+     - IM Version: 1K00
+     - PDS4 Flag: true
+     - LDD Flag: true
+     - IM Version: true
+     - Export JSON Flag: true
+
+     - Ingest LDD(s): /home/runner/work/ldd-cart/ldd-cart/src/dependencies/ldd-geom/src/PDS4_GEOM_IngestLDD.xml, /home/runner/work/ldd-cart/ldd-cart/src/PDS4_CART_IngestLDD.xml
+
+Output:
+
+     - ./PDS4_CART_1K00_1970.xsd
+     - ./PDS4_CART_1K00_1970.sch
+     - ./PDS4_CART_1K00_1970.xml
+     - ./export/PDS4_PDS_1K00.JSON
+
+>>  INFO Exit(0)
