@@ -1,10 +1,10 @@
 
->>  INFO LDDTOOL Version: 15.2.2
->>  INFO IM Version Id: 1.18.0.0
+>>  INFO LDDTOOL Version: 15.2.4
+>>  INFO IM Version Id: 1.23.0.0
 >>  INFO IM Namespace Id: pds
->>  INFO IM Label Version Id: 1.24
->>  INFO Date: Mon Nov 18 19:15:59 UTC 2024
->>  INFO PARENT_DIR: /tmp/lddtool-15.2.2/Data/
+>>  INFO IM Label Version Id: 1.0
+>>  INFO Date: Mon Apr 28 18:35:56 UTC 2025
+>>  INFO PARENT_DIR: /tmp/lddtool-15.2.4/Data/
 
 >>> ERROR Class:0001_NASA_PDS_1.cart.Map_Projection_Lander  Association:geom.Coordinate_Space_Reference  Class:geom.Coordinate_Space_Reference - Missing Component Class
 >>> ERROR Association: geom.Coordinate_Space_Reference - Missing Component - Reference Type: component_of
@@ -201,19 +201,18 @@
 
 Input:
 
-     - IM Version: 1I00
+     - IM Version: 1N00
      - PDS4 Flag: true
      - LDD Flag: true
-     - IM Version: true
      - Export JSON Flag: true
 
      - Ingest LDD(s): /home/runner/work/ldd-cart/ldd-cart/src/dependencies/ldd-geom/src/PDS4_GEOM_IngestLDD.xml, /home/runner/work/ldd-cart/ldd-cart/src/PDS4_CART_IngestLDD.xml
 
 Output:
 
-     - ./PDS4_CART_1I00_1970.xsd
-     - ./PDS4_CART_1I00_1970.sch
-     - ./PDS4_CART_1I00_1970.xml
-     - ./export/PDS4_PDS_1I00.JSON
+     - ./PDS4_CART_1N00_1970.xsd
+     - ./PDS4_CART_1N00_1970.sch
+     - ./PDS4_CART_1N00_1970.xml
+     - ./export/PDS4_PDS_1N00.JSON
 
 >>  INFO Exit(0)
