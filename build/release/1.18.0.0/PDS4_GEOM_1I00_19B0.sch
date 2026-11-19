@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:geom  Version:1.9.11.0 - Fri Apr 24 16:46:08 UTC 2026 -->
+  <!-- PDS4 Schematron for Name Space Id:geom  Version:1.9.11.0 - Thu Nov 19 22:29:24 UTC 2026 -->
   <!-- Generated from the PDS4 Information Model Version 1.18.0.0 - System Build 12.1 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -223,13 +223,6 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="geom:Coordinate_Space_Quality/geom:attitude_propagation_duration">
-      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
-        <title>geom:Coordinate_Space_Quality/geom:attitude_propagation_duration/geom:attitude_propagation_duration</title>
-        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="geom:Coordinate_Space_Quality/geom:quaternion_measurement_method">
       <sch:assert test=". = ('Bundle_Adjustment', 'Coarse', 'Fine', 'Sun_Find', 'Tilt_Only', 'Unknown')">
         <title>geom:Coordinate_Space_Quality/geom:quaternion_measurement_method/geom:quaternion_measurement_method</title>
@@ -244,83 +237,6 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="geom:Derived_Geometry/geom:emission_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Derived_Geometry/geom:emission_angle/geom:emission_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Derived_Geometry/geom:incidence_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Derived_Geometry/geom:incidence_angle/geom:incidence_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Derived_Geometry/geom:instrument_azimuth">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Derived_Geometry/geom:instrument_azimuth/geom:instrument_azimuth</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Derived_Geometry/geom:instrument_elevation">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Derived_Geometry/geom:instrument_elevation/geom:instrument_elevation</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Derived_Geometry/geom:phase_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Derived_Geometry/geom:phase_angle/geom:phase_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Derived_Geometry/geom:solar_azimuth">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Derived_Geometry/geom:solar_azimuth/geom:solar_azimuth</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Derived_Geometry/geom:solar_elevation">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Derived_Geometry/geom:solar_elevation/geom:solar_elevation</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Derived_Geometry/geom:solar_image_clock_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Derived_Geometry/geom:solar_image_clock_angle/geom:solar_image_clock_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Derived_Geometry/geom:start_azimuth">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Derived_Geometry/geom:start_azimuth/geom:start_azimuth</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Derived_Geometry/geom:stop_azimuth">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Derived_Geometry/geom:stop_azimuth/geom:stop_azimuth</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Derived_Geometry/geom:target_heliocentric_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Derived_Geometry/geom:target_heliocentric_distance/geom:target_heliocentric_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="geom:Display_Direction/geom:horizontal_display_direction">
       <sch:assert test=". = ('Left to Right', 'Right to Left')">
         <title>geom:Display_Direction/geom:horizontal_display_direction/geom:horizontal_display_direction</title>
@@ -332,13 +248,6 @@
       <sch:assert test=". = ('Bottom to Top', 'Top to Bottom')">
         <title>geom:Display_Direction/geom:vertical_display_direction/geom:vertical_display_direction</title>
         The attribute geom:Display_Direction/geom:vertical_display_direction must be equal to one of the following values 'Bottom to Top', 'Top to Bottom'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distance_Generic/geom:distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distance_Generic/geom:distance/geom:distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -397,195 +306,6 @@
       <sch:assert test="if ((geom:maximum_target_ssb_distance) and not (geom:minimum_target_ssb_distance))  then false() else true()">
         <title>geom:Distances_Min_Max/Rule</title>
         geom:minimum_target_ssb_distance and geom:maximum_target_ssb_distance, are a pair; if you use one, you must use both.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Min_Max/geom:maximum_spacecraft_central_body_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Min_Max/geom:maximum_spacecraft_central_body_distance/geom:maximum_spacecraft_central_body_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Min_Max/geom:maximum_spacecraft_geocentric_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Min_Max/geom:maximum_spacecraft_geocentric_distance/geom:maximum_spacecraft_geocentric_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Min_Max/geom:maximum_spacecraft_heliocentric_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Min_Max/geom:maximum_spacecraft_heliocentric_distance/geom:maximum_spacecraft_heliocentric_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Min_Max/geom:maximum_spacecraft_target_boresight_intercept_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Min_Max/geom:maximum_spacecraft_target_boresight_intercept_distance/geom:maximum_spacecraft_target_boresight_intercept_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Min_Max/geom:maximum_spacecraft_target_center_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Min_Max/geom:maximum_spacecraft_target_center_distance/geom:maximum_spacecraft_target_center_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Min_Max/geom:maximum_spacecraft_target_subspacecraft_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Min_Max/geom:maximum_spacecraft_target_subspacecraft_distance/geom:maximum_spacecraft_target_subspacecraft_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Min_Max/geom:maximum_target_geocentric_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Min_Max/geom:maximum_target_geocentric_distance/geom:maximum_target_geocentric_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Min_Max/geom:maximum_target_heliocentric_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Min_Max/geom:maximum_target_heliocentric_distance/geom:maximum_target_heliocentric_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Min_Max/geom:maximum_target_ssb_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Min_Max/geom:maximum_target_ssb_distance/geom:maximum_target_ssb_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Min_Max/geom:minimum_spacecraft_central_body_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Min_Max/geom:minimum_spacecraft_central_body_distance/geom:minimum_spacecraft_central_body_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Min_Max/geom:minimum_spacecraft_geocentric_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Min_Max/geom:minimum_spacecraft_geocentric_distance/geom:minimum_spacecraft_geocentric_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Min_Max/geom:minimum_spacecraft_heliocentric_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Min_Max/geom:minimum_spacecraft_heliocentric_distance/geom:minimum_spacecraft_heliocentric_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Min_Max/geom:minimum_spacecraft_target_boresight_intercept_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Min_Max/geom:minimum_spacecraft_target_boresight_intercept_distance/geom:minimum_spacecraft_target_boresight_intercept_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Min_Max/geom:minimum_spacecraft_target_center_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Min_Max/geom:minimum_spacecraft_target_center_distance/geom:minimum_spacecraft_target_center_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Min_Max/geom:minimum_spacecraft_target_subspacecraft_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Min_Max/geom:minimum_spacecraft_target_subspacecraft_distance/geom:minimum_spacecraft_target_subspacecraft_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Min_Max/geom:minimum_target_geocentric_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Min_Max/geom:minimum_target_geocentric_distance/geom:minimum_target_geocentric_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Min_Max/geom:minimum_target_heliocentric_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Min_Max/geom:minimum_target_heliocentric_distance/geom:minimum_target_heliocentric_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Min_Max/geom:minimum_target_ssb_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Min_Max/geom:minimum_target_ssb_distance/geom:minimum_target_ssb_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Specific/geom:spacecraft_central_body_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Specific/geom:spacecraft_central_body_distance/geom:spacecraft_central_body_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Specific/geom:spacecraft_geocentric_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Specific/geom:spacecraft_geocentric_distance/geom:spacecraft_geocentric_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Specific/geom:spacecraft_heliocentric_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Specific/geom:spacecraft_heliocentric_distance/geom:spacecraft_heliocentric_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Specific/geom:spacecraft_target_boresight_intercept_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Specific/geom:spacecraft_target_boresight_intercept_distance/geom:spacecraft_target_boresight_intercept_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Specific/geom:spacecraft_target_center_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Specific/geom:spacecraft_target_center_distance/geom:spacecraft_target_center_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Specific/geom:spacecraft_target_subspacecraft_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Specific/geom:spacecraft_target_subspacecraft_distance/geom:spacecraft_target_subspacecraft_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Specific/geom:target_geocentric_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Specific/geom:target_geocentric_distance/geom:target_geocentric_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Specific/geom:target_heliocentric_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Specific/geom:target_heliocentric_distance/geom:target_heliocentric_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Specific/geom:target_ssb_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Specific/geom:target_ssb_distance/geom:target_ssb_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -656,132 +376,6 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="geom:Distances_Start_Stop/geom:start_spacecraft_central_body_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Start_Stop/geom:start_spacecraft_central_body_distance/geom:start_spacecraft_central_body_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Start_Stop/geom:start_spacecraft_geocentric_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Start_Stop/geom:start_spacecraft_geocentric_distance/geom:start_spacecraft_geocentric_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Start_Stop/geom:start_spacecraft_heliocentric_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Start_Stop/geom:start_spacecraft_heliocentric_distance/geom:start_spacecraft_heliocentric_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Start_Stop/geom:start_spacecraft_target_boresight_intercept_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Start_Stop/geom:start_spacecraft_target_boresight_intercept_distance/geom:start_spacecraft_target_boresight_intercept_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Start_Stop/geom:start_spacecraft_target_center_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Start_Stop/geom:start_spacecraft_target_center_distance/geom:start_spacecraft_target_center_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Start_Stop/geom:start_spacecraft_target_subspacecraft_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Start_Stop/geom:start_spacecraft_target_subspacecraft_distance/geom:start_spacecraft_target_subspacecraft_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Start_Stop/geom:start_target_geocentric_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Start_Stop/geom:start_target_geocentric_distance/geom:start_target_geocentric_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Start_Stop/geom:start_target_heliocentric_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Start_Stop/geom:start_target_heliocentric_distance/geom:start_target_heliocentric_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Start_Stop/geom:start_target_ssb_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Start_Stop/geom:start_target_ssb_distance/geom:start_target_ssb_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Start_Stop/geom:stop_spacecraft_central_body_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Start_Stop/geom:stop_spacecraft_central_body_distance/geom:stop_spacecraft_central_body_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Start_Stop/geom:stop_spacecraft_geocentric_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Start_Stop/geom:stop_spacecraft_geocentric_distance/geom:stop_spacecraft_geocentric_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Start_Stop/geom:stop_spacecraft_heliocentric_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Start_Stop/geom:stop_spacecraft_heliocentric_distance/geom:stop_spacecraft_heliocentric_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Start_Stop/geom:stop_spacecraft_target_boresight_intercept_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Start_Stop/geom:stop_spacecraft_target_boresight_intercept_distance/geom:stop_spacecraft_target_boresight_intercept_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Start_Stop/geom:stop_spacecraft_target_center_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Start_Stop/geom:stop_spacecraft_target_center_distance/geom:stop_spacecraft_target_center_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Start_Stop/geom:stop_spacecraft_target_subspacecraft_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Start_Stop/geom:stop_spacecraft_target_subspacecraft_distance/geom:stop_spacecraft_target_subspacecraft_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Start_Stop/geom:stop_target_geocentric_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Start_Stop/geom:stop_target_geocentric_distance/geom:stop_target_geocentric_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Start_Stop/geom:stop_target_heliocentric_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Start_Stop/geom:stop_target_heliocentric_distance/geom:stop_target_heliocentric_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Distances_Start_Stop/geom:stop_target_ssb_distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Distances_Start_Stop/geom:stop_target_ssb_distance/geom:stop_target_ssb_distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="geom:Expanded_Geometry/pds:Internal_Reference">
       <sch:assert test="pds:reference_type = 'geometry_to_expanded_geometry'
             ">
@@ -807,13 +401,6 @@
       <sch:assert test="if ((geom:geometry_stop_time_utc) and not (geom:geometry_start_time_utc))  then false() else true()">
         <title>geom:Geometry_Orbiter/Rule</title>
         geom:geometry_start_time_utc and geom:geometry_stop_time_utc, are a pair; if you use one, you must use both.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Geometry_Orbiter/geom:geometry_reference_time_tdb">
-      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
-        <title>geom:Geometry_Orbiter/geom:geometry_reference_time_tdb/geom:geometry_reference_time_tdb</title>
-        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -845,83 +432,6 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="geom:Illumination_Min_Max/geom:maximum_emission_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Illumination_Min_Max/geom:maximum_emission_angle/geom:maximum_emission_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Illumination_Min_Max/geom:maximum_incidence_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Illumination_Min_Max/geom:maximum_incidence_angle/geom:maximum_incidence_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Illumination_Min_Max/geom:maximum_phase_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Illumination_Min_Max/geom:maximum_phase_angle/geom:maximum_phase_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Illumination_Min_Max/geom:maximum_solar_elongation">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Illumination_Min_Max/geom:maximum_solar_elongation/geom:maximum_solar_elongation</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Illumination_Min_Max/geom:minimum_emission_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Illumination_Min_Max/geom:minimum_emission_angle/geom:minimum_emission_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Illumination_Min_Max/geom:minimum_incidence_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Illumination_Min_Max/geom:minimum_incidence_angle/geom:minimum_incidence_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Illumination_Min_Max/geom:minimum_phase_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Illumination_Min_Max/geom:minimum_phase_angle/geom:minimum_phase_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Illumination_Min_Max/geom:minimum_solar_elongation">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Illumination_Min_Max/geom:minimum_solar_elongation/geom:minimum_solar_elongation</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Illumination_Specific/geom:emission_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Illumination_Specific/geom:emission_angle/geom:emission_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Illumination_Specific/geom:incidence_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Illumination_Specific/geom:incidence_angle/geom:incidence_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Illumination_Specific/geom:phase_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Illumination_Specific/geom:phase_angle/geom:phase_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="geom:Illumination_Specific/geom:reference_location">
       <sch:assert test=". = ('Boresight Intercept Point', 'Constant', 'Subspacecraft Point', 'Target Center')">
         <title>geom:Illumination_Specific/geom:reference_location/geom:reference_location</title>
@@ -933,13 +443,6 @@
       <sch:assert test=". = ('Center', 'Lower Left Corner', 'Lower Right Corner', 'Upper Left Corner', 'Upper Right Corner')">
         <title>geom:Illumination_Specific/geom:reference_pixel_location/geom:reference_pixel_location</title>
         The attribute geom:Illumination_Specific/geom:reference_pixel_location must be equal to one of the following values 'Center', 'Lower Left Corner', 'Lower Right Corner', 'Upper Left Corner', 'Upper Right Corner'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Illumination_Specific/geom:solar_elongation">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Illumination_Specific/geom:solar_elongation/geom:solar_elongation</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -974,187 +477,12 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="geom:Illumination_Start_Stop/geom:start_emission_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Illumination_Start_Stop/geom:start_emission_angle/geom:start_emission_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Illumination_Start_Stop/geom:start_incidence_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Illumination_Start_Stop/geom:start_incidence_angle/geom:start_incidence_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Illumination_Start_Stop/geom:start_phase_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Illumination_Start_Stop/geom:start_phase_angle/geom:start_phase_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Illumination_Start_Stop/geom:start_solar_elongation">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Illumination_Start_Stop/geom:start_solar_elongation/geom:start_solar_elongation</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Illumination_Start_Stop/geom:stop_emission_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Illumination_Start_Stop/geom:stop_emission_angle/geom:stop_emission_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Illumination_Start_Stop/geom:stop_incidence_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Illumination_Start_Stop/geom:stop_incidence_angle/geom:stop_incidence_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Illumination_Start_Stop/geom:stop_phase_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Illumination_Start_Stop/geom:stop_phase_angle/geom:stop_phase_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Illumination_Start_Stop/geom:stop_solar_elongation">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Illumination_Start_Stop/geom:stop_solar_elongation/geom:stop_solar_elongation</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="geom:Image_Display_Geometry/pds:Local_Internal_Reference">
       <sch:assert test="pds:local_reference_type = 'display_to_data_object'
             ">
         <title>geom:Image_Display_Geometry/pds:Local_Internal_Reference/Rule</title>
         For Local_Internal_Reference in geom:Image_Display_Geometry, local_reference_type must equal 'display_to_data_object'.
             </sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:List_Index_Angle/geom:index_value_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:List_Index_Angle/geom:index_value_angle/geom:index_value_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:List_Index_Length/geom:index_value_length">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:List_Index_Length/geom:index_value_length/geom:index_value_length</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:List_Index_Temperature/geom:index_value_temperature">
-      <sch:assert test="@unit = ('K', 'degC')">
-        <title>geom:List_Index_Temperature/geom:index_value_temperature/geom:index_value_temperature</title>
-        The attribute @unit must be equal to one of the following values 'K', 'degC'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Object_Orientation_Clock_Angles/geom:celestial_east_clock_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Object_Orientation_Clock_Angles/geom:celestial_east_clock_angle/geom:celestial_east_clock_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Object_Orientation_Clock_Angles/geom:celestial_north_clock_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Object_Orientation_Clock_Angles/geom:celestial_north_clock_angle/geom:celestial_north_clock_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Object_Orientation_Clock_Angles/geom:central_body_north_pole_clock_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Object_Orientation_Clock_Angles/geom:central_body_north_pole_clock_angle/geom:central_body_north_pole_clock_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Object_Orientation_Clock_Angles/geom:central_body_positive_pole_clock_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Object_Orientation_Clock_Angles/geom:central_body_positive_pole_clock_angle/geom:central_body_positive_pole_clock_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Object_Orientation_Clock_Angles/geom:ecliptic_east_clock_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Object_Orientation_Clock_Angles/geom:ecliptic_east_clock_angle/geom:ecliptic_east_clock_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Object_Orientation_Clock_Angles/geom:ecliptic_north_clock_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Object_Orientation_Clock_Angles/geom:ecliptic_north_clock_angle/geom:ecliptic_north_clock_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Object_Orientation_Clock_Angles/geom:sun_direction_clock_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Object_Orientation_Clock_Angles/geom:sun_direction_clock_angle/geom:sun_direction_clock_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Object_Orientation_Clock_Angles/geom:target_north_pole_clock_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Object_Orientation_Clock_Angles/geom:target_north_pole_clock_angle/geom:target_north_pole_clock_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Object_Orientation_Clock_Angles/geom:target_positive_pole_clock_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Object_Orientation_Clock_Angles/geom:target_positive_pole_clock_angle/geom:target_positive_pole_clock_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Object_Orientation_North_East/geom:east_azimuth">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Object_Orientation_North_East/geom:east_azimuth/geom:east_azimuth</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Object_Orientation_North_East/geom:north_azimuth">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Object_Orientation_North_East/geom:north_azimuth/geom:north_azimuth</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Object_Orientation_RA_Dec/geom:celestial_north_clock_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Object_Orientation_RA_Dec/geom:celestial_north_clock_angle/geom:celestial_north_clock_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Object_Orientation_RA_Dec/geom:declination_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Object_Orientation_RA_Dec/geom:declination_angle/geom:declination_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Object_Orientation_RA_Dec/geom:ecliptic_north_clock_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Object_Orientation_RA_Dec/geom:ecliptic_north_clock_angle/geom:ecliptic_north_clock_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -1165,38 +493,10 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="geom:Object_Orientation_RA_Dec/geom:right_ascension_angle">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Object_Orientation_RA_Dec/geom:right_ascension_angle/geom:right_ascension_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Object_Orientation_RA_Dec/geom:right_ascension_hour_angle">
-      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
-        <title>geom:Object_Orientation_RA_Dec/geom:right_ascension_hour_angle/geom:right_ascension_hour_angle</title>
-        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Pixel_Dimensions/geom:horizontal_pixel_field_of_view">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Pixel_Dimensions/geom:horizontal_pixel_field_of_view/geom:horizontal_pixel_field_of_view</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="geom:Pixel_Dimensions/geom:pixel_field_of_view_method">
       <sch:assert test=". = ('Average', 'Central Pixel', 'Constant')">
         <title>geom:Pixel_Dimensions/geom:pixel_field_of_view_method/geom:pixel_field_of_view_method</title>
         The attribute geom:Pixel_Dimensions/geom:pixel_field_of_view_method must be equal to one of the following values 'Average', 'Central Pixel', 'Constant'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Pixel_Dimensions/geom:vertical_pixel_field_of_view">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Pixel_Dimensions/geom:vertical_pixel_field_of_view/geom:vertical_pixel_field_of_view</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -1207,38 +507,10 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="geom:Pixel_Intercept/geom:pixel_latitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Pixel_Intercept/geom:pixel_latitude/geom:pixel_latitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Pixel_Intercept/geom:pixel_longitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Pixel_Intercept/geom:pixel_longitude/geom:pixel_longitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="geom:Pixel_Intercept/geom:reference_pixel_location">
       <sch:assert test=". = ('Center', 'Lower Left Corner', 'Lower Right Corner', 'Upper Left Corner', 'Upper Right Corner')">
         <title>geom:Pixel_Intercept/geom:reference_pixel_location/geom:reference_pixel_location</title>
         The attribute geom:Pixel_Intercept/geom:reference_pixel_location must be equal to one of the following values 'Center', 'Lower Left Corner', 'Lower Right Corner', 'Upper Left Corner', 'Upper Right Corner'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Pixel_Size_Projected/geom:distance">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Pixel_Size_Projected/geom:distance/geom:distance</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Pixel_Size_Projected/geom:horizontal_pixel_footprint">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Pixel_Size_Projected/geom:horizontal_pixel_footprint/geom:horizontal_pixel_footprint</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -1249,31 +521,10 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="geom:Pixel_Size_Projected/geom:vertical_pixel_footprint">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Pixel_Size_Projected/geom:vertical_pixel_footprint/geom:vertical_pixel_footprint</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="geom:Quaternion_Plus_Direction/geom:rotation_direction">
       <sch:assert test=". = ('Forward', 'From Base', 'Present to Reference', 'Reference to Present', 'Reverse', 'Toward Base')">
         <title>geom:Quaternion_Plus_Direction/geom:rotation_direction/geom:rotation_direction</title>
         The attribute geom:Quaternion_Plus_Direction/geom:rotation_direction must be equal to one of the following values 'Forward', 'From Base', 'Present to Reference', 'Reference to Present', 'Reverse', 'Toward Base'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Reference_Pixel/geom:horizontal_coordinate_pixel">
-      <sch:assert test="@unit = ('DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel')">
-        <title>geom:Reference_Pixel/geom:horizontal_coordinate_pixel/geom:horizontal_coordinate_pixel</title>
-        The attribute @unit must be equal to one of the following values 'DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Reference_Pixel/geom:vertical_coordinate_pixel">
-      <sch:assert test="@unit = ('DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel')">
-        <title>geom:Reference_Pixel/geom:vertical_coordinate_pixel/geom:vertical_coordinate_pixel</title>
-        The attribute @unit must be equal to one of the following values 'DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -1352,160 +603,6 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Min_Max/geom:maximum_latitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Min_Max/geom:maximum_latitude/geom:maximum_latitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Min_Max/geom:maximum_longitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Min_Max/geom:maximum_longitude/geom:maximum_longitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Min_Max/geom:maximum_subsolar_azimuth">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Min_Max/geom:maximum_subsolar_azimuth/geom:maximum_subsolar_azimuth</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Min_Max/geom:maximum_subsolar_latitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Min_Max/geom:maximum_subsolar_latitude/geom:maximum_subsolar_latitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Min_Max/geom:maximum_subsolar_longitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Min_Max/geom:maximum_subsolar_longitude/geom:maximum_subsolar_longitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Min_Max/geom:maximum_subspacecraft_azimuth">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Min_Max/geom:maximum_subspacecraft_azimuth/geom:maximum_subspacecraft_azimuth</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Min_Max/geom:maximum_subspacecraft_latitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Min_Max/geom:maximum_subspacecraft_latitude/geom:maximum_subspacecraft_latitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Min_Max/geom:maximum_subspacecraft_longitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Min_Max/geom:maximum_subspacecraft_longitude/geom:maximum_subspacecraft_longitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Min_Max/geom:minimum_latitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Min_Max/geom:minimum_latitude/geom:minimum_latitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Min_Max/geom:minimum_longitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Min_Max/geom:minimum_longitude/geom:minimum_longitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Min_Max/geom:minimum_subsolar_azimuth">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Min_Max/geom:minimum_subsolar_azimuth/geom:minimum_subsolar_azimuth</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Min_Max/geom:minimum_subsolar_latitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Min_Max/geom:minimum_subsolar_latitude/geom:minimum_subsolar_latitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Min_Max/geom:minimum_subsolar_longitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Min_Max/geom:minimum_subsolar_longitude/geom:minimum_subsolar_longitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Min_Max/geom:minimum_subspacecraft_azimuth">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Min_Max/geom:minimum_subspacecraft_azimuth/geom:minimum_subspacecraft_azimuth</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Min_Max/geom:minimum_subspacecraft_latitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Min_Max/geom:minimum_subspacecraft_latitude/geom:minimum_subspacecraft_latitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Min_Max/geom:minimum_subspacecraft_longitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Min_Max/geom:minimum_subspacecraft_longitude/geom:minimum_subspacecraft_longitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Specific/geom:subsolar_azimuth">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Specific/geom:subsolar_azimuth/geom:subsolar_azimuth</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Specific/geom:subsolar_latitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Specific/geom:subsolar_latitude/geom:subsolar_latitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Specific/geom:subsolar_longitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Specific/geom:subsolar_longitude/geom:subsolar_longitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Specific/geom:subspacecraft_azimuth">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Specific/geom:subspacecraft_azimuth/geom:subspacecraft_azimuth</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Specific/geom:subspacecraft_latitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Specific/geom:subspacecraft_latitude/geom:subspacecraft_latitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Specific/geom:subspacecraft_longitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Specific/geom:subspacecraft_longitude/geom:subspacecraft_longitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="geom:Surface_Geometry_Start_Stop">
       <sch:assert test="if ((geom:start_latitude) and not (geom:lat_long_method))  then false() else true()">
         <title>geom:Surface_Geometry_Start_Stop/Rule</title>
@@ -1571,139 +668,6 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Start_Stop/geom:start_latitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Start_Stop/geom:start_latitude/geom:start_latitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Start_Stop/geom:start_longitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Start_Stop/geom:start_longitude/geom:start_longitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Start_Stop/geom:start_subsolar_azimuth">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Start_Stop/geom:start_subsolar_azimuth/geom:start_subsolar_azimuth</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Start_Stop/geom:start_subsolar_latitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Start_Stop/geom:start_subsolar_latitude/geom:start_subsolar_latitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Start_Stop/geom:start_subsolar_longitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Start_Stop/geom:start_subsolar_longitude/geom:start_subsolar_longitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Start_Stop/geom:start_subspacecraft_azimuth">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Start_Stop/geom:start_subspacecraft_azimuth/geom:start_subspacecraft_azimuth</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Start_Stop/geom:start_subspacecraft_latitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Start_Stop/geom:start_subspacecraft_latitude/geom:start_subspacecraft_latitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Start_Stop/geom:start_subspacecraft_longitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Start_Stop/geom:start_subspacecraft_longitude/geom:start_subspacecraft_longitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Start_Stop/geom:stop_latitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Start_Stop/geom:stop_latitude/geom:stop_latitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Start_Stop/geom:stop_longitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Start_Stop/geom:stop_longitude/geom:stop_longitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Start_Stop/geom:stop_subsolar_azimuth">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Start_Stop/geom:stop_subsolar_azimuth/geom:stop_subsolar_azimuth</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Start_Stop/geom:stop_subsolar_latitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Start_Stop/geom:stop_subsolar_latitude/geom:stop_subsolar_latitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Start_Stop/geom:stop_subsolar_longitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Start_Stop/geom:stop_subsolar_longitude/geom:stop_subsolar_longitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Start_Stop/geom:stop_subspacecraft_azimuth">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Start_Stop/geom:stop_subspacecraft_azimuth/geom:stop_subspacecraft_azimuth</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Start_Stop/geom:stop_subspacecraft_latitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Start_Stop/geom:stop_subspacecraft_latitude/geom:stop_subspacecraft_latitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Surface_Geometry_Start_Stop/geom:stop_subspacecraft_longitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Surface_Geometry_Start_Stop/geom:stop_subspacecraft_longitude/geom:stop_subspacecraft_longitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Vector_Cartesian_Acceleration_Base/geom:x_acceleration">
-      <sch:assert test="@unit = ('cm/s**2', 'km/s**2', 'm/s**2')">
-        <title>geom:Vector_Cartesian_Acceleration_Base/geom:x_acceleration/geom:x_acceleration</title>
-        The attribute @unit must be equal to one of the following values 'cm/s**2', 'km/s**2', 'm/s**2'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Vector_Cartesian_Acceleration_Base/geom:y_acceleration">
-      <sch:assert test="@unit = ('cm/s**2', 'km/s**2', 'm/s**2')">
-        <title>geom:Vector_Cartesian_Acceleration_Base/geom:y_acceleration/geom:y_acceleration</title>
-        The attribute @unit must be equal to one of the following values 'cm/s**2', 'km/s**2', 'm/s**2'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Vector_Cartesian_Acceleration_Base/geom:z_acceleration">
-      <sch:assert test="@unit = ('cm/s**2', 'km/s**2', 'm/s**2')">
-        <title>geom:Vector_Cartesian_Acceleration_Base/geom:z_acceleration/geom:z_acceleration</title>
-        The attribute @unit must be equal to one of the following values 'cm/s**2', 'km/s**2', 'm/s**2'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="geom:Vector_Cartesian_Acceleration_Extended_Base/geom:light_time_correction_applied">
       <sch:assert test="if (not(@xsi:nil eq 'true') and (not(. = ('None', 'Received_Light_Time', 'Received_Light_Time_Stellar_Abb', 'Transmitted_Light_Time', 'Transmitted_Light_Time_Stellar_Abb')))) then false() else true()">
         <title>geom:Vector_Cartesian_Acceleration_Extended_Base/geom:light_time_correction_applied/geom:light_time_correction_applied</title>
@@ -1715,27 +679,6 @@
       <sch:assert test="if (not(@xsi:nil eq 'true') and (not(. = ('None', 'Received_Light_Time', 'Received_Light_Time_Stellar_Abb', 'Transmitted_Light_Time', 'Transmitted_Light_Time_Stellar_Abb')))) then false() else true()">
         <title>geom:Vector_Cartesian_Acceleration_Generic/geom:light_time_correction_applied/geom:light_time_correction_applied</title>
         The attribute geom:Vector_Cartesian_Acceleration_Generic/geom:light_time_correction_applied must be nulled or equal to one of the following values 'None', 'Received_Light_Time', 'Received_Light_Time_Stellar_Abb', 'Transmitted_Light_Time', 'Transmitted_Light_Time_Stellar_Abb'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Vector_Cartesian_Position_Base/geom:x_position">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Vector_Cartesian_Position_Base/geom:x_position/geom:x_position</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Vector_Cartesian_Position_Base/geom:y_position">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Vector_Cartesian_Position_Base/geom:y_position/geom:y_position</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Vector_Cartesian_Position_Base/geom:z_position">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Vector_Cartesian_Position_Base/geom:z_position/geom:z_position</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -1837,27 +780,6 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="geom:Vector_Cartesian_Velocity_Base/geom:x_velocity">
-      <sch:assert test="@unit = ('cm/s', 'km/s', 'm/s')">
-        <title>geom:Vector_Cartesian_Velocity_Base/geom:x_velocity/geom:x_velocity</title>
-        The attribute @unit must be equal to one of the following values 'cm/s', 'km/s', 'm/s'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Vector_Cartesian_Velocity_Base/geom:y_velocity">
-      <sch:assert test="@unit = ('cm/s', 'km/s', 'm/s')">
-        <title>geom:Vector_Cartesian_Velocity_Base/geom:y_velocity/geom:y_velocity</title>
-        The attribute @unit must be equal to one of the following values 'cm/s', 'km/s', 'm/s'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Vector_Cartesian_Velocity_Base/geom:z_velocity">
-      <sch:assert test="@unit = ('cm/s', 'km/s', 'm/s')">
-        <title>geom:Vector_Cartesian_Velocity_Base/geom:z_velocity/geom:z_velocity</title>
-        The attribute @unit must be equal to one of the following values 'cm/s', 'km/s', 'm/s'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="geom:Vector_Cartesian_Velocity_Extended_Base/geom:light_time_correction_applied">
       <sch:assert test="if (not(@xsi:nil eq 'true') and (not(. = ('None', 'Received_Light_Time', 'Received_Light_Time_Stellar_Abb', 'Transmitted_Light_Time', 'Transmitted_Light_Time_Stellar_Abb')))) then false() else true()">
         <title>geom:Vector_Cartesian_Velocity_Extended_Base/geom:light_time_correction_applied/geom:light_time_correction_applied</title>
@@ -1942,27 +864,6 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="geom:Vector_Planetocentric_Position_Base/geom:latitude_position">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Vector_Planetocentric_Position_Base/geom:latitude_position/geom:latitude_position</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Vector_Planetocentric_Position_Base/geom:longitude_position">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad')">
-        <title>geom:Vector_Planetocentric_Position_Base/geom:longitude_position/geom:longitude_position</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Vector_Planetocentric_Position_Base/geom:radius_position">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>geom:Vector_Planetocentric_Position_Base/geom:radius_position/geom:radius_position</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="geom:Vector_Planetocentric_Position_Central_Body_To_Spacecraft/geom:light_time_correction_applied">
       <sch:assert test="if (not(@xsi:nil eq 'true') and (not(. = ('None', 'Received_Light_Time', 'Received_Light_Time_Stellar_Abb', 'Transmitted_Light_Time', 'Transmitted_Light_Time_Stellar_Abb')))) then false() else true()">
         <title>geom:Vector_Planetocentric_Position_Central_Body_To_Spacecraft/geom:light_time_correction_applied/geom:light_time_correction_applied</title>
@@ -1995,27 +896,6 @@
       <sch:assert test="if (not(@xsi:nil eq 'true') and (not(. = ('None', 'Received_Light_Time', 'Received_Light_Time_Stellar_Abb', 'Transmitted_Light_Time', 'Transmitted_Light_Time_Stellar_Abb')))) then false() else true()">
         <title>geom:Vector_Planetocentric_Position_Spacecraft_To_Target/geom:light_time_correction_applied/geom:light_time_correction_applied</title>
         The attribute geom:Vector_Planetocentric_Position_Spacecraft_To_Target/geom:light_time_correction_applied must be nulled or equal to one of the following values 'None', 'Received_Light_Time', 'Received_Light_Time_Stellar_Abb', 'Transmitted_Light_Time', 'Transmitted_Light_Time_Stellar_Abb'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Vector_Planetocentric_Velocity_Base/geom:latitude_velocity">
-      <sch:assert test="@unit = ('deg/day', 'deg/s', 'rad/s')">
-        <title>geom:Vector_Planetocentric_Velocity_Base/geom:latitude_velocity/geom:latitude_velocity</title>
-        The attribute @unit must be equal to one of the following values 'deg/day', 'deg/s', 'rad/s'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Vector_Planetocentric_Velocity_Base/geom:longitude_velocity">
-      <sch:assert test="@unit = ('deg/day', 'deg/s', 'rad/s')">
-        <title>geom:Vector_Planetocentric_Velocity_Base/geom:longitude_velocity/geom:longitude_velocity</title>
-        The attribute @unit must be equal to one of the following values 'deg/day', 'deg/s', 'rad/s'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="geom:Vector_Planetocentric_Velocity_Base/geom:radial_velocity">
-      <sch:assert test="@unit = ('cm/s', 'km/s', 'm/s')">
-        <title>geom:Vector_Planetocentric_Velocity_Base/geom:radial_velocity/geom:radial_velocity</title>
-        The attribute @unit must be equal to one of the following values 'cm/s', 'km/s', 'm/s'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
